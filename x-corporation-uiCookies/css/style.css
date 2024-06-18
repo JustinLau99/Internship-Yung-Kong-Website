@@ -97,6 +97,15 @@ ul {
 /* --------------------
    main Wrapper
    -------------------*/
+
+.dim-img {
+    filter: brightness(50%); /* Adjust percentage to make it dimmer */
+    width: 100vw; /* Fill the entire viewport width */
+    height: 100vh; /* Fill the entire viewport height */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    object-position: center; /* Center the image within the container */
+}
+
 #main-wrapper{
     background: #fff;
     }
