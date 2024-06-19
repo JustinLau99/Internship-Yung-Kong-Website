@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <!-- header -->
     <?php include_once 'include/header.php'?>
 <body>
 <div id="main-wrapper">

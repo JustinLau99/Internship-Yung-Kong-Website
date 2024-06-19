@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <!-- header -->
     <?php include_once 'include/header.php'?>
 <body>
 <div id="main-wrapper">
@@ -16,11 +17,7 @@
 
 <!-- .nav -->
 <nav class="navbar m-menu navbar-default navbar-fixed-top">
-    <div class="container">
-        <?php include_once 'include/navbar-header.php'?>
-        
-    </div>
-<!-- .container -->
+    <?php include_once 'include/navbar.php'?>
 </nav>
 <!-- .nav -->
 
