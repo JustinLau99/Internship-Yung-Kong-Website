@@ -8,7 +8,7 @@
             <div class="col-sm-4 footer-block">
                 <div class="footer-widget widget_text">
                     <div class="footer-logo">
-                        <a href="#"><img src="img/logo.png" alt=""></a>
+                        <a href="#"><img src="img/yk_logo.png" alt="Yung Kong Logo"></a>
                     </div>
                     <p>Continually matrix cross functional opportunities whereas ethical information. Compellingly streamline enabled human capital before resource-leveling internal or "organic".</p>
 
@@ -33,7 +33,7 @@
                     </address>
 
                     <ul class="list-inline social-links">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/p/Yung-Kong-Co-Bhd-Hardware-%E4%BA%94%E9%87%91%E5%BA%97-100076001867357/"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>

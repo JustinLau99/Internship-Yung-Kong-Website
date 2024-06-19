@@ -25,7 +25,7 @@
 
 <section class="single-page-title">
     <div class="container text-center">
-        <h2>About us</h2>
+        <h2>Our main business</h2>
     </div>
 </section>
 <!-- .page-title -->
@@ -33,7 +33,7 @@
 <section class="about-text ptb-100">
     <section class="section-title">
         <div class="container text-center">
-            <h2>A Few Words About Us</h2>
+            <h2>Hardware and building materials retailing</h2>
             <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
         </div>
     </section>
@@ -41,18 +41,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p>Appropriately benchmark bricks-and-clicks e-business before parallel communities. Completely
-                    synergize exceptional outsourcing with principle-centered platforms. Credibly unleash synergistic
-                    internal or "organic" sources without functionalized technology. Objectively brand granular human
-                    capital without goal-oriented e-business. Competently predominate multifunctional web-readiness via
-                    state of the art strategic theme areas.</p>
+                <p>
+                    We supply more than 15,000 items such as cement, steel, power tools, hand tools, bathroom 
+                    and kitchen accessories, paints, safety shoes, machinery tools, electrical accessories, 
+                    pressure pump, piping, fitting, gloves, machinery, tape, lock, welding equipments, 
+                    safety equipments, measuring equipments, drill bits, door knobs, fasteners and many more.
+                </p>
             </div>
             <div class="col-md-6">
-                <p>Completely pontificate timely metrics rather than accurate growth strategies. Seamlessly impact
-                    premium communities whereas real-time networks. Professionally transform high-payoff collaboration
-                    and idea-sharing before resource maximizing supply chains. Energistically evisculate timely
-                    manufactured products for resource-leveling ROI. Assertively create client-focused vortals whereas
-                    functional potentialities.</p>
+                <p>
+                    Drop by to our nearest store and let our trained and friendly staff assist you in your needs 
+                    from DIY home repair or improvement requirement to project supplies. Alternatively, you could 
+                    shop with us via Lazada as per link above.
+                </p>
             </div>
         </div>
     </div>
@@ -218,7 +219,7 @@
 <section class="client-logo ptb-100">
     <section class="section-title">
         <div class="container text-center">
-            <h2>Our Clients</h2>
+            <h2>Our Key Product Brands</h2>
             <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
         </div>
     </section>

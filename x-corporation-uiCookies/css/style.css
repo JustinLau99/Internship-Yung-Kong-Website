@@ -366,6 +366,13 @@ Shortcode Content
     height         : 40px;
     }
 
+.navbar-brand img {
+    max-height: 100%; /* Scale down based on height */
+    max-width: 100%; /* Scale down based on width */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
+    }
+
 .navbar-default .navbar-nav > li {
     margin-right : 17px;
     }
@@ -1411,6 +1418,8 @@ service-icon-style
     background : #313131;
     }
 
+
+
 .footer .footer-block {
     border-right : 1px solid #3a3a3a;
     padding      : 80px 60px;
@@ -1445,6 +1454,18 @@ service-icon-style
     line-height   : 22px;
     color         : #ffffff;
     margin-bottom : 25px;
+    }
+
+.footer-logo {
+    font-size     : 16px;
+    line-height   : 22px;
+    color         : #ffffff;
+    margin-bottom : 25px;
+}
+
+.footer-logo img{
+    height: 15%; /* Maintain aspect ratio */
+    width: 15%; /* Maintain aspect ratio */
     }
 
 .footer .widget_text {
