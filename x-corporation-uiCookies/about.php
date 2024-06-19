@@ -1,67 +1,52 @@
 <?php 
-$images = [
-    ['src' => 'transpaint.png', 'alt' => ''],
-    ['src' => 'lazor.png', 'alt' => ''],
-    ['src' => 'versatile.png', 'alt' => ''],
-    ['src' => 'ymc.png', 'alt' => '']
-    ['src' => 'stanley2.png', 'alt' => '']
-    ['src' => 'irwin2.png', 'alt' => '']
-    ['src' => 'lenox.png', 'alt' => '']
-    ['src' => 'LAVOR_NEW.png', 'alt' => '']
-    ['src' => 'asteel.png', 'alt' => '']
-    ['src' => 'cms.png', 'alt' => '']
-    ['src' => 'dulux.png', 'alt' => '']
-    ['src' => 'bosch.png', 'alt' => '']
-    ['src' => 'hikoki.png', 'alt' => '']
-    ['src' => 'makita2.png', 'alt' => '']
-    ['src' => 'sika2.png', 'alt' => '']
-    ['src' => 'yale2.png', 'alt' => '']
-    ['src' => 'philips.png', 'alt' => '']
-    ['src' => 'karcher.png', 'alt' => '']
-    ['src' => 'abus.png', 'alt' => '']
-    ['src' => 'tri-circle2.png', 'alt' => '']
-    ['src' => '3m.png', 'alt' => '']
-    ['src' => 'hardex.png', 'alt' => '']
-    ['src' => 'energizer.png', 'alt' => '']
-    ['src' => 'eveready.png', 'alt' => '']
-    ['src' => 'koya2.png', 'alt' => '']
-    ['src' => 'prima.png', 'alt' => '']
-    ['src' => 'everlast.png', 'alt' => '']
-    ['src' => 'ecogreen.png', 'alt' => '']
-    ['src' => 'kingkong.png', 'alt' => '']
-    ['src' => 'selleys.png', 'alt' => '']
-    ['src' => 'rexco.png', 'alt' => '']
-    ['src' => 'vip.png', 'alt' => '']
-    ['src' => 'enviomatt2.png', 'alt' => '']
-    ['src' => 'envioclean2.png', 'alt' => '']
-    ['src' => 'domina2.png', 'alt' => '']
-    ['src' => 'galuzinc2.png', 'alt' => '']
-    ['src' => 'AKAIDO.png', 'alt' => '']
-    ['src' => 'INA.png', 'alt' => '']
-    ['src' => 'KHE_NEW.png', 'alt' => '']
-    ['src' => 'tekiro.png', 'alt' => '']
-    ['src' => 'WD40.png', 'alt' => '']
+$logo_brand = [
+    ['src' => 'transpaint.png', 'alt' => 'transpaint.png'],
+    ['src' => 'lazor.png', 'alt' => 'lazor.png'],
+    ['src' => 'versatile.png', 'alt' => 'versatile.png'],
+    ['src' => 'ymc.png', 'alt' => 'ymc.png'],
+    ['src' => 'stanley2.png', 'alt' => 'stanley2.png'],
+    ['src' => 'irwin2.png', 'alt' => 'irwin2.png'],
+    ['src' => 'lenox.png', 'alt' => 'lenox.png'],
+    ['src' => 'LAVOR_NEW.png', 'alt' => 'LAVOR_NEW.png'],
+    ['src' => 'asteel.png', 'alt' => 'asteel.png'],
+    ['src' => 'cms.png', 'alt' => 'cms.png'],
+    ['src' => 'dulux.png', 'alt' => 'dulux.png'],
+    ['src' => 'bosch.png', 'alt' => 'bosch.png'],
+    ['src' => 'hikoki.png', 'alt' => 'hikoki.png'],
+    ['src' => 'makita2.png', 'alt' => 'makita2.png'],
+    ['src' => 'sika2.png', 'alt' => 'sika2.png'],
+    ['src' => 'yale2.png', 'alt' => 'yale2.png'],
+    ['src' => 'philips.png', 'alt' => 'philips.png'],
+    ['src' => 'karcher.png', 'alt' => 'karcher.png'],
+    ['src' => 'abus.png', 'alt' => 'abus.png'],
+    ['src' => 'tri-circle2.png', 'alt' => 'circle2.png'],
+    ['src' => '3m.png', 'alt' => '3m.png'],
+    ['src' => 'hardex.png', 'alt' => 'hardex.png'],
+    ['src' => 'energizer.png', 'alt' => 'energizer.png'],
+    ['src' => 'eveready.png', 'alt' => 'eveready.png'],
+    ['src' => 'koya2.png', 'alt' => 'koya2.png'],
+    ['src' => 'prima.png', 'alt' => 'prima.png'],
+    ['src' => 'everlast.png', 'alt' => 'everlast.png'],
+    ['src' => 'ecogreen.png', 'alt' => 'ecogreen.png'],
+    ['src' => 'kingkong.png', 'alt' => 'kingkong.png'],
+    ['src' => 'selleys.png', 'alt' => 'selleys.png'],
+    ['src' => 'rexco.png', 'alt' => 'rexco.png'],
+    ['src' => 'vip.png', 'alt' => 'vip.png'],
+    ['src' => 'enviomatt2.png', 'alt' => 'enviomatt2.png'],
+    ['src' => 'envioclean2.png', 'alt' => 'envioclean2.png'],
+    ['src' => 'domina2.png', 'alt' => 'domina2.png'],
+    ['src' => 'galuzinc2.png', 'alt' => 'galuzinc2.png'],
+    ['src' => 'AKAIDO.png', 'alt' => 'AKAIDO.png'],
+    ['src' => 'INA.png', 'alt' => 'INA.png'],
+    ['src' => 'KHE_NEW.png', 'alt' => 'KHE_NEW.png'],
+    ['src' => 'tekiro.png', 'alt' => 'tekiro.png'],
+    ['src' => 'WD40.png', 'alt' => 'WD40.png'],
 ];
 
 
 ?>
 
-<?php 
-    $counter = 0; 
-    foreach ($images as $image): 
-        if ($counter % 6 == 0): ?>
-            <div class="row">
-        <?php endif; ?>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="<?php echo $image['src']; ?>" alt="<?php echo $image['alt']; ?>"></a>
-            </div>
-        <?php 
-        $counter++; 
-        if ($counter % 6 == 0): ?>
-            </div>
-        <?php endif; 
-    endforeach; 
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -308,6 +293,23 @@ $images = [
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
                 <a href="#"><img src="img/logo-client-6.jpg" alt="Image"></a>
             </div>
+
+<?php 
+    $counter = 0; 
+    foreach ($logo_brand as $brand): 
+        if ($counter % 6 == 0): ?>
+            <div class="row">
+        <?php endif; ?>
+            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                <a href="#"><img src="<?php echo $brand['src']; ?>" alt="<?php echo $brand['alt']; ?>"></a>
+            </div>
+        <?php 
+        $counter++; 
+        if ($counter % 6 == 0): ?>
+            </div>
+        <?php endif; 
+    endforeach; 
+?>
         </div>
     </div>
     <!--end of .container -->
