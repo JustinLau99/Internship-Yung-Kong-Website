@@ -46,7 +46,7 @@
 
 <div class="copyright-section">
     <div class="container clearfix">
-            <span class="copytext">Copyright &copy; 2016 | <a href="https://uicookies.com/downloads/x-corporation-free-bootstrap-html-template/">X-Corporation</a> Designed And Developed By: <strong style="color: #31aae2;"">uiCookies.com</strong></span>
+            <span class="copytext">Copyright &copy; 2023 | <a href="https://uicookies.com/downloads/x-corporation-free-bootstrap-html-template/">Yung Kong Co.</a> Designed And Developed By: <strong style="color: #31aae2;"">uiCookies.com</strong></span>
 
         <ul class="list-inline pull-right">
             <li class="active"><a href="#">Home</a></li>
