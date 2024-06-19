@@ -274,25 +274,6 @@ $logo_brand = [
         </div>
     </section>
     <div class="container">
-        <div class="row">
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-brand/transpaint.png" alt="Image"></a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-brand/lazor.png" alt="Image"></a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-3.jpg" alt="Image"></a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-4.jpg" alt="Image"></a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-5.jpg" alt="Image"></a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-6.jpg" alt="Image"></a>
-            </div>
 
 <?php 
     $counter = 0; 
@@ -301,7 +282,7 @@ $logo_brand = [
             <div class="row">
         <?php endif; ?>
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="<?php echo $brand['src']; ?>" alt="<?php echo $brand['alt']; ?>"></a>
+                <a href="#"><img src="img/logo-brand/<?php echo $brand['src']; ?>" alt="<?php echo $brand['alt']; ?>"></a>
             </div>
         <?php 
         $counter++; 
@@ -310,7 +291,7 @@ $logo_brand = [
         <?php endif; 
     endforeach; 
 ?>
-        </div>
+
     </div>
     <!--end of .container -->
 </section>
