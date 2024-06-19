@@ -435,7 +435,6 @@
 </div>
 <!-- #main-wrapper -->
 
-
 <!-- Script -->
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
@@ -445,9 +444,6 @@
 <script src="js/mobile-menu.js"></script>
 <script src="js/flexSlider/jquery.flexslider-min.js"></script>
 <script src="js/scripts.js"></script>
-    <div>
-		<a style="font-size:0; height:0; width:0; opacity:0; position:absolute" target="_blank" href="http://www.uicookies.com">HTML Templates by uiCookies</a>        
-	</div>
-    
+
 </body>
 </html>

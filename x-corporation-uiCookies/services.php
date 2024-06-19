@@ -232,5 +232,6 @@
 <script src="js/mobile-menu.js"></script>
 <script src="js/flexSlider/jquery.flexslider-min.js"></script>
 <script src="js/scripts.js"></script>
+
 </body>
 </html>

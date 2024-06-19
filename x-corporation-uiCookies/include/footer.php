@@ -46,15 +46,19 @@
 
 <div class="copyright-section">
     <div class="container clearfix">
-            <span class="copytext">Copyright &copy; 2023 | <a href="https://uicookies.com/downloads/x-corporation-free-bootstrap-html-template/">Yung Kong Co.</a> Designed And Developed By: <strong style="color: #31aae2;"">uiCookies.com</strong></span>
+            <span class="copytext">Copyright &copy; 2023 | <a href="https://www.yungkongco.com.my/">Yung Kong Co. Bhd. </a>(103194-T). <strong style="color: #31aae2;">All Rights Reserved.</strong></span>
 
         <ul class="list-inline pull-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+
+            <?php 
+            $current_page = basename($_SERVER['SCRIPT_NAME']);
+            
+            echo ($current_page == 'index.php' ? '<li class="active">' : '<li>') . '<a href="index.php">Home</a></li>';
+            echo ($current_page == 'about.php' ? '<li class="active">' : '<li>') . '<a href="about.php">About</a></li>';
+            echo ($current_page == 'services.php' ? '<li class="active">' : '<li>') . '<a href="services.php">Services</a></li>';
+            echo ($current_page == 'contact.php' ? '<li class="active">' : '<li>') . '<a href="contact.php">Contact</a></li>';
+            
+            ?>
         </ul>
     </div>
     <!-- .container -->
