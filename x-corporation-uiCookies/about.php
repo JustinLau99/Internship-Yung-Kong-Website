@@ -1,3 +1,68 @@
+<?php 
+$images = [
+    ['src' => 'transpaint.png', 'alt' => ''],
+    ['src' => 'lazor.png', 'alt' => ''],
+    ['src' => 'versatile.png', 'alt' => ''],
+    ['src' => 'ymc.png', 'alt' => '']
+    ['src' => 'stanley2.png', 'alt' => '']
+    ['src' => 'irwin2.png', 'alt' => '']
+    ['src' => 'lenox.png', 'alt' => '']
+    ['src' => 'LAVOR_NEW.png', 'alt' => '']
+    ['src' => 'asteel.png', 'alt' => '']
+    ['src' => 'cms.png', 'alt' => '']
+    ['src' => 'dulux.png', 'alt' => '']
+    ['src' => 'bosch.png', 'alt' => '']
+    ['src' => 'hikoki.png', 'alt' => '']
+    ['src' => 'makita2.png', 'alt' => '']
+    ['src' => 'sika2.png', 'alt' => '']
+    ['src' => 'yale2.png', 'alt' => '']
+    ['src' => 'philips.png', 'alt' => '']
+    ['src' => 'karcher.png', 'alt' => '']
+    ['src' => 'abus.png', 'alt' => '']
+    ['src' => 'tri-circle2.png', 'alt' => '']
+    ['src' => '3m.png', 'alt' => '']
+    ['src' => 'hardex.png', 'alt' => '']
+    ['src' => 'energizer.png', 'alt' => '']
+    ['src' => 'eveready.png', 'alt' => '']
+    ['src' => 'koya2.png', 'alt' => '']
+    ['src' => 'prima.png', 'alt' => '']
+    ['src' => 'everlast.png', 'alt' => '']
+    ['src' => 'ecogreen.png', 'alt' => '']
+    ['src' => 'kingkong.png', 'alt' => '']
+    ['src' => 'selleys.png', 'alt' => '']
+    ['src' => 'rexco.png', 'alt' => '']
+    ['src' => 'vip.png', 'alt' => '']
+    ['src' => 'enviomatt2.png', 'alt' => '']
+    ['src' => 'envioclean2.png', 'alt' => '']
+    ['src' => 'domina2.png', 'alt' => '']
+    ['src' => 'galuzinc2.png', 'alt' => '']
+    ['src' => 'AKAIDO.png', 'alt' => '']
+    ['src' => 'INA.png', 'alt' => '']
+    ['src' => 'KHE_NEW.png', 'alt' => '']
+    ['src' => 'tekiro.png', 'alt' => '']
+    ['src' => 'WD40.png', 'alt' => '']
+];
+
+
+?>
+
+<?php 
+    $counter = 0; 
+    foreach ($images as $image): 
+        if ($counter % 6 == 0): ?>
+            <div class="row">
+        <?php endif; ?>
+            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                <a href="#"><img src="<?php echo $image['src']; ?>" alt="<?php echo $image['alt']; ?>"></a>
+            </div>
+        <?php 
+        $counter++; 
+        if ($counter % 6 == 0): ?>
+            </div>
+        <?php endif; 
+    endforeach; 
+?>
+
 <!DOCTYPE html>
 <html>
     <!-- header -->
@@ -226,10 +291,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-1.jpg" alt="Image"></a>
+                <a href="#"><img src="img/logo-brand/transpaint.png" alt="Image"></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-2.jpg" alt="Image"></a>
+                <a href="#"><img src="img/logo-brand/lazor.png" alt="Image"></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
                 <a href="#"><img src="img/logo-client-3.jpg" alt="Image"></a>
