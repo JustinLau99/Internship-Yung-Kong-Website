@@ -356,6 +356,16 @@ Shortcode Content
         }
     }
 
+    .hover-text {
+        text-shadow: 2px 2px 3px black;
+        color: white; /* Initial color */
+        transition: color 0.3s ease; /* Smooth transition effect */
+    }
+    
+    .hover-text:hover {
+        color: rgb(163, 163, 163); /* Color when hovered */
+    }
+    
 .navbar-default {
     margin-bottom : 0;
     }
@@ -366,12 +376,13 @@ Shortcode Content
     height         : 40px;
     }
 
-.navbar-brand img {
-    max-height: 100%; /* Scale down based on height */
-    max-width: 100%; /* Scale down based on width */
-    height: auto; /* Maintain aspect ratio */
-    width: auto; /* Maintain aspect ratio */
+.navbar-brand img{
+    max-height : 100%; /* Scale down based on height */
+    max-width  : 100%; /* Scale down based on width */
+    height     : auto; /* Maintain aspect ratio */
+    width      : auto; /* Maintain aspect ratio */
     }
+
 
 .navbar-default .navbar-nav > li {
     margin-right : 17px;
@@ -1473,6 +1484,8 @@ service-icon-style
     margin-bottom : 25px;
     }
 
+
+
 .footer-logo {
     font-size     : 16px;
     line-height   : 22px;
@@ -1486,6 +1499,7 @@ service-icon-style
     }
 
 .footer .widget_text {
+    text-align: left;
     }
 
 .footer .footer-logo {

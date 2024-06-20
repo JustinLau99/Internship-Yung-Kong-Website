@@ -13,6 +13,12 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.php"><img src="img/yk_logo.png" alt=""></a>
+            <a class="navbar-brand" href="index.php">
+                <p class="hover-text">
+                    榕 光 有 限 公 司</br>
+                    YUNG KONG CO. BHD.
+                </p>
+            </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -29,7 +35,7 @@
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Type Something">
 			                                <span class="input-group-btn">
-			                                  <button type="submit" class="btn btn-primary">Search</button>
+                                                <button type="submit" class="btn btn-primary">Search</button>
 			                                </span>
                                     </div>
                                 </form>
@@ -40,13 +46,13 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right main-nav">
-                
+
                 <?php // Get the name of the current script ?>
                 <?php $current_page = basename($_SERVER['SCRIPT_NAME']); ?>
                 
                 <?php echo ($current_page == 'index.php' ? '<li class="active">' : '<li>')?><a href="index.php">Home</a></li>
                 <?php echo ($current_page == 'about.php' ? '<li class="active">' : '<li>')?><a href="about.php">About</a></li>
-                <?php echo ($current_page == 'services.php' ? '<li class="active">' : '<li>')?><a href="services.php">Services</a></li>
+                <?php echo ($current_page == 'services.php' ? '<li class="active">' : '<li>')?><a href="services.php">Location</a></li>
                 <?php echo ($current_page == 'contact.php' ? '<li class="active">' : '<li>')?><a href="contact.php">Contact</a></li>
                 
                 <li class="dropdown m-menu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Features

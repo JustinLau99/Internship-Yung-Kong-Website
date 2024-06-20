@@ -100,7 +100,7 @@
 
     <section class="section-title">
         <div class="container text-center">
-            <h2>Our Retail Items</h2>
+            <h2>What we offer</h2>
             <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
         </div>
     </section>
@@ -195,14 +195,12 @@
             <div class="col-md-6">
                 <div class="promo-block-wrapper clearfix">
                     <div class="promo-icon">
-                        <i class="fa fa-line-chart"></i>
+                        <i class="fa fa-thumbs-up"></i>
                     </div>
                     <div class="promo-content">
                         
                         <h3>Quality Products</h3>
-                        <p>
-                            We stock only the best brands to ensure you get reliable and durable products.
-                        </p>
+                        <p>We stock only the best brands to ensure you get reliable and durable products.</p>
 
                     </div>
                 </div>
@@ -214,11 +212,11 @@
                     </div>
                     <div class="promo-content">
 
-                        <h3>Competitive Prices.</h3>
+                        <h3>Expert Advice</h3>
                         <p>
-                            Get great value for your money with our competitive pricing.
+                            Our knowledgeable and friendly staff is here to help you find the right products for your needs.
                         </p>
-
+                        
                     </div>
                 </div>
                 <!-- /.promo-block-wrapper -->
@@ -242,6 +240,117 @@
     </div>
 </section>
 <!-- .x-features -->
+
+<section class="client-logo ptb-100">
+    <section class="section-title">
+        <div class="container text-center">
+            <h2>Our Departments</h2>
+            <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+                <a href="#">
+                    <p>Account Department</p><img src="img/department/ykacc.jpg" alt="Image">
+                </a>
+            </div>
+            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+                <a href="#">
+                    <p>Bintawa Department</p><img src="img/department/ykbtw.jpg" alt="Image">
+                </a>
+            </div>
+            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+                <a href="#">
+                    <p>Matang Department</p><img src="img/department/ykmatang.jpg" alt="Image">
+                </a>
+            </div>
+            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+                <a href="#">
+                    <p>Pending Department</p><img src="img/department/ykpending.jpg" alt="Image">
+                </a>
+            </div>
+            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+                <a href="#">
+                    <p>Penrissen Department</p><img src="img/department/ykpenrissen.jpg" alt="Image">
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    <!--end of .container -->
+</section>
+<!-- /.client-logo -->
+
+
+
+<section class="testimonial">
+    <section class="section-title">
+        <div class="container text-center">
+            <h2>Satisfied Customer</h2>
+            <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
+        </div>
+    </section>
+    <div class="container">
+        <div id="testimonialSlider" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <blockquote>
+                        <ul>
+                            <li><img src="img/img-testimonial-1.jpg" class="img-responsive" alt=""/></li>
+                            <li class="name">Justus Kühn</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel </br>lacus
+                            pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar donec</br> diam elit
+                            consequat eget augue vitae aliquet sollicitudin.
+                        </p>
+
+                    </blockquote>
+                </div>
+                <div class="item">
+                    <blockquote>
+                        <ul>
+                            <li><img src="img/img-testimonial-2.jpg" class=" img-responsive" alt=""/></li>
+                            <li class="name">Lennox Arnold</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel </br>lacus
+                            pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar donec</br> diam elit
+                            consequat eget augue vitae aliquet sollicitudin.
+                        </p>
+
+                    </blockquote>
+                </div>
+                <div class="item">
+                    <blockquote>
+                        <ul>
+                            <li><img src="img/img-testimonial-3.jpg" class="img-responsive" alt=""/></li>
+                            <li class="name">Paulina Berger</li>
+                        </ul>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel </br>lacus
+                            pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar donec</br> diam elit
+                            consequat eget augue vitae aliquet sollicitudin.
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#testimonialSlider" role="button" data-slide="prev">
+                <span><i class="fa fa-angle-left"></i></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#testimonialSlider" role="button" data-slide="next">
+                <span><i class="fa fa-angle-right"></i></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- #testimonialSlider -->
+    </div>
+</section>
+<!-- .testimonial -->
 
 <section class="team ptb-100">
     <section class="section-title">
@@ -333,115 +442,6 @@
     <!-- /.container -->
 </section>
 <!-- .team -->
-
-<section class="testimonial">
-    <section class="section-title">
-        <div class="container text-center">
-            <h2>Satisfied Customer</h2>
-            <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-        </div>
-    </section>
-    <div class="container">
-        <div id="testimonialSlider" class="carousel slide" data-ride="carousel">
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <blockquote>
-                        <ul>
-                            <li><img src="img/img-testimonial-1.jpg" class="img-responsive" alt=""/></li>
-                            <li class="name">Justus Kühn</li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel </br>lacus
-                            pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar donec</br> diam elit
-                            consequat eget augue vitae aliquet sollicitudin.
-                        </p>
-
-                    </blockquote>
-                </div>
-                <div class="item">
-                    <blockquote>
-                        <ul>
-                            <li><img src="img/img-testimonial-2.jpg" class=" img-responsive" alt=""/></li>
-                            <li class="name">Lennox Arnold</li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel </br>lacus
-                            pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar donec</br> diam elit
-                            consequat eget augue vitae aliquet sollicitudin.
-                        </p>
-
-                    </blockquote>
-                </div>
-                <div class="item">
-                    <blockquote>
-                        <ul>
-                            <li><img src="img/img-testimonial-3.jpg" class="img-responsive" alt=""/></li>
-                            <li class="name">Paulina Berger</li>
-                        </ul>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel </br>lacus
-                            pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar donec</br> diam elit
-                            consequat eget augue vitae aliquet sollicitudin.
-                        </p>
-                    </blockquote>
-                </div>
-            </div>
-            <!-- Controls -->
-            <a class="left carousel-control" href="#testimonialSlider" role="button" data-slide="prev">
-                <span><i class="fa fa-angle-left"></i></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#testimonialSlider" role="button" data-slide="next">
-                <span><i class="fa fa-angle-right"></i></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <!-- #testimonialSlider -->
-    </div>
-</section>
-<!-- .testimonial -->
-
-<section class="client-logo ptb-100">
-    <section class="section-title">
-        <div class="container text-center">
-            <h2>Our Departments</h2>
-            <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-        </div>
-    </section>
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-                <a href="#">
-                    <p>Account Department</p><img src="img/department/ykacc.jpg" alt="Image">
-                </a>
-            </div>
-            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-                <a href="#">
-                    <p>Bintawa Department</p><img src="img/department/ykbtw.jpg" alt="Image">
-                </a>
-            </div>
-            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-                <a href="#">
-                    <p>Matang Department</p><img src="img/department/ykmatang.jpg" alt="Image">
-                </a>
-            </div>
-            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-                <a href="#">
-                    <p>Pending Department</p><img src="img/department/ykpending.jpg" alt="Image">
-                </a>
-            </div>
-            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-                <a href="#">
-                    <p>Penrissen Department</p><img src="img/department/ykpenrissen.jpg" alt="Image">
-                </a>
-            </div>
-            
-        </div>
-    </div>
-    <!--end of .container -->
-</section>
-<!-- /.client-logo -->
 
 
 <!-- footer -->
