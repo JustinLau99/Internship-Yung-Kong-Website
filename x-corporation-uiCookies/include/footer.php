@@ -72,7 +72,7 @@
 
             <?php echo ($current_page == 'index.php' ? '<li class="active">' : '<li>')?><a href="index.php">Home</a></li>
             <?php echo ($current_page == 'about.php' ? '<li class="active">' : '<li>')?><a href="about.php">About</a></li>
-            <?php echo ($current_page == 'services.php' ? '<li class="active">' : '<li>')?><a href="services.php">Services</a></li>
+            <?php echo ($current_page == 'products.php' ? '<li class="active">' : '<li>')?><a href="products.php">Products</a></li>
             <?php echo ($current_page == 'contact.php' ? '<li class="active">' : '<li>')?><a href="contact.php">Contact</a></li>
             
         </ul>
