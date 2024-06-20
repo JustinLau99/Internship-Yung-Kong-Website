@@ -1033,7 +1033,7 @@ Team
 
 .client-logo a img {
     width              : 100%;
-    opacity            : 0.5;
+    opacity            : 0.8; 
     -webkit-transition : all 0.8s ease 0s;
     -moz-transition    : all 0.8s ease 0s;
     -o-transition      : all 0.8s ease 0s;
@@ -1044,12 +1044,29 @@ Team
     opacity : 1;
     }
 
+.col-md-5th {
+        width: 20%;
+        float: left;
+        padding: 0 15px;
+        box-sizing: border-box; /* Ensures padding is included in the width */
+    }
+
+@media (max-width: 992px) {
+    .col-md-5th {
+        width: 25%; /* For example, 4 items per row on medium screens */
+    }
+}
+
+
 @media (max-width : 992px) {
     .client-logo .section-margin {
         margin-bottom : 30px;
         }
     }
 
+.section-margin p{
+    text-align: center;
+    }
 /* --------------------------------------------
     Page Title
 ----------------------------------------------- */
@@ -1464,8 +1481,8 @@ service-icon-style
 }
 
 .footer-logo img{
-    height: 15%; /* Maintain aspect ratio */
-    width: 15%; /* Maintain aspect ratio */
+    height: 30%; /* Maintain aspect ratio */
+    width: 30%; /* Maintain aspect ratio */
     }
 
 .footer .widget_text {

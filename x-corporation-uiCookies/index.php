@@ -100,34 +100,44 @@
 
     <section class="section-title">
         <div class="container text-center">
-            <h2>What We Offer</h2>
+            <h2>Our Retail Items</h2>
             <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
         </div>
     </section>
 
+    
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="thumbnail clearfix">
-                    <a href="#"><img class="img-responsive" src="img/img-offer-1.jpg" alt="Image"></a>
+                    <a href="#"><img class="img-responsive" src="img/home-offer/construction-building-materials.png" alt="Image"></a>
 
                     <div class="caption">
-                        <h3><a href="#">Investment</a></h3>
+                        <h3><a href="#">Construction & Building Materials</a></h3>
 
-                        <p>Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat
-                            tellus odio malesuada ex.</p>
+                        <ul>
+                            <li>• Building Materials</li>
+                            <li>• Bolts & Fasteners</li>
+                            <li>• Plumbing</li>
+                        </ul>
+
+                        
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="thumbnail clearfix">
-                    <a href="#"><img class="img-responsive" src="img/img-offer-2.jpg" alt="Image"></a>
+                    <a href="#"><img class="img-responsive" src="img/home-offer/tools-equipment.png" alt="Image"></a>
 
                     <div class="caption">
-                        <h3><a href="#">Planning</a></h3>
+                        <h3><a href="#">Tools & Equipment</a></h3>
 
-                        <p>Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat
-                            tellus odio malesuada ex.</p>
+                        <ul>
+                            <li>• Hand Tools</li>
+                            <li>• Power Tools</li>
+                            <li>• Welding & Machinery</li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
@@ -136,25 +146,30 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="thumbnail clearfix">
-                    <a href="#"><img class="img-responsive" src="img/img-offer-3.jpg" alt="Image"></a>
+                    <a href="#"><img class="img-responsive" src="img/home-offer/home-general-supplies.png" alt="Image"></a>
 
                     <div class="caption">
-                        <h3><a href="#">Analysis</a></h3>
+                        <h3><a href="#">Home & General Supplies</a></h3>
 
-                        <p>Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat
-                            tellus odio malesuada ex.</p>
+                        <ul>
+                            <li>• General & Household</li>
+                            <li>• Paint</li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="thumbnail clearfix">
-                    <a href="#"><img class="img-responsive" src="img/img-offer-4.jpg" alt="Image"></a>
+                    <a href="#"><img class="img-responsive" src="img/home-offer/safety-and-utilities.png" alt="Image"></a>
 
                     <div class="caption">
-                        <h3><a href="#">Banking</a></h3>
-
-                        <p>Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat
-                            tellus odio malesuada ex.</p>
+                        <h3><a href="#">Safety and Utilities</a></h3>
+                        
+                        <ul>
+                            <li>• Safety & Security</li>
+                            <li>• Electrical Accessories</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -183,10 +198,12 @@
                         <i class="fa fa-line-chart"></i>
                     </div>
                     <div class="promo-content">
-                        <h3>We teach you how to improve your business</h3>
+                        
+                        <h3>Quality Products</h3>
+                        <p>
+                            We stock only the best brands to ensure you get reliable and durable products.
+                        </p>
 
-                        <p>Lorem ipsum dolor sit consectetuer adipiscing elit nonummy ib uismod tincidunt ut laoreet
-                            dolore magna aliquam erat volutpat.</p>
                     </div>
                 </div>
                 <!-- /.promo-block-wrapper -->
@@ -196,10 +213,12 @@
                         <i class="fa fa-life-ring"></i>
                     </div>
                     <div class="promo-content">
-                        <h3>We make the technology affordable for you</h3>
 
-                        <p>Lorem ipsum dolor sit consectetuer adipiscing elit nonummy ib uismod tincidunt ut laoreet
-                            dolore magna aliquam erat volutpat.</p>
+                        <h3>Competitive Prices.</h3>
+                        <p>
+                            Get great value for your money with our competitive pricing.
+                        </p>
+
                     </div>
                 </div>
                 <!-- /.promo-block-wrapper -->
@@ -209,14 +228,15 @@
                         <i class="fa fa-calculator"></i>
                     </div>
                     <div class="promo-content last-type">
-                        <h3>Seamlessly grow wireless human capital before turnkey.</h3>
 
-                        <p>Lorem ipsum dolor sit consectetuer adipiscing elit nonummy ib uismod tincidunt ut laoreet
-                            dolore magna aliquam erat volutpat.</p>
+                        <h3>Convenient Location.</h3>
+                        <p>
+                            Easily accessible, making your shopping experience quick and convenient.
+                        </p>
+
                     </div>
                 </div>
                 <!-- /.promo-block-wrapper -->
-
             </div>
         </div>
     </div>
@@ -384,30 +404,39 @@
 <section class="client-logo ptb-100">
     <section class="section-title">
         <div class="container text-center">
-            <h2>Our Clients</h2>
+            <h2>Our Departments</h2>
             <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
         </div>
     </section>
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-1.jpg" alt="Image"></a>
+            
+            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+                <a href="#">
+                    <p>Account Department</p><img src="img/department/ykacc.jpg" alt="Image">
+                </a>
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-2.jpg" alt="Image"></a>
+            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+                <a href="#">
+                    <p>Bintawa Department</p><img src="img/department/ykbtw.jpg" alt="Image">
+                </a>
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-3.jpg" alt="Image"></a>
+            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+                <a href="#">
+                    <p>Matang Department</p><img src="img/department/ykmatang.jpg" alt="Image">
+                </a>
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-4.jpg" alt="Image"></a>
+            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+                <a href="#">
+                    <p>Pending Department</p><img src="img/department/ykpending.jpg" alt="Image">
+                </a>
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-5.jpg" alt="Image"></a>
+            <div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+                <a href="#">
+                    <p>Penrissen Department</p><img src="img/department/ykpenrissen.jpg" alt="Image">
+                </a>
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-6.jpg" alt="Image"></a>
-            </div>
+            
         </div>
     </div>
     <!--end of .container -->

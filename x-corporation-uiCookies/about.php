@@ -278,17 +278,24 @@ $logo_brand = [
 <?php 
     $counter = 0; 
     foreach ($logo_brand as $brand): 
-        if ($counter % 6 == 0): ?>
-            <div class="row">
-        <?php endif; ?>
+        if ($counter % 6 == 0): 
+?>
+            <div class="row">';
+<?php
+        endif;
+?>
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-brand/<?php echo $brand['src']; ?>" alt="<?php echo $brand['alt']; ?>"></a>
+                <a href="#">
+                    <img src="img/logo-brand/<?php echo $brand['src']; ?>" alt="<?php echo $brand['alt']; ?>">
+                </a>
             </div>
-        <?php 
+<?php
         $counter++; 
-        if ($counter % 6 == 0): ?>
+        if ($counter % 6 == 0): 
+?>
             </div>
-        <?php endif; 
+<?php
+        endif; 
     endforeach; 
 ?>
 

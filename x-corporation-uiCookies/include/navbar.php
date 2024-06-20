@@ -15,7 +15,6 @@
             <a class="navbar-brand" href="index.php"><img src="img/yk_logo.png" alt=""></a>
         </div>
 
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="#navbar-collapse-1">
 
@@ -41,16 +40,14 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right main-nav">
-                <?php 
-                    // Get the name of the current script
-                    $current_page = basename($_SERVER['SCRIPT_NAME']);
-
-                    echo ($current_page == 'index.php' ? '<li class="active">' : '<li>') . '<a href="index.php">Home</a></li>';
-                    echo ($current_page == 'about.php' ? '<li class="active">' : '<li>') . '<a href="about.php">About</a></li>';
-                    echo ($current_page == 'services.php' ? '<li class="active">' : '<li>') . '<a href="services.php">Services</a></li>';
-                    echo ($current_page == 'contact.php' ? '<li class="active">' : '<li>') . '<a href="contact.php">Contact</a></li>';
-                    
-                ?>
+                
+                <?php // Get the name of the current script ?>
+                <?php $current_page = basename($_SERVER['SCRIPT_NAME']); ?>
+                
+                <?php echo ($current_page == 'index.php' ? '<li class="active">' : '<li>')?><a href="index.php">Home</a></li>
+                <?php echo ($current_page == 'about.php' ? '<li class="active">' : '<li>')?><a href="about.php">About</a></li>
+                <?php echo ($current_page == 'services.php' ? '<li class="active">' : '<li>')?><a href="services.php">Services</a></li>
+                <?php echo ($current_page == 'contact.php' ? '<li class="active">' : '<li>')?><a href="contact.php">Contact</a></li>
                 
                 <li class="dropdown m-menu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Features
                     <span><i class="fa fa-angle-down"></i></span></a>
