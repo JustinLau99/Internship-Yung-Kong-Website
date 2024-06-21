@@ -1,6 +1,6 @@
 <!-- uc-mobile-menu -->
+<div class="uc-mobile-menu uc-mobile-menu-effect">
 
-<!-- <div class="uc-mobile-menu uc-mobile-menu-effect"> -->
     <button type="button" class="close" aria-hidden="true" data-toggle="offcanvas"
             id="uc-mobile-menu-close-btn">&times;</button>
     <div>
@@ -13,5 +13,7 @@
             </ul>
         </div>
     </div>
+
+</div>
 <!-- .uc-mobile-menu -->
  

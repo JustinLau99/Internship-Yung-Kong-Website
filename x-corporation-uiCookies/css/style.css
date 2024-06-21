@@ -60,16 +60,12 @@ a {
     transition         : all 0.3s ease 0s;
     }
 
-a,
-a:active,
-a:focus,
-a:active {
+a, a:active, a:focus, a:active {
     text-decoration : none;
     outline         : none
     }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
     text-decoration : none;
     }
 
@@ -99,7 +95,7 @@ ul {
    -------------------*/
 
 .dim-img {
-    filter: brightness(50%); /* Adjust percentage to make it dimmer */
+    filter: brightness(40%); /* Adjust percentage to make it dimmer */
     width: 100vw; /* Fill the entire viewport width */
     height: 100vh; /* Fill the entire viewport height */
     object-fit: cover; /* Ensure the image covers the entire container */
@@ -356,16 +352,9 @@ Shortcode Content
         }
     }
 
-    .hover-text {
-        text-shadow: 2px 2px 3px black;
-        color: white; /* Initial color */
-        transition: color 0.3s ease; /* Smooth transition effect */
-    }
-    
-    .hover-text:hover {
-        color: rgb(163, 163, 163); /* Color when hovered */
-    }
-    
+
+
+
 .navbar-default {
     margin-bottom : 0;
     }
@@ -376,13 +365,32 @@ Shortcode Content
     height         : 40px;
     }
 
-.navbar-brand img{
+.navbar-brand img {
     max-height : 100%; /* Scale down based on height */
     max-width  : 100%; /* Scale down based on width */
     height     : auto; /* Maintain aspect ratio */
     width      : auto; /* Maintain aspect ratio */
     }
 
+.navbar-brand h1 {
+        text-shadow : 2px 2px 3px black;
+        font-family : "Georgia", Times, serif;
+        color       : white; /* Initial color */
+        transition  : color 0.3s ease; /* Smooth transition effect */
+        /* font-size   : 10px; */
+    }
+
+.navbar-brand h2 {
+        text-shadow : 2px 2px 3px black;
+        font-family : "Georgia", Times, serif;
+        color       : white; /* Initial color */
+        transition  : color 0.3s ease; /* Smooth transition effect */
+        /* font-size   : 10px; */
+    }
+    
+.navbar-brand:hover {
+        color: rgb(163, 163, 163); /* Color when hovered */
+    }
 
 .navbar-default .navbar-nav > li {
     margin-right : 17px;
@@ -676,18 +684,23 @@ Shortcode Content
 --------------------*/
 
 .hero-slide .carousel-caption {
-    bottom      : 50%;
+    bottom 		: 50%;
     text-shadow : none;
-    transform   : translateY(50%);
+    transform 	: translateY(50%);
     }
 
 .hero-slide .carousel-caption h1 {
-    font-size      : 60px;
-    line-height    : 1;
-    font-weight    : bold;
-    text-transform : uppercase;
-    color          : #ffffff;
+    font-family 	: "Georgia", Times, serif;
+	font-size 		: 40px;
+    line-height 	: 1;
+    font-weight 	: bold;
+    text-transform 	: uppercase;
+    color 			: #ffffff;
     }
+
+.carousel-caption{
+
+	}
 
 .hero-slide .carousel-caption p {
     font-size   : 20px;
@@ -744,7 +757,7 @@ Shortcode Content
     }
 
 /* -------------------
- Section Title Style
+ Section Title Styleq
  --------------------- */
 .section-title {
     margin-bottom : 50px;
@@ -1058,7 +1071,7 @@ Team
 .col-md-5th {
         width: 20%;
         float: left;
-        padding: 0 15px;
+        padding: 0 10px;
         box-sizing: border-box; /* Ensures padding is included in the width */
     }
 

@@ -18,15 +18,13 @@
 <div class="content-wrapper">
 
 <!-- .nav -->
-<nav class="navbar m-menu navbar-default navbar-fixed-top">
-    <?php include_once 'include/navbar.php'?>
-</nav>
+<?php include_once 'include/navbar.php'?>
 <!-- .nav -->
 
 
 <section class="single-page-title">
     <div class="container text-center">
-        <h2>Services</h2>
+        <h2>Categories</h2>
     </div>
 </section>
 <!-- .page-title -->
@@ -203,9 +201,7 @@
 
 
 <!-- footer -->
-<footer class="footer">
-    <?php include_once 'include/footer.php' ?>
-</footer>
+<?php include_once 'include/footer.php' ?>
 <!-- .footer -->
 
 </div>
@@ -214,10 +210,7 @@
 <!-- .offcanvas-pusher -->
 
 <!-- uc-mobile-menu -->
-<div class="uc-mobile-menu uc-mobile-menu-effect">
-    <?php include_once 'include/uc-mobile-menu.php'?>
-</div>
-<!-- .uc-mobile-menu -->
+<?php include_once 'include/uc-mobile-menu.php'?>
 
 
 </div>

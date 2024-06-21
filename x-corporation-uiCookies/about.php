@@ -67,9 +67,7 @@ $logo_brand = [
 <div class="content-wrapper">
 
 <!-- .nav -->
-<nav class="navbar m-menu navbar-default navbar-fixed-top">
-    <?php include_once 'include/navbar.php'?>
-</nav>
+<?php include_once 'include/navbar.php'?>
 <!-- .nav -->
 
 
@@ -280,7 +278,7 @@ $logo_brand = [
     foreach ($logo_brand as $brand): 
         if ($counter % 6 == 0): 
 ?>
-            <div class="row">';
+            <div class="row">
 <?php
         endif;
 ?>
@@ -295,8 +293,8 @@ $logo_brand = [
 ?>
             </div>
 <?php
-        endif; 
-    endforeach; 
+        endif;
+    endforeach;
 ?>
 
     </div>
@@ -306,9 +304,7 @@ $logo_brand = [
 
 
 <!-- footer -->
-<footer class="footer">
-    <?php include_once 'include/footer.php' ?>
-</footer>
+<?php include_once 'include/footer.php' ?>
 <!-- .footer -->
 
 </div>
@@ -317,10 +313,8 @@ $logo_brand = [
 <!-- .offcanvas-pusher -->
 
 <!-- uc-mobile-menu -->
-<div class="uc-mobile-menu uc-mobile-menu-effect">
-    <?php include_once 'include/uc-mobile-menu.php'?>
-</div>
-<!-- .uc-mobile-menu -->
+<?php include_once 'include/uc-mobile-menu.php'?>
+
 
 </div>
 <!-- #main-wrapper -->

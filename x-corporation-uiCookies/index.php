@@ -1,3 +1,19 @@
+<?php 
+
+// $product_categories = [
+//     ["title" => "Bolts & Fasteners"		, "img" => "bolts_fasteners_categories.jpg"],
+//     ["title" => "Building Material"		, "img" => "building_material_categories.jpg"],
+//     ["title" => "Electrical Accessories", "img" => "electrical_categories.jpg"],
+//     ["title" => "General Tools"			, "img" => "general_tools_categories.jpg"],
+//     ["title" => "Hand Tools"			, "img" => "hand_tools_categories.jpg"],
+//     ["title" => "Paint"					, "img" => "paint_categories.jpg"],
+//     ["title" => "Plumbing"				, "img" => "plumbing_categories.jpg"],
+//     ["title" => "Power Tools"			, "img" => "power_tools_categories.jpg"],
+//     ["title" => "Safety & Security"		, "img" => "safety_security_categories.jpg"],
+// ];
+
+?>
+
 <!DOCTYPE html>
 <html>
     <!-- header -->
@@ -12,75 +28,38 @@
 </div>
 
 <div class="uc-mobile-menu-pusher">
-
-<div class="content-wrapper">
+	<div class="content-wrapper">
 
 <!-- .nav -->
-<nav class="navbar m-menu navbar-default navbar-fixed-top">
-    <?php include_once 'include/navbar.php'?>
-</nav>
+<?php include_once 'include/navbar.php'?>
 <!-- .nav -->
 
 <div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
+    
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#x-corp-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#x-corp-carousel" data-slide-to="1"></li>
-        <li data-target="#x-corp-carousel" data-slide-to="2"></li>
-        <li data-target="#x-corp-carousel" data-slide-to="3"></li>
-        <li data-target="#x-corp-carousel" data-slide-to="4"></li>
+		<li data-target="#x-corp-carousel" data-slide-to="0" class="active"></li>
+		<li data-target="#x-corp-carousel" data-slide-to="1" class=""></li>
+		<li data-target="#x-corp-carousel" data-slide-to="2" class=""></li>
+		<li data-target="#x-corp-carousel" data-slide-to="3" class=""></li>
+		<li data-target="#x-corp-carousel" data-slide-to="4" class=""></li>
     </ol>
+
+	<div class="carousel-caption">
+		<h1>Yung Kong Co. Bhd.</h1>
+		<h2>Yung Kong Co. Bhd.</h2>
+
+		<p>[Information placeholder].</p>
+	</div>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
-        <div class="item active">
-            <img src="img/department/ykacc.jpg" alt="..." class="dim-img">
-
-            <div class="carousel-caption">
-                <h1>Account Department</h1>
-
-                <p>[Information placeholder].</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/department/ykbtw.jpg" alt="..." class="dim-img">
-
-            <div class="carousel-caption">
-                <h1>Bintawa Department</h1>
-
-                <p>[Information placeholder].</p>
-            </div>
-
-        </div>
-        <div class="item">
-            <img src="img/department/ykmatang.jpg" alt="..." class="dim-img">
-
-            <div class="carousel-caption">
-                <h1>Matang Department</h1>
-
-                <p>[Information placeholder].</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/department/ykpending.jpg" alt="..." class="dim-img">
-
-            <div class="carousel-caption">
-                <h1>Pending Department</h1>
-
-                <p>[Information placeholder].</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/department/ykpenrissen.jpg" alt="..." class="dim-img">
-
-            <div class="carousel-caption">
-                <h1>Penrissen Department</h1>
-
-                <p>[Information placeholder].</p>
-            </div>
-
-        </div>
+        <div class="item active"><img src="img/department/slider-ykacc.jpg" class="dim-img"></div>
+        <div class="item"><img src="img/department/slider-ykbtw.jpg" class="dim-img"></div>
+        <div class="item"><img src="img/department/slider-ykmatang.jpg" class="dim-img"></div>
+        <div class="item"><img src="img/department/slider-ykpending.jpg" class="dim-img"></div>
+        <div class="item"><img src="img/department/slider-ykpenrissen.jpg" class="dim-img"></div>
 
     </div>
 
@@ -284,182 +263,107 @@
 <!-- /.client-logo -->
 
 
-
-<section class="testimonial">
+<section class="skills ptb-100 gray-bg">
     <section class="section-title">
         <div class="container text-center">
-            <h2>Satisfied Customer</h2>
+            <h2>Our Professional Skills</h2>
             <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
         </div>
     </section>
-    <div class="container">
-        <div id="testimonialSlider" class="carousel slide" data-ride="carousel">
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <blockquote>
-                        <ul>
-                            <li><img src="img/img-testimonial-1.jpg" class="img-responsive" alt=""/></li>
-                            <li class="name">Justus Kühn</li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel </br>lacus
-                            pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar donec</br> diam elit
-                            consequat eget augue vitae aliquet sollicitudin.
-                        </p>
-
-                    </blockquote>
-                </div>
-                <div class="item">
-                    <blockquote>
-                        <ul>
-                            <li><img src="img/img-testimonial-2.jpg" class=" img-responsive" alt=""/></li>
-                            <li class="name">Lennox Arnold</li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel </br>lacus
-                            pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar donec</br> diam elit
-                            consequat eget augue vitae aliquet sollicitudin.
-                        </p>
-
-                    </blockquote>
-                </div>
-                <div class="item">
-                    <blockquote>
-                        <ul>
-                            <li><img src="img/img-testimonial-3.jpg" class="img-responsive" alt=""/></li>
-                            <li class="name">Paulina Berger</li>
-                        </ul>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel </br>lacus
-                            pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar donec</br> diam elit
-                            consequat eget augue vitae aliquet sollicitudin.
-                        </p>
-                    </blockquote>
-                </div>
-            </div>
-            <!-- Controls -->
-            <a class="left carousel-control" href="#testimonialSlider" role="button" data-slide="prev">
-                <span><i class="fa fa-angle-left"></i></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#testimonialSlider" role="button" data-slide="next">
-                <span><i class="fa fa-angle-right"></i></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <!-- #testimonialSlider -->
-    </div>
-</section>
-<!-- .testimonial -->
-
-<section class="team ptb-100">
-    <section class="section-title">
-        <div class="container text-center">
-            <h2>Our Team</h2>
-            <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-        </div>
-    </section>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/img-team-1.jpg" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>Reena Scot -
-                            <small>Director</small>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </div>
-            <!-- /.col-sm-4 -->
+            <div class="col-md-6">
+                <h3>Completely reconceptualize leading-edge e-commerce</h3>
 
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/img-team-2.jpg" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>David Martin -
-                            <small>Founder</small>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </div>
-            <!-- /.col-sm-4 -->
+                <p>Whereas 2.0 ideas. Energistically expedite frictionless infrastructures without user friendly quality
+                    vectors. Distinctively communicate customer directed content for leading-edge web-readiness.
+                    Professionally fabricate technically sound mindshare before emerging paradigms. Efficiently e-enable
+                    vertical benefits after intermandated vortals.</p>
 
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/img-team-3.jpg" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>Jenefir White -
-                            <small>marketing</small>
-                        </h3>
-                    </figcaption>
-                </figure>
+                <p>Enthusiastically innovate one-to-one technology through user-centric architectures. Dynamically
+                    whiteboard global processes with compelling interfaces. Globally empower ubiquitous growth
+                    strategies vis-a-vis cross-unit alignments. Collaboratively evisculate client-focused niches with
+                    impactful alignments.</p>
             </div>
-            <!-- /.col-sm-4 -->
+            <div class="col-md-6 x-progress">
+                <div class="progress-wrapper">
+                    <div class="progress-item">
+                        <span class="progress-title">Solution</span>
 
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-dealy" role="progressbar" aria-valuenow="50"
+                                 aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                        </div>
+                        <span class="progress-percent">50%</span>
+                    </div>
+                    <!-- /.progress-item -->
+
+                    <div class="progress-item">
+                        <span class="progress-title">Creativity</span>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-dealy" role="progressbar" aria-valuenow="90"
+                                 aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                        </div>
+                        <span class="progress-percent">90%</span>
+                    </div>
+                    <!-- /.progress-item -->
+
+                    <div class="progress-item">
+                        <span class="progress-title">Finance</span>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-dealy" role="progressbar" aria-valuenow="75"
+                                 aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                        </div>
+                        <span class="progress-percent">75%</span>
+                    </div>
+                    <!-- /.progress-item -->
+
+                    <div class="progress-item">
+                        <span class="progress-title">Brand</span>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-dealy" role="progressbar" aria-valuenow="33"
+                                 aria-valuemin="0" aria-valuemax="100" style="width: 33%;"></div>
+                        </div>
+                        <span class="progress-percent">33%</span>
+                    </div>
+                    <!-- /.progress-item -->
+
+                    <div class="progress-item">
+                        <span class="progress-title">Efficiency</span>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-dealy" role="progressbar" aria-valuenow="82"
+                                 aria-valuemin="0" aria-valuemax="100" style="width: 82%;"></div>
+                        </div>
+                        <span class="progress-percent">82%</span>
+                    </div>
+                    <!-- /.progress-item -->
+                </div>
+                <!-- /.progress-wrapper -->
+            </div>
         </div>
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/img-team-4.jpg" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>Reena Scot -
-                            <small>Director</small>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </div>
-            <!-- /.col-sm-4 -->
-
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/img-team-5.jpg" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>David Martin -
-                            <small>Founder</small>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </div>
-            <!-- /.col-sm-4 -->
-
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/img-team-6.jpg" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>Jenefir White -
-                            <small>marketing</small>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </div>
-            <!-- /.col-sm-4 -->
-
-        </div>
-        <!-- /.row -->
     </div>
-    <!-- /.container -->
+
 </section>
-<!-- .team -->
+<!-- .skills -->
 
 
-<!-- footer -->
-<footer class="footer">
-    <?php include_once 'include/footer.php' ?>
-</footer>
-<!-- .footer -->
 
-</div>
-<!-- .content-wrapper -->
+<!-- footer --> 
+ <?php include_once 'include/footer.php' ?>
+
+ 
+	</div>
+	<!-- .content-wrapper -->
 </div>
 <!-- .offcanvas-pusher -->
 
 <!-- uc-mobile-menu -->
-<div class="uc-mobile-menu uc-mobile-menu-effect">
-    <?php include_once 'include/uc-mobile-menu.php'?>
-</div>
-<!-- .uc-mobile-menu -->
+<?php include_once 'include/uc-mobile-menu.php'?>
 
 </div>
 <!-- #main-wrapper -->

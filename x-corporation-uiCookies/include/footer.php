@@ -1,83 +1,85 @@
 
-<!-- <footer class="footer"> -->
-
 <!-- Footer Widget Section -->
-<div class="footer-widget-section">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-sm-4 footer-block">
-                <div class="footer-widget">
-                <a href="index.php"><img src="img/yk_logo.png" alt="yk_logo" style="max-width: 100px; height: auto;"></a>
-                <a href="index.php">                    
-                    <p class="hover-text" style="font-size: 25px;">
-                    </br>榕 光 有 限 公 司</br></br>
-                        YUNG KONG CO. BHD.
-                    </p>
-                </a>
-                </div>
-            </div><!-- /.col-sm-4 -->
+<footer class="footer">
 
-            <div class="col-sm-4 footer-block">
-                <div class="footer-widget widget_text">
-                    <h3>Products</h3>
-                    <p>
-                        <i class="bi bi-house-door-fill"></i> Building Materials</br>
-                        <i class="bi bi-nut-fill"></i> Bolts & Fasteners</i></br>
-                        <i class="bi bi-wrench"></i> Hand Tools</br>
-                        <i class="bi bi-ladder"></i> General & Household</br>
-                        <i class="bi bi-door-open-fill"></i> Welding & Machinery</br>
-                        <i class="bi bi-lock-fill"></i> Safety & Security</br>
-                        <i class="bi bi-lightning-fill"></i> Electrical Accessories</br>
-                        <i class="bi bi-battery-full"></i> Plumbing</br>
-                        <i class="bi bi-plug-fill"></i> Power Tools</br>
-                        <i class="bi bi-paint-bucket"></i> Paint
-                    </p>
+    <div class="footer-widget-section">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-4 footer-block">
+                    <div class="footer-widget">
+                        <a href="index.php"><img src="img/yk_logo.png" alt="yk_logo" style="max-width: 100px; height: auto;"></a>
+                        <p class="logo-text"></br>
+                            <a href="index.php">                    
+                                榕 光 有 限 公 司</br>
+                                YUNG KONG CO. BHD.
+                            </a>
+                        </p>
                     </div>
-            </div><!-- /.col-sm-4 -->
+                </div><!-- /.col-sm-4 -->
 
-            <div class="col-sm-4 footer-block last">
-                <div class="footer-widget widget_text">
-                    <h3>Contact Us Today</h3>
-                    <address>
-                        Call Us: <u>082-483 570</u><br>
-                        Send an Email on <a href="mailto:ykacc@yungkong.com" target="_blank" rel="noopener noreferrer">
-                            ykacc@yungkong.com</a><br>
-                        Visit Us at <a href="https://maps.app.goo.gl/ZWygtHRJ35YiDgTn7" target="_blank" rel="noopener noreferrer">
-                            WISMA HII YII NGIIK, 3rd Floor, Lot 7573, Jalan Kwong Lee Bank, 93450</a>
-                    </address>
+                <div class="col-sm-4 footer-block">
+                    <div class="footer-widget widget_text">
+                        <h3>Products</h3>
+                        <p>
+                            <i class="bi bi-house-door-fill"></i> Building Materials</br>
+                            <i class="bi bi-nut-fill"></i> Bolts & Fasteners</i></br>
+                            <i class="bi bi-wrench"></i> Hand Tools</br>
+                            <i class="bi bi-ladder"></i> General & Household</br>
+                            <i class="bi bi-door-open-fill"></i> Welding & Machinery</br>
+                            <i class="bi bi-lock-fill"></i> Safety & Security</br>
+                            <i class="bi bi-lightning-fill"></i> Electrical Accessories</br>
+                            <i class="bi bi-battery-full"></i> Plumbing</br>
+                            <i class="bi bi-plug-fill"></i> Power Tools</br>
+                            <i class="bi bi-paint-bucket"></i> Paint
+                        </p>
+                        </div>
+                </div><!-- /.col-sm-4 -->
 
-                    <ul class="list-inline social-links">
-                        <li><a href="https://www.facebook.com/p/Yung-Kong-Co-Bhd-Hardware-%E4%BA%94%E9%87%91%E5%BA%97-100076001867357/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://api.whatsapp.com/send?phone=60168866571" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-whatsapp"></i></a></li>
-                        <li><a href="mailto:ykacc@yungkong.com" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-envelope"></i></a></li>
-                        <li><a href="https://maps.app.goo.gl/ZWygtHRJ35YiDgTn7" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-map-marker"></i></a></li>
-                    </ul>
-                </div>
-            </div><!-- /.col-sm-4 -->
+                <div class="col-sm-4 footer-block last">
+                    <div class="footer-widget widget_text">
+                        <h3>Contact Us Today</h3>
+                        <address>
+                            Call Us: <u>082-483 570</u><br>
+                            Send an Email on <a href="mailto:ykacc@yungkong.com" target="_blank" rel="noopener noreferrer">
+                                ykacc@yungkong.com</a><br>
+                            Visit Us at <a href="https://maps.app.goo.gl/ZWygtHRJ35YiDgTn7" target="_blank" rel="noopener noreferrer">
+                                WISMA HII YII NGIIK, 3rd Floor, Lot 7573, Jalan Kwong Lee Bank, 93450</a>
+                        </address>
+
+                        <ul class="list-inline social-links">
+                            <li><a href="https://www.facebook.com/p/Yung-Kong-Co-Bhd-Hardware-%E4%BA%94%E9%87%91%E5%BA%97-100076001867357/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=60168866571" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="mailto:ykacc@yungkong.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-envelope"></i></a></li>
+                            <li><a href="https://maps.app.goo.gl/ZWygtHRJ35YiDgTn7" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-map-marker"></i></a></li>
+                        </ul>
+                    </div>
+                </div><!-- /.col-sm-4 -->
+            </div>
         </div>
+    </div><!-- /.Footer Widget Section -->
+
+    <div class="copyright-section">
+        <div class="container clearfix">
+                <span class="copytext">Copyright &copy; 2023 | <a href="https://www.yungkongco.com.my/">Yung Kong Co. Bhd. </a>(103194-T). <strong style="color: #31aae2;">All Rights Reserved.</strong></span>
+
+            <ul class="list-inline pull-right">
+
+                <?php $current_page = basename($_SERVER['SCRIPT_NAME']);?>
+
+                <?php echo ($current_page == 'index.php' ? '<li class="active">' : '<li>')?><a href="index.php">Home</a></li>
+                <?php echo ($current_page == 'about.php' ? '<li class="active">' : '<li>')?><a href="about.php">About</a></li>
+                <?php echo ($current_page == 'products.php' ? '<li class="active">' : '<li>')?><a href="products.php">Products</a></li>
+                <?php echo ($current_page == 'contact.php' ? '<li class="active">' : '<li>')?><a href="contact.php">Contact</a></li>
+                
+            </ul>
+        </div>
+        <!-- .container -->
     </div>
-</div><!-- /.Footer Widget Section -->
-
-<div class="copyright-section">
-    <div class="container clearfix">
-            <span class="copytext">Copyright &copy; 2023 | <a href="https://www.yungkongco.com.my/">Yung Kong Co. Bhd. </a>(103194-T). <strong style="color: #31aae2;">All Rights Reserved.</strong></span>
-
-        <ul class="list-inline pull-right">
-
-            <?php $current_page = basename($_SERVER['SCRIPT_NAME']);?>
-
-            <?php echo ($current_page == 'index.php' ? '<li class="active">' : '<li>')?><a href="index.php">Home</a></li>
-            <?php echo ($current_page == 'about.php' ? '<li class="active">' : '<li>')?><a href="about.php">About</a></li>
-            <?php echo ($current_page == 'products.php' ? '<li class="active">' : '<li>')?><a href="products.php">Products</a></li>
-            <?php echo ($current_page == 'contact.php' ? '<li class="active">' : '<li>')?><a href="contact.php">Contact</a></li>
-            
-        </ul>
-    </div>
-    <!-- .container -->
-</div>
-<!-- .copyright-section -->
-
+    <!-- .copyright-section -->
+     
+</footer>
+<!-- .footer -->

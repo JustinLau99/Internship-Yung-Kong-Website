@@ -1,7 +1,6 @@
+<!-- nav -->
+<nav class="navbar m-menu navbar-default navbar-fixed-top">
 
-
-<!-- <nav class="navbar m-menu navbar-default navbar-fixed-top"> -->
-    
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -14,10 +13,8 @@
             </button>
             <a class="navbar-brand" href="index.php"><img src="img/yk_logo.png" alt=""></a>
             <a class="navbar-brand" href="index.php">
-                <p class="hover-text">
-                    榕 光 有 限 公 司</br>
-                    YUNG KONG CO. BHD.
-                </p>
+                <h1>榕 光 有 限 公 司</h1>
+                <h2>YUNG KONG CO. BHD.</h2>
             </a>
         </div>
 
@@ -92,6 +89,14 @@
                                     <li><a href="#">Responsive Design</a></li>
                                     <li><a href="#">Pixel Perfect Graphics</a></li>
                                 </ul>
+                                <ul class="col-sm-3">
+                                    <li class="dropdown-header">Widget Haeder</li>
+                                    <li><a href="#">Awesome Features</a></li>
+                                    <li><a href="#">Clean Interface</a></li>
+                                    <li><a href="#">Available Possibilities</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Pixel Perfect Graphics</a></li>
+                                </ul>
                             </div>
                         </li>
                     </ul>
@@ -103,3 +108,5 @@
         <!-- .navbar-collapse -->
     </div>
     <!-- .container -->
+</nav>
+<!-- nav -->
