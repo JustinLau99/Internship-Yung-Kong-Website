@@ -1,23 +1,14 @@
 <?php 
 
-// $product_categories = [
-//     ["title" => "Bolts & Fasteners"		, "img" => "bolts_fasteners_categories.jpg"],
-//     ["title" => "Building Material"		, "img" => "building_material_categories.jpg"],
-//     ["title" => "Electrical Accessories", "img" => "electrical_categories.jpg"],
-//     ["title" => "General Tools"			, "img" => "general_tools_categories.jpg"],
-//     ["title" => "Hand Tools"			, "img" => "hand_tools_categories.jpg"],
-//     ["title" => "Paint"					, "img" => "paint_categories.jpg"],
-//     ["title" => "Plumbing"				, "img" => "plumbing_categories.jpg"],
-//     ["title" => "Power Tools"			, "img" => "power_tools_categories.jpg"],
-//     ["title" => "Safety & Security"		, "img" => "safety_security_categories.jpg"],
-// ];
+
 
 ?>
 
 <!DOCTYPE html>
 <html>
-    <!-- header -->
+<!-- header -->
     <?php include_once 'include/header.php'?>
+<!-- .header -->
 <body>
 <div id="main-wrapper">
 <!-- Page Preloader -->
@@ -31,7 +22,7 @@
 	<div class="content-wrapper">
 
 <!-- .nav -->
-<?php include_once 'include/navbar.php'?>
+    <?php include_once 'include/navbar.php'?>
 <!-- .nav -->
 
 <div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
@@ -47,7 +38,6 @@
 
 	<div class="carousel-caption">
 		<h1>Yung Kong Co. Bhd.</h1>
-		<h2>Yung Kong Co. Bhd.</h2>
 
 		<p>[Information placeholder].</p>
 	</div>
@@ -89,10 +79,10 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="thumbnail clearfix">
-                    <a href="#"><img class="img-responsive" src="img/home-offer/construction-building-materials.png" alt="Image"></a>
+                    <a href="products.php"><img class="img-responsive" src="img/home-offer/construction-building-materials.png" alt="Image"></a>
 
                     <div class="caption">
-                        <h3><a href="#">Construction & Building Materials</a></h3>
+                        <h3><a href="products.php">Construction & Building Materials</a></h3>
 
                         <ul>
                             <li>• Building Materials</li>
@@ -106,10 +96,10 @@
             </div>
             <div class="col-md-6">
                 <div class="thumbnail clearfix">
-                    <a href="#"><img class="img-responsive" src="img/home-offer/tools-equipment.png" alt="Image"></a>
+                    <a href="products.php"><img class="img-responsive" src="img/home-offer/tools-equipment.png" alt="Image"></a>
 
                     <div class="caption">
-                        <h3><a href="#">Tools & Equipment</a></h3>
+                        <h3><a href="products.php">Tools & Equipment</a></h3>
 
                         <ul>
                             <li>• Hand Tools</li>
@@ -125,10 +115,10 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="thumbnail clearfix">
-                    <a href="#"><img class="img-responsive" src="img/home-offer/home-general-supplies.png" alt="Image"></a>
+                    <a href="products.php"><img class="img-responsive" src="img/home-offer/home-general-supplies.png" alt="Image"></a>
 
                     <div class="caption">
-                        <h3><a href="#">Home & General Supplies</a></h3>
+                        <h3><a href="products.php">Home & General Supplies</a></h3>
 
                         <ul>
                             <li>• General & Household</li>
@@ -140,10 +130,10 @@
             </div>
             <div class="col-md-6">
                 <div class="thumbnail clearfix">
-                    <a href="#"><img class="img-responsive" src="img/home-offer/safety-and-utilities.png" alt="Image"></a>
+                    <a href="products.php"><img class="img-responsive" src="img/home-offer/safety-and-utilities.png" alt="Image"></a>
 
                     <div class="caption">
-                        <h3><a href="#">Safety and Utilities</a></h3>
+                        <h3><a href="products.php">Safety and Utilities</a></h3>
                         
                         <ul>
                             <li>• Safety & Security</li>
@@ -354,8 +344,8 @@
 
 
  <!-- footer -->
-<?php include_once 'include/footer.php' ?>
-
+    <?php include_once 'include/footer.php' ?>
+<!-- .footer -->
  
 	</div>
 	<!-- .content-wrapper -->
@@ -363,7 +353,8 @@
 <!-- .offcanvas-pusher -->
 
 <!-- uc-mobile-menu -->
-<?php include_once 'include/uc-mobile-menu.php'?>
+    <?php include_once 'include/uc-mobile-menu.php'?>
+<!-- uc-mobile-menu -->
 
 </div>
 <!-- #main-wrapper -->

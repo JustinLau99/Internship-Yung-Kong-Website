@@ -98,8 +98,8 @@ ul {
     filter: brightness(40%); /* Adjust percentage to make it dimmer */
     width: 100vw; /* Fill the entire viewport width */
     height: 100vh; /* Fill the entire viewport height */
-    object-fit: cover; /* Ensure the image covers the entire container */
-    object-position: center; /* Center the image within the container */
+    object-fit: cover; /* Ensure the image covers the entire  */
+    object-position: center; /* Center the image within  */
 }
 
 #main-wrapper{
@@ -378,8 +378,8 @@ Shortcode Content
 	font-family : Baskerville, Georgia, "Kaiti", "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
 	font-weight : bold;
 	font-size 	: 22px;
-	text-shadow : 2px 2px 3px black;
-    }
+	text-shadow : 2px 2px 3px black;	
+    }   
 
 .navbar-brand h2, .footer-widget h2 {
 	color       : white; 
@@ -695,13 +695,14 @@ Shortcode Content
     }
 
 .hero-slide .carousel-caption h1 {
-    font-family 	: "Georgia", Times, serif;
 	font-size 		: 40px;
     line-height 	: 1;
     font-weight 	: bold;
     text-transform 	: uppercase;
     color 			: #ffffff;
+	text-shadow : 2px 2px 3px black;
     }
+
 
 .carousel-caption{
 
@@ -1122,7 +1123,6 @@ Team
 .single-page-title h2 {
     display        : inline-block;
     font-size      : 72px;
-    text-transform : uppercase;
     font-weight    : 700;
     margin-bottom  : 0;
     color          : #fff;

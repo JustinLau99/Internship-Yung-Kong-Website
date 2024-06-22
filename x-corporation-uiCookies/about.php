@@ -1,46 +1,46 @@
 <?php 
 $logo_brand = [
-    ['src' => 'transpaint.png', 'alt' => 'transpaint.png'],
-    ['src' => 'lazor.png', 'alt' => 'lazor.png'],
-    ['src' => 'versatile.png', 'alt' => 'versatile.png'],
-    ['src' => 'ymc.png', 'alt' => 'ymc.png'],
-    ['src' => 'stanley2.png', 'alt' => 'stanley2.png'],
-    ['src' => 'irwin2.png', 'alt' => 'irwin2.png'],
-    ['src' => 'lenox.png', 'alt' => 'lenox.png'],
-    ['src' => 'LAVOR_NEW.png', 'alt' => 'LAVOR_NEW.png'],
-    ['src' => 'asteel.png', 'alt' => 'asteel.png'],
-    ['src' => 'cms.png', 'alt' => 'cms.png'],
-    ['src' => 'dulux.png', 'alt' => 'dulux.png'],
-    ['src' => 'bosch.png', 'alt' => 'bosch.png'],
-    ['src' => 'hikoki.png', 'alt' => 'hikoki.png'],
-    ['src' => 'makita2.png', 'alt' => 'makita2.png'],
-    ['src' => 'sika2.png', 'alt' => 'sika2.png'],
-    ['src' => 'yale2.png', 'alt' => 'yale2.png'],
-    ['src' => 'philips.png', 'alt' => 'philips.png'],
-    ['src' => 'karcher.png', 'alt' => 'karcher.png'],
-    ['src' => 'abus.png', 'alt' => 'abus.png'],
-    ['src' => 'tri-circle2.png', 'alt' => 'circle2.png'],
-    ['src' => '3m.png', 'alt' => '3m.png'],
-    ['src' => 'hardex.png', 'alt' => 'hardex.png'],
-    ['src' => 'energizer.png', 'alt' => 'energizer.png'],
-    ['src' => 'eveready.png', 'alt' => 'eveready.png'],
-    ['src' => 'koya2.png', 'alt' => 'koya2.png'],
-    ['src' => 'prima.png', 'alt' => 'prima.png'],
-    ['src' => 'everlast.png', 'alt' => 'everlast.png'],
-    ['src' => 'ecogreen.png', 'alt' => 'ecogreen.png'],
-    ['src' => 'kingkong.png', 'alt' => 'kingkong.png'],
-    ['src' => 'selleys.png', 'alt' => 'selleys.png'],
-    ['src' => 'rexco.png', 'alt' => 'rexco.png'],
-    ['src' => 'vip.png', 'alt' => 'vip.png'],
-    ['src' => 'enviomatt2.png', 'alt' => 'enviomatt2.png'],
-    ['src' => 'envioclean2.png', 'alt' => 'envioclean2.png'],
-    ['src' => 'domina2.png', 'alt' => 'domina2.png'],
-    ['src' => 'galuzinc2.png', 'alt' => 'galuzinc2.png'],
-    ['src' => 'AKAIDO.png', 'alt' => 'AKAIDO.png'],
-    ['src' => 'INA.png', 'alt' => 'INA.png'],
-    ['src' => 'KHE_NEW.png', 'alt' => 'KHE_NEW.png'],
-    ['src' => 'tekiro.png', 'alt' => 'tekiro.png'],
-    ['src' => 'WD40.png', 'alt' => 'WD40.png'],
+    ['src' => 'transpaint.png'  ,'alt' => 'transpaint.png'],
+    ['src' => 'lazor.png'       ,'alt' => 'lazor.png'],
+    ['src' => 'versatile.png'   ,'alt' => 'versatile.png'],
+    ['src' => 'ymc.png'         ,'alt' => 'ymc.png'],
+    ['src' => 'stanley2.png'    ,'alt' => 'stanley2.png'],
+    ['src' => 'irwin2.png'      ,'alt' => 'irwin2.png'],
+    ['src' => 'lenox.png'       ,'alt' => 'lenox.png'],
+    ['src' => 'LAVOR_NEW.png'   ,'alt' => 'LAVOR_NEW.png'],
+    ['src' => 'asteel.png'      ,'alt' => 'asteel.png'],
+    ['src' => 'cms.png'         ,'alt' => 'cms.png'],
+    ['src' => 'dulux.png'       ,'alt' => 'dulux.png'],
+    ['src' => 'bosch.png'       ,'alt' => 'bosch.png'],
+    ['src' => 'hikoki.png'      ,'alt' => 'hikoki.png'],
+    ['src' => 'makita2.png'     ,'alt' => 'makita2.png'],
+    ['src' => 'sika2.png'       ,'alt' => 'sika2.png'],
+    ['src' => 'yale2.png'       ,'alt' => 'yale2.png'],
+    ['src' => 'philips.png'     ,'alt' => 'philips.png'],
+    ['src' => 'karcher.png'     ,'alt' => 'karcher.png'],
+    ['src' => 'abus.png'        ,'alt' => 'abus.png'],
+    ['src' => 'tri-circle2.png' ,'alt' => 'circle2.png'],
+    ['src' => '3m.png'          ,'alt' => '3m.png'],
+    ['src' => 'hardex.png'      ,'alt' => 'hardex.png'],
+    ['src' => 'energizer.png'   ,'alt' => 'energizer.png'],
+    ['src' => 'eveready.png'    ,'alt' => 'eveready.png'],
+    ['src' => 'koya2.png'       ,'alt' => 'koya2.png'],
+    ['src' => 'prima.png'       ,'alt' => 'prima.png'],
+    ['src' => 'everlast.png'    ,'alt' => 'everlast.png'],
+    ['src' => 'ecogreen.png'    ,'alt' => 'ecogreen.png'],
+    ['src' => 'kingkong.png'    ,'alt' => 'kingkong.png'],
+    ['src' => 'selleys.png'     ,'alt' => 'selleys.png'],
+    ['src' => 'rexco.png'       ,'alt' => 'rexco.png'],
+    ['src' => 'vip.png'         ,'alt' => 'vip.png'],
+    ['src' => 'enviomatt2.png'  ,'alt' => 'enviomatt2.png'],
+    ['src' => 'envioclean2.png' ,'alt' => 'envioclean2.png'],
+    ['src' => 'domina2.png'     ,'alt' => 'domina2.png'],
+    ['src' => 'galuzinc2.png'   ,'alt' => 'galuzinc2.png'],
+    ['src' => 'AKAIDO.png'      ,'alt' => 'AKAIDO.png'],
+    ['src' => 'INA.png'         ,'alt' => 'INA.png'],
+    ['src' => 'KHE_NEW.png'     ,'alt' => 'KHE_NEW.png'],
+    ['src' => 'tekiro.png'      ,'alt' => 'tekiro.png'],
+    ['src' => 'WD40.png'        ,'alt' => 'WD40.png'],
 ];
 
 
@@ -88,21 +88,11 @@ $logo_brand = [
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <p>
-                    We supply more than 15,000 items such as cement, steel, power tools, hand tools, bathroom 
-                    and kitchen accessories, paints, safety shoes, machinery tools, electrical accessories, 
-                    pressure pump, piping, fitting, gloves, machinery, tape, lock, welding equipments, 
-                    safety equipments, measuring equipments, drill bits, door knobs, fasteners and many more.
-                </p>
+
+            <div class="col-md-3 col-sm-6">
+
             </div>
-            <div class="col-md-6">
-                <p>
-                    Drop by to our nearest store and let our trained and friendly staff assist you in your needs 
-                    from DIY home repair or improvement requirement to project supplies. Alternatively, you could 
-                    shop with us via Lazada as per link above.
-                </p>
-            </div>
+
         </div>
     </div>
 

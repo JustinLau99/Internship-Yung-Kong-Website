@@ -15,13 +15,21 @@ jQuery(function ($) {
     // ------------------------------------------------------------------
     // sticky menu
     // ------------------------------------------------------------------
-	$(window).scroll(function() {
-	    if ($(".navbar").offset().top > 50) {
-	        $(".navbar-fixed-top").addClass("sticky-nav");
-	    } else {
-	        $(".navbar-fixed-top").removeClass("sticky-nav");
-	    }
-	});
+    function checkScroll() {
+        if ($(".navbar").offset().top > 50) {
+            $(".navbar-fixed-top").addClass("sticky-nav");
+        } else {
+            $(".navbar-fixed-top").removeClass("sticky-nav");
+        }
+    }
+
+    // Call checkScroll when the page is loaded
+    checkScroll();
+
+    // Call checkScroll when the page is scrolled
+    $(window).scroll(function() {
+        checkScroll();
+    });
 
 
 
