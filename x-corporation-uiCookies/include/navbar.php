@@ -44,8 +44,10 @@
 
             <ul class="nav navbar-nav navbar-right main-nav">
 
-                <?php // Get the name of the current script ?>
-                <?php $current_page = basename($_SERVER['SCRIPT_NAME']); ?>
+                <?php 
+                    // Get the name of the current script
+                    $current_page = basename($_SERVER['SCRIPT_NAME']); 
+                ?>
                 
                 <?php echo ($current_page == 'index.php' ? '<li class="active">' : '<li>')?><a href="index.php">Home</a></li>
                 <?php echo ($current_page == 'about.php' ? '<li class="active">' : '<li>')?><a href="about.php">About</a></li>

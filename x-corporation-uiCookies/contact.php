@@ -76,22 +76,22 @@
 
 <!-- footer -->
 <?php include_once 'include/footer.php' ?>
-<!-- .footer -->
 
 </div>
 <!-- .content-wrapper -->
 </div>
 <!-- .offcanvas-pusher -->
 
-<!-- uc-mobile-menu -->
-<?php include_once 'include/uc-mobile-menu.php'?>
+
+<?php include_once 'include/uc-mobile-menu.php'?><!-- uc-mobile-menu -->
 
 
 </div>
 <!-- #main-wrapper -->
 
-<!-- Script -->
-<?php include_once 'include/script-src.php'?>
+
+<?php include_once 'include/script-src.php'?><!-- Script -->
+
 
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js"></script>

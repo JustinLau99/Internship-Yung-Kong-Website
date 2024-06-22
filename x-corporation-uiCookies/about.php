@@ -320,7 +320,7 @@ $logo_brand = [
 <!-- #main-wrapper -->
 
 <!-- Script -->
-<?php include_once 'include/script-src.php'?>
+ <?php include_once 'include/script-src.php'?>
 
 </body>
 </html>

@@ -8,12 +8,10 @@
                 <div class="col-sm-4 footer-block">
                     <div class="footer-widget">
                         <a href="index.php"><img src="img/yk_logo.png" alt="yk_logo" style="max-width: 100px; height: auto;"></a>
-                        <p class="logo-text"></br>
-                            <a href="index.php">                    
-                                榕 光 有 限 公 司</br>
-                                YUNG KONG CO. BHD.
-                            </a>
-                        </p>
+                        <a href="index.php">                    
+                            <h1></br>榕 光 有 限 公 司</h1>
+                            <h2>YUNG KONG CO. BHD.</h2>
+                        </a>
                     </div>
                 </div><!-- /.col-sm-4 -->
 

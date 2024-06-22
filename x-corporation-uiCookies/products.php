@@ -200,17 +200,15 @@
 
 
 
-<!-- footer -->
-<?php include_once 'include/footer.php' ?>
-<!-- .footer -->
+<!-- footer --><?php include_once 'include/footer.php' ?><!-- footer -->
 
 </div>
 <!-- .content-wrapper -->
 </div>
 <!-- .offcanvas-pusher -->
 
-<!-- uc-mobile-menu -->
-<?php include_once 'include/uc-mobile-menu.php'?>
+
+<!-- uc-mobile-menu --><?php include_once 'include/uc-mobile-menu.php'?><!-- uc-mobile-menu -->
 
 
 </div>
