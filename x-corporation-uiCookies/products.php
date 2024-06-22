@@ -9,11 +9,12 @@ $prod_cat = [
     ['src' => 'paint_categories.jpg'            , 'alt' => 'paint_categories.jpg'],
     ['src' => 'plumbing_categories.jpg'         , 'alt' => 'plumbing_categories.jpg'],
     ['src' => 'power_tools_categories.jpg'      , 'alt' => 'power_tools_categories.jpg'],
-    ['src' => 'safety_security_categories.jpg'  , 'alt' => 'safety_security_categories.jpg'],
+    ['src' => 'safety_security_categories.jpg'	, 'alt' => 'safety_security_categories.jpg'],
+    ['src' => 'welding_machinery.jpg'			, 'alt' => 'welding_machinery.jpg'],
 ];
 
-
 ?>
+    
 
 <!DOCTYPE html>
 <html>
@@ -47,34 +48,28 @@ $prod_cat = [
 </section>
 <!-- page-title -->
 
-
+	
 
 
 
 
 <!-- about-text-->
 
-<section class="ptb-100 gray-bg">
+<section class="x-services ptb-100 gray-bg">
     <div class="container">
         <div class="row">
-            <?php foreach ($prod_cat as $cat): ?>
-                <div class="col-md-3 col-sm-4 col-6">
-                    <img src="img/product-categories/<?php echo $cat['src']; ?>" alt="<?php echo $cat['alt']; ?>" class="img-fluid">
-                </div>
-            <?php endforeach; ?>
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
 
-        
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
+<?php 
+            foreach ($prod_cat as $cat): 
+?>
+
+
+            <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/home-offer/construction-building-materials.png" alt="Image"></a>
+                    <a href="products.php"><img class="img-responsive" src="img/product-categories/<?php echo $cat['src']; ?>" alt="Image"></a>
 
                     <div class="caption">
+
                         <h3><a href="products.php">Construction & Building Materials</a></h3>
 
                         <ul>
@@ -87,6 +82,39 @@ $prod_cat = [
                     </div>
                 </div>
             </div>
+
+<?php 
+            endforeach; 
+?>
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+        
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="thumbnail clearfix">
+                    <a href="products.php"><img class="img-responsive" src="img/home-offer/construction-building-materials.png" alt="Image"></a>
+
+                    <div class="caption">
+
+                        <h3><a href="products.php">Construction & Building Materials</a></h3>
+
+                        <ul>
+                            <li>• Building Materials</li>
+                            <li>• Bolts & Fasteners</li>
+                            <li>• Plumbing</li>
+                        </ul>
+
+                        
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-6">
                 <div class="thumbnail clearfix">
                     <a href="products.php"><img class="img-responsive" src="img/home-offer/tools-equipment.png" alt="Image"></a>
@@ -103,9 +131,8 @@ $prod_cat = [
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- row -->
-        <div class="row">
+
+
             <div class="col-md-6">
                 <div class="thumbnail clearfix">
                     <a href="products.php"><img class="img-responsive" src="img/home-offer/home-general-supplies.png" alt="Image"></a>
