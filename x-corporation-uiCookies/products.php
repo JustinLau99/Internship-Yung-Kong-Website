@@ -1,20 +1,21 @@
 <?php 
+	include_once 'phpData/productClass.php';
 
-$prod_cat = [
-    ['src' => 'bolts_fasteners_categories.jpg'  , 'alt' => 'bolts_fasteners_categories.jpg'],
-    ['src' => 'building_material_categories.jpg', 'alt' => 'building_material_categories.jpg'],
-    ['src' => 'electrical_categories.jpg'       , 'alt' => 'electrical_categories.jpg'],
-    ['src' => 'general_tools_categories.jpg'    , 'alt' => 'general_tools_categories.jpg'],
-    ['src' => 'hand_tools_categories.jpg'       , 'alt' => 'hand_tools_categories.jpg'],
-    ['src' => 'paint_categories.jpg'            , 'alt' => 'paint_categories.jpg'],
-    ['src' => 'plumbing_categories.jpg'         , 'alt' => 'plumbing_categories.jpg'],
-    ['src' => 'power_tools_categories.jpg'      , 'alt' => 'power_tools_categories.jpg'],
-    ['src' => 'safety_security_categories.jpg'	, 'alt' => 'safety_security_categories.jpg'],
-    ['src' => 'welding_machinery.jpg'			, 'alt' => 'welding_machinery.jpg'],
+
+$product_category = [
+	new ProductCategory("Building Material"		, "building_material_categories.jpg", $building_materials),
+	new ProductCategory("Bolts & Fasteners"		, "bolts_fasteners_categories.jpg"	, $bolts_fasteners),
+	new ProductCategory("Hand Tools"			, "hand_tools_categories.jpg"		, $hand_tools),
+	new ProductCategory("General Tools"			, "general_tools_categories.jpg"	, $general_household),
+	new ProductCategory("Welding Machinery"		, "welding_machinery.jpg"			, $welding_machinery),
+	new ProductCategory("Safety & Security"		, "safety_security_categories.jpg"	, $safety_security),
+	new ProductCategory("Electrical Accessories", "electrical_categories.jpg"		, $electrical_accessories),
+	new ProductCategory("Plumbing"				, "plumbing_categories.jpg"			, $plumbing),
+	new ProductCategory("Power Tools"			, "power_tools_categories.jpg"		, $power_tools),
+	new ProductCategory("Paint"					, "paint_categories.jpg"			, $paint),
 ];
 
 ?>
-    
 
 <!DOCTYPE html>
 <html>
@@ -41,145 +42,82 @@ $prod_cat = [
 <!-- navbar -->
 
 
+
+<!-- page-title -->
 <section class="single-page-title">
-    <div class="container text-center">
-        <h2>Product Categories</h2>
+	
+	<div class="container text-center">
+		<h2>Product Categories</h2>
     </div>
 </section>
-<!-- page-title -->
-
-	
-
+<!-- /page-title -->
 
 
 
 <!-- about-text-->
 
 <section class="x-services ptb-100 gray-bg">
+	<section class="section-title">
+        <div class="container text-center">
+            <h2>What We Offer</h2>
+            <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
+        </div>
+    </section>
+
     <div class="container">
         <div class="row">
-
 <?php 
-            foreach ($prod_cat as $cat): 
+            foreach ($product_category as $category): 
 ?>
-
-
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/product-categories/<?php echo $cat['src']; ?>" alt="Image"></a>
+                    <a href="products.php"><img class="img-responsive" src="img/product-categories/<?php echo $category->imgSrc; ?>" alt="Image"></a>
 
                     <div class="caption">
 
-                        <h3><a href="products.php">Construction & Building Materials</a></h3>
+                        <h3>
+							<a href="products.php">
+								<?php echo $category->title; ?>
+							</a>
+						</h3>
 
                         <ul>
-                            <li>• Building Materials</li>
-                            <li>• Bolts & Fasteners</li>
-                            <li>• Plumbing</li>
+<?php 
+								foreach ($category->product as $product): 
+									echo '<li> • ';
+									echo $product->title;
+									echo '</li>';
+								endforeach;
+?>
                         </ul>
 
                         
                     </div>
                 </div>
             </div>
-
 <?php 
             endforeach; 
 ?>
-
         </div>
         <!-- /.row -->
     </div>
     <!-- /.container -->
 
-        
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-6">
-                <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/home-offer/construction-building-materials.png" alt="Image"></a>
-
-                    <div class="caption">
-
-                        <h3><a href="products.php">Construction & Building Materials</a></h3>
-
-                        <ul>
-                            <li>• Building Materials</li>
-                            <li>• Bolts & Fasteners</li>
-                            <li>• Plumbing</li>
-                        </ul>
-
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/home-offer/tools-equipment.png" alt="Image"></a>
-
-                    <div class="caption">
-                        <h3><a href="products.php">Tools & Equipment</a></h3>
-
-                        <ul>
-                            <li>• Hand Tools</li>
-                            <li>• Power Tools</li>
-                            <li>• Welding & Machinery</li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-6">
-                <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/home-offer/home-general-supplies.png" alt="Image"></a>
-
-                    <div class="caption">
-                        <h3><a href="products.php">Home & General Supplies</a></h3>
-
-                        <ul>
-                            <li>• General & Household</li>
-                            <li>• Paint</li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/home-offer/safety-and-utilities.png" alt="Image"></a>
-
-                    <div class="caption">
-                        <h3><a href="products.php">Safety and Utilities</a></h3>
-                        
-                        <ul>
-                            <li>• Safety & Security</li>
-                            <li>• Electrical Accessories</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- .row -->
-    </div>
 </section>
 
 
-<!-- .about-text-->
+<!-- /about-text-->
 
 
 
 <!-- footer -->
     <?php include_once 'include/footer.php' ?>
-<!-- footer -->
+<!-- /footer -->
 
 </div>
-<!-- .content-wrapper -->
+<!-- /content-wrapper -->
 </div>
-<!-- .offcanvas-pusher -->
+<!-- /offcanvas-pusher -->
 
 
 <!-- uc-mobile-menu -->
@@ -190,8 +128,12 @@ $prod_cat = [
 </div>
 <!-- #main-wrapper -->
 
-<!-- Script -->
-<?php include_once 'include/script-src.php'?>
+
+<!-- script -->
+<?php 
+	include_once 'include/script-src.php'
+?>
+<!-- /script -->
 
 </body>
 </html>
