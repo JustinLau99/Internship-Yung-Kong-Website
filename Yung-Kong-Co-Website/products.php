@@ -1,22 +1,4 @@
-<?php 
-	include_once 'phpData/productList.php';
 
-$product_category = [
-	$building_materials		
-	$bolts_fasteners			
-	$hand_tools				
-	$general_household		
-	$welding_machinery		
-	$safety_security			
-	$electrical_accessories	
-	$plumbing					
-	$power_tools				
-	$paint					
-];
-
-
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -67,38 +49,39 @@ $product_category = [
 
     <div class="container">
         <div class="row">
-<?php 
-            foreach ($product_category as $product): 
-?>
+			
+	<?php 
+			# load products
+			include_once 'phpData/productList.php'; 
+			foreach ($product_category as $products): 
+	?>
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/product-categories/<?php echo $product->imgSrc; ?>" alt="Image"></a>
+                    <a href="products.php"><img class="img-responsive" src="img/product-categories/<?php echo $products['img']; ?>" alt="Image"></a>
 
                     <div class="caption">
 
                         <h3>
 							<a href="products.php">
-								<?php echo $category->title; ?>
+								<?php echo $products['title']; ?>
 							</a>
 						</h3>
 
                         <ul>
-<?php 
-								foreach ($category->product as $product): 
+	<?php 
+								foreach ($products['prod'] as $product): 
 									echo '<li> • ';
 									echo $product->title;
 									echo '</li>';
 								endforeach;
-?>
+	?>
                         </ul>
 
                         
                     </div>
                 </div>
             </div>
-<?php 
-            endforeach; 
-?>
+						<?php endforeach; ?>
         </div>
         <!-- /.row -->
     </div>

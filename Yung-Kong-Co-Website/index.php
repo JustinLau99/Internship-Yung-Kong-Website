@@ -19,7 +19,9 @@
 
 <!-- .nav -->
     <?php include_once 'include/navbar.php'?>
-<!-- .nav -->
+<!-- /nav -->
+
+
 
 <div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
     
@@ -61,88 +63,74 @@
 </div>
 <!-- #x-corp-carousel-->
 
-<section class="x-services ptb-100 gray-bg">
 
-    <section class="section-title">
+<!-- productList -->
+<section class="x-services ptb-100 gray-bg">
+	<section class="section-title">
         <div class="container text-center">
-            <h2>What we offer</h2>
+            <h2>What We Offer</h2>
             <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
         </div>
     </section>
 
-    
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+			
+	<?php 
+			# load products
+			include_once 'phpData/productList.php';
+			
+			$counter = 0;
+			foreach ($product_category as $products):
+				if ($counter % 4 == 0):
+					echo '<div class="row">';
+				endif;
+	?>
+            <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/home-offer/construction-building-materials.png" alt="Image"></a>
+
+                    <a href="products.php"><img class="img-responsive" src="img/product-categories/<?php echo $products['img']; ?>" alt="Image"></a>
 
                     <div class="caption">
-                        <h3><a href="products.php">Construction & Building Materials</a></h3>
+
+                        <h3>
+							<a href="products.php">
+								<?php echo $products['title']; ?>
+							</a>
+						</h3>
 
                         <ul>
-                            <li>• Building Materials</li>
-                            <li>• Bolts & Fasteners</li>
-                            <li>• Plumbing</li>
+	<?php 
+								foreach ($products['subCategory'] as $product): 
+									echo '<li> • ';
+									echo $product;
+									echo '</li>';
+								endforeach;
+	?>
                         </ul>
 
                         
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/home-offer/tools-equipment.png" alt="Image"></a>
+	<?php 
+			$counter++;
+				// if divisible or is last element
+				if ($counter % 4 == 0 || $counter == count($product_category)):
+					echo '</div>'; 
+				endif;
+			endforeach; 
+	?>
 
-                    <div class="caption">
-                        <h3><a href="products.php">Tools & Equipment</a></h3>
-
-                        <ul>
-                            <li>• Hand Tools</li>
-                            <li>• Power Tools</li>
-                            <li>• Welding & Machinery</li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
         </div>
-        <!-- row -->
-        <div class="row">
-            <div class="col-md-6">
-                <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/home-offer/home-general-supplies.png" alt="Image"></a>
-
-                    <div class="caption">
-                        <h3><a href="products.php">Home & General Supplies</a></h3>
-
-                        <ul>
-                            <li>• General & Household</li>
-                            <li>• Paint</li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/home-offer/safety-and-utilities.png" alt="Image"></a>
-
-                    <div class="caption">
-                        <h3><a href="products.php">Safety and Utilities</a></h3>
-                        
-                        <ul>
-                            <li>• Safety & Security</li>
-                            <li>• Electrical Accessories</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- .row -->
+        <!-- /.row -->
     </div>
-    <!-- .container -->
+    <!-- /.container -->
+
 </section>
+<!-- /productList -->
+
+
 <!-- .x-services -->
 
 <section class="x-features">

@@ -12,12 +12,13 @@ class ProductCategory {
     }
 }
 
-		
+
 # products data
 
 $building_materials = [
-	'prod' => 
-	[
+	'img' => 'building_material_categories.jpg',
+	'title' => 'Building Materials',
+	'prod' => [
 		new ProductCategory('CEMENT'									, ''),
 		new ProductCategory('STEEL BAR'									, ''),
 		new ProductCategory('YMC'										, ''),
@@ -62,13 +63,19 @@ $building_materials = [
 		new ProductCategory('WOOD'										, ''),
 		new ProductCategory('PLYWOOD'									, ''),
 	],
-	'img' => 'building_material_categories.jpg',
-	'title' => 'Building Materials',
+	'subCategory' => [
+		'Cement',
+		'Steel Bar',
+		'Plywoods',
+		'Roofing Sheet',
+		'Wire Mesh',
+	],
 ];
 
 $bolts_fasteners = [
-	'prod' => 
-	[
+	'img' => 'bolts_fasteners_categories.jpg', 
+	'title' => 'Bolts & Fasteners',
+	'prod' => [
 		new ProductCategory('BOLT & NUT - UNC,S/STEEL,BRASS & OTHERS'	, ''),
 		new ProductCategory('BOLT & NUT'								, ''),
 		new ProductCategory('STUD BOLT - MS, ZP, S/S 304'				, ''),
@@ -84,13 +91,20 @@ $bolts_fasteners = [
 		new ProductCategory('LAZOR BOLTS & FASTENERS'					, ''),
 		new ProductCategory('ALUMINIUM RIVET - PATTA, OTHERS'			, ''),
 	],
-	'img' => 'bolts_fasteners_categories.jpg', 
-	'title' => 'Bolts & Fasteners',
+	'subCategory' => [
+		'Nails',
+		'Hooks',
+		'Rivets',
+		'Screws',
+		'Washers',
+		'Bolts & Nuts',
+	],
 ];
 
 $hand_tools = [
-	'prod' => 
-	[
+	'img' => 'hand_tools_categories.jpg', 
+	'title' => 'Hand Tools',
+	'prod' => [
 		new ProductCategory('MECHANIC TOOLS'							, ''),
 		new ProductCategory('ELORA, SOUTHEN GRACE, WING POH, WYNN\'S'	, ''),
 		new ProductCategory('TEKIRO PRODUCTS'							, ''),
@@ -115,13 +129,22 @@ $hand_tools = [
 		new ProductCategory('STANLEY AUTOCARE'							, ''),
 		new ProductCategory('STANLEY DISCONTINUE'						, ''),
 	],
-	'img' => 'hand_tools_categories.jpg', 
-	'title' => 'Hand Tools',
+	'subCategory' => [
+		'Mechanical Tools', 
+		'Crimping Tools', 
+		'Cutting Tools', 
+		'Holding Tools', 
+		'Fastening Tools', 
+		'Stapling Tools', 
+		'Striking & Struck Tools', 
+		'Measuring Tools', 
+	],
 ];
 
 $general_household = [
-	'prod' => 
-	[
+	'img' => 'general_tools_categories.jpg', 
+	'title' => 'General & Household',
+	'prod' => [
 		new ProductCategory('IKEA PRODUCTS'								, ''),
 		new ProductCategory('L.F HOUSEHOLD PRODUCTS'					, ''),
 		new ProductCategory('STATIONERY'								, ''),
@@ -156,13 +179,21 @@ $general_household = [
 		new ProductCategory('OFFER ITEM'								, ''),
 		new ProductCategory('A5 J.I.T GENERAL GOODS'					, ''),
 	],
-	'img' => 'general_tools_categories.jpg', 
-	'title' => 'General & Household',
+	'subCategory' => [
+		'Rachet Brace', 
+		'Wheel Spanner', 
+		'Utility Knife Set', 
+		'Hex Key Set', 
+		'Ladder', 
+		'G Clamps', 
+		'Others', 
+	],
 ];
 
 $welding_machinery = [
-	'prod' => 
-	[
+	'img' => 'welding_machinery.jpg', 
+	'title' => 'Welding & Machinery',
+	'prod' => [
 		new ProductCategory('MISCELLANEOUS / MIXED'				, ''),
 		new ProductCategory('V-BELT & PULLEYS'					, ''),
 		new ProductCategory('WALRUS PRODUCTS'					, ''),
@@ -180,13 +211,13 @@ $welding_machinery = [
 		new ProductCategory('JACK, CHAIN BLK & ACCESSORIES'		, ''),
 		new ProductCategory('ROPE & CHAIN'						, ''),
 	],
-	'img' => 'welding_machinery.jpg', 
-	'title' => 'Welding & Machinery',
+	'subCategory' => [],
 ];
 
 $safety_security = [
-	'prod' => 
-	[
+	'img' => 'safety_security_categories.jpg', 
+	'title' => 'Safety & Security',
+	'prod' => [
 		new ProductCategory('SAFETY SHOES'					, ''),
 		new ProductCategory('SAFETY EQUIPMENTS'				, ''),
 		new ProductCategory('3M PRODUCTS'					, ''),
@@ -202,13 +233,16 @@ $safety_security = [
 		new ProductCategory('STANLEY LOCK'					, ''),
 		new ProductCategory('STANLEY PADLOCK DISCONTINUE'	, ''),
 	],
-	'img' => 'safety_security_categories.jpg', 
-	'title' => 'Safety & Security',
+	'subCategory' => [
+		'Safety Shoes, Glove, Mask & Helmet', 
+		'Rain Coat Jacket, Welding Jacket', 
+	],
 ];
 
 $electrical_accessories = [
-	'prod' => 
-	[
+	'img' => 'electrical_categories.jpg', 
+	'title' => 'Electrical Accessories',
+	'prod' => [
 		new ProductCategory('BATTERY'					, ''),
 		new ProductCategory('NICRON PRODUCTS'			, ''),
 		new ProductCategory('ECOLINK PRODUCTS'			, ''),
@@ -220,13 +254,20 @@ $electrical_accessories = [
 		new ProductCategory('KHIND PRODUCT'				, ''),
 		new ProductCategory('FABER PRODUCTS'			, ''),
 	],
-	'img' => 'electrical_categories.jpg', 
-	'title' => 'Electrical Accessories',
+	'subCategory' => [
+		'Wire & Accessories', 
+		'Extensions & Adaptors', 
+		'Plug & Sockets', 
+		'Bulbs & Downlight', 
+		'Tube & Tube Fitting', 
+		'Accessories', 
+	],
 ];
 
 $plumbing = [
-	'prod' => 
-	[
+	'img' => 'plumbing_categories.jpg', 
+	'title' => 'Plumbing',
+	'prod' => [
 		new ProductCategory('WATER TAP & GATE, BALL VALVES'			, ''),
 		new ProductCategory('VIP PRODUCT'							, ''),
 		new ProductCategory('MILANO PRODUCT'						, ''),
@@ -243,13 +284,20 @@ $plumbing = [
 		new ProductCategory('PIPE FITTING - POLYPIPE'				, ''),
 		new ProductCategory('PIPE FITTING - BRASS, S/STEEL & COPPER', ''),
 	],
-	'img' => 'plumbing_categories.jpg', 
-	'title' => 'Plumbing',
+	'subCategory' => [
+		'Valve & Fitting', 
+		'Taps & Accessories', 
+		'Shower Set & Accessories', 
+		'Bathroom & Accessories', 
+		'Sink & Accessories', 
+		'Basin & Accessories', 
+	],
 ];
 
 $power_tools = [
-	'prod' => 
-	[
+	'img' => 'power_tools_categories.jpg', 
+	'title' => 'Power Tools',
+	'prod' => [
 		new ProductCategory('JET MASTER'				, ''),
 		new ProductCategory('VACMASTER'					, ''),
 		new ProductCategory('KANO & VOMAX PRODUCTS'		, ''),
@@ -272,25 +320,46 @@ $power_tools = [
 		new ProductCategory('MAKITA SPARE PARTS'		, ''),
 		new ProductCategory('MAKITA - TC INACTIVE'		, ''),
 	],
-	'img' => 'power_tools_categories.jpg', 
-	'title' => 'Power Tools',
+	'subCategory' => [
+		'Cordless Tools', 
+		'Demolition Tools and Equipment', 
+		'Power Drills', 
+		'Heat Guns', 
+		'Fastening Tools', 
+		'Jigsaw', 
+		'Nail Gun', 
+	],
 ];
 
 $paint = [
-	'prod' => 
-	[
+	'img' => 'paint_categories.jpg', 
+	'title' => 'Paint',
+	'prod' => [
 		new ProductCategory('SPRAY PAINT, SPIRIT & MIX PAINTS'	, ''),
 		new ProductCategory('DULUX PAINT'						, ''),
 		new ProductCategory('KANGAROO PAINT'					, ''),
 		new ProductCategory('COLOURLAND PAINT'					, ''),
 		new ProductCategory('TRANS PAINT'						, ''),
 	],
-	'img' => 'paint_categories.jpg', 
-	'title' => 'Paint',
+	'subCategory' => [
+		'Decorating Paint', 
+		'Industrial Paint', 
+		'Painting Accesories', 
+	],
 ];
 
-
-
+$product_category = [
+	$building_materials, 
+	$bolts_fasteners, 
+	$hand_tools, 
+	$general_household, 
+	$welding_machinery, 
+	$safety_security, 
+	$electrical_accessories, 
+	$plumbing, 
+	$power_tools, 
+	$paint, 
+];
 
 
 ?>
