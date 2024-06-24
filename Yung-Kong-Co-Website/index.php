@@ -79,12 +79,8 @@
 	<?php 
 			# load products
 			include_once 'phpData/productList.php';
-			
-			$counter = 0;
 			foreach ($product_category as $products):
-				if ($counter % 4 == 0):
-					echo '<div class="row">';
-				endif;
+
 	?>
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="thumbnail clearfix">
@@ -98,15 +94,13 @@
 								<?php echo $products['title']; ?>
 							</a>
 						</h3>
-
+						
                         <ul>
-	<?php 
-								foreach ($products['subCategory'] as $product): 
-									echo '<li> • ';
-									echo $product;
-									echo '</li>';
-								endforeach;
-	?>
+						<?php foreach ($products['subCategory'] as $product): ?>
+							<li> • 
+							<?php echo $product; ?>
+							</li>
+						<?php endforeach; ?>
                         </ul>
 
                         
@@ -114,11 +108,7 @@
                 </div>
             </div>
 	<?php 
-			$counter++;
-				// if divisible or is last element
-				if ($counter % 4 == 0 || $counter == count($product_category)):
-					echo '</div>'; 
-				endif;
+
 			endforeach; 
 	?>
 

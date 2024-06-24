@@ -19,16 +19,16 @@
                     <div class="footer-widget widget_text">
                         <h3>Products</h3>
                         <p>
-                            <i class="bi bi-house-door-fill"></i> Building Materials</br>
-                            <i class="bi bi-nut-fill"></i> Bolts & Fasteners</i></br>
-                            <i class="bi bi-wrench"></i> Hand Tools</br>
-                            <i class="bi bi-ladder"></i> General & Household</br>
-                            <i class="bi bi-door-open-fill"></i> Welding & Machinery</br>
-                            <i class="bi bi-lock-fill"></i> Safety & Security</br>
-                            <i class="bi bi-lightning-fill"></i> Electrical Accessories</br>
-                            <i class="bi bi-battery-full"></i> Plumbing</br>
-                            <i class="bi bi-plug-fill"></i> Power Tools</br>
-                            <i class="bi bi-paint-bucket"></i> Paint
+                            <a href=""><i class="bi bi-house-door-fill">	</i>Building Materials		</a></br>
+                            <a href=""><i class="bi bi-nut-fill">			</i>Bolts & Fasteners 		</a></br>
+                            <a href=""><i class="bi bi-wrench">				</i>Hand Tools				</a></br>
+                            <a href=""><i class="bi bi-ladder">				</i>General & Household		</a></br>
+                            <a href=""><i class="bi bi-door-open-fill">		</i>Welding & Machinery		</a></br>
+                            <a href=""><i class="bi bi-lock-fill">			</i>Safety & Security		</a></br>
+                            <a href=""><i class="bi bi-lightning-fill">		</i>Electrical Accessories	</a></br>
+                            <a href=""><i class="bi bi-battery-full">		</i>Plumbing				</a></br>
+                            <a href=""><i class="bi bi-plug-fill">			</i>Power Tools				</a></br>
+                            <a href=""><i class="bi bi-paint-bucket">		</i>Paint					</a>
                         </p>
                         </div>
                 </div><!-- /.col-sm-4 -->

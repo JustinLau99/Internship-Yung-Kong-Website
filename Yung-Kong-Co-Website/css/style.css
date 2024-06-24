@@ -816,7 +816,7 @@ Shortcode Content
 @media (min-width : 768px) {
     .x-services .thumbnail a > img,
     .x-services .thumbnail > img {
-        float : left;
+		width : 100%;
         }
     }
 
@@ -831,7 +831,9 @@ Shortcode Content
     padding  : 30px;
     color    : #969595;
     overflow : hidden;
+	min-height: 300px; 
     }
+
 
 .x-services .thumbnail .caption h3 {
     font-size      : 15px;

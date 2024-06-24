@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <!-- header -->
@@ -21,7 +19,7 @@
 <div class="content-wrapper">
 
 <!-- navbar -->
-<?php include_once 'include/navbar.php'?>
+	<?php include_once 'include/navbar.php'?>
 <!-- navbar -->
 
 
@@ -38,7 +36,6 @@
 
 
 <!-- about-text-->
-
 <section class="x-services ptb-100 gray-bg">
 	<section class="section-title">
         <div class="container text-center">
@@ -52,10 +49,10 @@
 			
 	<?php 
 			# load products
-			include_once 'phpData/productList.php'; 
+			include_once 'phpData/productList.php';
 			foreach ($product_category as $products): 
 	?>
-            <div class="col-md-3 col-sm-4 col-xs-6">
+            <div class="col-md-6 col-sm-6">
                 <div class="thumbnail clearfix">
                     <a href="products.php"><img class="img-responsive" src="img/product-categories/<?php echo $products['img']; ?>" alt="Image"></a>
 
@@ -68,20 +65,16 @@
 						</h3>
 
                         <ul>
-	<?php 
-								foreach ($products['prod'] as $product): 
-									echo '<li> • ';
-									echo $product->title;
-									echo '</li>';
-								endforeach;
-	?>
+							<?php foreach ($products['prod'] as $product):?>
+								<li> • <?php echo $product->title; ?></li>
+							<?php endforeach; ?>
                         </ul>
 
-                        
                     </div>
+					<!-- /caption -->
                 </div>
             </div>
-						<?php endforeach; ?>
+			<?php endforeach; ?>
         </div>
         <!-- /.row -->
     </div>
