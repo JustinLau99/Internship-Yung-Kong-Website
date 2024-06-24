@@ -1,18 +1,18 @@
 <?php 
-	include_once 'phpData/productClass.php';
+	include_once 'phpData/productList.php';
 
 
 $product_category = [
-	new ProductCategory("Building Material"		, "building_material_categories.jpg", $building_materials),
-	new ProductCategory("Bolts & Fasteners"		, "bolts_fasteners_categories.jpg"	, $bolts_fasteners),
-	new ProductCategory("Hand Tools"			, "hand_tools_categories.jpg"		, $hand_tools),
-	new ProductCategory("General Tools"			, "general_tools_categories.jpg"	, $general_household),
-	new ProductCategory("Welding Machinery"		, "welding_machinery.jpg"			, $welding_machinery),
-	new ProductCategory("Safety & Security"		, "safety_security_categories.jpg"	, $safety_security),
-	new ProductCategory("Electrical Accessories", "electrical_categories.jpg"		, $electrical_accessories),
-	new ProductCategory("Plumbing"				, "plumbing_categories.jpg"			, $plumbing),
-	new ProductCategory("Power Tools"			, "power_tools_categories.jpg"		, $power_tools),
-	new ProductCategory("Paint"					, "paint_categories.jpg"			, $paint),
+	$building_materials,
+	$bolts_fasteners,
+	$hand_tools,
+	$general_household,
+	$welding_machinery,
+	$safety_security,
+	$electrical_accessories,
+	$plumbing,
+	$power_tools,
+	$paint,
 ];
 
 ?>
@@ -67,11 +67,11 @@ $product_category = [
     <div class="container">
         <div class="row">
 <?php 
-            foreach ($product_category as $category): 
+            foreach ($product_category as $product): 
 ?>
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="thumbnail clearfix">
-                    <a href="products.php"><img class="img-responsive" src="img/product-categories/<?php echo $category->imgSrc; ?>" alt="Image"></a>
+                    <a href="products.php"><img class="img-responsive" src="img/product-categories/<?php echo $product->imgSrc; ?>" alt="Image"></a>
 
                     <div class="caption">
 
