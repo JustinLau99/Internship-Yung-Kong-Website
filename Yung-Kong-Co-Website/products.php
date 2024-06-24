@@ -1,19 +1,20 @@
 <?php 
 	include_once 'phpData/productList.php';
 
-
 $product_category = [
-	$building_materials,
-	$bolts_fasteners,
-	$hand_tools,
-	$general_household,
-	$welding_machinery,
-	$safety_security,
-	$electrical_accessories,
-	$plumbing,
-	$power_tools,
-	$paint,
+	$building_materials		
+	$bolts_fasteners			
+	$hand_tools				
+	$general_household		
+	$welding_machinery		
+	$safety_security			
+	$electrical_accessories	
+	$plumbing					
+	$power_tools				
+	$paint					
 ];
+
+
 
 ?>
 
