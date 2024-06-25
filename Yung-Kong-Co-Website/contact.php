@@ -17,7 +17,7 @@
 <div class="content-wrapper">
 
 <!-- .nav -->
-<?php include_once 'include/navbar.php'?>
+	<?php include_once 'include/navbar.php'?>
 <!-- .nav -->
 
 

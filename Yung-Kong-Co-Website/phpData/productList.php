@@ -1,20 +1,56 @@
 <?php
 
-class ProductCategory {
-    // Properties
-    public $title;
-    public $imgSrc;
-
-    // Constructor
-    public function __construct($title, $img_source) {
-        $this->title = $title;
-        $this->imgSrc = $img_source;
-    }
-}
 
 
-# products data
+# products' data
 
+// Read the JSON file
+$jsonString = file_get_contents('phpData/products.json');
+
+// Decode the JSON string into php array
+$data = json_decode($jsonString, true); 
+
+// Example: Print the data to verify it's correct
+echo '<pre>';
+$imgValue = $data['building_materials']['prod'];
+
+foreach ($imgValue as $img):
+	echo $img['title'];
+	echo $img['img'];
+
+endforeach;
+
+// print_r($data);
+echo '</pre>';
+
+
+$product_category = [
+	$data['building_materials'], 
+	$data['bolts_fasteners'], 
+	$data['hand_tools'], 
+	$data['general_household'], 
+	$data['welding_machinery'], 
+	$data['safety_security'], 
+	$data['electrical_accessories'], 
+	$data['plumbing'], 
+	$data['power_tools'], 
+	$data['paint'], 
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 $building_materials = [
 	'img' => 'building_material_categories.jpg',
 	'title' => 'Building Materials',
@@ -348,18 +384,7 @@ $paint = [
 	],
 ];
 
-$product_category = [
-	$building_materials, 
-	$bolts_fasteners, 
-	$hand_tools, 
-	$general_household, 
-	$welding_machinery, 
-	$safety_security, 
-	$electrical_accessories, 
-	$plumbing, 
-	$power_tools, 
-	$paint, 
-];
+*/
 
 
 ?>
