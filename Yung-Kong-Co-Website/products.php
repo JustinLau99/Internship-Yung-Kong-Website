@@ -55,113 +55,73 @@
 	
 	<div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
 		<!-- Wrapper for slides -->
+		
 		<div class="carousel-inner">
-			<div class="item active">
-				<div class="row">
-					<div class="col-sm-3">
-						<div class="col-item">
-							<div class="photo">
-								<img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
-							</div>
-							<div class="info">
-								<div class="row">
-									<div class="price col-md-12">
-										<h5>Sample Product</h5>
-										<h5 class="price-text-color">$199.99</h5>
+
+		<?php 
+			include_once 'phpData/productList.php';
+			$itemPerRow = 4;
+			$count = 0;
+			$product_categories = [
+				$data['building_materials'],
+				$data['bolts_fasteners'],
+				$data['hand_tools'],
+				$data['general_household'],
+				$data['welding_machinery'],
+				$data['safety_security'],
+				$data['electrical_accessories'],
+				$data['plumbing'],
+				$data['power_tools'],
+				$data['paint'],
+			];
+			
+		?>
+
+
+		<?php foreach ($data['building_materials'] as $product_category): ?>
+			<?php if ($count === 0 || $count === $itemPerRow){ ?>
+
+					<div class="item <?php echo ($count === 0) ? 'active' : ''; ?>">
+			
+			<?php } ?>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="col-item">
+								<div class="photo">
+									<img src="https://dummyimage.com/320x200/9e9e9e/ffffff.png" class="img-responsive" alt="a" />
+								</div>
+								<div class="info">
+									<div class="row">
+										<div class="price col-md-12">
+											<h5>Sample Product</h5>
+											<h5 class="price-text-color">$199.99</h5>
+										</div>
 									</div>
-								</div>
-								<div class="separator clear-left">
-									<p class="btn-add"><i class="fa fa-shopping-cart"></i>
-										<a href="" class="hidden-sm">Add to cart</a>
-									</p>
-									<p class="btn-details"><i class="fa fa-list"></i>
-										<a href="" class="hidden-sm">More details</a>
-									</p>
-								</div>
-								<div class="clearfix">
+									<div class="separator clear-left">
+										<p class="btn-add"><i class="fa fa-shopping-cart"></i>
+											<a href="" class="hidden-sm">Add to cart</a>
+										</p>
+										<p class="btn-details"><i class="fa fa-list"></i>
+											<a href="" class="hidden-sm">More details</a>
+										</p>
+									</div>
+									<div class="clearfix">
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="col-item">
-							<div class="photo">
-								<img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
-							</div>
-							<div class="info">
-								<div class="row">
-									<div class="price col-md-6">
-										<h5>
-											Product Example</h5>
-										<h5 class="price-text-color">
-											$249.99</h5>
-									</div>
-									<div class="rating hidden-sm col-md-6">
-									</div>
-								</div>
-								<div class="separator clear-left">
-									<p class="btn-add">
-										<i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
-									<p class="btn-details">
-										<i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
-								</div>
-								<div class="clearfix">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="col-item">
-							<div class="photo">
-								<img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
-							</div>
-							<div class="info">
-								<div class="row">
-									<div class="price col-md-6">
-										<h5>
-											Next Sample Product</h5>
-										<h5 class="price-text-color">
-											$149.99</h5>
-									</div>
-								</div>
-								<div class="separator clear-left">
-									<p class="btn-add">
-										<i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
-									<p class="btn-details">
-										<i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
-								</div>
-								<div class="clearfix">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="col-item">
-							<div class="photo">
-								<img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
-							</div>
-							<div class="info">
-								<div class="row">
-									<div class="price col-md-6">
-										<h5>
-											Sample Product</h5>
-										<h5 class="price-text-color">
-											$199.99</h5>
-									</div>
-								</div>
-								<div class="separator clear-left">
-									<p class="btn-add">
-										<i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
-									<p class="btn-details">
-										<i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
-								</div>
-								<div class="clearfix">
-								</div>
-							</div>
-						</div>
-					</div>
+
+		<?php if ($count === 0 || $count === $itemPerRow){ ?>
 				</div>
+		<?php } ?>
+
+		<?php
+				$count++;
+			endforeach;
+		?>
+
 			</div>
+
 			<div class="item">
 				<div class="row">
 					<div class="col-sm-3">
