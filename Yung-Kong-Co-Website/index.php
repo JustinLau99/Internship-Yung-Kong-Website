@@ -35,7 +35,7 @@
     </ol>
 
 	<div class="carousel-caption">
-		<h1>Yung Kong Co. Bhd.</h1>
+		<h1>Welcome to Yung Kong Co. Bhd.</h1>
 
 		<p>[Information placeholder].</p>
 	</div>
@@ -107,10 +107,8 @@
                     </div>
                 </div>
             </div>
-	<?php 
 
-			endforeach; 
-	?>
+	<?php endforeach; ?>
 
         </div>
         <!-- /.row -->

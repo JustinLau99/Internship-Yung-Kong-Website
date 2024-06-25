@@ -836,7 +836,7 @@ Shortcode Content
 
 
 .x-services .thumbnail .caption h3 {
-    font-size      : 15px;
+    font-size      : 20px;
     text-transform : capitalize;
     margin-bottom  : 5px;
     }
@@ -1631,3 +1631,21 @@ service-icon-style
     text-align: center;
     top: 65%;
     }
+
+
+
+	.card-title {
+		color: #db0075;
+	}
+	.card-text {
+		color: #17E6E6;
+	}
+	.list-inline-item {
+		color: #ffd700
+	}
+	.price {
+		color: #d92644;
+	}
+	.btn-pink {
+		background-color: #fcb2b2 !important;
+	}
