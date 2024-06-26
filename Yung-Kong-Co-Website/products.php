@@ -85,7 +85,6 @@
 							<!-- Wrapper for slides -->
 							<div class="carousel-inner">
 
-
 								<div class="item active">
 
 									<div class="col-sm-3">
@@ -109,6 +108,7 @@
 											<div class="clearfix"></div>
 										</div>
 									</div>
+									
 									<div class="col-sm-3">
 										<img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
 
@@ -370,10 +370,22 @@
 								];
 
 								?>
-								
-								<?php $count = 0;?>
-								<?php foreach ($data['building_materials']['prod'] as $product): ?>
+
+								<?php $totalProducts = count($data['building_materials']['prod']); ?>
+								<?php foreach ($data['building_materials']['prod'] as $index => $product): ?>
 									
+									<?php if ($index === 4): ?>
+										
+										<div class="item <?php echo ($index === 0) ? 'active' : '' ?>">
+
+									<?php endif; ?>
+									<?php if ($index % 4 === 0 || $index + 1 === $totalProducts): ?>
+										
+										
+										</div>
+
+									<?php endif; ?>
+
 								<?php endforeach; ?>
 
 							</div>
