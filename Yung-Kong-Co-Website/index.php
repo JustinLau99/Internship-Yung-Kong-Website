@@ -5,6 +5,7 @@
 <!-- .header -->
 
 <body>
+
 	<div id="main-wrapper">
 		<!-- Page Preloader -->
 		<div id="preloader">
@@ -12,19 +13,17 @@
 				<div class="status-mes"></div>
 			</div>
 		</div>
-
 		<div class="uc-mobile-menu-pusher">
+
+			<!-- index -->
 			<div class="content-wrapper">
 
-				<!-- .nav -->
+				<!-- navbar -->
 				<?php include_once 'include/navbar.php' ?>
-				<!-- /nav -->
 
-
-
+				<!-- Indicators -->
 				<div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
 
-					<!-- Indicators -->
 					<ol class="carousel-indicators">
 						<li data-target="#x-corp-carousel" data-slide-to="0" class="active"></li>
 						<li data-target="#x-corp-carousel" data-slide-to="1" class=""></li>
@@ -39,7 +38,6 @@
 						<p>[Information placeholder].</p>
 					</div>
 
-					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 
 						<div class="item active"><img src="img/department/slider-ykacc.jpg" class="dim-img"></div>
@@ -50,7 +48,6 @@
 
 					</div>
 
-					<!-- Controls -->
 					<a class="left carousel-control" href="#x-corp-carousel" role="button" data-slide="prev">
 						<i class="fa fa-angle-left" aria-hidden="true"></i>
 						<span class="sr-only">Previous</span>
@@ -60,7 +57,12 @@
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
-				<!-- #x-corp-carousel-->
+
+
+
+
+
+
 
 
 				<!-- productList -->
@@ -76,8 +78,8 @@
 						<div class="row">
 
 							<?php
-							# load products
-							include_once 'phpData/productList.php';
+
+							include_once 'json/product_category.php'; # load products
 							foreach ($product_category as $products):
 
 								?>
@@ -117,51 +119,164 @@
 					<!-- /.container -->
 
 				</section>
-				<!-- /productList -->
 
 
 
-				<section class="client-logo ptb-100">
+
+
+
+
+				<!-- Departments -->
+				<!-- Topic Cards -->
+				<section class="x-features">
 					<section class="section-title">
 						<div class="container text-center">
 							<h2>Our Departments</h2>
 							<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
 						</div>
 					</section>
-					<div class="container-fluid">
-						<div class="row">
+					<div id="cards_landscape_wrap-2">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+									<a href="">
+										<div class="card-flyer">
+											<div class="text-box">
+												<div class="image-box">
+													<img src="img/department/ykacc.jpg" />
+												</div>
+												<div class="text-container">
+													<h6>Account Department</h6>
 
-							<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-								<a href="#">
-									<p>Account Department</p><img src="img/department/ykacc.jpg" alt="Image">
-								</a>
-							</div>
-							<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-								<a href="#">
-									<p>Bintawa Department</p><img src="img/department/ykbtw.jpg" alt="Image">
-								</a>
-							</div>
-							<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-								<a href="#">
-									<p>Matang Department</p><img src="img/department/ykmatang.jpg" alt="Image">
-								</a>
-							</div>
-							<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-								<a href="#">
-									<p>Pending Department</p><img src="img/department/ykpending.jpg" alt="Image">
-								</a>
-							</div>
-							<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-								<a href="#">
-									<p>Penrissen Department</p><img src="img/department/ykpenrissen.jpg" alt="Image">
-								</a>
-							</div>
+													<i class="bi bi-geo icon-lg">
+														
+														<p>Address</p>
+													</i>
 
+
+
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+									<a href="">
+										<div class="card-flyer">
+											<div class="text-box">
+												<div class="image-box">
+													<img src="img/department/ykbtw.jpg" />
+												</div>
+												<div class="text-container">
+													<h6>Bintawa Department</h6>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+														industry. Lorem Ipsum has been the industry's standard dummy
+														text
+														ever since the 1500s.</p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+									<a href="">
+										<div class="card-flyer">
+											<div class="text-box">
+												<div class="image-box">
+													<img src="img/department/ykmatang.jpg" />
+												</div>
+
+												<div class="text-container">
+													<h6>Matang Department</h6>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+														industry. Lorem Ipsum has been the industry's standard dummy
+														text
+														ever since the 1500s.</p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+									<a href="">
+										<div class="card-flyer">
+											<div class="text-box">
+												<div class="image-box">
+													<img src="img/department/ykpending.jpg" />
+												</div>
+
+												<div class="text-container">
+													<h6>Pending Department</h6>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+														industry. Lorem Ipsum has been the industry's standard dummy
+														text
+														ever since the 1500s.</p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+									<a href="">
+										<div class="card-flyer">
+											<div class="text-box">
+												<div class="image-box">
+													<img src="img/department/ykpenrissen.jpg" />
+												</div>
+												<div class="text-container">
+													<h6>Penrissen Department</h6>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+														industry. Lorem Ipsum has been the industry's standard dummy
+														text
+														ever since the 1500s.</p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
-					<!--end of .container -->
 				</section>
-				<!-- /.client-logo -->
+
+
+
+
+
+
+
+
+				<!-- Product Brands -->
+				<section class="client-logo ptb-100">
+
+					<?php include_once 'json/brand_logo.php' ?>
+
+					<section class="section-title">
+						<div class="container text-center">
+							<h2>Our Key Product Brands</h2>
+							<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
+						</div>
+					</section>
+
+					<div class="container">
+
+						<?php foreach ($brand_data['brand_logo'] as $brand): ?>
+
+							<div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+								<a href="#">
+									<img src="img/brands/<?php echo $brand['src']; ?>" alt="<?php echo $brand['alt']; ?>">
+								</a>
+							</div>
+
+						<?php endforeach; ?>
+
+					</div>
+				</section>
+
+
+
+
+
 
 
 
@@ -169,7 +284,6 @@
 
 				<!-- footer -->
 				<?php include_once 'include/footer.php' ?>
-				<!-- .footer -->
 
 			</div>
 			<!-- .content-wrapper -->
@@ -178,7 +292,6 @@
 
 		<!-- uc-mobile-menu -->
 		<?php include_once 'include/uc-mobile-menu.php' ?>
-		<!-- uc-mobile-menu -->
 
 	</div>
 	<!-- #main-wrapper -->

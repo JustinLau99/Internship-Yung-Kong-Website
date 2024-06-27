@@ -19,7 +19,7 @@ $logo_brand = [
     ['src' => 'philips.png'     ,'alt' => 'philips.png'],
     ['src' => 'karcher.png'     ,'alt' => 'karcher.png'],
     ['src' => 'abus.png'        ,'alt' => 'abus.png'],
-    ['src' => 'tri-circle2.png' ,'alt' => 'circle2.png'],
+    ['src' => 'tri_circle2.png' ,'alt' => 'circle2.png'],
     ['src' => '3m.png'          ,'alt' => '3m.png'],
     ['src' => 'hardex.png'      ,'alt' => 'hardex.png'],
     ['src' => 'energizer.png'   ,'alt' => 'energizer.png'],
@@ -101,7 +101,7 @@ $logo_brand = [
 
 
 
-
+<!-- Product Brands -->
 <section class="client-logo ptb-100">
     <section class="section-title">
         <div class="container text-center">
@@ -122,7 +122,7 @@ $logo_brand = [
 ?>
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
                 <a href="#">
-                    <img src="img/logo-brand/<?php echo $brand['src']; ?>" alt="<?php echo $brand['alt']; ?>">
+                    <img src="img/brands/<?php echo $brand['src']; ?>" alt="<?php echo $brand['alt']; ?>">
                 </a>
             </div>
 <?php
@@ -138,7 +138,7 @@ $logo_brand = [
     </div>
     <!--end of .container -->
 </section>
-<!-- /.client-logo -->
+
 
 
 <!-- footer -->

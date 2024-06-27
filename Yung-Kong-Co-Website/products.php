@@ -14,7 +14,7 @@
 			</div>
 		</div>
 
-
+		<!-- mobile menu -->
 		<div class="uc-mobile-menu-pusher">
 
 			<div class="content-wrapper">
@@ -60,19 +60,19 @@
 
 
 				<!-- display carousel products -->
-				<?php include_once 'phpData/productList.php';
+				<?php include_once 'phpData/products.php';
 
 				$product_categories = [
-					$data['building_materials'],
-					$data['bolts_fasteners'],
-					$data['hand_tools'],
-					$data['general_household'],
-					$data['welding_machinery'],
-					$data['safety_security'],
-					$data['electrical_accessories'],
-					$data['plumbing'],
-					$data['power_tools'],
-					$data['paint'],
+					$products_data['building_materials'],
+					$products_data['bolts_fasteners'],
+					$products_data['hand_tools'],
+					$products_data['general_household'],
+					$products_data['welding_machinery'],
+					$products_data['safety_security'],
+					$products_data['electrical_accessories'],
+					$products_data['plumbing'],
+					$products_data['power_tools'],
+					$products_data['paint'],
 				];
 
 				?>
@@ -86,7 +86,7 @@
 						?>
 						<div class="row">
 							<div class="col-md-9">
-								<h3><?php echo $category['title']?></h3>
+								<h3><?php echo $category['title'] ?></h3>
 							</div>
 						</div>
 
@@ -120,7 +120,7 @@
 
 							</div>
 						</div>
-					<?php
+						<?php
 					endforeach;
 					?>
 
@@ -153,12 +153,10 @@
 
 				<!-- about-text-->
 				<section class="x-services ptb-100 gray-bg">
-					<section class="section-title">
-						<div class="container text-center">
-							<h2>What We Offer</h2>
-							<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-						</div>
-					</section>
+					<div class="container text-center">
+						<h2>What We Offer</h2>
+						<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
+					</div>
 
 					<div class="container">
 						<div class="row">
