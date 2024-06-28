@@ -60,7 +60,7 @@
 
 
 				<!-- display carousel products -->
-				<?php include_once 'phpData/products.php';
+				<?php include_once 'json/product_category.php';
 
 				$product_categories = [
 					$products_data['building_materials'],
@@ -149,57 +149,6 @@
 
 
 
-
-
-				<!-- about-text-->
-				<section class="x-services ptb-100 gray-bg">
-					<div class="container text-center">
-						<h2>What We Offer</h2>
-						<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-					</div>
-
-					<div class="container">
-						<div class="row">
-
-							<?php
-							# load products
-							include_once 'phpData/productList.php';
-							foreach ($product_category as $products):
-								?>
-								<div class="col-md-4 col-sm-4">
-									<div class="thumbnail clearfix">
-										<a href="products.php"><img class="img-responsive"
-												src="img/product-categories/<?php echo $products['img']; ?>"
-												alt="Image"></a>
-
-										<div class="caption">
-
-											<h3>
-												<a href="products.php">
-													<?php echo $products['title']; ?>
-												</a>
-											</h3>
-
-											<ul>
-												<?php foreach ($products['prod'] as $product): ?>
-													<li> • <?php echo $product['title']; ?></li>
-												<?php endforeach; ?>
-											</ul>
-
-										</div>
-										<!-- /caption -->
-									</div>
-								</div>
-							<?php endforeach; ?>
-						</div>
-						<!-- /.row -->
-					</div>
-					<!-- /.container -->
-
-				</section>
-
-
-				<!-- /about-text-->
 
 
 

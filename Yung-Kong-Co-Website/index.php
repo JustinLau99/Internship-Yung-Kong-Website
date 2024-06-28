@@ -135,106 +135,42 @@
 							<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
 						</div>
 					</section>
+
 					<div id="cards_landscape_wrap-2">
 						<div class="container-fluid">
-							<div class="row">
+
+							<?php include_once VENDOR_PATH .'';
+							
+
+							?>
+
+							<?php foreach ($departments as $depart): ?>
+
 								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
 									<a href="">
 										<div class="card-flyer">
 											<div class="text-box">
+
 												<div class="image-box">
-													<img src="img/department/ykacc.jpg" />
+													<img src="img/department/<?php echo $depart['img'] ?>" />
 												</div>
 												<div class="text-container">
-													<h6>Account Department</h6>
 
-													<i class="bi bi-geo icon-lg">
-														
-														<p>Address</p>
-													</i>
-
-
-
+													<h6><?php echo $depart['name'] ?></h6>
+													
+													<i class="bi bi-geo icon-lg"><p><?php echo $depart['address'] ?></p></i>
+													<i class="bi bi-telephone icon-lg"><p><?php echo $depart['tel'] ?></p></i>
+													<i class="bi bi-whatsapp icon-lg"><p><?php echo $depart['whatsapp'] ?></p></i>
+													<i class="bi bi-envelope icon-lg"><p><?php echo $depart['mail']?></p></i>
+													<p>Fax: <?php echo $depart['fax'] ?></p>
 												</div>
 											</div>
 										</div>
 									</a>
 								</div>
-								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-									<a href="">
-										<div class="card-flyer">
-											<div class="text-box">
-												<div class="image-box">
-													<img src="img/department/ykbtw.jpg" />
-												</div>
-												<div class="text-container">
-													<h6>Bintawa Department</h6>
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting
-														industry. Lorem Ipsum has been the industry's standard dummy
-														text
-														ever since the 1500s.</p>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-									<a href="">
-										<div class="card-flyer">
-											<div class="text-box">
-												<div class="image-box">
-													<img src="img/department/ykmatang.jpg" />
-												</div>
 
-												<div class="text-container">
-													<h6>Matang Department</h6>
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting
-														industry. Lorem Ipsum has been the industry's standard dummy
-														text
-														ever since the 1500s.</p>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-									<a href="">
-										<div class="card-flyer">
-											<div class="text-box">
-												<div class="image-box">
-													<img src="img/department/ykpending.jpg" />
-												</div>
+							<?php endforeach; ?>
 
-												<div class="text-container">
-													<h6>Pending Department</h6>
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting
-														industry. Lorem Ipsum has been the industry's standard dummy
-														text
-														ever since the 1500s.</p>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
-									<a href="">
-										<div class="card-flyer">
-											<div class="text-box">
-												<div class="image-box">
-													<img src="img/department/ykpenrissen.jpg" />
-												</div>
-												<div class="text-container">
-													<h6>Penrissen Department</h6>
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting
-														industry. Lorem Ipsum has been the industry's standard dummy
-														text
-														ever since the 1500s.</p>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
 						</div>
 					</div>
 				</section>

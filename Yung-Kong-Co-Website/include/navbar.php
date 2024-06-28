@@ -44,16 +44,13 @@
 
             <ul class="nav navbar-nav navbar-right main-nav">
 
-                <?php 
-                    // Get the name of the current script
-                    $current_page = basename($_SERVER['SCRIPT_NAME']); 
-                ?>
+                <?php $current_page = basename($_SERVER['SCRIPT_NAME']); ?>
                 
-                <?php echo ($current_page == 'index.php' ? '<li class="active">' : '<li>')?><a href="index.php">Home</a></li>
-                <?php echo ($current_page == 'about.php' ? '<li class="active">' : '<li>')?><a href="about.php">About</a></li>
-                <?php echo ($current_page == 'products.php' ? '<li class="active">' : '<li>')?><a href="products.php">Products</a></li>
-                <?php echo ($current_page == 'contact.php' ? '<li class="active">' : '<li>')?><a href="contact.php">Contact</a></li>
-                
+				<li class="<?php echo ($current_page == 'index.php') ? 'active' : '' ?>"><a href="index.php">Home</a></li>
+				<li class="<?php echo ($current_page == 'about.php') ? 'active' : '' ?>"><a href="about.php">About</a></li>
+				<li class="<?php echo ($current_page == 'products.php') ? 'active' : '' ?>"><a href="products.php">Products</a></li>
+				<li class="<?php echo ($current_page == 'contact.php') ? 'active' : '' ?>"><a href="contact.php">Contact</a></li>
+
                 <li class="dropdown m-menu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Features
                     <span><i class="fa fa-angle-down"></i></span></a>
                     <ul class="dropdown-menu">
