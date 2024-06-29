@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <!-- header -->
@@ -120,12 +121,6 @@
 
 				</section>
 
-
-
-
-
-
-
 				<!-- Departments -->
 				<!-- Topic Cards -->
 				<section class="x-features">
@@ -139,7 +134,7 @@
 					<div id="cards_landscape_wrap-2">
 						<div class="container-fluid">
 
-							<?php include_once VENDOR_PATH .'';
+							<?php include_once 'phpData/departments.php';
 							
 
 							?>

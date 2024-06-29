@@ -51,50 +51,15 @@
 				<li class="<?php echo ($current_page == 'products.php') ? 'active' : '' ?>"><a href="products.php">Products</a></li>
 				<li class="<?php echo ($current_page == 'contact.php') ? 'active' : '' ?>"><a href="contact.php">Contact</a></li>
 
-                <li class="dropdown m-menu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Features
+                <li class="dropdown m-menu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Online Shop
                     <span><i class="fa fa-angle-down"></i></span></a>
                     <ul class="dropdown-menu">
                         <li>
                             <div class="m-menu-content">
                                 <ul class="col-sm-3">
-                                    <li class="dropdown-header">Widget Haeder</li>
-                                    <li><a href="#">Awesome Features</a></li>
-                                    <li><a href="#">Clean Interface</a></li>
-                                    <li><a href="#">Available Possibilities</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Pixel Perfect Graphics</a></li>
-                                </ul>
-                                <ul class="col-sm-3">
-                                    <li class="dropdown-header">Widget Haeder</li>
-                                    <li><a href="#">Awesome Features</a></li>
-                                    <li><a href="#">Clean Interface</a></li>
-                                    <li><a href="#">Available Possibilities</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Pixel Perfect Graphics</a></li>
-                                </ul>
-                                <ul class="col-sm-3">
-                                    <li class="dropdown-header">Widget Haeder</li>
-                                    <li><a href="#">Awesome Features</a></li>
-                                    <li><a href="#">Clean Interface</a></li>
-                                    <li><a href="#">Available Possibilities</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Pixel Perfect Graphics</a></li>
-                                </ul>
-                                <ul class="col-sm-3">
-                                    <li class="dropdown-header">Widget Haeder</li>
-                                    <li><a href="#">Awesome Features</a></li>
-                                    <li><a href="#">Clean Interface</a></li>
-                                    <li><a href="#">Available Possibilities</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Pixel Perfect Graphics</a></li>
-                                </ul>
-                                <ul class="col-sm-3">
-                                    <li class="dropdown-header">Widget Haeder</li>
-                                    <li><a href="#">Awesome Features</a></li>
-                                    <li><a href="#">Clean Interface</a></li>
-                                    <li><a href="#">Available Possibilities</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Pixel Perfect Graphics</a></li>
+                                    <li class="dropdown-header">Online Shops</li>
+                                    <li><a href="#">Shopee</a></li>
+                                    <li><a href="#">Lazada</a></li>
                                 </ul>
                             </div>
                         </li>
