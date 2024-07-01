@@ -55,9 +55,6 @@
 
 
 
-
-
-
 				<!-- display carousel products -->
 				<?php include_once 'json/product_category.php';
 
@@ -72,17 +69,15 @@
 					$products_data['plumbing'],
 					$products_data['power_tools'],
 					$products_data['paint'],
-				];
+				]; 
 
 				?>
 
 				<!-- products-category -->
 				<div class="container-fluid">
-					<?php
 
-					foreach ($product_categories as $category):
+					<?php foreach ($product_categories as $category): ?>
 
-						?>
 						<div class="row">
 							<div class="col-md-9">
 								<h3><?php echo $category['title'] ?></h3>
@@ -118,9 +113,8 @@
 
 							</div>
 						</div>
-						<?php
-					endforeach;
-					?>
+
+					<?php endforeach; ?>
 
 
 				</div>
@@ -130,99 +124,42 @@
 
 
 
+				<div class="container-fluid">
 
 
 
-				<div class="container-fluid bg-transparent my-4 p-3" style="position: relative;">
-					<div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-						<div class="col">
-							<div class="card h-100 shadow-sm">
-								<img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png"
-									class="card-img-top" alt="...">
-								<div class="card-body">
-									<span class="float-start badge rounded-pill bg-primary">ASUS Rog</span>
-									<span class="float-end price-hp">12354.00&euro;</span>
-									<h5 class="card-title">
-										Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-										Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum
-										ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.
-									</h5>
-									<div class="text-center my-4">
-										<a href="#" class="btn btn-warning">Check offer</a>
+
+					<?php foreach ($product_categories as $category): ?>
+
+
+						<div class="card card-block left">
+							<a href="#" class="btn btn-primary"><?php echo $category['title'] ?></a>
+						</div>
+
+						<div class="row">
+
+							<?php foreach ($category['prod'] as $product): ?>
+
+								<div class="col-md-2 col-sm-3 col-xs-6">
+									<div class="card card-block">
+										<img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg"
+											alt="Photo of sunset">
+										<h5 class="card-title mt-3 mb-3"><?php echo $product['title'] ?></h5>
+										<p class="card-text">
+											This is a company that builds websites, web apps and e-commerce solutions.
+										</p>
 									</div>
 								</div>
-							</div>
+
+							<?php endforeach; ?>
+
 						</div>
-						<div class="col">
-							<div class="card h-100 shadow-sm">
-								<img src="https://www.freepnglogos.com/uploads/notebook-png/notebook-laptop-png-images-you-can-download-mashtrelo-14.png"
-									class="card-img-top" alt="...">
-								<div class="card-body">
-									<span class="float-start badge rounded-pill bg-success">12354.00&euro;</span>
-									<span class="float-end"><a href="#">Example</a></span>
-									<h5 class="card-title">
-										Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-										Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum
-										ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.
-									</h5>
-									<div class="d-grid gap-2 my-4">
-										<a href="#" class="btn btn-warning">Check offer</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card h-100 shadow-sm">
-								<img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png"
-									class="card-img-top" alt="...">
-								<div class="label-top shadow-sm">Asus Rog</div>
-								<div class="card-body">
-									<div class="clearfix mb-3">
-										<span class="float-start badge rounded-pill bg-success">12354.00&euro;</span>
-										<span class="float-end"><a href="#" class="small text-muted">Reviews</a></span>
-									</div>
-									<h5 class="card-title">
-										Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-										Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum
-										ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.
-									</h5>
-									<div class="text-center my-4">
-										<a href="#" class="btn btn-warning">Check offer</a>
-									</div>
-									<div class="clearfix mb-1">
-										<span class="float-start"><i class="far fa-question-circle"></i></span>
-										<span class="float-end"><i class="fas fa-plus"></i></span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card h-100">
-								<img src="https://www.freepnglogos.com/uploads/notebook-png/notebook-laptop-png-images-you-can-download-mashtrelo-14.png"
-									class="card-img-top" alt="...">
-								<div class="label-top shadow-sm">DELL</div>
-								<div class="card-body">
-									<div class="clearfix mb-3">
-										<span class="float-start price-hp">12354.00&euro;</span>
-										<span class="float-end"><a class="text-muted small" href="#">Reviews</a></span>
-									</div>
-									<h5 class="card-title">
-										Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-										Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum
-										ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.
-									</h5>
-									<div class="text-center my-4">
-										<a href="#" class="btn btn-warning">Check offer</a>
-									</div>
-									<div class="clearfix mb-1">
-										<span class="float-start"><i class="far fa-question-circle"></i></span>
-										<span class="float-end"><i class="fas fa-plus"></i></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+
+					<?php endforeach; ?>
+
+
 				</div>
+
 
 
 
@@ -238,7 +175,6 @@
 
 				<!-- footer -->
 				<?php include_once 'include/footer.php'; ?>
-				<!-- /footer -->
 
 			</div>
 			<!-- /content-wrapper -->
@@ -248,7 +184,6 @@
 
 		<!-- uc-mobile-menu -->
 		<?php include_once 'include/uc-mobile-menu.php'; ?>
-		<!-- uc-mobile-menu -->
 
 
 	</div>
