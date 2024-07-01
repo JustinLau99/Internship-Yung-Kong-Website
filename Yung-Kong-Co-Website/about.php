@@ -51,7 +51,7 @@ $logo_brand = [
 <!DOCTYPE html>
 <html>
     <!-- header -->
-    <?php include_once 'include/header.php'?>
+    <?php include_once 'include/header.php'; ?>
 <body>
 <div id="main-wrapper">
 
@@ -67,7 +67,7 @@ $logo_brand = [
 <div class="content-wrapper">
 
 <!-- .nav -->
-<?php include_once 'include/navbar.php'?>
+<?php include_once 'include/navbar.php'; ?>
 <!-- .nav -->
 
 
@@ -142,7 +142,7 @@ $logo_brand = [
 
 
 <!-- footer -->
-<?php include_once 'include/footer.php' ?>
+<?php include_once 'include/footer.php'; ?>
 <!-- .footer -->
 
 </div>

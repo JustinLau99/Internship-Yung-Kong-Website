@@ -10,5 +10,3 @@ if ($brand_data === null && json_last_error() !== JSON_ERROR_NONE) {
     echo "Failed to decode JSON: " . json_last_error_msg();
 }
 
-
-?>

@@ -14,7 +14,7 @@ define('SUBDIR_PATH', BASE_PATH . '/subdir/');
 $debug = true;
 
 
-// $debug = false;
+$debug = false;
 
 
 
@@ -28,4 +28,3 @@ if ($debug) {
     echo 'SUBDIR_PATH: ' . SUBDIR_PATH . '<br>';
 }
 
-?>

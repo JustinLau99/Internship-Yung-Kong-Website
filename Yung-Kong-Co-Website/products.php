@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!-- header -->
-<?php include_once 'include/header.php' ?>
+<?php include_once 'include/header.php'; ?>
 <!-- .header -->
 
 <body>
@@ -20,7 +20,7 @@
 			<div class="content-wrapper">
 
 				<!-- navbar -->
-				<?php include_once 'include/navbar.php' ?>
+				<?php include_once 'include/navbar.php'; ?>
 				<!-- navbar -->
 
 
@@ -153,7 +153,7 @@
 
 
 				<!-- footer -->
-				<?php include_once 'include/footer.php' ?>
+				<?php include_once 'include/footer.php'; ?>
 				<!-- /footer -->
 
 			</div>
@@ -163,7 +163,7 @@
 
 
 		<!-- uc-mobile-menu -->
-		<?php include_once 'include/uc-mobile-menu.php' ?>
+		<?php include_once 'include/uc-mobile-menu.php'; ?>
 		<!-- uc-mobile-menu -->
 
 

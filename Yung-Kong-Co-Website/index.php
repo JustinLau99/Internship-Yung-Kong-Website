@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <!-- header -->
-<?php include_once 'include/header.php' ?>
+<?php include_once 'include/header.php'; ?>
 <!-- .header -->
 
 <body>
@@ -20,7 +20,7 @@
 			<div class="content-wrapper">
 
 				<!-- navbar -->
-				<?php include_once 'include/navbar.php' ?>
+				<?php include_once 'include/navbar.php'; ?>
 
 				<!-- Indicators -->
 				<div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
@@ -134,10 +134,7 @@
 					<div id="cards_landscape_wrap-2">
 						<div class="container-fluid">
 
-							<?php include_once 'phpData/departments.php';
-							
-
-							?>
+							<?php include_once 'phpData/departments.php'; ?>
 
 							<?php foreach ($departments as $depart): ?>
 
@@ -180,7 +177,7 @@
 				<!-- Product Brands -->
 				<section class="client-logo ptb-100">
 
-					<?php include_once 'json/brand_logo.php' ?>
+					<?php include_once 'json/brand_logo.php'; ?>
 
 					<section class="section-title">
 						<div class="container text-center">
@@ -214,7 +211,7 @@
 
 
 				<!-- footer -->
-				<?php include_once 'include/footer.php' ?>
+				<?php include_once 'include/footer.php'; ?>
 
 			</div>
 			<!-- .content-wrapper -->
@@ -222,13 +219,13 @@
 		<!-- .offcanvas-pusher -->
 
 		<!-- uc-mobile-menu -->
-		<?php include_once 'include/uc-mobile-menu.php' ?>
+		<?php include_once 'include/uc-mobile-menu.php'; ?>
 
 	</div>
 	<!-- #main-wrapper -->
 
 	<!-- Script -->
-	<?php include_once 'include/script-src.php' ?>
+	<?php include_once 'include/script-src.php'; ?>
 
 </body>
 
