@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <!-- header -->
@@ -76,45 +75,42 @@
 					</section>
 
 					<div class="container-fluid">
-						<div class="row">
 
-							<?php
+						<?php
 
-							include_once 'json/product_category.php'; # load products
-							foreach ($product_category as $products):
+						include_once 'json/product_category.php'; # load products
+						foreach ($product_category as $products):
 
-								?>
-								<div class="col-md-3 col-sm-4 col-xs-6">
-									<div class="thumbnail clearfix">
+							?>
+							<div class="col-md-3 col-sm-4 col-xs-6">
+								<div class="thumbnail clearfix">
 
-										<a href="products.php"><img class="img-responsive"
-												src="img/product-categories/<?php echo $products['img']; ?>"
-												alt="Image"></a>
+									<a href="products.php"><img class="img-responsive"
+											src="img/product-categories/<?php echo $products['img']; ?>" alt="Image"></a>
 
-										<div class="caption">
+									<div class="caption">
 
-											<h3>
-												<a href="products.php">
-													<?php echo $products['title']; ?>
-												</a>
-											</h3>
+										<h3>
+											<a href="products.php">
+												<?php echo $products['title']; ?>
+											</a>
+										</h3>
 
-											<ul>
-												<?php foreach ($products['subCategory'] as $product): ?>
-													<li> •
-														<?php echo $product; ?>
-													</li>
-												<?php endforeach; ?>
-											</ul>
+										<ul>
+											<?php foreach ($products['subCategory'] as $product): ?>
+												<li> •
+													<?php echo $product; ?>
+												</li>
+											<?php endforeach; ?>
+										</ul>
 
 
-										</div>
 									</div>
 								</div>
+							</div>
 
-							<?php endforeach; ?>
+						<?php endforeach; ?>
 
-						</div>
 						<!-- /.row -->
 					</div>
 					<!-- /.container -->
@@ -135,7 +131,6 @@
 						<div class="container-fluid">
 
 							<?php include_once 'phpData/departments.php'; ?>
-
 							<?php foreach ($departments as $depart): ?>
 
 								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
@@ -149,11 +144,19 @@
 												<div class="text-container">
 
 													<h6><?php echo $depart['name'] ?></h6>
-													
-													<i class="bi bi-geo icon-lg"><p><?php echo $depart['address'] ?></p></i>
-													<i class="bi bi-telephone icon-lg"><p><?php echo $depart['tel'] ?></p></i>
-													<i class="bi bi-whatsapp icon-lg"><p><?php echo $depart['whatsapp'] ?></p></i>
-													<i class="bi bi-envelope icon-lg"><p><?php echo $depart['mail']?></p></i>
+
+													<i class="bi bi-geo icon-lg">
+														<p><?php echo $depart['address'] ?></p>
+													</i>
+													<i class="bi bi-telephone icon-lg">
+														<p><?php echo $depart['tel'] ?></p>
+													</i>
+													<i class="bi bi-whatsapp icon-lg">
+														<p><?php echo $depart['whatsapp'] ?></p>
+													</i>
+													<i class="bi bi-envelope icon-lg">
+														<p><?php echo $depart['mail'] ?></p>
+													</i>
 													<p>Fax: <?php echo $depart['fax'] ?></p>
 												</div>
 											</div>
