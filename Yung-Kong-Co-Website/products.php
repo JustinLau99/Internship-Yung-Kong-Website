@@ -78,7 +78,7 @@
 				?>
 
 
-				<div class="container">
+				<div class="container-fluid">
 					<?php
 
 					foreach ($product_categories as $category):
@@ -96,14 +96,13 @@
 
 								<?php foreach ($category['prod'] as $product): ?>
 
-									<div class="col-sm-3" style="min-height: 400px;">
+									<div class="col-md-2 col-sm-3" style="min-height: 400px;">
 										<img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
 
 										<div class="info">
 											<div class="row">
 												<div class="price col-md-6">
 													<h5><?php echo $product['title'] ?></h5>
-													<h5 class="price-text-color">$199.99</h5>
 												</div>
 											</div>
 											<div class="separator clear-left">
@@ -172,9 +171,7 @@
 
 
 	<!-- script -->
-	<?php
-	include_once 'include/script-src.php'
-		?>
+	<?php include_once 'include/script-src.php'; ?>
 	<!-- /script -->
 
 </body>

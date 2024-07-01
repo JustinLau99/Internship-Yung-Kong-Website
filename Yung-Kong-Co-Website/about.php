@@ -151,14 +151,14 @@ $logo_brand = [
 <!-- .offcanvas-pusher -->
 
 <!-- uc-mobile-menu -->
-<?php include_once 'include/uc-mobile-menu.php'?>
+<?php include_once 'include/uc-mobile-menu.php'; ?>
 
 
 </div>
 <!-- #main-wrapper -->
 
 <!-- Script -->
- <?php include_once 'include/script-src.php'?>
+ <?php include_once 'include/script-src.php'; ?>
 
 </body>
 </html>
