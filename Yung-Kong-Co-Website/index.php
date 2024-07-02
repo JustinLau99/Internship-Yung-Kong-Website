@@ -79,14 +79,16 @@
 					<div class="container-fluid">
 
 
-						<?php include_once INCLUDE_PATH . 'product_category.php'; ?>
+						<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
 						<?php foreach ($product_category as $products): ?>
 
 							<div class="col-md-3 col-sm-4 col-xs-6">
 								<div class="thumbnail clearfix">
 
-									<a href="products.php"><img class="img-responsive"
-											src="<?php echo IMG_PRODUCT_CATEGORY . $products['img']; ?>"></a>
+									<a href="products.php">
+										<img class="img-responsive"
+											src="<?php echo IMG_PRODUCT_CATEGORY . $products['img']; ?>">
+									</a>
 
 									<div class="caption">
 

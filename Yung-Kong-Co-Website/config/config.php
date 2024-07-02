@@ -5,6 +5,7 @@ define('BASE_PATH', dirname(__DIR__));
 define('CONFIG_PATH'			, BASE_PATH . '/config/');
 define('INCLUDE_PATH'			, BASE_PATH . '/include/');
 define('IMG_PATH'				, BASE_PATH . '/img/');
+define('PHPDATA_PATH'			, BASE_PATH . '/phpData/');
 
 define('IMG_PRODUCT_CATEGORY'	, IMG_PATH . '/product-categories/');
 define('IMG_HOME_OFFER'			, IMG_PATH . '/home-offer/');
