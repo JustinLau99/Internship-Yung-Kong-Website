@@ -2,29 +2,49 @@
 // Define the base path of the project
 define('BASE_PATH', dirname(__DIR__));
 
-// Define paths for different parts of your application
-define('CONFIG_PATH', BASE_PATH . '/config/');
-define('INCLUDES_PATH', BASE_PATH . '/includes/');
-define('TEMPLATES_PATH', BASE_PATH . '/templates/');
-define('UPLOADS_PATH', BASE_PATH . '/uploads/');
-define('SUBDIR_PATH', BASE_PATH . '/subdir/');
+define('CONFIG_PATH'			, BASE_PATH . '/config/');
+define('INCLUDE_PATH'			, BASE_PATH . '/include/');
+define('IMG_PATH'				, BASE_PATH . '/img/');
+
+define('IMG_PRODUCT_CATEGORY'	, IMG_PATH . '/product-categories/');
+define('IMG_HOME_OFFER'			, IMG_PATH . '/home-offer/');
+define('IMG_DEPARTMENT'			, IMG_PATH . '/department/');
+define('IMG_BRAND'				, IMG_PATH . '/brands/');
 
 
 // Other settings
-$debug = true;
-
-
 $debug = false;
-
-
 
 // Debugging information (optional)
 if ($debug) {
-    echo 'BASE_PATH: ' . BASE_PATH . '<br>';
-    echo 'CONFIG_PATH: ' . CONFIG_PATH . '<br>';
-    echo 'INCLUDES_PATH: ' . INCLUDES_PATH . '<br>';
-    echo 'TEMPLATES_PATH: ' . TEMPLATES_PATH . '<br>';
-    echo 'UPLOADS_PATH: ' . UPLOADS_PATH . '<br>';
-    echo 'SUBDIR_PATH: ' . SUBDIR_PATH . '<br>';
+    echo 'BASE_PATH: ' 		. BASE_PATH 	. '<br>';
+    echo 'CONFIG_PATH: '	. CONFIG_PATH 	. '<br>';
+    echo 'IMG_PATH: ' 		. IMG_PATH 		. '<br>';
 }
 
+/*************************
+
+project/
+├
+├── config/
+│   └── config.php
+│
+├── img/
+│   └── brands.php
+│   └── department.php
+│   └── home-offer.php
+│   └── product-category.php
+│
+├── include/
+│   └── footer.php
+│   └── header.php
+│   └── navbar.php
+│   └── script-src.php
+│   └── uc-mobile-menu.php
+│
+├── about.php
+├── contact.php
+├── index.php
+└── products.php
+
+*************************/

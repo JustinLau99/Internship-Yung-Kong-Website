@@ -1,7 +1,9 @@
+<?php include_once 'config/config.php'; ?> <!-- define path -->
+
 <!DOCTYPE html>
 <html>
 <!-- header -->
-<?php include_once 'include/header.php'; ?>
+<?php include_once INCLUDE_PATH . 'header.php'; ?>
 
 <body>
 	<div id="main-wrapper">
@@ -18,7 +20,7 @@
 			<div class="content-wrapper">
 
 				<!-- .nav -->
-				<?php include_once 'include/navbar.php'; ?>
+				<?php include_once INCLUDE_PATH . 'navbar.php'; ?>
 				<!-- .nav -->
 
 
@@ -81,7 +83,7 @@
 				<!--.map-section-->
 
 				<!-- footer -->
-				<?php include_once 'include/footer.php'; ?>
+				<?php include_once INCLUDE_PATH . 'footer.php'; ?>
 
 			</div>
 			<!-- .content-wrapper -->
@@ -89,14 +91,14 @@
 		<!-- .offcanvas-pusher -->
 
 
-		<?php include_once 'include/uc-mobile-menu.php'; ?><!-- uc-mobile-menu -->
+		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?><!-- uc-mobile-menu -->
 
 
 	</div>
 	<!-- #main-wrapper -->
 
 
-	<?php include_once 'include/script-src.php'; ?><!-- Script -->
+	<?php include_once INCLUDE_PATH . 'script-src.php'; ?><!-- Script -->
 
 
 	<!-- Google Map -->

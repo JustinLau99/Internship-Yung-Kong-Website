@@ -1,7 +1,9 @@
+<?php include_once 'config/config.php'; ?> <!-- define path -->
+
 <!DOCTYPE html>
 <html>
 <!-- header -->
-<?php include_once 'include/header.php'; ?>
+<?php include_once INCLUDE_PATH . 'header.php'; ?>
 <!-- .header -->
 
 <body>
@@ -19,7 +21,7 @@
 			<div class="content-wrapper">
 
 				<!-- navbar -->
-				<?php include_once 'include/navbar.php'; ?>
+				<?php include_once INCLUDE_PATH . 'navbar.php'; ?>
 
 				<!-- Indicators -->
 				<div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
@@ -76,17 +78,15 @@
 
 					<div class="container-fluid">
 
-						<?php
 
-						include_once 'json/product_category.php'; # load products
-						foreach ($product_category as $products):
+						<?php include_once INCLUDE_PATH . 'product_category.php'; ?>
+						<?php foreach ($product_category as $products): ?>
 
-							?>
 							<div class="col-md-3 col-sm-4 col-xs-6">
 								<div class="thumbnail clearfix">
 
 									<a href="products.php"><img class="img-responsive"
-											src="img/product-categories/<?php echo $products['img']; ?>" alt="Image"></a>
+											src="<?php echo IMG_PRODUCT_CATEGORY . $products['img']; ?>"></a>
 
 									<div class="caption">
 
@@ -214,7 +214,7 @@
 
 
 				<!-- footer -->
-				<?php include_once 'include/footer.php'; ?>
+				<?php include_once INCLUDE_PATH . 'footer.php'; ?>
 
 			</div>
 			<!-- .content-wrapper -->
@@ -222,13 +222,13 @@
 		<!-- .offcanvas-pusher -->
 
 		<!-- uc-mobile-menu -->
-		<?php include_once 'include/uc-mobile-menu.php'; ?>
+		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?>
 
 	</div>
 	<!-- #main-wrapper -->
 
 	<!-- Script -->
-	<?php include_once 'include/script-src.php'; ?>
+	<?php include_once INCLUDE_PATH . 'script-src.php'; ?>
 
 </body>
 
