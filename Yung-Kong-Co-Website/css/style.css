@@ -1201,6 +1201,7 @@ Team
 	-moz-transition: all 0.8s ease 0s;
 	-o-transition: all 0.8s ease 0s;
 	transition: all 0.8s ease 0s;
+
 }
 
 .client-logo a:hover img {
@@ -1834,6 +1835,7 @@ service-icon-style
 	background-color: #fcb2b2 !important;
 }
 
+
 /* ---------------------------------------------- /*
  * Bootstrap
 /* ---------------------------------------------- */
@@ -1848,22 +1850,6 @@ service-icon-style
 	font-size: 0.75em;
 	/* 0.75 times the normal size */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

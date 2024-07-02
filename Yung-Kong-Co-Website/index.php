@@ -124,7 +124,6 @@
 				</section>
 
 				<!-- Departments -->
-				<!-- Topic Cards -->
 				<section class="x-features">
 					<section class="section-title">
 						<div class="container text-center">
@@ -195,13 +194,13 @@
 						</div>
 					</section>
 
-					<div class="container">
+					<div class="container-fluid">
 
 						<?php foreach ($brand_logo as $brand): ?>
 
-							<div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+							<div class="col-lg-1 col-md-2 col-sm-4 col-xs-6 section-margin">
 								<a href="#">
-									<img src="<?php echo IMG_BRAND . $brand['src']; ?>">">
+									<img src="<?php echo IMG_BRAND . $brand['src']; ?>">
 								</a>
 							</div>
 
