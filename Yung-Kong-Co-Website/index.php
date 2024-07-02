@@ -67,6 +67,10 @@
 
 
 
+
+
+
+
 				<!-- productList -->
 				<section class="x-services ptb-100 gray-bg">
 					<section class="section-title">
@@ -87,19 +91,19 @@
 
 									<a href="products.php">
 										<img class="img-responsive"
-											src="<?php echo IMG_PRODUCT_CATEGORY . $products['img']; ?>">
+											src="<?php echo IMG_PRODUCT_CATEGORY . $products[img]; ?> ">
 									</a>
 
 									<div class="caption">
 
 										<h3>
 											<a href="products.php">
-												<?php echo $products['title']; ?>
+												<?php echo $products[title]; ?>
 											</a>
 										</h3>
 
 										<ul>
-											<?php foreach ($products['subCategory'] as $product): ?>
+											<?php foreach ($products[subCategory] as $product): ?>
 												<li> •
 													<?php echo $product; ?>
 												</li>
@@ -132,7 +136,7 @@
 					<div id="cards_landscape_wrap-2">
 						<div class="container-fluid">
 
-							<?php include_once 'phpData/departments.php'; ?>
+							<?php include_once PHPDATA_PATH . 'departments.php'; ?>
 							<?php foreach ($departments as $depart): ?>
 
 								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
@@ -141,7 +145,7 @@
 											<div class="text-box">
 
 												<div class="image-box">
-													<img src="img/department/<?php echo $depart['img'] ?>" />
+													<img src="<?php echo IMG_DEPARTMENT . $depart[img] ?>" />
 												</div>
 												<div class="text-container">
 
@@ -182,7 +186,7 @@
 				<!-- Product Brands -->
 				<section class="client-logo ptb-100">
 
-					<?php include_once 'json/brand_logo.php'; ?>
+					<?php include_once PHPDATA_PATH . 'brand_logo.php'; ?>
 
 					<section class="section-title">
 						<div class="container text-center">
@@ -193,11 +197,11 @@
 
 					<div class="container">
 
-						<?php foreach ($brand_data['brand_logo'] as $brand): ?>
+						<?php foreach ($brand_logo as $brand): ?>
 
 							<div class="col-md-2 col-sm-4 col-xs-6 section-margin">
 								<a href="#">
-									<img src="img/brands/<?php echo $brand['src']; ?>" alt="<?php echo $brand['alt']; ?>">
+									<img src="<?php echo IMG_BRAND . $brand['src']; ?>">">
 								</a>
 							</div>
 

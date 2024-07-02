@@ -7,14 +7,14 @@ define('INCLUDE_PATH'			, BASE_PATH . '/include/');
 define('IMG_PATH'				, BASE_PATH . '/img/');
 define('PHPDATA_PATH'			, BASE_PATH . '/phpData/');
 
-define('IMG_PRODUCT_CATEGORY'	, IMG_PATH . '/product-categories/');
-define('IMG_HOME_OFFER'			, IMG_PATH . '/home-offer/');
-define('IMG_DEPARTMENT'			, IMG_PATH . '/department/');
-define('IMG_BRAND'				, IMG_PATH . '/brands/');
+define('IMG_PRODUCT_CATEGORY'	, 'img/product-categories/');
+define('IMG_DEPARTMENT'			, 'img/department/');
+define('IMG_BRAND'				, 'img/brands/');
 
 
 // Other settings
 $debug = false;
+
 
 // Debugging information (optional)
 if ($debug) {
@@ -23,7 +23,7 @@ if ($debug) {
     echo 'IMG_PATH: ' 		. IMG_PATH 		. '<br>';
 }
 
-/*************************
+/* ************************
 
 project/
 ├
@@ -48,4 +48,4 @@ project/
 ├── index.php
 └── products.php
 
-*************************/
+************************ */
