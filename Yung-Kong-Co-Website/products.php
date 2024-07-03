@@ -69,7 +69,7 @@
 					<?php foreach ($product_category as $category): ?>
 
 						<div class="card card-block left">
-							<a href="#" class="btn btn-primary"><?php echo $category[title] ?></a>
+							<a href="#" class="btn btn-primary"><?php echo $category[TITLE] ?></a>
 						</div>
 
 						<div class="row">
@@ -80,7 +80,7 @@
 									<div class="card card-block">
 										<img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg"
 											alt="Photo of sunset">
-										<h5 class="card-title mt-3 mb-3"><?php echo $product[title] ?></h5>
+										<h5 class="card-title mt-3 mb-3"><?php echo $product[TITLE] ?></h5>
 										<p class="card-text">
 											This is a company that builds websites, web apps and e-commerce solutions.
 										</p>

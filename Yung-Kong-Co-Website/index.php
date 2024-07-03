@@ -91,19 +91,19 @@
 
 									<a href="products.php">
 										<img class="img-responsive"
-											src="<?php echo IMG_PRODUCT_CATEGORY . $products[img]; ?> ">
+											src="<?php echo IMG_PRODUCT_CATEGORY . $products[IMG]; ?> ">
 									</a>
 
 									<div class="caption">
 
 										<h3>
 											<a href="products.php">
-												<?php echo $products[title]; ?>
+												<?php echo $products[TITLE]; ?>
 											</a>
 										</h3>
 
 										<ul>
-											<?php foreach ($products[subCategory] as $product): ?>
+											<?php foreach ($products[SUBCATEGORY] as $product): ?>
 												<li> •
 													<?php echo $product; ?>
 												</li>
@@ -144,7 +144,7 @@
 											<div class="text-box">
 
 												<div class="image-box">
-													<img src="<?php echo IMG_DEPARTMENT . $depart[img] ?>" />
+													<img src="<?php echo IMG_DEPARTMENT . $depart[IMG] ?>" />
 												</div>
 												<div class="text-container">
 

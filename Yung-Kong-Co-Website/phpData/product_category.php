@@ -2,86 +2,86 @@
 
 
 // categories key value
-const building_materials 		= 'building_materials';
-const bolts_fasteners 			= 'bolts_fasteners';
-const hand_tools 				= 'hand_tools';
-const general_household 		= 'general_household';
-const welding_machinery 		= 'welding_machinery';
-const safety_security 			= 'safety_security';
-const electrical_accessories 	= 'electrical_accessories';
-const plumbing 					= 'plumbing';
-const power_tools 				= 'power_tools';
-const paint 					= 'paint';
+const BUILDING_MATERIALS 		= 'building_materials';
+const BOLTS_FASTENERS 			= 'bolts_fasteners';
+const HAND_TOOLS 				= 'hand_tools';
+const GENERAL_HOUSEHOLD 		= 'general_household';
+const WELDING_MACHINERY 		= 'welding_machinery';
+const SAFETY_SECURITY 			= 'safety_security';
+const ELECTRICAL_ACCESSORIES 	= 'electrical_accessories';
+const PLUMBING 					= 'plumbing';
+const POWER_TOOLS 				= 'power_tools';
+const PAINT 					= 'paint';
 // each category key value
-const img 						= 'img';
-const title 					= 'title';
-const subCategory 				= 'subCategory';
-const prod 						= 'prod';
+const IMG 						= 'img';
+const TITLE 					= 'title';
+const SUBCATEGORY 				= 'subCategory';
+const PROD 						= 'prod';
 
 // product category
 $product_category = [
 
-	building_materials => [
-		img => "building_material_categories.jpg",
-		title => "Building Materials",
-		subCategory => [
+	BUILDING_MATERIALS => [
+		IMG => "building_material_categories.jpg",
+		TITLE => "Building Materials",
+		SUBCATEGORY => [
 			"Cement",
 			"Steel Bar",
 			"Plywoods",
 			"Roofing Sheet",
 			"Wire Mesh"
 		],
-		prod => [
-			[title => "CEMENT", 													img => ""],
-			[title => "STEEL BAR", 												img => ""],
-			[title => "YMC", 														img => ""],
-			[title => "DQ", 														img => ""],
-			[title => "YRC", 														img => ""],
-			[title => "YKWI BAR CUT & BEND", 										img => ""],
-			[title => "GI & PVC, HARD DRAWN WIRE", 								img => ""],
-			[title => "GI GRILL, WIRE MESH", 										img => ""],
-			[title => "CL FENCE & BARBED WIRE", 									img => ""],
-			[title => "VERSATILE FENCE, FITTING", 									img => ""],
-			[title => "YKWI PRODUCT SPECIAL ORDER", 								img => ""],
-			[title => "GI, PPGI, PLAIN SHEET", 									img => ""],
-			[title => "ROOFING-CORRUGATED, TRANSPARENT & RIDGES", 					img => ""],
-			[title => "YUNCO PRODUCT SPECIAL ORDER", 								img => ""],
-			[title => "ASTEEL ROOFING PRODUCT", 									img => ""],
-			[title => "CAPPING, FLASHING, GUTTER", 								img => ""],
-			[title => "TRUSS, PURLIN, U-PARTITION", 								img => ""],
-			[title => "ROOFING PRODUCTION", 										img => ""],
-			[title => "PURLIN PRODUCTION", 										img => ""],
-			[title => "DOOR FRAME", 												img => ""],
-			[title => "ROOFING ACCESSORIES", 										img => ""],
-			[title => "HEXAGONAL WIRE NETTING", 									img => ""],
-			[title => "NETTING & MESH - MOSQUITO, G.I COATED", 					img => ""],
-			[title => "GABION", 													img => ""],
-			[title => "ANGLE IRON BAR", 											img => ""],
-			[title => "M.S FLAT, SQUARE BAR, IRON GATE", 							img => ""],
-			[title => "HOLLOW SECTION", 											img => ""],
-			[title => "I-BEAM", 													img => ""],
-			[title => "U-CHANNEL", 												img => ""],
-			[title => "G.I. PIPE", 												img => ""],
-			[title => "UPVC PIPE", 												img => ""],
-			[title => "BLACK PIPE", 												img => ""],
-			[title => "PVC PIPE", 													img => ""],
-			[title => "HDPE PIPE", 												img => ""],
-			[title => "CHROME, STEEL, COPPER TUBE", 								img => ""],
-			[title => "BRICK", 													img => ""],
-			[title => "INSULATION", 												img => ""],
-			[title => "YH LAMINATED PRODUCTS", 									img => ""],
-			[title => "PRIMAFLEX SHEET", 											img => ""],
-			[title => "GYPSUM BOARD", 												img => ""],
-			[title => "M.S PLAIN PLATE", 											img => ""],
-			[title => "WOOD", 														img => ""],
-			[title => "PLYWOOD", 													img => ""],
+		PROD => [
+			[TITLE => "CEMENT", 													IMG => ""],
+			[TITLE => "STEEL BAR", 												IMG => ""],
+			[TITLE => "YMC", 														IMG => ""],
+			[TITLE => "DQ", 														IMG => ""],
+			[TITLE => "YRC", 														IMG => ""],
+			[TITLE => "YKWI BAR CUT & BEND", 										IMG => ""],
+			[TITLE => "GI & PVC, HARD DRAWN WIRE", 								IMG => ""],
+			[TITLE => "GI GRILL, WIRE MESH", 										IMG => ""],
+			[TITLE => "CL FENCE & BARBED WIRE", 									IMG => ""],
+			[TITLE => "VERSATILE FENCE, FITTING", 									IMG => ""],
+			[TITLE => "YKWI PRODUCT SPECIAL ORDER", 								IMG => ""],
+			[TITLE => "GI, PPGI, PLAIN SHEET", 									IMG => ""],
+			[TITLE => "ROOFING-CORRUGATED, TRANSPARENT & RIDGES", 					IMG => ""],
+			[TITLE => "YUNCO PRODUCT SPECIAL ORDER", 								IMG => ""],
+			[TITLE => "ASTEEL ROOFING PRODUCT", 									IMG => ""],
+			[TITLE => "CAPPING, FLASHING, GUTTER", 								IMG => ""],
+			[TITLE => "TRUSS, PURLIN, U-PARTITION", 								IMG => ""],
+			[TITLE => "ROOFING PRODUCTION", 										IMG => ""],
+			[TITLE => "PURLIN PRODUCTION", 										IMG => ""],
+			[TITLE => "DOOR FRAME", 												IMG => ""],
+			[TITLE => "ROOFING ACCESSORIES", 										IMG => ""],
+			[TITLE => "HEXAGONAL WIRE NETTING", 									IMG => ""],
+			[TITLE => "NETTING & MESH - MOSQUITO, G.I COATED", 					IMG => ""],
+			[TITLE => "GABION", 													IMG => ""],
+			[TITLE => "ANGLE IRON BAR", 											IMG => ""],
+			[TITLE => "M.S FLAT, SQUARE BAR, IRON GATE", 							IMG => ""],
+			[TITLE => "HOLLOW SECTION", 											IMG => ""],
+			[TITLE => "I-BEAM", 													IMG => ""],
+			[TITLE => "U-CHANNEL", 												IMG => ""],
+			[TITLE => "G.I. PIPE", 												IMG => ""],
+			[TITLE => "UPVC PIPE", 												IMG => ""],
+			[TITLE => "BLACK PIPE", 												IMG => ""],
+			[TITLE => "PVC PIPE", 													IMG => ""],
+			[TITLE => "HDPE PIPE", 												IMG => ""],
+			[TITLE => "CHROME, STEEL, COPPER TUBE", 								IMG => ""],
+			[TITLE => "BRICK", 													IMG => ""],
+			[TITLE => "INSULATION", 												IMG => ""],
+			[TITLE => "YH LAMINATED PRODUCTS", 									IMG => ""],
+			[TITLE => "PRIMAFLEX SHEET", 											IMG => ""],
+			[TITLE => "GYPSUM BOARD", 												IMG => ""],
+			[TITLE => "M.S PLAIN PLATE", 											IMG => ""],
+			[TITLE => "WOOD", 														IMG => ""],
+			[TITLE => "PLYWOOD", 													IMG => ""],
 		]
 	],
 
-	bolts_fasteners => [
-		img => "bolts_fasteners_categories.jpg",
-		title => "Bolts & Fasteners",
-		subCategory => [
+	BOLTS_FASTENERS => [
+		IMG => "bolts_fasteners_categories.jpg",
+		TITLE => "Bolts & Fasteners",
+		SUBCATEGORY => [
 			"Nails",
 			"Hooks",
 			"Rivets",
@@ -89,53 +89,53 @@ $product_category = [
 			"Washers",
 			"Bolts & Nut"
 		],
-		prod => [
-			[title => "BOLT & NUT - UNC,S/STEEL,BRASS & OTHERS", 					img => ""],
-			[title => "BOLT & NUT", 												img => ""],
-			[title => "STUD BOLT - MS, ZP, S/S 304", 								img => ""],
-			[title => "NUTS, BOLT & ZP BOLT & NUT", 								img => ""],
-			[title => "WASHER-MS,S/S,BRASS,HDG,FIBRE & SPRING", 					img => ""],
-			[title => "POINTED SCREW", 											img => ""],
-			[title => "SELF DRILLING SCREW", 										img => ""],
-			[title => "SCREW - BSW SOCKET & CSK MACHINE", 							img => ""],
-			[title => "NAIL - COIL, ROOFING & OTHER", 								img => ""],
-			[title => "JAGUAR IRON NAIL", 											img => ""],
-			[title => "CONCRETE NAIL", 											img => ""],
-			[title => "RAW & WALL PLUG", 											img => ""],
-			[title => "LAZOR BOLTS & FASTENERS", 									img => ""],
-			[title => "ALUMINIUM RIVET - PATTA, OTHERS", 							img => ""],
+		PROD => [
+			[TITLE => "BOLT & NUT - UNC,S/STEEL,BRASS & OTHERS", 					IMG => ""],
+			[TITLE => "BOLT & NUT", 												IMG => ""],
+			[TITLE => "STUD BOLT - MS, ZP, S/S 304", 								IMG => ""],
+			[TITLE => "NUTS, BOLT & ZP BOLT & NUT", 								IMG => ""],
+			[TITLE => "WASHER-MS,S/S,BRASS,HDG,FIBRE & SPRING", 					IMG => ""],
+			[TITLE => "POINTED SCREW", 											IMG => ""],
+			[TITLE => "SELF DRILLING SCREW", 										IMG => ""],
+			[TITLE => "SCREW - BSW SOCKET & CSK MACHINE", 							IMG => ""],
+			[TITLE => "NAIL - COIL, ROOFING & OTHER", 								IMG => ""],
+			[TITLE => "JAGUAR IRON NAIL", 											IMG => ""],
+			[TITLE => "CONCRETE NAIL", 											IMG => ""],
+			[TITLE => "RAW & WALL PLUG", 											IMG => ""],
+			[TITLE => "LAZOR BOLTS & FASTENERS", 									IMG => ""],
+			[TITLE => "ALUMINIUM RIVET - PATTA, OTHERS", 							IMG => ""],
 		]
 	],
 
-	hand_tools => [
-		img => "hand_tools_categories.jpg",
-		title => "Hand Tools",
-		prod => [
-			[title => "MECHANIC TOOLS", 											img => ""],
-			[title => "ELORA, SOUTHEN GRACE, WING POH, WYNN'S", 					img => ""],
-			[title => "TEKIRO PRODUCTS", 											img => ""],
-			[title => "HELLO PRODUCTS", 											img => ""],
-			[title => "HOLDING TOOLS", 											img => ""],
-			[title => "NIPPLE, GREASE GUN, OIL CAN", 								img => ""],
-			[title => "PACKING TOOL & TOOL BOX", 									img => ""],
-			[title => "STRIKING & STRUCK TOOLS", 									img => ""],
-			[title => "LETTER BOX & NUMBERING", 									img => ""],
-			[title => "BOLT CUTTER, FILE, KNIFE", 									img => ""],
-			[title => "GRINDING DISC, CUTTING WHEELS, DRILL BIT", 					img => ""],
-			[title => "AKODA PRODUCTS", 											img => ""],
-			[title => "MEASURING TAPE & MARKING TOOLS", 							img => ""],
-			[title => "PAINTING TOOLS", 											img => ""],
-			[title => "LAZOR PAINTING TOOLS", 										img => ""],
-			[title => "GARDEN TOOLS - SHOVEL & HOES", 								img => ""],
-			[title => "IRWIN & LENOX ACCESSORIES", 								img => ""],
-			[title => "IRWIN HAND TOOLS", 											img => ""],
-			[title => "IRWIN & LENOX DISCONTINUE", 								img => ""],
-			[title => "STANLEY HAND TOOLS", 										img => ""],
-			[title => "STANLEY MECHANIC TOOLS", 									img => ""],
-			[title => "STANLEY AUTOCARE", 											img => ""],
-			[title => "STANLEY DISCONTINUE", 										img => ""],
+	HAND_TOOLS => [
+		IMG => "hand_tools_categories.jpg",
+		TITLE => "Hand Tools",
+		PROD => [
+			[TITLE => "MECHANIC TOOLS", 											IMG => ""],
+			[TITLE => "ELORA, SOUTHEN GRACE, WING POH, WYNN'S", 					IMG => ""],
+			[TITLE => "TEKIRO PRODUCTS", 											IMG => ""],
+			[TITLE => "HELLO PRODUCTS", 											IMG => ""],
+			[TITLE => "HOLDING TOOLS", 											IMG => ""],
+			[TITLE => "NIPPLE, GREASE GUN, OIL CAN", 								IMG => ""],
+			[TITLE => "PACKING TOOL & TOOL BOX", 									IMG => ""],
+			[TITLE => "STRIKING & STRUCK TOOLS", 									IMG => ""],
+			[TITLE => "LETTER BOX & NUMBERING", 									IMG => ""],
+			[TITLE => "BOLT CUTTER, FILE, KNIFE", 									IMG => ""],
+			[TITLE => "GRINDING DISC, CUTTING WHEELS, DRILL BIT", 					IMG => ""],
+			[TITLE => "AKODA PRODUCTS", 											IMG => ""],
+			[TITLE => "MEASURING TAPE & MARKING TOOLS", 							IMG => ""],
+			[TITLE => "PAINTING TOOLS", 											IMG => ""],
+			[TITLE => "LAZOR PAINTING TOOLS", 										IMG => ""],
+			[TITLE => "GARDEN TOOLS - SHOVEL & HOES", 								IMG => ""],
+			[TITLE => "IRWIN & LENOX ACCESSORIES", 								IMG => ""],
+			[TITLE => "IRWIN HAND TOOLS", 											IMG => ""],
+			[TITLE => "IRWIN & LENOX DISCONTINUE", 								IMG => ""],
+			[TITLE => "STANLEY HAND TOOLS", 										IMG => ""],
+			[TITLE => "STANLEY MECHANIC TOOLS", 									IMG => ""],
+			[TITLE => "STANLEY AUTOCARE", 											IMG => ""],
+			[TITLE => "STANLEY DISCONTINUE", 										IMG => ""],
 		],
-		subCategory => [
+		SUBCATEGORY => [
 			"Mechanical Tools",
 			"Crimping Tools",
 			"Cutting Tools",
@@ -147,45 +147,45 @@ $product_category = [
 		]
 	],
 
-	general_household => [
-		img => "general_tools_categories.jpg",
-		title => "General & Household",
-		prod => [
-			[title => "IKEA PRODUCTS", 											img => ""],
-			[title => "L.F HOUSEHOLD PRODUCTS", 									img => ""],
-			[title => "STATIONERY", 												img => ""],
-			[title => "HOOK,C PIN,SHELF & L BRACKET & SIMILARTY", 					img => ""],
-			[title => "CURTAIN ACCESORIES", 										img => ""],
-			[title => "LAZOR GENERAL TOOLS", 										img => ""],
-			[title => "YKTF PRODUCTS", 											img => ""],
-			[title => "HOSE", 														img => ""],
-			[title => "HOSE ACCESORIES", 											img => ""],
-			[title => "HOSE CLIP", 												img => ""],
-			[title => "FLEXIBLE HOSE", 											img => ""],
-			[title => "CLEANING TOOLS", 											img => ""],
-			[title => "LADDER", 													img => ""],
-			[title => "LADDER PRODUCTION", 										img => ""],
-			[title => "LAZOR LADDER", 												img => ""],
-			[title => "ASTERI LADDER", 											img => ""],
-			[title => "RACK", 														img => ""],
-			[title => "WHEELS", 													img => ""],
-			[title => "WHEEL BARROW & TROLLEY", 									img => ""],
-			[title => "RUBBER MOUNTING", 											img => ""],
-			[title => "SIKA", 														img => ""],
-			[title => "HARDEX", 													img => ""],
-			[title => "SCP", 														img => ""],
-			[title => "DEVON", 													img => ""],
-			[title => "SELLEYS", 													img => ""],
-			[title => "WD-40", 													img => ""],
-			[title => "REXCO", 													img => ""],
-			[title => "DAVCO", 													img => ""],
-			[title => "KOYA PRODUCTS", 											img => ""],
-			[title => "MIX", 														img => ""],
-			[title => "TRANSP, J.I.T, SERV, DIS, UNDERBILL", 						img => ""],
-			[title => "OFFER ITEM", 												img => ""],
-			[title => "A5 J.I.T GENERAL GOODS", 									img => ""],
+	GENERAL_HOUSEHOLD => [
+		IMG => "general_tools_categories.jpg",
+		TITLE => "General & Household",
+		PROD => [
+			[TITLE => "IKEA PRODUCTS", 											IMG => ""],
+			[TITLE => "L.F HOUSEHOLD PRODUCTS", 									IMG => ""],
+			[TITLE => "STATIONERY", 												IMG => ""],
+			[TITLE => "HOOK,C PIN,SHELF & L BRACKET & SIMILARTY", 					IMG => ""],
+			[TITLE => "CURTAIN ACCESORIES", 										IMG => ""],
+			[TITLE => "LAZOR GENERAL TOOLS", 										IMG => ""],
+			[TITLE => "YKTF PRODUCTS", 											IMG => ""],
+			[TITLE => "HOSE", 														IMG => ""],
+			[TITLE => "HOSE ACCESORIES", 											IMG => ""],
+			[TITLE => "HOSE CLIP", 												IMG => ""],
+			[TITLE => "FLEXIBLE HOSE", 											IMG => ""],
+			[TITLE => "CLEANING TOOLS", 											IMG => ""],
+			[TITLE => "LADDER", 													IMG => ""],
+			[TITLE => "LADDER PRODUCTION", 										IMG => ""],
+			[TITLE => "LAZOR LADDER", 												IMG => ""],
+			[TITLE => "ASTERI LADDER", 											IMG => ""],
+			[TITLE => "RACK", 														IMG => ""],
+			[TITLE => "WHEELS", 													IMG => ""],
+			[TITLE => "WHEEL BARROW & TROLLEY", 									IMG => ""],
+			[TITLE => "RUBBER MOUNTING", 											IMG => ""],
+			[TITLE => "SIKA", 														IMG => ""],
+			[TITLE => "HARDEX", 													IMG => ""],
+			[TITLE => "SCP", 														IMG => ""],
+			[TITLE => "DEVON", 													IMG => ""],
+			[TITLE => "SELLEYS", 													IMG => ""],
+			[TITLE => "WD-40", 													IMG => ""],
+			[TITLE => "REXCO", 													IMG => ""],
+			[TITLE => "DAVCO", 													IMG => ""],
+			[TITLE => "KOYA PRODUCTS", 											IMG => ""],
+			[TITLE => "MIX", 														IMG => ""],
+			[TITLE => "TRANSP, J.I.T, SERV, DIS, UNDERBILL", 						IMG => ""],
+			[TITLE => "OFFER ITEM", 												IMG => ""],
+			[TITLE => "A5 J.I.T GENERAL GOODS", 									IMG => ""],
 		],
-		subCategory => [
+		SUBCATEGORY => [
 			"Rachet Brace",
 			"Wheel Spanner",
 			"Utility Knife Set",
@@ -196,73 +196,73 @@ $product_category = [
 		]
 	],
 
-	welding_machinery => [
-		img => "welding_machinery.jpg",
-		title => "Welding & Machinery",
-		prod => [
-			[title => "MISCELLANEOUS / MIXED", 									img => ""],
-			[title => "V-BELT & PULLEYS", 											img => ""],
-			[title => "WALRUS PRODUCTS", 											img => ""],
-			[title => "GASKET, RUBBER SHEET & SIMILARTY", 							img => ""],
-			[title => "PLASTIC SHEETS", 											img => ""],
-			[title => "WELDING ROD & ACCESPRIES", 									img => ""],
-			[title => "HARRY PRODUCTS", 											img => ""],
-			[title => "BEARING", 													img => ""],
-			[title => "SCAFFOLDING & ACCESSORIES", 								img => ""],
-			[title => "LOUVRES, DOORS & ACCESSORIES", 								img => ""],
-			[title => "SAND PAPER", 												img => ""],
-			[title => "HINGES", 													img => ""],
-			[title => "TOWER BOLTS", 												img => ""],
-			[title => "HANDLE", 													img => ""],
-			[title => "JACK, CHAIN BLK & ACCESSORIES", 							img => ""],
-			[title => "ROPE & CHAIN", 												img => ""],
+	WELDING_MACHINERY => [
+		IMG => "welding_machinery.jpg",
+		TITLE => "Welding & Machinery",
+		PROD => [
+			[TITLE => "MISCELLANEOUS / MIXED", 									IMG => ""],
+			[TITLE => "V-BELT & PULLEYS", 											IMG => ""],
+			[TITLE => "WALRUS PRODUCTS", 											IMG => ""],
+			[TITLE => "GASKET, RUBBER SHEET & SIMILARTY", 							IMG => ""],
+			[TITLE => "PLASTIC SHEETS", 											IMG => ""],
+			[TITLE => "WELDING ROD & ACCESPRIES", 									IMG => ""],
+			[TITLE => "HARRY PRODUCTS", 											IMG => ""],
+			[TITLE => "BEARING", 													IMG => ""],
+			[TITLE => "SCAFFOLDING & ACCESSORIES", 								IMG => ""],
+			[TITLE => "LOUVRES, DOORS & ACCESSORIES", 								IMG => ""],
+			[TITLE => "SAND PAPER", 												IMG => ""],
+			[TITLE => "HINGES", 													IMG => ""],
+			[TITLE => "TOWER BOLTS", 												IMG => ""],
+			[TITLE => "HANDLE", 													IMG => ""],
+			[TITLE => "JACK, CHAIN BLK & ACCESSORIES", 							IMG => ""],
+			[TITLE => "ROPE & CHAIN", 												IMG => ""],
 		],
-		subCategory => [
+		SUBCATEGORY => [
 
 		]
 	],
 
-	safety_security => [
-		img => "safety_security_categories.jpg",
-		title => "Safety & Security",
-		prod => [
-			[title => "SAFETY SHOES", 												img => ""],
-			[title => "SAFETY EQUIPMENTS", 										img => ""],
-			[title => "3M PRODUCTS", 												img => ""],
-			[title => "LAZOR HAND GLOVE", 											img => ""],
-			[title => "ABUS", 														img => ""],
-			[title => "SOLEX", 													img => ""],
-			[title => "YALE", 														img => ""],
-			[title => "TRI-CIRCLE", 												img => ""],
-			[title => "AMAN / VIRO", 												img => ""],
-			[title => "BUICK", 													img => ""],
-			[title => "LAZOR LOCK", 												img => ""],
-			[title => "MIX LOCKS", 												img => ""],
-			[title => "STANLEY LOCK", 												img => ""],
-			[title => "STANLEY PADLOCK DISCONTINUE", 								img => ""],
+	SAFETY_SECURITY => [
+		IMG => "safety_security_categories.jpg",
+		TITLE => "Safety & Security",
+		PROD => [
+			[TITLE => "SAFETY SHOES", 												IMG => ""],
+			[TITLE => "SAFETY EQUIPMENTS", 										IMG => ""],
+			[TITLE => "3M PRODUCTS", 												IMG => ""],
+			[TITLE => "LAZOR HAND GLOVE", 											IMG => ""],
+			[TITLE => "ABUS", 														IMG => ""],
+			[TITLE => "SOLEX", 													IMG => ""],
+			[TITLE => "YALE", 														IMG => ""],
+			[TITLE => "TRI-CIRCLE", 												IMG => ""],
+			[TITLE => "AMAN / VIRO", 												IMG => ""],
+			[TITLE => "BUICK", 													IMG => ""],
+			[TITLE => "LAZOR LOCK", 												IMG => ""],
+			[TITLE => "MIX LOCKS", 												IMG => ""],
+			[TITLE => "STANLEY LOCK", 												IMG => ""],
+			[TITLE => "STANLEY PADLOCK DISCONTINUE", 								IMG => ""],
 		],
-		subCategory => [
+		SUBCATEGORY => [
 			"Safety Shoes, Glove, Mask & Helmet",
 			"Rain Coat Jacket, Welding Jacket"
 		]
 	],
 
-	electrical_accessories => [
-		img => "electrical_categories.jpg",
-		title => "Electrical Accessories",
-		prod => [
-			[title => "BATTERY", 													img => ""],
-			[title => "NICRON PRODUCTS", 											img => ""],
-			[title => "ECOLINK PRODUCTS", 											img => ""],
-			[title => "LITE ME PRODUCTS", 											img => ""],
-			[title => "SENCO PRODUCTS", 											img => ""],
-			[title => "ELECTRICAL ACCESSORIES", 									img => ""],
-			[title => "PHILIPS", 													img => ""],
-			[title => "PHILIPS DISCONTINUE", 										img => ""],
-			[title => "KHIND PRODUCT", 											img => ""],
-			[title => "FABER PRODUCTS", 											img => ""],
+	ELECTRICAL_ACCESSORIES => [
+		IMG => "electrical_categories.jpg",
+		TITLE => "Electrical Accessories",
+		PROD => [
+			[TITLE => "BATTERY", 													IMG => ""],
+			[TITLE => "NICRON PRODUCTS", 											IMG => ""],
+			[TITLE => "ECOLINK PRODUCTS", 											IMG => ""],
+			[TITLE => "LITE ME PRODUCTS", 											IMG => ""],
+			[TITLE => "SENCO PRODUCTS", 											IMG => ""],
+			[TITLE => "ELECTRICAL ACCESSORIES", 									IMG => ""],
+			[TITLE => "PHILIPS", 													IMG => ""],
+			[TITLE => "PHILIPS DISCONTINUE", 										IMG => ""],
+			[TITLE => "KHIND PRODUCT", 											IMG => ""],
+			[TITLE => "FABER PRODUCTS", 											IMG => ""],
 		],
-		subCategory => [
+		SUBCATEGORY => [
 			"Wire & Accessories",
 			"Extensions & Adaptors",
 			"Plug & Sockets",
@@ -272,27 +272,27 @@ $product_category = [
 		]
 	],
 
-	plumbing => [
-		img => "plumbing_categories.jpg",
-		title => "Plumbing",
-		prod => [
-			[title => "WATER TAP & GATE, BALL VALVES", 							img => ""],
-			[title => "VIP PRODUCT", 												img => ""],
-			[title => "MILANO PRODUCT", 											img => ""],
-			[title => "TOILET SET, CISTERM, SINK & DRAINAGE", 						img => ""],
-			[title => "KHE TAP", 													img => ""],
-			[title => "KHE RACKING", 												img => ""],
-			[title => "KHE SINK", 													img => ""],
-			[title => "KHE CERAMIC", 												img => ""],
-			[title => "KHE ACCESSORIES", 											img => ""],
-			[title => "KHE DISCONTINUE", 											img => ""],
-			[title => "DOCASA SANITARYWARE", 										img => ""],
-			[title => "PIPE FITTING -G.I", 										img => ""],
-			[title => "PIPE FITTING - PVC & U-PVC", 								img => ""],
-			[title => "PIPE FITTING - POLYPIPE", 									img => ""],
-			[title => "PIPE FITTING - BRASS, S/STEEL & COPPER", 					img => ""],
+	PLUMBING => [
+		IMG => "plumbing_categories.jpg",
+		TITLE => "Plumbing",
+		PROD => [
+			[TITLE => "WATER TAP & GATE, BALL VALVES", 							IMG => ""],
+			[TITLE => "VIP PRODUCT", 												IMG => ""],
+			[TITLE => "MILANO PRODUCT", 											IMG => ""],
+			[TITLE => "TOILET SET, CISTERM, SINK & DRAINAGE", 						IMG => ""],
+			[TITLE => "KHE TAP", 													IMG => ""],
+			[TITLE => "KHE RACKING", 												IMG => ""],
+			[TITLE => "KHE SINK", 													IMG => ""],
+			[TITLE => "KHE CERAMIC", 												IMG => ""],
+			[TITLE => "KHE ACCESSORIES", 											IMG => ""],
+			[TITLE => "KHE DISCONTINUE", 											IMG => ""],
+			[TITLE => "DOCASA SANITARYWARE", 										IMG => ""],
+			[TITLE => "PIPE FITTING -G.I", 										IMG => ""],
+			[TITLE => "PIPE FITTING - PVC & U-PVC", 								IMG => ""],
+			[TITLE => "PIPE FITTING - POLYPIPE", 									IMG => ""],
+			[TITLE => "PIPE FITTING - BRASS, S/STEEL & COPPER", 					IMG => ""],
 		],
-		subCategory => [
+		SUBCATEGORY => [
 			"Valve & Fitting",
 			"Taps & Accessories",
 			"Shower Set & Accessories",
@@ -302,33 +302,33 @@ $product_category = [
 		]
 	],
 
-	power_tools => [
-		img => "power_tools_categories.jpg",
-		title => "Power Tools",
-		prod => [
-			[title => "JET MASTER", 												img => ""],
-			[title => "VACMASTER", 												img => ""],
-			[title => "KANO & VOMAX PRODUCTS", 									img => ""],
-			[title => "DONG CHENG PRODUCTS", 										img => ""],
-			[title => "LAVOR", 													img => ""],
-			[title => "LAVOR ACCESSORIES", 										img => ""],
-			[title => "LAVOR SPARE PART", 											img => ""],
-			[title => "COMPRESSOR & AIR FITTING", 									img => ""],
-			[title => "BOSCH", 													img => ""],
-			[title => "AKAIDO PRODUCTS", 											img => ""],
-			[title => "HITACHI & CARBON BRUSH", 									img => ""],
-			[title => "HIKOKI", 													img => ""],
-			[title => "KARCHER", 													img => ""],
-			[title => "MAKITA DC TOOLS", 											img => ""],
-			[title => "MAKITA DC TOOLS - OPE", 									img => ""],
-			[title => "MAKITA DC TOOLS - CLEANER", 								img => ""],
-			[title => "MAKITA AC TOOLS", 											img => ""],
-			[title => "MAKITA AC - MT", 											img => ""],
-			[title => "MAKITA ACCESSORY", 											img => ""],
-			[title => "MAKITA SPARE PARTS", 										img => ""],
-			[title => "MAKITA - TC INACTIVE", 										img => ""],
+	POWER_TOOLS => [
+		IMG => "power_tools_categories.jpg",
+		TITLE => "Power Tools",
+		PROD => [
+			[TITLE => "JET MASTER", 												IMG => ""],
+			[TITLE => "VACMASTER", 												IMG => ""],
+			[TITLE => "KANO & VOMAX PRODUCTS", 									IMG => ""],
+			[TITLE => "DONG CHENG PRODUCTS", 										IMG => ""],
+			[TITLE => "LAVOR", 													IMG => ""],
+			[TITLE => "LAVOR ACCESSORIES", 										IMG => ""],
+			[TITLE => "LAVOR SPARE PART", 											IMG => ""],
+			[TITLE => "COMPRESSOR & AIR FITTING", 									IMG => ""],
+			[TITLE => "BOSCH", 													IMG => ""],
+			[TITLE => "AKAIDO PRODUCTS", 											IMG => ""],
+			[TITLE => "HITACHI & CARBON BRUSH", 									IMG => ""],
+			[TITLE => "HIKOKI", 													IMG => ""],
+			[TITLE => "KARCHER", 													IMG => ""],
+			[TITLE => "MAKITA DC TOOLS", 											IMG => ""],
+			[TITLE => "MAKITA DC TOOLS - OPE", 									IMG => ""],
+			[TITLE => "MAKITA DC TOOLS - CLEANER", 								IMG => ""],
+			[TITLE => "MAKITA AC TOOLS", 											IMG => ""],
+			[TITLE => "MAKITA AC - MT", 											IMG => ""],
+			[TITLE => "MAKITA ACCESSORY", 											IMG => ""],
+			[TITLE => "MAKITA SPARE PARTS", 										IMG => ""],
+			[TITLE => "MAKITA - TC INACTIVE", 										IMG => ""],
 		],
-		subCategory => [
+		SUBCATEGORY => [
 			"Cordless Tools",
 			"Demolition Tools and Equipment",
 			"Power Drills",
@@ -339,17 +339,17 @@ $product_category = [
 		]
 	],
 
-	paint => [
-		img => "paint_categories.jpg",
-		title => "Paint",
-		prod => [
-			[title => "SPRAY PAINT, SPIRIT & MIX PAINTS", 							img => ""],
-			[title => "DULUX PAINT", 												img => ""],
-			[title => "KANGAROO PAINT", 											img => ""],
-			[title => "COLOURLAND PAINT", 											img => ""],
-			[title => "TRANS PAINT", 												img => ""],
+	PAINT => [
+		IMG => "paint_categories.jpg",
+		TITLE => "Paint",
+		PROD => [
+			[TITLE => "SPRAY PAINT, SPIRIT & MIX PAINTS", 							IMG => ""],
+			[TITLE => "DULUX PAINT", 												IMG => ""],
+			[TITLE => "KANGAROO PAINT", 											IMG => ""],
+			[TITLE => "COLOURLAND PAINT", 											IMG => ""],
+			[TITLE => "TRANS PAINT", 												IMG => ""],
 		],
-		subCategory => [
+		SUBCATEGORY => [
 			"Decorating Paint",
 			"Industrial Paint",
 			"Painting Accesories"
