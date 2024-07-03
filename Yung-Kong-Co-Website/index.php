@@ -103,9 +103,9 @@
 										</h3>
 
 										<ul>
-											<?php foreach ($products[SUBCATEGORY] as $product): ?>
+											<?php foreach ($products[SUBCATEGORY] as $prod): ?>
 												<li> •
-													<?php echo $product; ?>
+													<?php echo $prod; ?>
 												</li>
 											<?php endforeach; ?>
 										</ul>

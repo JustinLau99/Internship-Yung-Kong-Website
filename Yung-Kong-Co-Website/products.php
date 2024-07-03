@@ -57,15 +57,9 @@
 
 
 				<!-- products-category -->
-				<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
-
-
-
 				<div class="container-fluid">
 
-
-
-
+					<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
 					<?php foreach ($product_category as $category): ?>
 
 						<div class="card card-block left">
@@ -74,13 +68,13 @@
 
 						<div class="row">
 
-							<?php foreach ($category['prod'] as $product): ?>
+							<?php foreach ($category['prod'] as $prod): ?>
 
 								<div class="col-md-2 col-sm-3 col-xs-6">
 									<div class="card card-block">
 										<img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg"
 											alt="Photo of sunset">
-										<h5 class="card-title mt-3 mb-3"><?php echo $product[TITLE] ?></h5>
+										<h5 class="card-title mt-3 mb-3"><?php echo $prod[TITLE] ?></h5>
 										<p class="card-text">
 											[Product Description]
 										</p>
