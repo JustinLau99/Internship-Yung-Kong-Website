@@ -82,7 +82,7 @@
 											alt="Photo of sunset">
 										<h5 class="card-title mt-3 mb-3"><?php echo $product[TITLE] ?></h5>
 										<p class="card-text">
-											This is a company that builds websites, web apps and e-commerce solutions.
+											[Product Description]
 										</p>
 									</div>
 								</div>
