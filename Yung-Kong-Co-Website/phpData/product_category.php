@@ -1,33 +1,19 @@
 <?php
 
-
-// categories key value
-const BUILDING_MATERIALS 		= 'building_materials';
-const BOLTS_FASTENERS 			= 'bolts_fasteners';
-const HAND_TOOLS 				= 'hand_tools';
-const GENERAL_HOUSEHOLD 		= 'general_household';
-const WELDING_MACHINERY 		= 'welding_machinery';
-const SAFETY_SECURITY 			= 'safety_security';
-const ELECTRICAL_ACCESSORIES 	= 'electrical_accessories';
-const PLUMBING 					= 'plumbing';
-const POWER_TOOLS 				= 'power_tools';
-const PAINT 					= 'paint';
 // each category key value
-const IMG 						= 'img';
-const TITLE 					= 'title';
-const SUBCATEGORY 				= 'subCategory';
-const PROD 						= 'prod';
-const IMG_PATH 					= 'img_path';
+const IMG 					= 'img';
+const TITLE 				= 'title';
+const SUBCATEGORY 			= 'subCategory';
+const PROD 					= 'prod';
+const PRODUCT_IMG_PATH		= 'img_path';
 
+// categories key value (same as folder name)
 
-				
-// product category
 $product_category = [
-
-	BUILDING_MATERIALS => [
-		IMG => "building_material_categories.jpg",
+	[
 		TITLE => "Building Materials",
-		IMG_PATH => BUILDING_MATERIALS,
+		IMG => "building_material_categories.jpg",
+		PRODUCT_IMG_PATH => '/building_materials/',
 		SUBCATEGORY => [
 			"Cement",
 			"Steel Bar",
@@ -79,13 +65,13 @@ $product_category = [
 			[TITLE => 'YMC'											, IMG => 'ymc.jpg'],
 			[TITLE => 'YRC'											, IMG => 'yrc.jpg'],
 			[TITLE => 'YUNCO PRODUCT SPECIAL ORDER'					, IMG => 'yunco_product_special_order.jpg'],
-		]
+		],
 	],
 ##########################################################	
-	BOLTS_FASTENERS => [
-		IMG => "bolts_fasteners_categories.jpg",
+	[
 		TITLE => "Bolts & Fasteners",
-		IMG_PATH => BOLTS_FASTENERS,
+		IMG => "bolts_fasteners_categories.jpg",
+		PRODUCT_IMG_PATH => '/bolts_fasteners/',
 		SUBCATEGORY => [
 			"Nails",
 			"Hooks",
@@ -109,13 +95,13 @@ $product_category = [
 			[TITLE => 'SELF DRILLING SCREW'							, IMG => 'self_drilling_screw.jpg'],
 			[TITLE => 'STUD BOLT - MS, ZP, S/S 304'					, IMG => 'stud_bolt_ms_zp_s_s_304.jpg'],
 			[TITLE => 'WASHER-MS,S/S,BRASS,HDG,FIBRE & SPRING'		, IMG => 'washer_ms_s_s_brass_hdg_fibre_spring.jpg'],
-		]
+		],
 	],
 ##########################################################
-	HAND_TOOLS => [
-		IMG => "hand_tools_categories.jpg",
+	[
 		TITLE => "Hand Tools",
-		IMG_PATH => HAND_TOOLS,
+		IMG => "hand_tools_categories.jpg",
+		PRODUCT_IMG_PATH => '/hand_tools/',
 		PROD => [
 			[TITLE => 'AKODA PRODUCTS'								, IMG => 'akoda_products.jpg'],
 			[TITLE => 'BOLT CUTTER, FILE, KNIFE'					, IMG => 'bolt_cutter_file_knife.jpg'],
@@ -127,13 +113,13 @@ $product_category = [
 			[TITLE => 'IRWIN & LENOX ACCESSORIES'					, IMG => 'irwin_hand_tools.jpg'],
 			[TITLE => 'IRWIN & LENOX DISCONTINUE'					, IMG => 'irwin_lenox_accessories.jpg'],
 			[TITLE => 'IRWIN HAND TOOLS'							, IMG => 'irwin_lenox_discontinue.jpg'],
-			[TITLE => 'LAZOR PAINTING TOOLS'						, IMG => 'lazor_painting_tools.jpg'],
+			[TITLE => 'LAZOR Painting TOOLS'						, IMG => 'lazor_painting_tools.jpg'],
 			[TITLE => 'LETTER BOX & NUMBERING'						, IMG => 'letter_box_numbering.jpg'],
 			[TITLE => 'MEASURING TAPE & MARKING TOOLS'				, IMG => 'measuring_tape_marking_tools.jpg'],
 			[TITLE => 'MECHANIC TOOLS'								, IMG => 'mechanical_tools.jpg'],
 			[TITLE => 'NIPPLE, GREASE GUN, OIL CAN'					, IMG => 'nipple_grease_gun_oil_can.jpg'],
 			[TITLE => 'PACKING TOOL & TOOL BOX'						, IMG => 'packing_tool_tool_box.jpg'],
-			[TITLE => 'PAINTING TOOLS'								, IMG => 'painting_tools.jpg'],
+			[TITLE => 'Painting TOOLS'								, IMG => 'painting_tools.jpg'],
 			[TITLE => 'STANLEY AUTOCARE'							, IMG => 'stanley_autocare.jpg'],
 			[TITLE => 'STANLEY DISCONTINUE'							, IMG => 'stanley_discontinue.jpg'],
 			[TITLE => 'STANLEY HAND TOOLS'							, IMG => 'stanley_hand_tools.jpg'],
@@ -150,13 +136,22 @@ $product_category = [
 			"Stapling Tools",
 			"Striking & Struck Tools",
 			"Measuring Tools"
-		]
+		],
 	],
 ##########################################################
-	GENERAL_HOUSEHOLD => [
-		IMG => "general_tools_categories.jpg",
+	[
 		TITLE => "General & Household",
-		IMG_PATH => HAND_TOOLS,
+		IMG => "general_tools_categories.jpg",
+		PRODUCT_IMG_PATH => '/general_household/',
+		SUBCATEGORY => [
+			"Rachet Brace",
+			"Wheel Spanner",
+			"Utility Knife Set",
+			"Hex Key Set",
+			"Ladder",
+			"G Clamps",
+			"Others"
+		],
 		PROD => [
 			[TITLE => 'A5 J.I.T GENERAL GOODS'						, IMG => 'a5_jit_general_goods.jpg'],
 			[TITLE => 'ASTERI LADDER'								, IMG => 'asteri_ladder.jpg'],
@@ -192,21 +187,15 @@ $product_category = [
 			[TITLE => 'WHEELS'										, IMG => 'wheels.jpg'],
 			[TITLE => 'YKTF PRODUCTS'								, IMG => 'yktf_products.jpg'],
 		],
-		SUBCATEGORY => [
-			"Rachet Brace",
-			"Wheel Spanner",
-			"Utility Knife Set",
-			"Hex Key Set",
-			"Ladder",
-			"G Clamps",
-			"Others"
-		]
 	],
 ##########################################################
-	WELDING_MACHINERY => [
-		IMG => "welding_machinery.jpg",
+	[
 		TITLE => "Welding & Machinery",
-		IMG_PATH => GENERAL_HOUSEHOLD,
+		IMG => "welding_machinery.jpg",
+		PRODUCT_IMG_PATH => '/welding_machinery/',
+		SUBCATEGORY => [
+
+		],
 		PROD => [
 			[TITLE => 'BEARING'										, IMG => 'bearing.jpg'],
 			[TITLE => 'GASKET, RUBBER SHEET & SIMILARTY'			, IMG => 'gasket_rubber_sheet_similarty.jpg'],
@@ -225,15 +214,16 @@ $product_category = [
 			[TITLE => 'WALRUS PRODUCTS'								, IMG => 'walrus_products.jpg'],
 			[TITLE => 'WELDING ROD & ACCESPRIES'					, IMG => 'welding_rod_accespries.jpg'],
 		],
-		SUBCATEGORY => [
-
-		]
 	],
 ##########################################################
-	SAFETY_SECURITY => [
-		IMG => "safety_security_categories.jpg",
+	[
 		TITLE => "Safety & Security",
-		IMG_PATH => WELDING_MACHINERY,
+		IMG => "safety_security_categories.jpg",
+		PRODUCT_IMG_PATH => '/safety_security/',
+		SUBCATEGORY => [
+			"Safety Shoes, Glove, Mask & Helmet",
+			"Rain Coat Jacket, Welding Jacket"
+		],
 		PROD => [
 			[TITLE => '3M PRODUCTS'									, IMG => '3m_products.jpg'],
 			[TITLE => 'ABUS'										, IMG => 'abus.jpg'],
@@ -250,16 +240,20 @@ $product_category = [
 			[TITLE => 'TRI-CIRCLE'									, IMG => 'tri_circle.jpg'],
 			[TITLE => 'YALE'										, IMG => 'yale.jpg'],
 		],
-		SUBCATEGORY => [
-			"Safety Shoes, Glove, Mask & Helmet",
-			"Rain Coat Jacket, Welding Jacket"
-		]
 	],
 ##########################################################
-	ELECTRICAL_ACCESSORIES => [
-		IMG => "electrical_categories.jpg",
+	[
 		TITLE => "Electrical Accessories",
-		IMG_PATH => SAFETY_SECURITY,
+		IMG => "electrical_categories.jpg",
+		PRODUCT_IMG_PATH => '/electrical_accessories/',
+		SUBCATEGORY => [
+			"Wire & Accessories",
+			"Extensions & Adaptors",
+			"Plug & Sockets",
+			"Bulbs & Downlight",
+			"Tube & Tube Fitting",
+			"Accessories"
+		],
 		PROD => [
 			[TITLE => 'BATTERY'										, IMG => 'battery.jpg'],
 			[TITLE => 'ECOLINK PRODUCTS'							, IMG => 'ecolink_products.jpg'],
@@ -272,20 +266,20 @@ $product_category = [
 			[TITLE => 'PHILIPS DISCONTINUE'							, IMG => 'philips_discontinue.jpg'],
 			[TITLE => 'SENCO PRODUCTS'								, IMG => 'senco_products.jpg'],
 		],
-		SUBCATEGORY => [
-			"Wire & Accessories",
-			"Extensions & Adaptors",
-			"Plug & Sockets",
-			"Bulbs & Downlight",
-			"Tube & Tube Fitting",
-			"Accessories"
-		]
 	],
 ##########################################################
-	PLUMBING => [
-		IMG => "plumbing_categories.jpg",
+	[
 		TITLE => "Plumbing",
-		IMG_PATH => PLUMBING,
+		IMG => "plumbing_categories.jpg",
+		PRODUCT_IMG_PATH => '/plumbing/',
+		SUBCATEGORY => [
+			"Valve & Fitting",
+			"Taps & Accessories",
+			"Shower Set & Accessories",
+			"Bathroom & Accessories",
+			"Sink & Accessories",
+			"Basin & Accessories"
+		],
 		PROD => [
 			[TITLE => 'DOCASA SANITARYWARE'							, IMG => 'docasa_sanitaryware.jpg'],
 			[TITLE => 'KHE ACCESSORIES'								, IMG => 'khe_accessories.jpg'],
@@ -303,20 +297,21 @@ $product_category = [
 			[TITLE => 'VIP PRODUCT'									, IMG => 'vip_product.jpg'],
 			[TITLE => 'WATER TAP & GATE, BALL VALVES'				, IMG => 'water_tap_gate_ball_valves.jpg'],
 		],
-		SUBCATEGORY => [
-			"Valve & Fitting",
-			"Taps & Accessories",
-			"Shower Set & Accessories",
-			"Bathroom & Accessories",
-			"Sink & Accessories",
-			"Basin & Accessories"
-		]
 	],
 ##########################################################
-	POWER_TOOLS => [
-		IMG => "power_tools_categories.jpg",
+	[
 		TITLE => "Power Tools",
-		IMG_PATH => POWER_TOOLS,
+		IMG => "power_tools_categories.jpg",
+		PRODUCT_IMG_PATH => '/power_tools/',
+		SUBCATEGORY => [
+			"Cordless Tools",
+			"Demolition Tools and Equipment",
+			"Power Drills",
+			"Heat Guns",
+			"Fastening Tools",
+			"Jigsaw",
+			"Nail Gun"
+		],
 		PROD => [
 			[TITLE => 'AKAIDO PRODUCTS'								, IMG => 'akaido.jpg'],
 			[TITLE => 'BOSCH'										, IMG => 'bosch.jpg'],
@@ -340,39 +335,24 @@ $product_category = [
 			[TITLE => 'MAKITA SPARE PARTS'							, IMG => 'makita_tc_inactive.jpg'],
 			[TITLE => 'VACMASTER'									, IMG => 'vacmaster.jpg'],
 		],
-		SUBCATEGORY => [
-			"Cordless Tools",
-			"Demolition Tools and Equipment",
-			"Power Drills",
-			"Heat Guns",
-			"Fastening Tools",
-			"Jigsaw",
-			"Nail Gun"
-		]
 	],
 ##########################################################
-	PAINT => [
-		IMG => "paint_categories.jpg",
+	[
 		TITLE => "Paint",
-		IMG_PATH => PAINT,
+		IMG => "paint_categories.jpg",
+		PRODUCT_IMG_PATH => '/paint/',
+		SUBCATEGORY => [
+			"Decorating paint",
+			"Industrial paint",
+			"painting Accesories"
+		],
 		PROD => [
 			[TITLE => 'COLOURLAND PAINT'							, IMG => 'colourland_paint.jpg'],
 			[TITLE => 'DULUX PAINT'									, IMG => 'dulux_paint.jpg'],
 			[TITLE => 'KANGAROO PAINT'								, IMG => 'kangaroo_paint.jpg'],
-			[TITLE => 'SPRAY PAINT, SPIRIT & MIX PAINTS'			, IMG => 'spray_paint_spirit_max_paints.jpg'],
+			[TITLE => 'SPRAY PAINT, SPIRIT & MIX PAINT'				, IMG => 'spray_paint_spirit_max_paints.jpg'],
 			[TITLE => 'TRANS PAINT'									, IMG => 'trans_paint.jpg'],
 		],
-		SUBCATEGORY => [
-			"Decorating Paint",
-			"Industrial Paint",
-			"Painting Accesories"
-		]
 	],
-
+##########################################################
 ];
-
-
-
-
-
-

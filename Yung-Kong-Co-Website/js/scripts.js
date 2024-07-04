@@ -169,6 +169,18 @@ jQuery(function ($) {
 }); // JQuery end
 
 
-$(document).on('click', '.m-menu .dropdown-menu', function(e) {
-  e.stopPropagation()
-})
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	const sidebar = document.querySelector('.sidebar');
+	const stickySection = document.querySelector('.product-sidebar');
+	const stickyOffset = stickySection.offsetTop; // Get the offset position of the sticky section
+
+	window.addEventListener('scroll', function () {
+		if (window.scrollY >= stickyOffset) {
+			sidebar.classList.remove('sticky');
+		} else {
+			sidebar.classList.add('sticky');
+		}
+	});
+});

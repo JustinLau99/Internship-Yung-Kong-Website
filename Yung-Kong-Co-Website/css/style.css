@@ -1887,6 +1887,7 @@ img {
 .card {
 	transition: 0.5s;
 	cursor: pointer;
+	border: 2px solid rgba(100, 100, 100, 0.1);
 }
 
 .card-title {
@@ -1909,7 +1910,7 @@ img {
 }
 
 .card-text {
-	height: 80px;
+	height: 40px;
 }
 
 .card::before,
@@ -1940,3 +1941,25 @@ img {
 .card:focus::after {
 	transform: scale3d(1, 1, 1);
 }
+
+.card-block {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	min-height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

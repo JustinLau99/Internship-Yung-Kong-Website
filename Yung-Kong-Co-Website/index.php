@@ -1,3 +1,5 @@
+<!-- index.php -->
+
 <?php include_once 'config/config.php'; ?> <!-- define path -->
 
 <!DOCTYPE html>
@@ -7,6 +9,9 @@
 <!-- .header -->
 
 <body>
+
+
+
 
 	<div id="main-wrapper">
 		<!-- Page Preloader -->

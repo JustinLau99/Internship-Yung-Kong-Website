@@ -1,5 +1,7 @@
-<?php include_once 'config/config.php'; ?> <!-- define path -->
+<!-- products.php -->
 
+
+<?php include_once 'config/config.php'; ?> <!-- define path -->
 
 <!DOCTYPE html>
 <html>
@@ -25,6 +27,13 @@
 
 				<!-- navbar -->
 				<?php include_once INCLUDE_PATH . 'navbar.php'; ?>
+
+
+
+
+
+
+
 
 
 
@@ -56,51 +65,58 @@
 
 
 
-				<!-- products-category -->
-				<div class="container-fluid">
-
-					<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
-					<?php foreach ($product_category as $category): ?>
-
-						<div class="card card-block left">
-							<a href="#" class="btn btn-primary"><?php echo $category[TITLE] ?></a>
-						</div>
-
-						<div class="row">
-
-							<?php foreach ($category['prod'] as $prod): ?>
-
-								<div class="col-md-2 col-sm-3 col-xs-6">
-									<div class="card card-block">
-										<img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg"
-											alt="Photo of sunset">
-										<h5 class="card-title mt-3 mb-3"><?php echo $prod[TITLE] ?></h5>
-										<p class="card-text">
-											[Product Description]
-										</p>
-									</div>
-								</div>
-
-							<?php endforeach; ?>
-
-						</div>
-
-					<?php endforeach; ?>
-
-
+				<!-- side navigation -->
+				<div class="sidebar">
+					<a class="active" href="#home">Home</a>
+					<a href="#categories">Categories</a>
+					<a href="#news">News</a>
+					<a href="#contact">Contact</a>
+					<a href="#about">About</a>
 				</div>
 
 
 
 
 
+				<section class="product-sidebar">
+
+					<!-- products-category -->
+					<div class="container-fluid">
+
+						<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
+						<?php foreach ($product_category as $category): ?>
+
+							<div class="section">
+								<div class="sticky-button">
+									<a href="#" class="btn btn-primary"><?php echo $category[TITLE] ?></a>
+								</div>
+								<div class="row">
+
+									<?php foreach ($category['prod'] as $prod): ?>
+
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="card card-block">
+												<img src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?>"
+													class="img-fluid">
+												<h2 class="card-title mt-3 mb-3"><?php echo $prod[TITLE] ?></h2>
+												<p class="card-text">
+													[Product Description]
+												</p>
+											</div>
+										</div>
+
+									<?php endforeach; ?>
+
+								</div>
+							</div>
+
+						<?php endforeach; ?>
+
+					</div>
 
 
 
-
-
-
-
+				</section>
 
 
 				<!-- footer -->

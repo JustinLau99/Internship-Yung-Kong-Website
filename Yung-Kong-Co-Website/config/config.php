@@ -4,23 +4,21 @@ define('BASE_PATH', dirname(__DIR__));
 
 define('CONFIG_PATH'			, BASE_PATH . '/config/');
 define('INCLUDE_PATH'			, BASE_PATH . '/include/');
-define('IMG_PATH'				, BASE_PATH . '/img/');
 define('PHPDATA_PATH'			, BASE_PATH . '/phpData/');
-
+// img path
 define('IMG_PRODUCT_CATEGORY'	, 'img/product-categories/');
 define('IMG_DEPARTMENT'			, 'img/department/');
 define('IMG_BRAND'				, 'img/brands/');
+define('IMG_PRODUCT'			, 'img/product/');
 
 
 // Other settings
 $debug = false;
 
-
 // Debugging information (optional)
 if ($debug) {
-    echo 'BASE_PATH: ' 		. BASE_PATH 	. '<br>';
+    echo 'BASE_PATH: ' 		. BASE_PATH		. '<br>';
     echo 'CONFIG_PATH: '	. CONFIG_PATH 	. '<br>';
-    echo 'IMG_PATH: ' 		. IMG_PATH 		. '<br>';
 }
 
 /* ************************
