@@ -1,4 +1,5 @@
 <!-- nav -->
+
 <nav class="navbar m-menu navbar-default navbar-fixed-top">
 
 	<div class="container">
@@ -42,6 +43,7 @@
 				</li>
 			</ul>
 
+
 			<ul class="nav navbar-nav navbar-right main-nav">
 
 				<?php $current_page = basename($_SERVER['SCRIPT_NAME']); ?>
@@ -52,15 +54,38 @@
 				<li class="<?php echo ($current_page == 'about.php') ? 'active' : ''; ?>">
 					<a href="about.php">About</a>
 				</li>
-				<li class="<?php echo ($current_page == 'products.php') ? 'active' : ''; ?>">
-					<a href="products.php">Products</a>
+
+
+				<li class="dropdown m-menu-fw <?php echo ($current_page == 'products.php') ? 'active' : ''; ?>">
+					<a href="products.php" class="dropdown-toggle">Products
+						<span><i class="fa fa-angle-down"></i></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<div class="m-menu-content">
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#building_materials_category.jpg">Building Materials</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#bolts_fasteners_category.jpg">Bolts and Fasteners</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#hand_tools_category.jpg">Hand Tools</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#general_household_category.jpg">General Household</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#welding_machinery_category.jpg">Welding Machinery</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#safety_security_category.jpg">Safety Security</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#electrical_accessories_category.jpg">Electrical Accessories</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#plumbing_category.jpg">Plumbing</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#power_tools_category.jpg">Power Tools</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#paint_category.jpg">Paint</a></li></ul>
+							</div>
+						</li>
+					</ul>
 				</li>
+
 				<li class="<?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>">
 					<a href="contact.php">Contact</a>
 				</li>
 
-				<li class="dropdown m-menu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Online Shop
-						<span><i class="fa fa-angle-down"></i></span></a>
+				<li class="dropdown m-menu-fw">
+					<a href="#" data-toggle="dropdown" class="dropdown-toggle">Online Shop
+						<span><i class="fa fa-angle-down"></i></span>
+					</a>
 					<ul class="dropdown-menu">
 						<li>
 							<div class="m-menu-content">

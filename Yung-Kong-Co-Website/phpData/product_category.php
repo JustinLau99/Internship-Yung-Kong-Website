@@ -12,7 +12,7 @@ const PRODUCT_IMG_PATH		= 'img_path';
 $product_category = [
 	[
 		TITLE => "Building Materials",
-		IMG => "building_material_categories.jpg",
+		IMG => "building_materials_category.jpg",
 		PRODUCT_IMG_PATH => '/building_materials/',
 		SUBCATEGORY => [
 			"Cement",
@@ -70,7 +70,7 @@ $product_category = [
 ##########################################################	
 	[
 		TITLE => "Bolts & Fasteners",
-		IMG => "bolts_fasteners_categories.jpg",
+		IMG => "bolts_fasteners_category.jpg",
 		PRODUCT_IMG_PATH => '/bolts_fasteners/',
 		SUBCATEGORY => [
 			"Nails",
@@ -100,7 +100,7 @@ $product_category = [
 ##########################################################
 	[
 		TITLE => "Hand Tools",
-		IMG => "hand_tools_categories.jpg",
+		IMG => "hand_tools_category.jpg",
 		PRODUCT_IMG_PATH => '/hand_tools/',
 		PROD => [
 			[TITLE => 'AKODA PRODUCTS'								, IMG => 'akoda_products.jpg'],
@@ -141,7 +141,7 @@ $product_category = [
 ##########################################################
 	[
 		TITLE => "General & Household",
-		IMG => "general_tools_categories.jpg",
+		IMG => "general_household_category.jpg",
 		PRODUCT_IMG_PATH => '/general_household/',
 		SUBCATEGORY => [
 			"Rachet Brace",
@@ -191,7 +191,7 @@ $product_category = [
 ##########################################################
 	[
 		TITLE => "Welding & Machinery",
-		IMG => "welding_machinery.jpg",
+		IMG => "welding_machinery_category.jpg",
 		PRODUCT_IMG_PATH => '/welding_machinery/',
 		SUBCATEGORY => [
 
@@ -218,7 +218,7 @@ $product_category = [
 ##########################################################
 	[
 		TITLE => "Safety & Security",
-		IMG => "safety_security_categories.jpg",
+		IMG => "safety_security_category.jpg",
 		PRODUCT_IMG_PATH => '/safety_security/',
 		SUBCATEGORY => [
 			"Safety Shoes, Glove, Mask & Helmet",
@@ -244,7 +244,7 @@ $product_category = [
 ##########################################################
 	[
 		TITLE => "Electrical Accessories",
-		IMG => "electrical_categories.jpg",
+		IMG => "electrical_accessories_category.jpg",
 		PRODUCT_IMG_PATH => '/electrical_accessories/',
 		SUBCATEGORY => [
 			"Wire & Accessories",
@@ -270,7 +270,7 @@ $product_category = [
 ##########################################################
 	[
 		TITLE => "Plumbing",
-		IMG => "plumbing_categories.jpg",
+		IMG => "plumbing_category.jpg",
 		PRODUCT_IMG_PATH => '/plumbing/',
 		SUBCATEGORY => [
 			"Valve & Fitting",
@@ -301,7 +301,7 @@ $product_category = [
 ##########################################################
 	[
 		TITLE => "Power Tools",
-		IMG => "power_tools_categories.jpg",
+		IMG => "power_tools_category.jpg",
 		PRODUCT_IMG_PATH => '/power_tools/',
 		SUBCATEGORY => [
 			"Cordless Tools",
@@ -339,7 +339,7 @@ $product_category = [
 ##########################################################
 	[
 		TITLE => "Paint",
-		IMG => "paint_categories.jpg",
+		IMG => "paint_category.jpg",
 		PRODUCT_IMG_PATH => '/paint/',
 		SUBCATEGORY => [
 			"Decorating paint",
@@ -356,3 +356,17 @@ $product_category = [
 	],
 ##########################################################
 ];
+
+
+
+# building_materials
+# bolts_fasteners
+# hand_tools
+# general_household
+# welding_machinery
+# safety_security
+# electrical_accessories
+# plumbing
+# power_tools
+# paint
+

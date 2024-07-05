@@ -486,13 +486,9 @@ Shortcode Content
 
 .navbar-brand img {
 	max-height: 100%;
-	/* Scale down based on height */
 	max-width: 100%;
-	/* Scale down based on width */
 	height: auto;
-	/* Maintain aspect ratio */
 	width: auto;
-	/* Maintain aspect ratio */
 }
 
 .navbar-brand h1,
@@ -626,6 +622,7 @@ Shortcode Content
 	transform: translateY(50px);
 }
 
+
 .dropdown:hover .dropdown-menu {
 	display: block;
 	margin-top: 28px !important;
@@ -659,16 +656,15 @@ Shortcode Content
 
 .dropdown-menu li a {
 	display: block;
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 30px;
-	color: #969595;
-	padding: 3px 20px;
+	color: #717171;
 }
 
 .dropdown-menu li a:hover {
 	color: #31aae2;
 	background-color: #f5f5f5;
-	padding-left: 25px;
+	padding-left: 8px;
 }
 
 .dropdown-menu>.active>a,
@@ -705,13 +701,14 @@ Shortcode Content
 .m-menu .m-menu-content {}
 
 .m-menu .dropdown.m-menu-fw .dropdown-menu {
-	left: 15px;
-	right: 15px;
+	left:	-110px;
+	right:	-110px;
 }
 
 .m-menu-content ul {
 	border-right: 1px solid #f5f5f5;
-	padding: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .m-menu-content ul:last-of-type {
@@ -1208,18 +1205,25 @@ Team
 	opacity: 1;
 }
 
-.col-md-5th {
-	width: 20%;
-	float: left;
-	padding: 0 10px;
-	box-sizing: border-box;
-	/* Ensures padding is included in the width */
-}
 
-@media (max-width: 992px) {
+
+
+
+
+@media (min-width: 768px) {
+
 	.col-md-5th {
-		width: 25%;
-		/* For example, 4 items per row on medium screens */
+		width: 20%;
+		float: left;
+		padding: 0 10px;
+		box-sizing: border-box;
+		/* Ensures padding is included in the width */
+	}
+
+	.col-md-10th {
+		width: 10%;
+		float: left;
+		box-sizing: border-box;
 	}
 }
 
@@ -1877,17 +1881,19 @@ service-icon-style
 
 
 
-img {
-	height: 150px;
-	width: 100%;
+.card img {
+    max-height: 150px;
+    width: 100%;
 }
-
 
 
 .card {
 	transition: 0.5s;
 	cursor: pointer;
 	border: 2px solid rgba(100, 100, 100, 0.1);
+	margin-bottom: 10px;
+	margin-top: 10px;
+	min-height: 250px;
 }
 
 .card-title {
@@ -1896,12 +1902,7 @@ img {
 	cursor: pointer;
 }
 
-.card-title i {
-	font-size: 15px;
-	transition: 1s;
-	cursor: pointer;
-	color: #ffa710
-}
+
 
 
 .card:hover {
@@ -1941,25 +1942,3 @@ img {
 .card:focus::after {
 	transform: scale3d(1, 1, 1);
 }
-
-.card-block {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	min-height: 300px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
