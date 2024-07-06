@@ -9,7 +9,7 @@ const PRODUCT_IMG_PATH		= 'img_path';
 
 // categories key value (same as folder name)
 
-$product_category = [
+const PRODUCT_CATEGORY = [
 	[
 		TITLE => "Building Materials",
 		IMG => "building_materials_category.jpg",

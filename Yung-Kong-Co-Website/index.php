@@ -47,11 +47,11 @@
 
 					<div class="carousel-inner" role="listbox">
 
-						<div class="item active"><img src="img/department/slider-ykacc.jpg" class="dim-img"></div>
-						<div class="item"><img src="img/department/slider-ykbtw.jpg" class="dim-img"></div>
-						<div class="item"><img src="img/department/slider-ykmatang.jpg" class="dim-img"></div>
-						<div class="item"><img src="img/department/slider-ykpending.jpg" class="dim-img"></div>
-						<div class="item"><img src="img/department/slider-ykpenrissen.jpg" class="dim-img"></div>
+						<div class="item active"><img src="img/department/slider-ykacc.jpg"></div>
+						<div class="item"><img src="img/department/slider-ykbtw.jpg"></div>
+						<div class="item"><img src="img/department/slider-ykmatang.jpg"></div>
+						<div class="item"><img src="img/department/slider-ykpending.jpg"></div>
+						<div class="item"><img src="img/department/slider-ykpenrissen.jpg"></div>
 
 					</div>
 
@@ -89,12 +89,12 @@
 
 
 						<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
-						<?php foreach ($product_category as $products): ?>
+						<?php foreach (PRODUCT_CATEGORY as $products): ?>
 
 							<div class="col-md-3 col-sm-4 col-xs-6">
 								<div class="thumbnail clearfix">
 
-									<a href="products.php">
+									<a href="products.php#<?php echo $products[IMG]?>">
 										<img class="img-responsive"
 											src="<?php echo IMG_PRODUCT_CATEGORY . $products[IMG]; ?> ">
 									</a>
@@ -141,7 +141,7 @@
 						<div class="container-fluid">
 
 							<?php include_once PHPDATA_PATH . 'departments.php'; ?>
-							<?php foreach ($departments as $depart): ?>
+							<?php foreach (DEPARTMENTS as $depart): ?>
 
 								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
 									<a href="">

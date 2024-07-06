@@ -1,15 +1,17 @@
 <?php
 // Define the base path of the project
 define('BASE_PATH', dirname(__DIR__));
-
-define('CONFIG_PATH'			, BASE_PATH . '/config/');
-define('INCLUDE_PATH'			, BASE_PATH . '/include/');
-define('PHPDATA_PATH'			, BASE_PATH . '/phpData/');
+// folder path
+define('CONFIG_PATH'			, BASE_PATH	. '/config/');
+define('INCLUDE_PATH'			, BASE_PATH	. '/include/');
+define('PHPDATA_PATH'			, BASE_PATH	. '/phpData/');
 // img path
 define('IMG_PRODUCT_CATEGORY'	, 'img/product-categories/');
 define('IMG_DEPARTMENT'			, 'img/department/');
 define('IMG_BRAND'				, 'img/brands/');
 define('IMG_PRODUCT'			, 'img/product/');
+
+
 
 
 // Other settings

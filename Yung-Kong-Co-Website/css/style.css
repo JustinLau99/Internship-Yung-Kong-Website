@@ -207,18 +207,7 @@ ul {
    main Wrapper
    -------------------*/
 
-.dim-img {
-	filter: brightness(40%);
-	/* Adjust percentage to make it dimmer */
-	width: 100vw;
-	/* Fill the entire viewport width */
-	height: 100vh;
-	/* Fill the entire viewport height */
-	object-fit: cover;
-	/* Ensure the image covers the entire  */
-	object-position: center;
-	/* Center the image within  */
-}
+
 
 #main-wrapper {
 	background: #fff;
@@ -831,6 +820,10 @@ Shortcode Content
 
 .carousel-caption {}
 
+.carousel-inner .item {
+	filter: brightness(40%);	
+}
+
 .hero-slide .carousel-caption p {
 	font-size: 20px;
 	color: #ffffff;
@@ -979,6 +972,7 @@ Shortcode Content
 /* --------------------------------------------------
 features start
 -----------------------------------------------------*/
+
 .x-features {
 	background: #6591d8;
 	padding: 80px 0 85px;
@@ -1106,6 +1100,7 @@ Team
 	width: 60px;
 	height: 60px;
 	border-radius: 3px;
+
 }
 
 #testimonialSlider .carousel-inner .item .name {
@@ -1699,9 +1694,7 @@ service-icon-style
 
 .footer-logo img {
 	height: 30%;
-	/* Maintain aspect ratio */
 	width: 30%;
-	/* Maintain aspect ratio */
 }
 
 .footer .widget_text {
@@ -1820,9 +1813,6 @@ service-icon-style
 
 
 
-.card-text {
-	color: #17E6E6;
-}
 
 .list-inline-item {
 	color: #ffd700
@@ -1883,11 +1873,15 @@ service-icon-style
 
 .card {
 	transition: 0.5s;
-	cursor: pointer;
 	border: 2px solid rgba(100, 100, 100, 0.1);
 	margin-bottom: 10px;
 	margin-top: 10px;
 	min-height: 270px;
+}
+
+
+.card p {
+	color: #17E6E6;
 }
 
 .card-title {

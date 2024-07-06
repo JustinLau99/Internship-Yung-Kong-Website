@@ -1,5 +1,8 @@
 <?php
-$departments = [
+
+
+
+const DEPARTMENTS = [
 	[ # HQ
 		'name' => 'HQ & Account Department',
 		'img' => 'ykacc.jpg',
