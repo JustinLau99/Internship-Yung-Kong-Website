@@ -63,16 +63,16 @@
 					<ul class="dropdown-menu">
 						<li>
 							<div class="m-menu-content">
-								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#building_materials_category.jpg">Building Materials</a></li></ul>
-								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#bolts_fasteners_category.jpg">Bolts and Fasteners</a></li></ul>
-								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#hand_tools_category.jpg">Hand Tools</a></li></ul>
-								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#general_household_category.jpg">General Household</a></li></ul>
-								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#welding_machinery_category.jpg">Welding Machinery</a></li></ul>
-								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#safety_security_category.jpg">Safety Security</a></li></ul>
-								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#electrical_accessories_category.jpg">Electrical Accessories</a></li></ul>
-								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#plumbing_category.jpg">Plumbing</a></li></ul>
-								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#power_tools_category.jpg">Power Tools</a></li></ul>
-								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="#paint_category.jpg">Paint</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="products.php#building_materials_category.jpg">Building Materials</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="products.php#bolts_fasteners_category.jpg">Bolts and Fasteners</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="products.php#hand_tools_category.jpg">Hand Tools</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="products.php#general_household_category.jpg">General Household</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="products.php#welding_machinery_category.jpg">Welding Machinery</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="products.php#safety_security_category.jpg">Safety Security</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="products.php#electrical_accessories_category.jpg">Electrical Accessories</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="products.php#plumbing_category.jpg">Plumbing</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="products.php#power_tools_category.jpg">Power Tools</a></li></ul>
+								<ul class="col-md-10th col-md-2 col-sm-2"><li><a href="products.php#paint_category.jpg">Paint</a></li></ul>
 							</div>
 						</li>
 					</ul>

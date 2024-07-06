@@ -69,7 +69,7 @@
 
 
 
-				<section class="product-sidebar">
+				<section>
 
 					<!-- products-category -->
 					<div class="container-fluid">

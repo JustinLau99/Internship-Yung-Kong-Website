@@ -1819,9 +1819,6 @@ service-icon-style
 
 
 
-.card-title {
-	color: #db0075;
-}
 
 .card-text {
 	color: #17E6E6;
@@ -1831,9 +1828,6 @@ service-icon-style
 	color: #ffd700
 }
 
-.price {
-	color: #d92644;
-}
 
 .btn-pink {
 	background-color: #fcb2b2 !important;
@@ -1893,7 +1887,7 @@ service-icon-style
 	border: 2px solid rgba(100, 100, 100, 0.1);
 	margin-bottom: 10px;
 	margin-top: 10px;
-	min-height: 250px;
+	min-height: 270px;
 }
 
 .card-title {
