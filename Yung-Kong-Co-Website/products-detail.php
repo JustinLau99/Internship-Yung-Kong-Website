@@ -39,11 +39,6 @@
 					</div>
 				</section>
 
-
-
-
-
-
 				<section>
 
 					<!-- products-category -->

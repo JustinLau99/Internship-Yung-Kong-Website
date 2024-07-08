@@ -32,17 +32,13 @@
 
 
 
-
-
-
-
-
 				<!-- page-title -->
 				<section class="single-page-title">
 
 					<div class="container text-center">
 						<h2>Product Categories</h2>
 					</div>
+
 				</section>
 
 
@@ -71,24 +67,27 @@
 
 				<section>
 
+
 					<!-- products-category -->
+
 					<div class="container-fluid">
 
 						<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
 						<?php foreach (PRODUCT_CATEGORY as $category): ?>
-
 
 							<div class="row" id="<?php echo $category[IMG] ?>">
 
 								<div class="sticky-button">
 									<a href="#" class="btn btn-primary"><?php echo $category[TITLE] ?></a>
 								</div>
+
 								<div class="row">
 
 									<?php foreach ($category[PROD] as $prod): ?>
 
 										<div class="col-md-2 col-sm-3 col-xs-6">
-											<a href="products-detail.php?cat=<?php echo $category[IMG]; ?>&id=<?php echo $prod[IMG]?>">
+											<a
+												href="products-detail.php?cat=<?php echo $category[IMG]; ?>&id=<?php echo $prod[IMG] ?>">
 												<div class="card">
 
 													<img
@@ -105,6 +104,8 @@
 									<?php endforeach; ?>
 
 								</div>
+
+
 							</div>
 
 						<?php endforeach; ?>

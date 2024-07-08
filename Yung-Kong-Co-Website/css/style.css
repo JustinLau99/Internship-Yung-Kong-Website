@@ -690,8 +690,8 @@ Shortcode Content
 .m-menu .m-menu-content {}
 
 .m-menu .dropdown.m-menu-fw .dropdown-menu {
-	left:	-110px;
-	right:	-110px;
+	left: -110px;
+	right: -110px;
 }
 
 .m-menu-content ul {
@@ -802,6 +802,8 @@ Shortcode Content
     HERO SLIDER
 --------------------*/
 
+
+
 .hero-slide .carousel-caption {
 	bottom: 50%;
 	text-shadow: none;
@@ -821,8 +823,11 @@ Shortcode Content
 .carousel-caption {}
 
 .carousel-inner .item {
-	filter: brightness(40%);	
+	filter: brightness(40%);
+
+
 }
+
 
 .hero-slide .carousel-caption p {
 	font-size: 20px;
@@ -852,10 +857,12 @@ Shortcode Content
 }
 
 .hero-slide .carousel-indicators {
+
 	bottom: 60px;
 }
 
 .hero-slide .carousel-indicators li {
+	
 	border: 2px solid #ffffff;
 }
 
@@ -1096,6 +1103,7 @@ Team
 }
 
 #testimonialSlider .carousel-inner .item img {
+	
 	display: inline-block;
 	width: 60px;
 	height: 60px;
@@ -1108,6 +1116,7 @@ Team
 	font-size: 12px;
 	margin-top: 5px;
 	color: rgba(255, 255, 255, 0.5);
+
 }
 
 #testimonialSlider .carousel-inner .item blockquote {
@@ -1271,6 +1280,52 @@ Team
 	position: relative;
 	z-index: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.single-page-title- {
+	background-size: cover;
+	width: 100%;
+	background-attachment: fixed;
+	padding: 15% 0 5%;
+	position: relative;
+}
+
+.single-page-title-::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .7);
+}
+
+.single-page-title- h2 {
+	display: inline-block;
+	font-size: 72px;
+	font-weight: 700;
+	margin-bottom: 0;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+
+
+
+
+
 
 
 /*-------------------------
@@ -1866,8 +1921,8 @@ service-icon-style
 
 
 .card img {
-    max-height: 150px;
-    width: 100%;
+	height: 150px;
+	width: 100%;
 }
 
 

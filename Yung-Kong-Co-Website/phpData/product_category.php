@@ -359,14 +359,24 @@ const PRODUCT_CATEGORY = [
 
 
 
-# building_materials
-# bolts_fasteners
-# hand_tools
-# general_household
-# welding_machinery
-# safety_security
-# electrical_accessories
-# plumbing
-# power_tools
-# paint
+// building_materials
+// bolts_fasteners
+// hand_tools
+// general_household
+// welding_machinery
+// safety_security
+// electrical_accessories
+// plumbing
+// power_tools
+// paint
 
+// building_materials_category.jpg
+// bolts_fasteners_category.jpg
+// hand_tools_category.jpg
+// general_household_category.jpg
+// welding_machinery_category.jpg
+// safety_security_category.jpg
+// electrical_accessories_category.jpg
+// plumbing_category.jpg
+// power_tools_category.jpg
+// paint_category.jpg
