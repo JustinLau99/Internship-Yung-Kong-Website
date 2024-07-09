@@ -924,15 +924,98 @@ Shortcode Content
 }
 
 /*---------------------------
- Service section
+ thumbnail section
  ---------------------------*/
-.x-services .thumbnail {
-	padding: 0;
-	line-height: 24px;
-	border: 1px solid #f1f1f1;
-	border-radius: 0;
-	margin-bottom: 30px;
+
+/* hover animation */
+
+
+.thumbnail {
+	transition: 0.5s;
+
 }
+
+.thumbnail img {
+	height: 150px;
+	width: auto;
+	max-width: 100%;
+	display: block;
+	object-fit: contain;
+}
+
+.thumbnail:hover {
+	transform: scale(1.05);
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail::before,
+.thumbnail::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: scale3d(0, 0, 1);
+	transition: transform .3s ease-out 0s;
+	background: rgba(255, 255, 255, 0.1);
+	content: '';
+}
+
+.thumbnail::before {
+	transform-origin: left top;
+}
+
+.thumbnail::after {
+	transform-origin: right bottom;
+}
+
+.thumbnail:hover::before,
+.thumbnail:hover::after,
+.thumbnail:focus::before,
+.thumbnail:focus::after {
+	transform: scale3d(1, 1, 1);
+}
+
+
+
+/* same height for all thumbnail */
+
+.equal-height {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.equal-height .col-md-3,
+.equal-height .col-sm-4,
+.equal-height .col-xs-6 {
+	display: flex;
+	flex-direction: column;
+}
+
+.thumbnail {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+}
+
+.thumbnail .caption {
+	margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width : 768px) {
 
@@ -972,8 +1055,6 @@ Shortcode Content
 .x-services .thumbnail .caption h3 a:hover {
 	color: #31aae2;
 }
-
-
 
 .x-services .thumbnail .caption p {
 	margin: 0;
@@ -1932,15 +2013,23 @@ service-icon-style
 	border: 2px solid rgba(100, 100, 100, 0.1);
 	margin-bottom: 10px;
 	margin-top: 10px;
-	min-height: 270px;
+	height: 270px;
+	/* Fixed height for the card */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	/* Prevent content from overflowing */
 }
 
 .card img {
-	height: 100px;
+	height: 150px;
 	width: auto;
+	max-width: 100%;
 	display: block;
+	margin-bottom: 10px;
+	object-fit: contain;
 }
-
 
 
 .card p {

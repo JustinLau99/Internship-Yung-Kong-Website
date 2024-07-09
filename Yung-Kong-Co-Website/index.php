@@ -94,36 +94,37 @@
 					</section>
 
 					<div class="container-fluid">
+						<div class="row equal-height">
+							<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
+							<?php foreach (PRODUCT_CATEGORY as $products): ?>
 
-						<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
-						<?php foreach (PRODUCT_CATEGORY as $products): ?>
+								<div class="col-md-3 col-sm-4 col-xs-6">
+									<div class="thumbnail ">
 
-							<div class="col-md-3 col-sm-4 col-xs-6">
-								<div class="thumbnail clearfix">
+										<a href="products.php#<?php echo $products[IMG] ?>">
+											<img class="img-responsive"
+												src="<?php echo IMG_PRODUCT_CATEGORY . $products[IMG]; ?> ">
+										</a>
 
-									<a href="products.php#<?php echo $products[IMG] ?>">
-										<img class="img-responsive"
-											src="<?php echo IMG_PRODUCT_CATEGORY . $products[IMG]; ?> ">
-									</a>
+										<div class="caption">
 
-									<div class="caption">
+											<h3><!-- product Title -->
+												<a href="products.php"><?php echo $products[TITLE]; ?></a>
+											</h3>
 
-										<h3><!-- product Title -->
-											<a href="products.php"><?php echo $products[TITLE]; ?></a>
-										</h3>
+											<ul><!-- product subcategory-->
+												<?php foreach ($products[SUBCATEGORY] as $prod): ?>
+													<li> • <?php echo $prod; ?></li>
+												<?php endforeach; ?>
+											</ul>
 
-										<ul><!-- product subcategory-->
-											<?php foreach ($products[SUBCATEGORY] as $prod): ?>
-												<li> • <?php echo $prod; ?></li>
-											<?php endforeach; ?>
-										</ul>
-
+										</div>
 									</div>
 								</div>
-							</div>
 
-						<?php endforeach; ?>
+							<?php endforeach; ?>
 
+						</div>
 					</div>
 
 				</section>

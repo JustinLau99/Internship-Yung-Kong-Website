@@ -77,30 +77,29 @@
 						<div class="container-fluid">
 
 							<?php foreach ($category[PROD] as $prod): ?>
+
 								<div class="col-md-2 col-sm-3 col-xs-6">
 
-									<div class="thumbnail clearfix">
+									<div class="card">
 
-										<div class="card">
+										<a href="products-detail.php?
+												cat=<?php echo $category[IMG]; ?>
+												&id=<?php echo $prod[IMG] ?>">
 
-											<a href="products-detail.php?
-											cat=<?php echo $category[IMG]; ?>
-											&id=<?php echo $prod[IMG] ?>">
+											<img class="img-responsive"
+												src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?> ">
+										</a>
 
-												<img class="img-responsive"
-													src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?> ">
-											</a>
+										<div class="caption">
 
-											<div class="caption">
+											<h3><!-- product Title -->
+												<?php echo $prod[TITLE] ?>
+											</h3>
 
-												<h3><!-- product Title -->
-													<?php echo $prod[TITLE] ?>
-												</h3>
-
-											</div>
 										</div>
 									</div>
 								</div>
+								
 							<?php endforeach; ?>
 
 						</div>
