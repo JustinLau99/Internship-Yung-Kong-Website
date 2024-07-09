@@ -932,7 +932,7 @@ Shortcode Content
 
 .thumbnail {
 	transition: 0.5s;
-
+	padding: 0px;
 }
 
 .thumbnail img {
@@ -995,12 +995,12 @@ Shortcode Content
 .thumbnail {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-grow: 1;
 }
 
 .thumbnail .caption {
-	margin-top: auto;
+	margin-top: 0;
 }
 
 
