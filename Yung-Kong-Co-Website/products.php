@@ -62,7 +62,55 @@
 
 
 
+				<section class="x-services ptb-100 gray-bg">
 
+					<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
+					<?php foreach (PRODUCT_CATEGORY as $category): ?>
+
+						<section class="section-title">
+							<div class="container text-center">
+								<h2><?php echo $category[TITLE] ?></h2>
+								<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
+							</div>
+						</section>
+
+						<div class="container-fluid">
+
+							<?php foreach ($category[PROD] as $prod): ?>
+								<div class="col-md-2 col-sm-3 col-xs-6">
+
+									<div class="thumbnail clearfix">
+
+										<div class="card">
+
+											<a href="products-detail.php?
+											cat=<?php echo $category[IMG]; ?>
+											&id=<?php echo $prod[IMG] ?>">
+
+												<img class="img-responsive"
+													src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?> ">
+											</a>
+
+											<div class="caption">
+
+												<h3><!-- product Title -->
+													<?php echo $prod[TITLE] ?>
+												</h3>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							<?php endforeach; ?>
+
+						</div>
+
+					<?php endforeach; ?>
+
+				</section>
+
+
+				<!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->
 
 
 				<section>

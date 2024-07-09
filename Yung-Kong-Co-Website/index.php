@@ -34,46 +34,45 @@
 
 
 
-				<section class="single-page-title-">
 
-					<div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
 
-						<ol class="carousel-indicators">
-							<li data-target="#x-corp-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#x-corp-carousel" data-slide-to="1" class=""></li>
-							<li data-target="#x-corp-carousel" data-slide-to="2" class=""></li>
-							<li data-target="#x-corp-carousel" data-slide-to="3" class=""></li>
-							<li data-target="#x-corp-carousel" data-slide-to="4" class=""></li>
-						</ol>
+				<div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
 
-						<div class="carousel-caption">
-							<h1>Welcome to Yung Kong Co. Bhd.</h1>
+					<ol class="carousel-indicators">
+						<li data-target="#x-corp-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#x-corp-carousel" data-slide-to="1" class=""></li>
+						<li data-target="#x-corp-carousel" data-slide-to="2" class=""></li>
+						<li data-target="#x-corp-carousel" data-slide-to="3" class=""></li>
+						<li data-target="#x-corp-carousel" data-slide-to="4" class=""></li>
+					</ol>
 
-							<p>[Information placeholder].</p>
-						</div>
+					<div class="carousel-caption">
+						<h1>Welcome to Yung Kong Co. Bhd.</h1>
 
-						<div class="carousel-inner" role="listbox">
-
-							<div class="item active"><img src="img/department/slider-ykacc.jpg"></div>
-							<div class="item"> <img src="img/department/slider-ykbtw.jpg"></div>
-							<div class="item"> <img src="img/department/slider-ykmatang.jpg"></div>
-							<div class="item"> <img src="img/department/slider-ykpending.jpg"></div>
-							<div class="item"> <img src="img/department/slider-ykpenrissen.jpg"></div>
-
-						</div>
-
-						<a class="left carousel-control" href="#x-corp-carousel" role="button" data-slide="prev">
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#x-corp-carousel" role="button" data-slide="next">
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
-							<span class="sr-only">Next</span>
-						</a>
+						<p>[Information placeholder].</p>
 					</div>
 
+					<div class="carousel-inner" role="listbox">
 
-				</section>
+						<div class="item active"><img src="img/department/slider-ykacc.jpg"></div>
+						<div class="item"> <img src="img/department/slider-ykbtw.jpg"></div>
+						<div class="item"> <img src="img/department/slider-ykmatang.jpg"></div>
+						<div class="item"> <img src="img/department/slider-ykpending.jpg"></div>
+						<div class="item"> <img src="img/department/slider-ykpenrissen.jpg"></div>
+
+					</div>
+
+					<a class="left carousel-control" href="#x-corp-carousel" role="button" data-slide="prev">
+						<i class="fa fa-angle-left" aria-hidden="true"></i>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#x-corp-carousel" role="button" data-slide="next">
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+
+
 
 
 
@@ -96,7 +95,6 @@
 
 					<div class="container-fluid">
 
-
 						<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
 						<?php foreach (PRODUCT_CATEGORY as $products): ?>
 
@@ -110,20 +108,15 @@
 
 									<div class="caption">
 
-										<h3>
-											<a href="products.php">
-												<?php echo $products[TITLE]; ?>
-											</a>
+										<h3><!-- product Title -->
+											<a href="products.php"><?php echo $products[TITLE]; ?></a>
 										</h3>
 
-										<ul>
+										<ul><!-- product subcategory-->
 											<?php foreach ($products[SUBCATEGORY] as $prod): ?>
-												<li> •
-													<?php echo $prod; ?>
-												</li>
+												<li> • <?php echo $prod; ?></li>
 											<?php endforeach; ?>
 										</ul>
-
 
 									</div>
 								</div>
@@ -131,9 +124,7 @@
 
 						<?php endforeach; ?>
 
-						<!-- /.row -->
 					</div>
-					<!-- /.container -->
 
 				</section>
 

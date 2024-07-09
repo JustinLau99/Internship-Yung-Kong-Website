@@ -647,7 +647,7 @@ Shortcode Content
 	display: block;
 	font-size: 15px;
 	line-height: 30px;
-	color: #717171;
+	color: #2a2a2a;
 }
 
 .dropdown-menu li a:hover {
@@ -862,7 +862,7 @@ Shortcode Content
 }
 
 .hero-slide .carousel-indicators li {
-	
+
 	border: 2px solid #ffffff;
 }
 
@@ -952,14 +952,15 @@ Shortcode Content
 
 .x-services .thumbnail .caption {
 	padding: 30px;
-	color: #969595;
 	overflow: hidden;
-	min-height: 300px;
 }
 
+.x-services .thumbnail .caption li {
+	font-size: 18px;
+}
 
 .x-services .thumbnail .caption h3 {
-	font-size: 20px;
+	font-size: 28px;
 	text-transform: capitalize;
 	margin-bottom: 5px;
 }
@@ -971,6 +972,8 @@ Shortcode Content
 .x-services .thumbnail .caption h3 a:hover {
 	color: #31aae2;
 }
+
+
 
 .x-services .thumbnail .caption p {
 	margin: 0;
@@ -1103,7 +1106,7 @@ Team
 }
 
 #testimonialSlider .carousel-inner .item img {
-	
+
 	display: inline-block;
 	width: 60px;
 	height: 60px;
@@ -1351,13 +1354,11 @@ Team
 
 .x-progress .progress-title {
 	display: inline-block;
-	float: left;
 	width: 95px;
 }
 
 .x-progress .progress-percent {
 	display: inline-block;
-	float: right;
 	text-align: center;
 	padding-left: 30px;
 }
@@ -1920,10 +1921,10 @@ service-icon-style
 
 
 
-.card img {
-	height: 150px;
+/* .card img {
+	height: 100%;
 	width: 100%;
-}
+} */
 
 
 .card {
@@ -1933,6 +1934,13 @@ service-icon-style
 	margin-top: 10px;
 	min-height: 270px;
 }
+
+.card img {
+	height: 100px;
+	width: auto;
+	display: block;
+}
+
 
 
 .card p {
