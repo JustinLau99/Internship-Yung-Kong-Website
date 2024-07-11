@@ -955,10 +955,14 @@ Shortcode Content
 	right: 0;
 	bottom: 0;
 	left: 0;
-	transform: scale3d(0, 0, 1);
+	transform: scale3d(0, 0, 0);
 	transition: transform .3s ease-out 0s;
 	background: rgba(255, 255, 255, 0.1);
 	content: '';
+}
+
+.thumbnail a {
+	position: relative;
 }
 
 .thumbnail::before {
@@ -969,12 +973,6 @@ Shortcode Content
 	transform-origin: right bottom;
 }
 
-.thumbnail:hover::before,
-.thumbnail:hover::after,
-.thumbnail:focus::before,
-.thumbnail:focus::after {
-	transform: scale3d(1, 1, 1);
-}
 
 
 
@@ -2002,23 +2000,18 @@ service-icon-style
 
 
 
-/* .card img {
-	height: 100%;
-	width: 100%;
-} */
-
 
 .card {
 	transition: 0.5s;
 	border: 2px solid rgba(100, 100, 100, 0.1);
-	margin-bottom: 10px;
-	margin-top: 10px;
 	height: 270px;
 	/* Fixed height for the card */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	overflow: hidden;
+	margin-top: 15px;
+	margin-bottom: 15px;
 	/* Prevent content from overflowing */
 }
 
@@ -2027,10 +2020,12 @@ service-icon-style
 	width: auto;
 	max-width: 100%;
 	display: block;
-	margin-bottom: 10px;
 	object-fit: contain;
 }
 
+.card .img-box{
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Basic shadow */
+}
 
 .card p {
 	color: #17E6E6;

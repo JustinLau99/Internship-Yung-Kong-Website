@@ -45,75 +45,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<section class="x-services ptb-100 gray-bg">
-
-					<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
-					<?php foreach (PRODUCT_CATEGORY as $category): ?>
-
-						<section class="section-title">
-							<div class="container text-center">
-								<h2><?php echo $category[TITLE] ?></h2>
-								<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-							</div>
-						</section>
-
-						<div class="container-fluid">
-
-							<?php foreach ($category[PROD] as $prod): ?>
-
-								<div class="col-md-2 col-sm-3 col-xs-6">
-
-									<div class="card">
-
-										<a href="products-detail.php?
-												cat=<?php echo $category[IMG]; ?>
-												&id=<?php echo $prod[IMG] ?>">
-
-											<img class="img-responsive"
-												src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?> ">
-										</a>
-
-										<div class="caption">
-
-											<h3><!-- product Title -->
-												<?php echo $prod[TITLE] ?>
-											</h3>
-
-										</div>
-									</div>
-								</div>
-								
-							<?php endforeach; ?>
-
-						</div>
-
-					<?php endforeach; ?>
-
-				</section>
-
-
 				<!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->
 
 
 				<section>
-
 
 					<!-- products-category -->
 
@@ -124,33 +59,38 @@
 
 							<div class="row" id="<?php echo $category[IMG] ?>">
 
+							
 								<div class="sticky-button">
 									<a href="#" class="btn btn-primary"><?php echo $category[TITLE] ?></a>
 								</div>
 
-								<div class="row">
 
+									
 									<?php foreach ($category[PROD] as $prod): ?>
 
 										<div class="col-md-2 col-sm-3 col-xs-6">
 											<a
-												href="products-detail.php?cat=<?php echo $category[IMG]; ?>&id=<?php echo $prod[IMG] ?>">
+												href="product-detail.php?cat=<?php echo $category[IMG]; ?>&id=<?php echo $prod[IMG] ?>">
+												
 												<div class="card">
 
-													<img
-														src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?>">
+													<div class="img-box">
+
+														<img
+															src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?>">
+													</div>
 
 													<h2 class="card-title mt-3 mb-3"><?php echo $prod[TITLE] ?></h2>
 													<p class="card-text">
 														[Product Description]
 													</p>
 												</div>
+												
 											</a>
 										</div>
 
 									<?php endforeach; ?>
 
-								</div>
 
 
 							</div>
@@ -158,8 +98,6 @@
 						<?php endforeach; ?>
 
 					</div>
-
-
 
 				</section>
 
