@@ -1,4 +1,4 @@
-<?php include_once 'config/config.php'; ?> <!-- define path -->
+<?php include_once 'config/config.php'; ?><!-- define path -->
 
 <?php
 $logo_brand = [
@@ -52,26 +52,21 @@ $logo_brand = [
 
 <!DOCTYPE html>
 <html>
-<!-- header -->
-<?php include_once INCLUDE_PATH . 'header.php'; ?>
+
+<?php include_once INCLUDE_PATH . 'header.php'; ?><!-- header -->
 
 <body>
 	<div id="main-wrapper">
 
-		<!-- Page Preloader -->
-		<div id="preloader">
-			<div id="status">
-				<div class="status-mes"></div>
-			</div>
-		</div>
+		<?php include_once INCLUDE_PATH . 'preloader.php' ?><!-- preloader -->
+
 
 		<div class="uc-mobile-menu-pusher">
 
 			<div class="content-wrapper">
 
-				<!-- .nav -->
-				<?php include_once INCLUDE_PATH . 'navbar.php'; ?>
-				<!-- .nav -->
+				
+				<?php include_once INCLUDE_PATH . 'navbar.php'; ?><!-- navbar -->
 
 
 				<section class="single-page-title">
@@ -143,23 +138,23 @@ $logo_brand = [
 
 
 
-				<!-- footer -->
-				<?php include_once INCLUDE_PATH . 'footer.php'; ?>
+				
+				<?php include_once INCLUDE_PATH . 'footer.php'; ?><!-- footer -->
 
 			</div>
 			<!-- .content-wrapper -->
 		</div>
 		<!-- .offcanvas-pusher -->
 
-		<!-- uc-mobile-menu -->
-		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?>
+		
+		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?><!-- uc-mobile-menu -->
 
 
 	</div>
 	<!-- #main-wrapper -->
 
-	<!-- Script -->
-	<?php include_once INCLUDE_PATH . 'script-src.php'; ?>
+	
+	<?php include_once INCLUDE_PATH . 'script-src.php'; ?><!-- Script -->
 
 </body>
 

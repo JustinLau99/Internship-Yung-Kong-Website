@@ -5,18 +5,14 @@
 
 <!DOCTYPE html>
 <html>
-<!-- header -->
-<?php include_once INCLUDE_PATH . 'header.php'; ?>
+
+<?php include_once INCLUDE_PATH . 'header.php'; ?><!-- header -->
 
 <body>
 	<div id="main-wrapper">
 
-		<!-- Page Preloader -->
-		<div id="preloader">
-			<div id="status">
-				<div class="status-mes"></div>
-			</div>
-		</div>
+		<?php include_once INCLUDE_PATH . 'preloader.php' ?><!-- preloader -->
+
 
 		<!-- mobile menu -->
 		<div class="uc-mobile-menu-pusher">
@@ -41,14 +37,20 @@
 
 				</section>
 
+				<section class="x-services ptb-100 gray-bg">
+
+					<section class="section-title ">
+						<div class="container text-center">
+							<h2>What We Offer</h2>
+							<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
+						</div>
+					</section>
 
 
 
 
-				<!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->
 
 
-				<section>
 
 					<!-- products-category -->
 
@@ -59,39 +61,36 @@
 
 							<div class="row" id="<?php echo $category[IMG] ?>">
 
-							
+
 								<div class="sticky-button">
 									<a href="#" class="btn btn-primary"><?php echo $category[TITLE] ?></a>
 								</div>
 
 
-									
-									<?php foreach ($category[PROD] as $prod): ?>
+								<?php foreach ($category[PROD] as $prod): ?>
 
-										<div class="col-md-2 col-sm-3 col-xs-6">
-											<a
-												href="product-detail.php?cat=<?php echo $category[IMG]; ?>&id=<?php echo $prod[IMG] ?>">
-												
-												<div class="card">
+									<div class="col-md-2 col-sm-3 col-xs-6">
+										<a
+											href="product-detail.php?cat=<?php echo $category[IMG]; ?>&id=<?php echo $prod[IMG] ?>">
 
-													<div class="img-box">
+											<div class="card">
 
-														<img
-															src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?>">
-													</div>
-
-													<h2 class="card-title mt-3 mb-3"><?php echo $prod[TITLE] ?></h2>
-													<p class="card-text">
-														[Product Description]
-													</p>
+												<div class="img-box">
+													<img
+														src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?>">
 												</div>
-												
-											</a>
-										</div>
-
-									<?php endforeach; ?>
 
 
+												<div class="caption">
+													<h3><?php echo $prod[TITLE]; ?></h3><!-- product Title -->
+												</div>
+
+											</div>
+
+										</a>
+									</div>
+
+								<?php endforeach; ?>
 
 							</div>
 
@@ -99,8 +98,8 @@
 
 					</div>
 
-				</section>
 
+				</section>
 
 				<!-- footer -->
 				<?php include_once INCLUDE_PATH . 'footer.php'; ?>

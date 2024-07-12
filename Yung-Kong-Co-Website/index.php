@@ -1,32 +1,26 @@
 <!-- index.php -->
 
-<?php include_once 'config/config.php'; ?> <!-- define path -->
+<?php include_once 'config/config.php'; ?><!-- define path -->
 
 <!DOCTYPE html>
 <html>
-<!-- header -->
-<?php include_once INCLUDE_PATH . 'header.php'; ?>
-<!-- .header -->
+
+<?php include_once INCLUDE_PATH . 'header.php'; ?><!-- header -->
 
 <body>
 
 
-
-
 	<div id="main-wrapper">
-		<!-- Page Preloader -->
-		<div id="preloader">
-			<div id="status">
-				<div class="status-mes"></div>
-			</div>
-		</div>
+		
+		<?php include_once INCLUDE_PATH . 'preloader.php' ?><!-- preloader -->
+		
 		<div class="uc-mobile-menu-pusher">
 
 			<!-- index -->
 			<div class="content-wrapper">
 
-				<!-- navbar -->
-				<?php include_once INCLUDE_PATH . 'navbar.php'; ?>
+				
+				<?php include_once INCLUDE_PATH . 'navbar.php'; ?><!-- navbar -->
 
 
 
@@ -91,12 +85,13 @@
 					</section>
 
 					<div class="container-fluid">
+						
 						<div class="row equal-height">
 							<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
 							<?php foreach (PRODUCT_CATEGORY as $products): ?>
 
 								<div class="col-md-3 col-sm-4 col-xs-6">
-									<div class="thumbnail ">
+									<div class="thumbnail">
 
 										<a href="products.php#<?php echo $products[IMG] ?>">
 											<img class="img-responsive"
@@ -138,10 +133,11 @@
 					<div id="cards_landscape_wrap-2">
 						<div class="container-fluid">
 
+						
 							<?php include_once PHPDATA_PATH . 'departments.php'; ?>
 							<?php foreach (DEPARTMENTS as $depart): ?>
 
-								<div class="col-md-5th col-sm-4 col-xs-6 section-margin">
+								<div class="col-md-5th col-sm-4 col-xs-6 section-margin ">
 									<a href="">
 										<div class="card-flyer">
 											<div class="text-box">
@@ -173,6 +169,8 @@
 								</div>
 
 							<?php endforeach; ?>
+
+
 
 						</div>
 					</div>
@@ -221,22 +219,22 @@
 
 
 
-				<!-- footer -->
-				<?php include_once INCLUDE_PATH . 'footer.php'; ?>
+				
+				<?php include_once INCLUDE_PATH . 'footer.php'; ?><!-- footer -->
 
 			</div>
 			<!-- .content-wrapper -->
 		</div>
 		<!-- .offcanvas-pusher -->
 
-		<!-- uc-mobile-menu -->
-		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?>
+		
+		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?><!-- uc-mobile-menu -->
 
 	</div>
 	<!-- #main-wrapper -->
 
-	<!-- Script -->
-	<?php include_once INCLUDE_PATH . 'script-src.php'; ?>
+	
+	<?php include_once INCLUDE_PATH . 'script-src.php'; ?><!-- Script -->
 
 </body>
 

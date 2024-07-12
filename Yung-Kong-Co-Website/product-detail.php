@@ -12,8 +12,9 @@ function searchProduct(): array
 
 	$targetProduct = [
 		PRODUCT_IMG_PATH => '',
-		'title' => '',
-		'img' => '',
+		TITLE => '',
+		IMG => '',
+		DESC => '',
 	];
 
 	// search category
@@ -25,8 +26,9 @@ function searchProduct(): array
 			foreach ($category[PROD] as $prod) {
 				if ($prod[IMG] === $queryId) {
 
-					$targetProduct['title'] = $prod[TITLE];
-					$targetProduct['img'] = $prod[IMG];
+					$targetProduct[TITLE] = $prod[TITLE];
+					$targetProduct[IMG] = $prod[IMG];
+					$targetProduct[DESC] = $prod[DESC];
 
 					$found = true;
 					break; // Exit loop once product is found
@@ -37,10 +39,6 @@ function searchProduct(): array
 				}
 			}
 		}
-	}
-
-	foreach ($targetProduct as $value) {
-		echo $value . '<br>';
 	}
 
 	// Check if no product was found for the given query parameters
@@ -65,18 +63,14 @@ function searchProduct(): array
 
 <!DOCTYPE html>
 <html>
-<!-- header -->
-<?php include_once INCLUDE_PATH . 'header.php'; ?>
+
+<?php include_once INCLUDE_PATH . 'header.php'; ?><!-- header -->
 
 <body>
 	<div id="main-wrapper">
 
-		<!-- Page Preloader -->
-		<div id="preloader">
-			<div id="status">
-				<div class="status-mes"></div>
-			</div>
-		</div>
+		<?php include_once INCLUDE_PATH . 'preloader.php' ?><!-- preloader -->
+
 
 		<!-- mobile menu -->
 		<div class="uc-mobile-menu-pusher">
@@ -84,12 +78,7 @@ function searchProduct(): array
 			<div class="content-wrapper">
 
 
-
-				<!-- navbar -->
-				<?php include_once INCLUDE_PATH . 'navbar.php'; ?>
-
-
-
+				<?php include_once INCLUDE_PATH . 'navbar.php'; ?><!-- navbar -->
 
 
 				<!-- page-title -->
@@ -103,9 +92,7 @@ function searchProduct(): array
 
 
 					<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
-
-
-					<?php $foundProduct = searchProduct(); ?>
+					<?php $foundProduct = searchProduct(); // function ?>
 
 
 					<!-- products-category -->
@@ -114,18 +101,22 @@ function searchProduct(): array
 							<div class="thumbnail">
 								<img
 									src="<?php echo IMG_PRODUCT . $foundProduct[PRODUCT_IMG_PATH] . $foundProduct['img'] ?>">
-									<?php echo IMG_PRODUCT . $foundProduct[PRODUCT_IMG_PATH] . $foundProduct['img'] ?>
 							</div>
 
 						</div>
 						<div class="col-md-6 col-sm-12">
 							<div class="thumbnail">
-								product description
+								<h1>
+									<?php echo $foundProduct[TITLE]; ?>
+								</h1>
+								<p>
+									<?php echo $foundProduct[DESC]; ?>
+								</p>
 							</div>
 						</div>
 
 						<div class="col-md-6 col-sm-12">
-
+							asd
 
 						</div>
 
@@ -135,9 +126,7 @@ function searchProduct(): array
 
 				</section>
 
-
-				<!-- footer -->
-				<?php include_once INCLUDE_PATH . 'footer.php'; ?>
+				<?php include_once INCLUDE_PATH . 'footer.php'; ?><!-- footer -->
 
 			</div>
 			<!-- /content-wrapper -->
@@ -145,17 +134,14 @@ function searchProduct(): array
 		<!-- /offcanvas-pusher -->
 
 
-		<!-- uc-mobile-menu -->
-		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?>
+		
+		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?><!-- uc-mobile-menu -->
 
 
 	</div>
 	<!-- #main-wrapper -->
 
-
-	<!-- script -->
-	<?php include_once INCLUDE_PATH . 'script-src.php'; ?>
-	<!-- /script -->
+	<?php include_once INCLUDE_PATH . 'script-src.php'; ?><!-- script -->
 
 </body>
 

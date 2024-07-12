@@ -1,27 +1,21 @@
-<?php include_once 'config/config.php'; ?> <!-- define path -->
+<?php include_once 'config/config.php'; ?><!-- define path -->
 
 <!DOCTYPE html>
 <html>
-<!-- header -->
-<?php include_once INCLUDE_PATH . 'header.php'; ?>
+
+<?php include_once INCLUDE_PATH . 'header.php'; ?><!-- header -->
 
 <body>
 	<div id="main-wrapper">
 
-		<!-- Page Preloader -->
-		<div id="preloader">
-			<div id="status">
-				<div class="status-mes"></div>
-			</div>
-		</div>
+		<?php include_once INCLUDE_PATH . 'preloader.php' ?><!-- preloader -->
+
 
 		<div class="uc-mobile-menu-pusher">
 
 			<div class="content-wrapper">
 
-				<!-- .nav -->
-				<?php include_once INCLUDE_PATH . 'navbar.php'; ?>
-				<!-- .nav -->
+				<?php include_once INCLUDE_PATH . 'navbar.php'; ?><!-- navbar -->
 
 
 				<section class="single-page-title">
@@ -82,8 +76,8 @@
 				</section>
 				<!--.map-section-->
 
-				<!-- footer -->
-				<?php include_once INCLUDE_PATH . 'footer.php'; ?>
+				
+				<?php include_once INCLUDE_PATH . 'footer.php'; ?><!-- footer -->
 
 			</div>
 			<!-- .content-wrapper -->
