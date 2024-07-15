@@ -69,7 +69,7 @@
 
 
 				<!-- productList -->
-				<section class="x-services gray-bg">
+				<section class="x-services bg-gray">
 					<section class="section-title text-center">
 						<h2>What We Offer</h2>
 						<span class="bordered-icon">

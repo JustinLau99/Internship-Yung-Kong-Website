@@ -88,7 +88,7 @@ function searchProduct(): array
 					</div>
 				</section>
 
-				<section>
+				<section class="x-services">
 
 					<section class="section-title text-center">
 						<h2>Description</h2>
@@ -115,15 +115,14 @@ function searchProduct(): array
 								<h1>
 									<?php echo $foundProduct[TITLE]; ?>
 								</h1>
-								<p>
-									<?php echo $foundProduct[DESC]; ?>
-								</p>
+
 							</div>
 						</div>
 
 						<div class="col-md-6 col-sm-12">
-							asd
-
+							<p>
+								<?php echo $foundProduct[DESC]; ?>
+							</p>
 						</div>
 
 					</div>

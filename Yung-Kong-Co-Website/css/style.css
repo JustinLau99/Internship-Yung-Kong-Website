@@ -194,16 +194,19 @@ ul {
    Section Background
    -------------------*/
 
-.gray-bg {
-	background-color: #f9f9f9;
-}
-
-.white-bg {
+.bg-white {
 	background-color: #fff;
 }
 
+.bg-gray {
+	background-color: #f9f9f9;
+}
 
-/* --------------------
+.bg-gray-darker {
+	background-color: #f9f9f9;
+}
+
+/* ----------------rgb(122, 41, 41)
    main Wrapper
    -------------------*/
 
@@ -424,6 +427,40 @@ Shortcode Content
 	background-size: cover;
 }
 
+
+/*-----------------------------
+ SIDEBAR
+--------------------------------*/
+
+#sidebar {
+	position: sticky;
+	top: 80px;
+	/* Adjust based on your header height */
+	left: 0;
+	width: 250px;
+	/* Adjust the width as needed */
+	height: 100%;
+	padding: 15px;
+	background-color: #f8f9fa;
+	border-right: 1px solid #ddd;
+	z-index: 1000;
+}
+
+#sidebar .list-group-item {
+	margin-bottom: 5px;
+	border: none;
+}
+
+#sidebar .list-group-item a {
+	text-decoration: none;
+	color: #333;
+}
+
+#sidebar .list-group-item a:hover {
+	color: #007bff;
+}
+
+ 
 /*-----------------------------
  NAVIGATION & HEADER STYLE
 --------------------------------*/
@@ -738,6 +775,7 @@ Shortcode Content
 }
 
 /*uc-mobile-menu*/
+
 .uc-mobile-menu {}
 
 .uc-mobile-menu-container>div {
@@ -1037,10 +1075,15 @@ Shortcode Content
 	}
 }
 
+
+
 .x-services .thumbnail .caption {
 	padding: 30px;
 	overflow: hidden;
+
 }
+
+
 
 .x-services .thumbnail .caption li {
 	font-size: 18px;
@@ -2010,7 +2053,7 @@ service-icon-style
 .card {
 	transition: 0.5s;
 	border: 2px solid rgba(100, 100, 100, 0.1);
-	height: 270px;
+	height: 300px;
 	/* Fixed height for the card */
 	display: flex;
 	flex-direction: column;
@@ -2018,22 +2061,25 @@ service-icon-style
 	overflow: hidden;
 	margin-top: 15px;
 	margin-bottom: 15px;
+	background-color: white;
 	/* Prevent content from overflowing */
 }
 
 .card img {
 	width: 100%;
-    height: 200px;
-    display: block;
-    object-fit: cover; /* Ensures the image covers the area */
+	height: 200px;
+	display: block;
+	object-fit: cover;
+	/* Ensures the image covers the area */
 }
 
-.card .img-box{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Basic shadow */
+.card .img-box {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	/* Basic shadow */
 }
 
 .card p {
@@ -2046,6 +2092,11 @@ service-icon-style
 	cursor: pointer;
 }
 
+.card .caption {
+	/* font-size: 20px; */
+	padding: 8px;
+	overflow: hidden;
+}
 
 
 
@@ -2083,4 +2134,3 @@ service-icon-style
 .card:focus::after {
 	transform: scale3d(1, 1, 1);
 }
-

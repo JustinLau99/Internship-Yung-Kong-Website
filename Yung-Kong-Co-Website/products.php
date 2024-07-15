@@ -24,6 +24,7 @@
 				<?php include_once INCLUDE_PATH . 'navbar.php'; ?><!-- navbar -->
 
 
+
 				<!-- page-title -->
 				<section class="single-page-title">
 
@@ -33,15 +34,27 @@
 
 				</section>
 
-				<section class="x-services gray-bg">
 
+				<!-- Sidebar -->
+				<div class="col-md-3">
+					<div id="sidebar">
+						<ul class="list-group">
+							<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
+							<?php foreach (PRODUCT_CATEGORY as $category): ?>
+								<li class="list-group-item">
+									<a href="#<?php echo $category[IMG]; ?>"><?php echo $category[TITLE]; ?></a>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+				</div>
 
+				<section class="x-services bg-gray">
 
-					<!-- products-category -->
-
-					<div class="container-fluid">
+					<div class="container-fluid" style="margin-left: 270px;">
 
 						<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
+						<!-- Product Category -->
 						<?php foreach (PRODUCT_CATEGORY as $category): ?>
 
 							<section class="x-services bg-dark" id="<?php echo $category[IMG] ?>">
@@ -53,24 +66,27 @@
 									</span>
 								</section>
 
-								<div class="row" >
+								<div class="row">
 
+									<!-- Each Product from category -->
 									<?php foreach ($category[PROD] as $prod): ?>
 
 										<div class="col-md-2 col-sm-3 col-xs-6">
-											<a
-												href="product-detail.php?cat=<?php echo $category[IMG]; ?>&id=<?php echo $prod[IMG] ?>">
+											<a href="product-detail.php?
+												cat=<?php echo $category[IMG]; ?>&id=<?php echo $prod[IMG] ?>">
 
 												<div class="card">
 
 													<div class="img-box">
+														<!-- product image -->
 														<img
 															src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?>">
 													</div>
 
 
 													<div class="caption">
-														<h3><?php echo $prod[TITLE]; ?></h3><!-- product Title -->
+														<!-- product Title -->
+														<h3><?php echo $prod[TITLE]; ?></h3>
 													</div>
 
 												</div>
@@ -89,20 +105,20 @@
 
 
 				</section>
-				
+
 				<?php include_once INCLUDE_PATH . 'footer.php'; ?><!-- footer -->
 
 			</div>
 			<!-- /content-wrapper -->
 		</div>
 		<!-- /offcanvas-pusher -->
-		
+
 		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?><!-- uc-mobile-menu -->
 
 
 	</div>
 	<!-- #main-wrapper -->
-	
+
 	<?php include_once INCLUDE_PATH . 'script-src.php'; ?><!-- script -->
 
 </body>
