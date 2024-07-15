@@ -22,9 +22,6 @@
 
 <!-- Bootstrap 5 CSS -->
  
- <!-- problem -->
- <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
- <!-- problem -->
 
 
 <!-- Bootstrap 5 Bundle (includes Popper.js) -->

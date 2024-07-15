@@ -104,11 +104,10 @@ function searchProduct(): array
 					<!-- products-category -->
 					<div class="container-fluid">
 						<div class="col-md-6 col-sm-12">
-							<div class="thumbnail">
+							<div class="thumbnail product-details">
 								<img
 									src="<?php echo IMG_PRODUCT . $foundProduct[PRODUCT_IMG_PATH] . $foundProduct['img'] ?>">
 							</div>
-
 						</div>
 						<div class="col-md-6 col-sm-12">
 							<div class="thumbnail">
