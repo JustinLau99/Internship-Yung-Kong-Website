@@ -90,6 +90,12 @@ function searchProduct(): array
 
 				<section>
 
+					<section class="section-title text-center">
+						<h2>Description</h2>
+						<span class="bordered-icon">
+							<i class="bi bi-circle"></i>
+						</span>
+					</section>
 
 					<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
 					<?php $foundProduct = searchProduct(); // function ?>
@@ -134,7 +140,7 @@ function searchProduct(): array
 		<!-- /offcanvas-pusher -->
 
 
-		
+
 		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?><!-- uc-mobile-menu -->
 
 

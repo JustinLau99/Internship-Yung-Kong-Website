@@ -11,15 +11,15 @@
 
 
 	<div id="main-wrapper">
-		
+
 		<?php include_once INCLUDE_PATH . 'preloader.php' ?><!-- preloader -->
-		
+
 		<div class="uc-mobile-menu-pusher">
 
 			<!-- index -->
 			<div class="content-wrapper">
 
-				
+
 				<?php include_once INCLUDE_PATH . 'navbar.php'; ?><!-- navbar -->
 
 
@@ -40,7 +40,6 @@
 					<div class="carousel-caption">
 						<h1>Welcome to Yung Kong Co. Bhd.</h1>
 
-						<p>[Information placeholder].</p>
 					</div>
 
 					<div class="carousel-inner" role="listbox">
@@ -69,24 +68,20 @@
 
 
 
-
-
-
-
-
-
 				<!-- productList -->
-				<section class="x-services ptb-100 gray-bg">
-					<section class="section-title">
-						<div class="container text-center">
-							<h2>What We Offer</h2>
-							<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-						</div>
+				<section class="x-services gray-bg">
+					<section class="section-title text-center">
+						<h2>What We Offer</h2>
+						<span class="bordered-icon">
+							<i class="bi bi-circle"></i>
+						</span>
 					</section>
 
+					
 					<div class="container-fluid">
-						
-						<div class="row equal-height">
+
+						<div class="equal-height">
+
 							<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
 							<?php foreach (PRODUCT_CATEGORY as $products): ?>
 
@@ -133,7 +128,7 @@
 					<div id="cards_landscape_wrap-2">
 						<div class="container-fluid">
 
-						
+
 							<?php include_once PHPDATA_PATH . 'departments.php'; ?>
 							<?php foreach (DEPARTMENTS as $depart): ?>
 
@@ -219,7 +214,7 @@
 
 
 
-				
+
 				<?php include_once INCLUDE_PATH . 'footer.php'; ?><!-- footer -->
 
 			</div>
@@ -227,13 +222,13 @@
 		</div>
 		<!-- .offcanvas-pusher -->
 
-		
+
 		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?><!-- uc-mobile-menu -->
 
 	</div>
 	<!-- #main-wrapper -->
 
-	
+
 	<?php include_once INCLUDE_PATH . 'script-src.php'; ?><!-- Script -->
 
 </body>

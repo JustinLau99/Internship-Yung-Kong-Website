@@ -30,8 +30,6 @@
 <!-- Bootstrap 5 Bundle (includes Popper.js) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- FontAwesome CSS -->
-<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
 
 <!-- Optional Scripts -->
 <script src="js/smoothscroll.js"></script>
