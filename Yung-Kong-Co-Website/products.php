@@ -35,23 +35,10 @@
 				</section>
 
 
-				<!-- Sidebar -->
-				<div class="col-md-3">
-					<div id="sidebar">
-						<ul class="list-group">
-							<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
-							<?php foreach (PRODUCT_CATEGORY as $category): ?>
-								<li class="list-group-item">
-									<a href="#<?php echo $category[IMG]; ?>"><?php echo $category[TITLE]; ?></a>
-								</li>
-							<?php endforeach; ?>
-						</ul>
-					</div>
-				</div>
-
+				
 				<section class="x-services bg-gray">
 
-					<div class="container-fluid" style="margin-left: 270px;">
+					<div class="container-fluid">
 
 						<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
 						<!-- Product Category -->
