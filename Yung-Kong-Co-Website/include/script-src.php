@@ -1,10 +1,8 @@
 
 <!-- Script -->
-<script src="js/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -16,12 +14,6 @@
 
 <!-- products dropdown always show in navbar -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
-
-<!-- Bootstrap 5 CSS -->
- 
 
 
 <!-- Bootstrap 5 Bundle (includes Popper.js) -->

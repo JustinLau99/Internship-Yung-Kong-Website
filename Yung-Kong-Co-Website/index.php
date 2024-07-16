@@ -31,7 +31,7 @@
 
 					<ol class="carousel-indicators">
 						<li data-target="#x-corp-carousel" data-slide-to="0" class="active"> </li>
-						<li data-target="#x-corp-carousel" data-slide-to="1" class=""> </li>
+						<li data-target="#x-codemon slayerrp-carousel" data-slide-to="1" class=""> </li>
 						<li data-target="#x-corp-carousel" data-slide-to="2" class=""> </li>
 						<li data-target="#x-corp-carousel" data-slide-to="3" class=""> </li>
 						<li data-target="#x-corp-carousel" data-slide-to="4" class=""> </li>
@@ -65,9 +65,6 @@
 
 
 
-
-
-
 				<!-- productList -->
 				<section class="x-services bg-gray">
 					<section class="section-title text-center">
@@ -77,7 +74,7 @@
 						</span>
 					</section>
 
-					
+
 					<div class="container-fluid">
 
 						<div class="equal-height">

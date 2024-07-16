@@ -62,6 +62,7 @@ function searchProduct(): array
 <?php include_once 'config/config.php'; ?> <!-- define path -->
 
 <!DOCTYPE html>
+
 <html>
 
 <?php include_once INCLUDE_PATH . 'header.php'; ?><!-- header -->
