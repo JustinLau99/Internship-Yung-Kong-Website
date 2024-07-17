@@ -49,5 +49,3 @@ const DEPARTMENTS = [
 		'mail' => 'ykmatang@yungkong.com',
 	],
 ];
-
-?>

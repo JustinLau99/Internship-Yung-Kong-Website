@@ -1,4 +1,4 @@
-Item Group,Description,categories
+Item Group,Description,Item Type
 00-1,CEMENT,0
 00-3,STEEL BAR,0
 01-0,YMC,0
@@ -193,8 +193,3 @@ Item Group,Description,categories
 92,KANGAROO PAINT,9
 93,COLOURLAND PAINT,9
 94,TRANS PAINT,9
-,,
-,,
-,,
-,,
-,,

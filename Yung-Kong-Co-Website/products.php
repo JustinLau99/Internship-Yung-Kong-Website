@@ -19,11 +19,7 @@
 
 			<div class="content-wrapper">
 
-
-
 				<?php include_once INCLUDE_PATH . 'navbar.php'; ?><!-- navbar -->
-
-
 
 				<!-- page-title -->
 				<section class="single-page-title">
@@ -34,6 +30,9 @@
 
 				</section>
 
+
+				<!-- dropdown menu -->
+				<!-- 
 				<li class="dropdown m-menu-fw <?php echo ($current_page == 'products.php') ? 'active' : ''; ?>">
 					<ul class="dropdown-menu show">
 						<li>
@@ -52,7 +51,9 @@
 						</li>
 					</ul>
 				</li>
-
+				 -->
+				<!-- dropdown menu -->
+				
 
 				
 				<section class="x-services bg-gray">
