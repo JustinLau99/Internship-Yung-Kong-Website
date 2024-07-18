@@ -1,265 +1,52 @@
-<!-- index.php -->
-
-<?php include_once 'config/config.php'; ?><!-- define path -->
-
 <!DOCTYPE html>
-<html>
-
-<?php include_once INCLUDE_PATH . 'header.php'; ?><!-- header -->
-
-<body>
-
-
-	<div id="main-wrapper">
-
-		<?php include_once INCLUDE_PATH . 'preloader.php' ?><!-- preloader -->
-
-		<div class="uc-mobile-menu-pusher">
-
-			<!-- index -->
-			<div class="content-wrapper">
-
-
-				<?php include_once INCLUDE_PATH . 'navbar.php'; ?><!-- navbar -->
-
-
-
-				<!-- Indicators -->
-
-
-				<div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
-
-					<ol class="carousel-indicators">
-						<li data-target="#x-corp-carousel" data-slide-to="0" class="active"> </li>
-						<li data-target="#x-codemon slayerrp-carousel" data-slide-to="1" class=""> </li>
-						<li data-target="#x-corp-carousel" data-slide-to="2" class=""> </li>
-						<li data-target="#x-corp-carousel" data-slide-to="3" class=""> </li>
-						<li data-target="#x-corp-carousel" data-slide-to="4" class=""> </li>
-					</ol>
-
-					<div class="carousel-caption">
-						<h1>Welcome to Yung Kong Co. Bhd.</h1>
-
-					</div>
-
-					<div class="carousel-inner" role="listbox">
-
-						<div class="item active"> <img src="img/department/slider-ykacc.jpg"></div>
-						<div class="item"> <img src="img/department/slider-ykbtw.jpg"></div>
-						<div class="item"> <img src="img/department/slider-ykmatang.jpg"></div>
-						<div class="item"> <img src="img/department/slider-ykpending.jpg"></div>
-						<div class="item"> <img src="img/department/slider-ykpenrissen.jpg"></div>
-
-					</div>
-
-					<a class="left carousel-control" href="#x-corp-carousel" role="button" data-slide="prev">
-						<i class="fa fa-angle-left" aria-hidden="true"></i>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#x-corp-carousel" role="button" data-slide="next">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
-
-
-
-
-				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-							class="active" aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-							aria-label="Slide 2"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-							aria-label="Slide 3"></button>
-					</div>
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img src="https://dummyimage.com/600x400/000/fff" class="d-block w-100" alt="Slide 1">
-						</div>
-						<div class="carousel-item">
-							<img src="https://dummyimage.com/600x400/000/fff" class="d-block w-100" alt="Slide 2">
-						</div>
-						<div class="carousel-item">
-							<img src="https://dummyimage.com/600x400/000/fff" class="d-block w-100" alt="Slide 3">
-						</div>
-					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-						data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-						data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
-				</div>
-
-				<!-- productList -->
-				<section class="x-services bg-gray">
-					<section class="section-title text-center">
-						<h2>What We Offer</h2>
-						<span class="bordered-icon">
-							<i class="bi bi-circle"></i>
-						</span>
-					</section>
-
-
-					<div class="container-fluid">
-
-						<div class="equal-height">
-
-							<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
-							<?php foreach ($productListing as $products): ?>
-
-								<div class="col-md-3 col-sm-4 col-xs-6">
-									<div class="thumbnail">
-
-										<a href="products.php#<?php echo $products['Image Path'] ?>">
-											<img class="img-responsive"
-												src="<?php echo IMG_PRODUCT_CATEGORY . $products['Image Path']; ?> ">
-										</a>
-
-										<div class="caption">
-
-											<h3><!-- product Title -->
-												<a href="products.php"><?php echo $products['Description']; ?></a>
-											</h3>
-
-											<ul><!-- product subcategory-->
-												<?php foreach ($products['SubCategories'] as $prod): ?>
-													<li> • <?php echo $prod; ?></li>
-												<?php endforeach; ?>
-											</ul>
-
-										</div>
-									</div>
-								</div>
-
-							<?php endforeach; ?>
-
-						</div>
-					</div>
-
-				</section>
-
-				<!-- Departments -->
-				<section class="x-features">
-					<section class="section-title">
-						<div class="container text-center">
-							<h2>Our Departments</h2>
-							<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-						</div>
-					</section>
-
-					<div id="cards_landscape_wrap-2">
-						<div class="container-fluid">
-
-
-							<?php include_once PHPDATA_PATH . 'departments.php'; ?>
-							<?php foreach (DEPARTMENTS as $depart): ?>
-
-								<div class="col-md-5th col-sm-4 col-xs-6 section-margin ">
-									<a href="">
-										<div class="card-flyer">
-											<div class="text-box">
-
-												<div class="image-box">
-													<img src="<?php echo IMG_DEPARTMENT . $depart[IMG] ?>" />
-												</div>
-												<div class="text-container">
-
-													<h6><?php echo $depart['name'] ?></h6>
-
-													<i class="bi bi-geo icon-lg">
-														<p><?php echo $depart['address'] ?></p>
-													</i>
-													<i class="bi bi-telephone icon-lg">
-														<p><?php echo $depart['tel'] ?></p>
-													</i>
-													<i class="bi bi-whatsapp icon-lg">
-														<p><?php echo $depart['whatsapp'] ?></p>
-													</i>
-													<i class="bi bi-envelope icon-lg">
-														<p><?php echo $depart['mail'] ?></p>
-													</i>
-													<p>Fax: <?php echo $depart['fax'] ?></p>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-
-							<?php endforeach; ?>
-
-
-
-						</div>
-					</div>
-				</section>
-
-
-
-
-
-
-
-
-				<!-- Product Brands -->
-				<section class="client-logo ptb-100">
-
-					<?php include_once PHPDATA_PATH . 'brand_logo.php'; ?>
-
-					<section class="section-title">
-						<div class="container text-center">
-							<h2>Our Key Product Brands</h2>
-							<span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-						</div>
-					</section>
-
-					<div class="container-fluid">
-
-						<?php foreach ($brand_logo as $brand): ?>
-
-							<div class="col-lg-1 col-md-2 col-sm-4 col-xs-6 section-margin">
-								<a href="#">
-									<img src="<?php echo IMG_BRAND . $brand['src']; ?>">
-								</a>
-							</div>
-
-						<?php endforeach; ?>
-
-					</div>
-				</section>
-
-
-
-
-
-
-
-
-
-
-
-				<?php include_once INCLUDE_PATH . 'footer.php'; ?><!-- footer -->
-
+<html lang="en">
+
+<?php include_once 'include/header.php'; ?><!-- header.php -->
+
+<body class="bg-gray-100">
+	
+	<?php include_once 'include/navbar.php';?><!-- navbar.php -->
+	
+	<!-- Background Slider -->
+	<div class="relative">
+		<!-- Left Button -->
+		<button id="leftButton"
+			class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10">
+			<svg class="w-6 h-6 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round"
+				stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+				<path d="M15 19l-7-7 7-7"></path>
+			</svg>
+		</button>
+		<!-- Right Button -->
+		<button id="rightButton"
+			class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10">
+			<svg class="w-6 h-6 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round"
+				stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+				<path d="M9 5l7 7-7 7"></path>
+			</svg>
+		</button>
+		<!-- Slides Container -->
+		<div class="background-slider">
+			<div class="background-slide active">
+				<img src="https://via.placeholder.com/1500x500/FF0000/FFFFFF" alt="Slide 1">
 			</div>
-			<!-- .content-wrapper -->
+			<div class="background-slide">
+				<img src="https://via.placeholder.com/1500x500/00FF00/FFFFFF" alt="Slide 2">
+			</div>
+			<div class="background-slide">
+				<img src="https://via.placeholder.com/1500x500/0000FF/FFFFFF" alt="Slide 3">
+			</div>
 		</div>
-		<!-- .offcanvas-pusher -->
-
-
-		<?php include_once INCLUDE_PATH . 'uc-mobile-menu.php'; ?><!-- uc-mobile-menu -->
-
 	</div>
-	<!-- #main-wrapper -->
 
 
-	<?php include_once INCLUDE_PATH . 'script-src.php'; ?><!-- Script -->
 
+
+
+
+
+	<?php include_once 'include/footer.php'; ?><!-- footer.php -->
+	<?php include_once 'include/script-src.php'; ?><!-- script-src.php -->
 </body>
 
 </html>

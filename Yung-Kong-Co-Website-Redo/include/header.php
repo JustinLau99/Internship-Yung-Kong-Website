@@ -1,30 +1,13 @@
-<!-- header -->
+<!-- header.php -->
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yung Kong Co. Bhd.</title>
+	<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+	<link rel="stylesheet" href="css/styles.css">
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Yung Kong Co</title>
-	<!-- web-fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<!-- off-canvas -->
-	<link href="css/mobile-menu.css" rel="stylesheet">
-	<!-- font-awesome -->
-	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-		integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<!-- Style CSS -->
-	<link href="css/style.css" rel="stylesheet">
-
-	<!-- FontAwesome CSS -->
-	<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
-	
-	<!-- BS Carousel -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Get the current script name from the server environment -->
+	<?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
 
 </head>
