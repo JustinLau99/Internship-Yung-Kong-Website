@@ -1,0 +1,14 @@
+/var/www/myproject/
+├── config/
+│   └── config.php
+├── css/
+│   └── css.css
+├── include/
+│   └── css.css
+│   └── footer.php
+│   └── header.php
+│   └── navbar.php
+├── products.php 
+├── about.php 
+├── contact.php 
+└── index.php
