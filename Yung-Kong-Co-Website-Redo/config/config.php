@@ -1,0 +1,52 @@
+<?php
+// Define the base path of the project
+define('BASE_PATH', dirname(__DIR__));
+// folder path
+define('CONFIG_PATH'			, BASE_PATH	. '/config/');
+define('INCLUDE_PATH'			, BASE_PATH	. '/include/');
+define('PHPDATA_PATH'			, BASE_PATH	. '/phpData/');
+
+// img path
+define('IMG_PRODUCT_CATEGORY'	, 'img/product-categories/');
+define('IMG_DEPARTMENT'			, 'img/department/');
+define('IMG_BRAND'				, 'img/brands/');
+define('IMG_PRODUCT'			, 'img/product/');
+
+
+
+
+// Other settings
+$debug = false;
+
+// Debugging information (optional)
+if ($debug) {
+    echo 'BASE_PATH: ' 		. BASE_PATH		. '<br>';
+    echo 'CONFIG_PATH: '	. CONFIG_PATH 	. '<br>';
+}
+
+/* ************************
+
+project/
+├
+├── config/
+│   └── config.php
+│
+├── img/
+│   └── brands.php
+│   └── department.php
+│   └── home-offer.php
+│   └── product-category.php
+│
+├── include/
+│   └── footer.php
+│   └── header.php
+│   └── navbar.php
+│   └── script-src.php
+│   └── uc-mobile-menu.php
+│
+├── about.php
+├── contact.php
+├── index.php
+└── products.php
+
+************************ */
