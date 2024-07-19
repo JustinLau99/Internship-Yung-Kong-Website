@@ -26,40 +26,54 @@
 
 				<!-- Indicators -->
 
-				<div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
 
-					<ol class="carousel-indicators">
-						<li data-target="#x-corp-carousel" data-slide-to="0" class="active"> </li>
-						<li data-target="#x-codemon slayerrp-carousel" data-slide-to="1" class=""> </li>
-						<li data-target="#x-corp-carousel" data-slide-to="2" class=""> </li>
-						<li data-target="#x-corp-carousel" data-slide-to="3" class=""> </li>
-						<li data-target="#x-corp-carousel" data-slide-to="4" class=""> </li>
-					</ol>
 
-					<div class="carousel-caption">
-						<h1>Welcome to Yung Kong Co. Bhd.</h1>
+				<!-- carousel -->
 
+				<section>
+
+					<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+						<!-- button -->
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+								class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+								aria-label="Slide 4"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+								aria-label="Slide 5"></button>
+
+						</div>
+						<!-- content -->
+						<div class="carousel-inner">
+							<div class="carousel-item active"> <img src="img/department/slider-ykacc.jpg"
+									class="d-block w-100" alt="..."></div>
+							<div class="carousel-item"> <img src="img/department/slider-ykbtw.jpg" class="d-block w-100"
+									alt="...">
+							</div>
+							<div class="carousel-item"> <img src="img/department/slider-ykmatang.jpg"
+									class="d-block w-100" alt="..."></div>
+							<div class="carousel-item"> <img src="img/department/slider-ykpending.jpg"
+									class="d-block w-100" alt="..."></div>
+							<div class="carousel-item"> <img src="img/department/slider-ykpenrissen.jpg"
+									class="d-block w-100" alt="..."></div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
 					</div>
+				</section>
 
-					<div class="carousel-inner" role="listbox">
-
-						<div class="item active"> <img src="img/department/slider-ykacc.jpg"></div>
-						<div class="item"> <img src="img/department/slider-ykbtw.jpg"></div>
-						<div class="item"> <img src="img/department/slider-ykmatang.jpg"></div>
-						<div class="item"> <img src="img/department/slider-ykpending.jpg"></div>
-						<div class="item"> <img src="img/department/slider-ykpenrissen.jpg"></div>
-
-					</div>
-
-					<a class="left carousel-control" href="#x-corp-carousel" role="button" data-slide="prev">
-						<i class="fa fa-angle-left" aria-hidden="true"></i>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#x-corp-carousel" role="button" data-slide="next">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
 
 
 
@@ -230,5 +244,3 @@
 </body>
 
 </html>
-
-
