@@ -1,4 +1,5 @@
 <!-- Footer Widget Section -->
+
 <footer class="footer">
 
 	<div class="footer-widget-section">

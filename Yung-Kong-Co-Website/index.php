@@ -26,7 +26,6 @@
 
 				<!-- Indicators -->
 
-
 				<div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
 
 					<ol class="carousel-indicators">

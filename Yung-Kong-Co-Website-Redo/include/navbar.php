@@ -1,64 +1,63 @@
-<!-- navbar.php -->
-
 <?php
-// declare page variable
 
 $pages = [
 	['url' => 'index.php', 'name' => 'Home'],
-	['url' => 'products.php', 'name' => 'Product'],
-	['url' => 'contact.php', 'name' => 'Contact'],
+	['url' => 'products.php', 'name' => 'Products'],
+	['url' => 'contact.php', 'name' => 'Contact Us'],
+	['url' => 'onlineShop.php', 'name' => 'Online Shop'],
 ];
 
+$currentPage = basename($_SERVER['SCRIPT_NAME']); // Get the current page name
 
 ?>
 
-<nav class="bg-white shadow-lg">
-	<div class="max-w-6xl mx-auto px-4">
-		<div class="flex justify-between">
-			<div class="flex space-x-7">
-				<!-- Logo -->
-				<div>
-					<a href="#" class="flex items-center py-4 px-2">
-						<img src="https://via.placeholder.com/50" alt="Logo" class="h-8 w-8 mr-2">
-						<span class="font-semibold text-gray-500 text-lg">BrandName</span>
-					</a>
-				</div>
-				<!-- Primary Navbar items -->
-				<div class="hidden md:flex items-center space-x-1">
-					<?php foreach ($pages as $page): ?>
-						<a href="<?= $page['url'] ?>"
-							class="py-4 px-2 font-semibold <?= ($currentPage === $page['url']) ? 'text-blue-500 border-b-4 border-blue-500' : 'text-gray-500 hover:text-blue-500 transition duration-300' ?>"><?= $page['name'] ?></a>
-					<?php endforeach; ?>
-				</div>
-			</div>
-			<!-- Secondary Navbar items -->
-			<div class="hidden md:flex items-center space-x-3 ">
-				<a href="login.php"
-					class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-gray-200 transition duration-300">Log
-					In</a>
-				<a href="signup.php"
-					class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">Sign
-					Up</a>
-			</div>
-			<!-- Mobile menu button -->
-			<div class="md:hidden flex items-center">
-				<button class="outline-none mobile-menu-button">
-					<svg class="w-6 h-6 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round"
-						stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-						<path d="M4 6h16M4 12h16m-7 6h7"></path>
-					</svg>
-				</button>
-			</div>
-		</div>
-	</div>
 
-	<!-- mobile menu -->
-	<div class="hidden mobile-menu">
-		<ul class="">
-			<?php foreach ($pages as $page): ?>
-				<a href="<?= $page['url']?>"
-					class="block text-sm px-2 py-4 <?= ($currentPage === $page['url']) ? 'text-white bg-blue-500' : 'hover:text-blue-500 transition duration-300' ?>"><?= $page['name']?></a>
-			<?php endforeach; ?>
-		</ul>
+
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top text-light py-4">
+	<div class="container-fluid">
+
+		<a class="navbar-brand" href="index.php"><img src="img/yk_logo.png" alt=""></a>
+		<a class="navbar-brand navbar-text" href="index.php">
+			榕 光 有 限 公 司<br>
+			YUNG KONG CO. BHD.
+		</a>
+
+
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto">
+				<?php foreach ($pages as $page): ?>
+					<?php if ($page['url'] === 'products.php'): ?>
+						<!-- Show dropdown menu if current page is products.php -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle navbar-text <?= ($currentPage === $page['url']) ? 'active' : ''; ?>"
+								href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<?= $page['name']; ?>
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="#">Action</a></li>
+								<li><a class="dropdown-item" href="#">Another action</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#">Something else here</a></li>
+							</ul>
+						</li>
+					<?php else: ?>
+						<li class="nav-item">
+							<a class="nav-link navbar-text <?= ($currentPage === $page['url']) ? 'active' : ''; ?>"
+								href="<?= $page['url']; ?>">
+								<?= $page['name']; ?>
+							</a>
+						</li>
+					<?php endif; ?>
+				<?php endforeach; ?>
+			</ul>
+		</div>
 	</div>
 </nav>

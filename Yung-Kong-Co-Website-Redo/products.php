@@ -7,8 +7,7 @@
 <?php include_once 'include/header.php'; ?><!-- header.php -->
 
 
-
-<body class="bg-gray-100">
+<body>
 
 	<?php include_once 'include/navbar.php'; ?><!-- navbar.php -->
 
