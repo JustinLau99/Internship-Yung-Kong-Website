@@ -21,20 +21,20 @@ $footerProducts = [
 
 ?>
 
-<footer>
+<footer class="footer">
 	<div class="footer-section-1 text-light py-4">
 		<div class="container">
 			<div class="row text-center">
-				<!-- footer logo -->
-				<div class="col-md-4 mb-3 ">
+				<!-- section 1 -->
+				<div class="col-md-4 mb-3 border-end border-2 border-secondary border-opacity-25" >
 					<a href="index.php"><img src="img/yk_logo.png" class="img-fluid" alt="yk_logo"></a>
 					<a href="index.php">
-						<h1>榕 光 有 限 公 司</h1>
-						<h2>YUNG KONG CO. BHD.</h2>
+						<h1 class="fs-5 lh-lg ">榕 光 有 限 公 司</h1>
+						<h2 class="fs-5">YUNG KONG CO. BHD.</h2>
 					</a>
 				</div>
 
-				<!-- footer products -->
+				<!-- section 2 -->
 				<div class="col-md-4 mb-3">
 					<h3>Products</h3>
 					<ul class="list-unstyled">
@@ -47,8 +47,8 @@ $footerProducts = [
 					</ul>
 				</div>
 
-				<!-- Contact Us Today -->
-				<div class="col-md-4 mb-3">
+				<!-- section 3 -->
+				<div class="col-md-4 mb-3 border-start border-2 border-secondary border-opacity-25">
 					<h3>Contact Us Today</h3>
 					<address class="text-white-50">
 						Call Us: <u>082-483 570</u><br>

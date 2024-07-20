@@ -15,9 +15,15 @@ a:hover {
 	color: #31aae2;
 }
 
+html, body {
+    height: 100%; /* Ensure the body takes up the full height */
+    margin: 0;
+}
 
-
-
+body { 
+    display: flex; /* so that footer get pushed bottom */
+    flex-direction: column;
+}
 
 
 
@@ -26,79 +32,74 @@ a:hover {
  NavBar
 *************************/
 
+
 /* Navbar */
+
 #navbar {
-    transition: background-color 0.5s ease;
-    background-color: transparent;
-    height: 80px;
-    display: flex;
-    align-items: center;
+	transition: background-color 0.5s ease;
+	background-color: transparent;
+	height: 75px;
 }
 
 #navbar .navbar-brand img {
-    max-height: 60px;
-    object-fit: contain;
+	max-height: 60px;
+	object-fit: contain;
 }
 
 #navbar.navbar-scrolled {
-    background-color: #333333 !important;
+	background-color: #333333 !important;
 }
 
-#navbar .navbar-text {
-    color: white !important;
-}
-
-#navbar .nav-link.active {
-    border-bottom: 2px solid white;
-}
 
 #navbar .nav-link {
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
+	border-bottom: 2px solid transparent;
+	transition: border-color 0.3s ease;
 }
 
 #navbar .nav-link:hover {
-    border-bottom: 2px solid white;
+	border-bottom: 2px solid white;
 }
 
 /* Dropdown menu */
 #navbar .dropdown-menu {
-	position: absolute; /* Change position to absolute */
-	left: 50%;
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin-top: 10px;
-    background-color: #222;
-    border-radius: 0.25rem;
-    box-shadow: 0 0 0 rgba(0,0,0,.125);
-    transform: translateY(10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease;
+	display: flex;
+	padding: 0;
+	background-color: #d0d0d0;
+	transform: translateY(10px);
+	/* Animation */
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease;
 }
 
 #navbar .nav-item:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-#navbar .dropdown-menu .dropdown-item {
-    color: #fff;
-    transition: background-color 0.3s ease;
-    padding: 10px 15px;
-    white-space: nowrap;
-    margin: 0;
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
 }
 
 #navbar .dropdown-menu .dropdown-item:hover {
-    background-color: #31aae2;
-    color: #fff;
+	background-color: #31aae2;
+	color: #fff;
+}
+
+#navbar .dropdown-menu .dropdown-item {
+	color: #fff;
+	transition: background-color 0.3s ease;
 }
 
 
 
+
+.dropdown {
+	position: static !important;
+}
+
+.dropdown-menu {
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+	margin-top: 0px !important;
+	/* width: 100% !important; */
+}
 
 
 
@@ -106,31 +107,19 @@ a:hover {
  Carousel
 *************************/
 
-/* Container for the overlay effect */
-.carousel-inner .carousel-item {
-	position: relative;
+
+/* Shadow */
+.carousel-inner {
+	filter: brightness(40%);
 }
 
-.carousel-inner .carousel-item::before {
-	content: '';
-	/* Empty content for the overlay */
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	opacity: 1;
-	pointer-events: none;
-	transition: opacity 0.5s ease;
-}
+/* carousel text */
+.carousel-caption {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -20%);
+	z-index: 10;
 
-/* Ensure images are not affected by the overlay */
-.carousel-inner .carousel-item img {
-	width: 100%;
-	height: auto;
-	display: block;
-	object-fit: cover;
 }
 
 
@@ -147,6 +136,10 @@ a:hover {
 /************************* 
 Footer
 *************************/
+
+.footer {
+	margin-top: auto;
+}
 
 footer img {
 	max-height: 100px;
@@ -183,3 +176,36 @@ footer a:hover {
 }
 
 
+/************************* 
+ Parallax
+*************************/
+
+
+.parallax-section {
+    position: relative;
+	min-height: 400px;
+    overflow: hidden;
+}
+
+.parallax-image {
+	
+	filter: brightness(30%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/img-page-title.jpg'); 
+    background-size: cover; 
+    background-attachment: fixed; /* Creates the parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}

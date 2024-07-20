@@ -1,8 +1,23 @@
 <!-- nav -->
 
-<nav class="navbar m-menu navbar-default navbar-fixed-top">
+<?php
 
-	<div class="container">
+$pages = [
+    ['url' => 'index.php', 'name' => 'Home'],
+    ['url' => 'products.php', 'name' => 'Products'],
+    ['url' => 'contact.php', 'name' => 'Contact Us'],
+    ['url' => 'onlineShop.php', 'name' => 'Online Shop'],
+];
+
+$currentPage = basename($_SERVER['SCRIPT_NAME']); // Get the current page name
+
+?>
+
+
+
+<nav class="navbar-expand-lg fixed-top navbar m-menu navbar-default navbar-fixed-top">
+
+	<div class="container ">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -22,26 +37,6 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="#navbar-collapse-1">
 
-			<ul class="nav-cta hidden-xs">
-				<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><i
-							class="fa fa-search"></i></a>
-					<ul class="dropdown-menu">
-						<li>
-							<div class="head-search">
-								<form role="form">
-									<!-- Input Group -->
-									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Type Something">
-										<span class="input-group-btn">
-											<button type="submit" class="btn btn-primary">Search</button>
-										</span>
-									</div>
-								</form>
-							</div>
-						</li>
-					</ul>
-				</li>
-			</ul>
 
 
 			<ul class="nav navbar-nav navbar-right main-nav">
@@ -58,7 +53,6 @@
 
 				<li class="dropdown m-menu-fw <?php echo ($current_page == 'products.php') ? 'active' : ''; ?>">
 					<a href="products.php" class="dropdown-toggle" id="dropdownMenuButton">Products
-						<span><i class="fa fa-angle-down"></i></span>
 					</a>
 					<ul class="dropdown-menu show">
 						<li>
@@ -84,7 +78,6 @@
 
 				<li class="dropdown m-menu-fw">
 					<a href="#" data-toggle="dropdown" class="dropdown-toggle">Online Shop
-						<span><i class="fa fa-angle-down"></i></span>
 					</a>
 					<ul class="dropdown-menu">
 						<li>

@@ -924,6 +924,30 @@ Shortcode Content
 	}
 }
 
+
+/* Shadow */
+.carousel-inner .carousel-item::before { 
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	opacity: 1;
+	pointer-events: none;
+	transition: opacity 0.5s ease;
+}
+
+/* Ensure images are not affected by the overlay */
+.carousel-inner .carousel-item img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+
 /* -------------------
  Section Title Style
  --------------------- */
