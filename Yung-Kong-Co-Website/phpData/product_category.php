@@ -60,6 +60,9 @@ function buildNestedArray(array $stockItemTypeListing, array $productCategory): 
 	return $result;
 }
 
+
+
+
 // Parse CSV data to PHP
 $stockItemTypeListing = readCSVData("phpData/stock_item_type_listing.csv");
 $productCategory = readCSVData("phpData/product_category.csv");

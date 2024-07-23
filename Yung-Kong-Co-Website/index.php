@@ -87,13 +87,13 @@
 						</span>
 					</section>
 
-
+					
 					<div class="container-fluid">
 
 						<div class="equal-height">
 
-							<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
-							<?php foreach (PRODUCT_CATEGORY as $products): ?>
+							<?php include_once 'include/product_category.php'; ?>
+							<?php foreach ($nestedArray as $products): ?>
 
 								<div class="col-md-3 col-sm-4 col-xs-6">
 									<div class="thumbnail">
@@ -127,6 +127,7 @@
 				</section>
 
 				<!-- Departments -->
+
 				<section class="x-features">
 					<section class="section-title">
 						<div class="container text-center">
@@ -139,7 +140,7 @@
 						<div class="container-fluid">
 
 
-							<?php include_once PHPDATA_PATH . 'departments.php'; ?>
+							<?php include_once 'include/departments.php'; ?>
 							<?php foreach (DEPARTMENTS as $depart): ?>
 
 								<div class="col-md-5th col-sm-4 col-xs-6 section-margin ">

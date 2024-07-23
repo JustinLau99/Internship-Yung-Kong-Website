@@ -9,9 +9,7 @@
 
 	<?php include_once 'include/navbar.php'; ?><!-- navbar.php -->
 
-
 	<!-- carousel -->
-
 	<section>
 
 		<div id="carouselIMG" class="carousel slide" data-bs-ride="carousel">
@@ -33,7 +31,6 @@
 				<div class="carousel-item"><img src="img/department/slider-ykpenrissen.jpg" class="w-100"></div>
 			</div>
 
-			<!-- Caption stays here -->
 			<div class="carousel-caption d-md-block ">
 				<h5 class="fs-1 text-center">Welcome to Yung Kong Co. Bhd.</h5>
 			</div>
@@ -47,11 +44,7 @@
 			</button>
 		</div>
 
-
-
-
 	</section>
-
 
 
 	<!-- productList -->
@@ -59,43 +52,117 @@
 		<section class="section-title text-center">
 			<h2>What We Offer</h2>
 			<span class="bordered-icon">
-				<i class="bi bi-circle"></i>
+				<i class="bi bi-dash-lg fs-1"></i><i class="bi bi-circle fs-2"></i><i class="bi bi-dash-lg fs-1"></i>
 			</span>
 		</section>
 
 
+
+		<!-- read CSV -->
+		<?php include_once 'phpData/readCSV.php'; ?>
+		<?php $productCategory = readCSVData("phpData/product_category.csv"); // Parse CSV data to PHP ?>
+		<?php $stockItemTypeListing = readCSVData("phpData/stock_item_type_listing.csv"); ?>
+		<?php $productListings = buildNestedArray($stockItemTypeListing, $productCategory); // Build the nested array structure ?>
+		<!-- product card -->
 		<div class="container-fluid">
+			<div class="row g-3 d-flex align-items-stretch">
 
-			<div class="equal-height">
-
-
-
-				<div class="col-md-3 col-sm-4 col-xs-6">
-					<div class="thumbnail">
-
-						<a href="products.php#<?php echo '$products[IMG]' ?>">
-							<img class="img-responsive" src="<?php echo 'IMG_PRODUCT_CATEGORY' . '$products[IMG]'; ?> ">
-						</a>
-
-						<div class="caption">
-
-							<h3><!-- product Title -->
-								<a href="products.php"><?php echo '$products[TITLE]'; ?></a>
-							</h3>
-
-							<ul><!-- product subcategory-->
-								<li> • <?php echo '$prod'; ?></li>
-							</ul>
-
+				<?php foreach ($productListings as $key => $prodList): ?>
+					<div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="card h-100">
+							<img src="img/product-categories/<?= htmlspecialchars($prodList['Image Path']); ?>"
+								class="card-img-top" alt="<?= htmlspecialchars($prodList['Image Path']); ?>">
+							<div class="card-body">
+								<!-- card info -->
+								<h5 class="card-title"><?= htmlspecialchars($prodList['Description']) ?></h5>
+								<p class="card-text">
+									<?php foreach ($prodList['SubCategory'] as $subcategory): ?>
+										<?= "- " . htmlspecialchars($subcategory) . "<br>"; ?>
+									<?php endforeach; ?>
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
-
-
+				<?php endforeach; ?>
 			</div>
 		</div>
-
 	</section>
+
+
+	<!-- department -->
+	<section class="yk-section bg-gray">
+		<section class="section-title text-center">
+			<h2>Our Departments</h2>
+			<span class="bordered-icon">
+				<i class="bi bi-dash-lg fs-1"></i><i class="bi bi-circle fs-2"></i><i class="bi bi-dash-lg fs-1"></i>
+
+			</span>
+		</section>
+
+		<!-- read CSV -->
+		<?php include_once 'phpData/readCSV.php'; ?>
+		<?php $departments = readCSVData('phpData/departments.csv'); ?>
+		<!-- department card -->
+		<div class="container-fluid">
+			<div class="row g-3 d-flex align-items-stretch">
+
+				<?php foreach ($departments as $key => $depart): ?>
+
+					<div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="card h-100">
+							<img src="img/department/<?= htmlspecialchars($depart['img']); ?>" class="card-img-top"
+								alt="<?= htmlspecialchars($depart['img']); ?>">
+							<div class="card-body">
+								<h5 class="card-title text-center"><?= htmlspecialchars($depart['name']) ?></h5>
+
+								<div class="card-text">
+									<!-- department info -->
+									<i class="fs-4 bi bi-geo"></i><?= htmlspecialchars($depart['address']) ?><br>
+									<i class="fs-4 bi bi-telephone"></i><?= htmlspecialchars($depart['tel']) ?><br>
+									<i class="fs-4 bi bi-whatsapp"></i><?= htmlspecialchars($depart['fax']) ?><br>
+									<i class="fs-4 bi bi-envelope"></i><?= htmlspecialchars($depart['whatsapp']) ?><br>
+									Fax: <?= htmlspecialchars($depart['mail']) ?><br>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+	</section>
+
+	<!-- key product brand -->
+	<section class="yk-section bg-gray">
+		<section class="section-title text-center">
+			<h2>Key Product Brands</h2>
+			<span class="bordered-icon">
+				<i class="bi bi-dash-lg fs-1"></i><i class="bi bi-circle fs-2"></i><i class="bi bi-dash-lg fs-1"></i>
+
+			</span>
+		</section>
+
+		<!-- read CSV -->
+		<?php include_once 'phpData/readCSV.php'; ?>
+		<?php $departments = readCSVData('phpData/brand_logo.csv'); ?>
+		<!-- key product brand card -->
+		<div class="container-fluid">
+			<div class="row g-3 d-flex align-items-stretch">
+
+				<?php foreach ($departments as $key => $depart): ?>
+
+					<div class="col-lg-1 col-md-2 col-sm-3 col-xs-4">
+						<div class="h-100">
+							<img src="img/brands/<?= htmlspecialchars($depart['img']); ?>" class="card-img-top"
+								alt="<?= htmlspecialchars($depart['img']); ?>">
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+	</section>
+
+
+
+
 
 	<?php include_once 'include/footer.php'; ?><!-- footer.php -->
 	<?php include_once 'include/script-src.php'; ?><!-- script-src.php -->
