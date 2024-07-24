@@ -1,4 +1,4 @@
-Item Group,Description,Item Type,Img Path,DESC
+item_group,name,item_type,img_path,description
 00-1,CEMENT,0,cement.jpg,"""[cement - description]"""
 00-3,STEEL BAR,0,steel_bar.jpg,"""[steel_bar - description]"""
 01-0,YMC,0,ymc.jpg,"""[ymc - description]"""

@@ -62,23 +62,26 @@
 		<?php include_once 'phpData/readCSV.php'; ?>
 		<?php $productCategory = readCSVData("phpData/product_category.csv"); // Parse CSV data to PHP ?>
 		<?php $stockItemTypeListing = readCSVData("phpData/stock_item_type_listing.csv"); ?>
-		<?php $productListings = buildNestedArray($stockItemTypeListing, $productCategory); // Build the nested array structure ?>
 		<!-- product card -->
+
 		<div class="container-fluid">
 			<div class="row g-3 d-flex align-items-stretch">
 
-				<?php foreach ($productListings as $key => $prodList): ?>
+				<?php foreach ($stockItemTypeListing as $stockList): ?>
 					<div class="col-md-3 col-sm-4 col-xs-6">
 						<div class="card h-100">
-							<img src="img/product-categories/<?= htmlspecialchars($prodList['Image Path']); ?>"
-								class="card-img-top" alt="<?= htmlspecialchars($prodList['Image Path']); ?>">
+							<img src="img/product-categories/<?= htmlspecialchars($stockList['img_path']); ?>"
+								class="card-img-top" alt="<?= htmlspecialchars($stockList['img_path']); ?>">
 							<div class="card-body">
 								<!-- card info -->
-								<h5 class="card-title"><?= htmlspecialchars($prodList['Description']) ?></h5>
+								<h5 class="card-title"><?= htmlspecialchars($stockList['name']) ?></h5>
 								<p class="card-text">
-									<?php foreach ($prodList['SubCategory'] as $subcategory): ?>
-										<?= "- " . htmlspecialchars($subcategory) . "<br>"; ?>
+
+									<?php $subcategories = explode(';', $stockList['subcategory']); ?>
+									<?php foreach ($subcategories as $subcategory): ?>
+										<?= "- " . htmlspecialchars(trim($subcategory)) . "<br>"; ?>
 									<?php endforeach; ?>
+									
 								</p>
 							</div>
 						</div>

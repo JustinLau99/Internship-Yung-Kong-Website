@@ -24,7 +24,7 @@ function readCSVData(string $filename): array
 }
 
 
-
+/* 
 function buildNestedArray(array $stockItemTypeListing, array $productCategory): array
 {
 	// Create an empty array for the nested structure
@@ -58,11 +58,10 @@ function buildNestedArray(array $stockItemTypeListing, array $productCategory): 
 			'Category' => $itemTypeMap[$itemType] ?? [] // Use empty array if no categories exist for this item type
 		];
 	}
-
 	return $result;
 }
 
-
+*/
 
 
 function debugExtractedCSV($extracted)
