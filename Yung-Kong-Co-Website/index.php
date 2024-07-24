@@ -87,7 +87,7 @@
 						</span>
 					</section>
 
-					
+
 					<div class="container-fluid">
 
 						<div class="equal-height">
@@ -155,18 +155,14 @@
 
 													<h6><?php echo $depart['name'] ?></h6>
 
-													<i class="bi bi-geo icon-lg">
-														<p><?php echo $depart['address'] ?></p>
-													</i>
-													<i class="bi bi-telephone icon-lg">
-														<p><?php echo $depart['tel'] ?></p>
-													</i>
-													<i class="bi bi-whatsapp icon-lg">
-														<p><?php echo $depart['whatsapp'] ?></p>
-													</i>
-													<i class="bi bi-envelope icon-lg">
-														<p><?php echo $depart['mail'] ?></p>
-													</i>
+													<i class="bi bi-geo icon-lg"></i>
+													<p><?= $depart['address'] ?></p>
+													<i class="bi bi-telephone icon-lg"></i>
+													<p><?php echo $depart['tel'] ?></p>
+													<i class="bi bi-whatsapp icon-lg"></i>
+													<p><?php echo $depart['whatsapp'] ?></p>
+													<i class="bi bi-envelope icon-lg"></i>
+													<p><?php echo $depart['mail'] ?></p>
 													<p>Fax: <?php echo $depart['fax'] ?></p>
 												</div>
 											</div>

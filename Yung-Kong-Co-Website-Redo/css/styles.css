@@ -15,14 +15,17 @@ a:hover {
 	color: #31aae2;
 }
 
-html, body {
-    height: 100%; /* Ensure the body takes up the full height */
-    margin: 0;
+html,
+body {
+	height: 100%;
+	/* Ensure the body takes up the full height */
+	margin: 0;
 }
 
-body { 
-    display: flex; /* so that footer get pushed bottom */
-    flex-direction: column;
+body {
+	display: flex;
+	/* so that footer get pushed bottom */
+	flex-direction: column;
 }
 
 
@@ -60,6 +63,7 @@ body {
 	border-bottom: 2px solid white;
 }
 
+
 /* Dropdown menu */
 #navbar .dropdown-menu {
 	display: flex;
@@ -70,6 +74,9 @@ body {
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease;
+	width: 100%;  
+	position: absolute;  
+	left: 0; 
 }
 
 #navbar .nav-item:hover .dropdown-menu {
@@ -78,17 +85,14 @@ body {
 	transform: translateY(0);
 }
 
+#navbar .dropdown-menu .dropdown-item {
+	transition: background-color 0.3s ease;
+}
+
 #navbar .dropdown-menu .dropdown-item:hover {
 	background-color: #31aae2;
 	color: #fff;
 }
-
-#navbar .dropdown-menu .dropdown-item {
-	color: #fff;
-	transition: background-color 0.3s ease;
-}
-
-
 
 
 .dropdown {
@@ -176,36 +180,57 @@ footer a:hover {
 }
 
 
+
+/* footer social links */
+
+
+.footer .social-links a {
+	font-size: 20px;
+	width: 42px;
+	height: 42px;
+	color: #6b6b6b;
+	background-color: #4a4a4a;
+	line-height: 42px;
+	border-radius: 50%;
+}
+
+.footer .social-links a:hover {
+	color: #ffffff;
+	background-color: #31aae2;
+}
+
+
 /************************* 
  Parallax
 *************************/
 
 
 .parallax-section {
-    position: relative;
+	position: relative;
 	min-height: 400px;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .parallax-image {
-	
+
 	filter: brightness(30%);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/img-page-title.jpg'); 
-    background-size: cover; 
-    background-attachment: fixed; /* Creates the parallax effect */
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/img-page-title.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	/* Creates the parallax effect */
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 1;
 }
 
 .parallax-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    padding: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+	position: relative;
+	z-index: 2;
+	color: white;
+	padding: 20px;
+	top: 50%;
+	transform: translateY(-50%);
 }

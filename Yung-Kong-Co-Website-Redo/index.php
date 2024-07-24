@@ -101,27 +101,27 @@
 
 		<!-- read CSV -->
 		<?php include_once 'phpData/readCSV.php'; ?>
-		<?php $departments = readCSVData('phpData/departments.csv'); ?>
+		<?php $brand_logos = readCSVData('phpData/departments.csv'); ?>
 		<!-- department card -->
 		<div class="container-fluid">
 			<div class="row g-3 d-flex align-items-stretch">
 
-				<?php foreach ($departments as $key => $depart): ?>
+				<?php foreach ($brand_logos as $key => $logo): ?>
 
 					<div class="col-md-3 col-sm-4 col-xs-6">
 						<div class="card h-100">
-							<img src="img/department/<?= htmlspecialchars($depart['img']); ?>" class="card-img-top"
-								alt="<?= htmlspecialchars($depart['img']); ?>">
+							<img src="img/department/<?= htmlspecialchars($logo['img']); ?>" class="card-img-top"
+								alt="<?= htmlspecialchars($logo['img']); ?>">
 							<div class="card-body">
-								<h5 class="card-title text-center"><?= htmlspecialchars($depart['name']) ?></h5>
+								<h5 class="card-title text-center"><?= htmlspecialchars($logo['name']) ?></h5>
 
 								<div class="card-text">
 									<!-- department info -->
-									<i class="fs-4 bi bi-geo"></i><?= htmlspecialchars($depart['address']) ?><br>
-									<i class="fs-4 bi bi-telephone"></i><?= htmlspecialchars($depart['tel']) ?><br>
-									<i class="fs-4 bi bi-whatsapp"></i><?= htmlspecialchars($depart['fax']) ?><br>
-									<i class="fs-4 bi bi-envelope"></i><?= htmlspecialchars($depart['whatsapp']) ?><br>
-									Fax: <?= htmlspecialchars($depart['mail']) ?><br>
+									<i class="fs-4 bi bi-geo"></i><?= htmlspecialchars($logo['address']) ?><br>
+									<i class="fs-4 bi bi-telephone"></i><?= htmlspecialchars($logo['tel']) ?><br>
+									<i class="fs-4 bi bi-whatsapp"></i><?= htmlspecialchars($logo['fax']) ?><br>
+									<i class="fs-4 bi bi-envelope"></i><?= htmlspecialchars($logo['whatsapp']) ?><br>
+									Fax: <?= htmlspecialchars($logo['mail']) ?><br>
 
 								</div>
 							</div>
@@ -143,17 +143,17 @@
 
 		<!-- read CSV -->
 		<?php include_once 'phpData/readCSV.php'; ?>
-		<?php $departments = readCSVData('phpData/brand_logo.csv'); ?>
+		<?php $brand_logos = readCSVData('phpData/brand_logo.csv'); ?>
 		<!-- key product brand card -->
 		<div class="container-fluid">
 			<div class="row g-3 d-flex align-items-stretch">
 
-				<?php foreach ($departments as $key => $depart): ?>
+				<?php foreach ($brand_logos as $key => $logo): ?>
 
 					<div class="col-lg-1 col-md-2 col-sm-3 col-xs-4">
 						<div class="h-100">
-							<img src="img/brands/<?= htmlspecialchars($depart['img']); ?>" class="card-img-top"
-								alt="<?= htmlspecialchars($depart['img']); ?>">
+							<img src="img/brands/<?= htmlspecialchars($logo['img']); ?>" class="card-img-top"
+								alt="<?= htmlspecialchars($logo['img']); ?>">
 						</div>
 					</div>
 				<?php endforeach; ?>

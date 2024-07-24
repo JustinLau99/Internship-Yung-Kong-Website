@@ -76,22 +76,13 @@ function debugExtractedCSV($extracted)
 			echo "- " . htmlspecialchars($subcategory) . "<br>";
 		}
 
-		// echo "<br>Categories:";
-		// foreach ($value['Category'] as $category) {
-		// 	echo "<br>- Item Group: " . htmlspecialchars($category['Item Group']) . "----";
-		// 	echo "  Description: " . htmlspecialchars($category['Description']);
-		// }
-		// echo "<br>";
+		echo "<br>Categories:";
+		foreach ($extract['Category'] as $category) {
+			echo "<br>- Item Group: " . htmlspecialchars($category['Item Group']) . "----";
+			echo "  Description: " . htmlspecialchars($category['Description']);
+		}
+		echo "<br>";
 	}
 
 }
-
-
-
-
-
-
-
-
-
 

@@ -21,82 +21,54 @@
 
 
 
-	<section class="x-services bg-gray">
 
+
+
+
+	<section class="yk-section bg-gray">
+
+
+
+
+		<!-- read CSV -->
+		<?php include_once 'phpData/readCSV.php'; ?>
+		<?php $productCategory = readCSVData("phpData/product_category.csv"); // Parse CSV data to PHP ?>
+		<?php $stockItemTypeListing = readCSVData("phpData/stock_item_type_listing.csv"); ?>
+		<?php $productListings = buildNestedArray($stockItemTypeListing, $productCategory); // Build the nested array structure ?>
+
+		<!-- product list card -->
 		<div class="container-fluid">
+			<div class="row g-3 d-flex align-items-stretch">
 
-			<?php include_once 'PHPDATA_PATH' . 'product_category.php'; ?>
-			<!-- Product Category -->
-			<?php foreach ('PRODUCT_CATEGORY' as $category): ?>
-
-				<section class="x-services bg-dark" id="<?php echo $category[IMG] ?>">
+				<?php foreach ($productListings as $key => $prodList): ?>
 
 					<section class="section-title text-center">
-						<h2><?php echo $category[TITLE] ?></h2>
+						<h2><?= $prodList['Description']?></h2>
 						<span class="bordered-icon">
-							<i class="bi bi-circle"></i>
+							<i class="bi bi-dash-lg fs-1"></i><i class="bi bi-circle fs-2"></i><i
+								class="bi bi-dash-lg fs-1"></i>
 						</span>
 					</section>
 
+					<?php foreach ($prodList['Category'] as $key2 => $prod): ?>
+						<div class="col-md-3 col-sm-4 col-xs-6">
+							<div class="card h-100">
+								<img src="img/product/<?= htmlspecialchars($prodList['Description']); ?>/<?= htmlspecialchars($prod['Description']) ?>"
+									class="card-img-top" alt="<?= htmlspecialchars($prod['Description']); ?>">
+								<div class="card-body">
+									<!-- card info -->
+									<h5 class="card-title"><?= htmlspecialchars($prod['Img Path']) ?></h5>
+									<p class="card-text">
 
-
-
-
-
-					<div class="row">
-
-						<!-- Each Product from category -->
-						<?php foreach ($category[PROD] as $prod): ?>
-
-							<div class="col-md-2 col-sm-3 col-xs-6">
-								<a href="product-detail.php?
-							cat=<?php echo $category[IMG]; ?>&id=<?php echo $prod[IMG] ?>">
-
-									<div class="card">
-
-										<div class="img-box">
-											<!-- product image -->
-											<img src="<?php echo IMG_PRODUCT . $category[PRODUCT_IMG_PATH] . $prod[IMG] ?>">
-										</div>
-
-
-										<div class="caption">
-											<!-- product Title -->
-											<h3><?php echo $prod[TITLE]; ?></h3>
-										</div>
-
-									</div>
-
-								</a>
+									</p>
+								</div>
 							</div>
-
-
-						<?php endforeach; ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					</div>
-				</section>
-
-			<?php endforeach; ?>
-
+						</div>
+					<?php endforeach; ?>
+				<?php endforeach; ?>
+			</div>
 		</div>
-
-
 	</section>
-
 
 
 
@@ -108,3 +80,4 @@
 </body>
 
 </html>
+

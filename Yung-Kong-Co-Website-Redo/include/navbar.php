@@ -39,10 +39,13 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']); // Get the current page name
 								<?= $page['name']; ?>
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+								
 								<li><a class="dropdown-item p-2" href="products.php">All Products</a></li>
 								<li><a class="dropdown-item p-2" href="#">Action</a></li>
 								<li><a class="dropdown-item p-2" href="#">Another action</a></li>
 								<li><a class="dropdown-item p-2" href="#">Something else here</a></li>
+
 							</ul>
 						</li>
 
