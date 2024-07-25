@@ -38,15 +38,25 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']); // Get the current page name
 								href="products.php" id="navbarDropdown" role="button">
 								<?= $page['name']; ?>
 							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<!-- only run if file exists -->
+							<?php if (file_exists('phpData/stock_item_type_listing.csv') && file_exists('phpData/readCSV.php')): ?>
 
-								
-								<li><a class="dropdown-item p-2" href="products.php">All Products</a></li>
-								<li><a class="dropdown-item p-2" href="#">Action</a></li>
-								<li><a class="dropdown-item p-2" href="#">Another action</a></li>
-								<li><a class="dropdown-item p-2" href="#">Something else here</a></li>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-							</ul>
+									<?php include_once 'phpData/readCSV.php'; ?>
+
+									<?php $stock_item_type_listing = readCSVData("phpData/stock_item_type_listing.csv") ?>
+									<?php foreach ($stock_item_type_listing as $stockList): ?>
+
+										<div class="col-md-2 ">
+											<a class="dropdown-item" href="products.php"><?= $stockList['name'] ?></a>
+										</div>
+
+									<?php endforeach; ?>
+
+								</ul>
+
+							<?php endif ?>
 						</li>
 
 

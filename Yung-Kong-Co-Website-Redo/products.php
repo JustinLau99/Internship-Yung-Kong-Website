@@ -28,18 +28,18 @@
 
 		<!-- read CSV -->
 		<?php include_once 'phpData/readCSV.php'; ?>
-		<?php $productCategory = readCSVData("phpData/product_category.csv"); ?><!--  Parse CSV data to PHP -->
 		<?php $stockItemTypeListing = readCSVData("phpData/stock_item_type_listing.csv"); ?>
+		<?php $productCategory = readCSVData("phpData/product_category.csv"); ?><!--  Parse CSV data to PHP -->
 
 		<!-- product list card -->
 		<div class="container-fluid">
 			<div class="row g-3 d-flex align-items-stretch">
 
-				<?php foreach ($stockItemTypeListing as $key => $stockList): ?>
+				<?php foreach ($stockItemTypeListing as $stockList): ?>
 
-					<section class="section-title text-center">
-
-						<h2><?= $stockList['item_type'] ?></h2>
+					<section class="section-title text-center" id="<?= $stockList['img_path'] ?>">
+						<!-- category name -->
+						<h2><?= $stockList['name'] ?></h2>
 
 						<span class="bordered-icon">
 							<i class="bi bi-dash-lg fs-1"></i>
@@ -50,12 +50,17 @@
 
 					<?php foreach ($productCategory as $prod): ?>
 
-						<?php if ($prod['item_type'] == $stockList['item_type'] && $prod['item_group'] == $stockList['item_group']): ?>
+						<?php if ($prod['item_type'] == $stockList['item_type']): ?>
 
-							<div class="col-md-3 col-sm-4 col-xs-6">
+							<div class="col-lg-2 col-md-3 col-sm-4 ">
 								<div class="card h-100">
-									<img src="img/product/<?= htmlspecialchars($prod['img_path']) ?>" class="card-img-top"
-										alt="<?= htmlspecialchars($prod['name']) ?>">
+									<div class="card-img-container">
+
+										<img class="custom-card-img" style="object-fit: cover;"
+											src="img/product/<?= htmlspecialchars($stockList['name']) ?>/<?= htmlspecialchars($prod['img_path']) ?>"
+											alt="<?= htmlspecialchars($stockList['name']) ?>/<?= htmlspecialchars($prod['img_path']) ?>">
+									</div>
+
 									<div class="card-body">
 										<!-- card info -->
 										<h5 class="card-title"><?= htmlspecialchars($prod['name']) ?></h5>

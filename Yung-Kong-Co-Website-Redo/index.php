@@ -60,8 +60,8 @@
 
 		<!-- read CSV -->
 		<?php include_once 'phpData/readCSV.php'; ?>
-		<?php $productCategory = readCSVData("phpData/product_category.csv"); // Parse CSV data to PHP ?>
 		<?php $stockItemTypeListing = readCSVData("phpData/stock_item_type_listing.csv"); ?>
+		<?php $productCategory = readCSVData("phpData/product_category.csv"); // Parse CSV data to PHP ?>
 		<!-- product card -->
 
 		<div class="container-fluid">
@@ -70,20 +70,24 @@
 				<?php foreach ($stockItemTypeListing as $stockList): ?>
 					<div class="col-md-3 col-sm-4 col-xs-6">
 						<div class="card h-100">
-							<img src="img/product-categories/<?= htmlspecialchars($stockList['img_path']); ?>"
-								class="card-img-top" alt="<?= htmlspecialchars($stockList['img_path']); ?>">
-							<div class="card-body">
-								<!-- card info -->
-								<h5 class="card-title"><?= htmlspecialchars($stockList['name']) ?></h5>
-								<p class="card-text">
+							<a href="products.php#<?= htmlspecialchars($stockList['img_path']) ?>">
 
-									<?php $subcategories = explode(';', $stockList['subcategory']); ?>
-									<?php foreach ($subcategories as $subcategory): ?>
-										<?= "- " . htmlspecialchars(trim($subcategory)) . "<br>"; ?>
-									<?php endforeach; ?>
-									
-								</p>
-							</div>
+								<img src="img/product-categories/<?= htmlspecialchars($stockList['img_path']); ?>"
+									class="card-img-top" alt="<?= htmlspecialchars($stockList['img_path']); ?>">
+								<div class="card-body">
+									<!-- card info -->
+									<h5 class="card-title"><?= htmlspecialchars($stockList['name']) ?></h5>
+									<p class="card-text">
+
+										<?php $subcategories = explode(';', $stockList['subcategory']); ?>
+										<?php foreach ($subcategories as $subcategory): ?>
+											<?= "- " . htmlspecialchars(trim($subcategory)) . "<br>"; ?>
+										<?php endforeach; ?>
+
+									</p>
+								</div>
+
+							</a>
 						</div>
 					</div>
 				<?php endforeach; ?>
