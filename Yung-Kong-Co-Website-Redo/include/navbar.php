@@ -17,13 +17,13 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 
 
 <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top text-light">
-	<div class="container d-flex justify-content-between align-items-center">
+	<div class="container align-items-center">
 		<a class="navbar-brand" href="index.php">
 			<img src="img/yk_logo.png" alt="" class="img-fluid">
 		</a>
-		<a class="navbar-brand text-white" href="index.php">
-			<h1 class="fs-4 ">榕光有限公司</h1>
-			<h2 class="fs-6">YUNG KONG CO. BHD.</h2>
+		<a class="navbar-brand flex-column text-white" href="index.php">
+			<h1 class="fs-4 m-0">榕光有限公司</h1>
+			<h2 class="fs-6 m-0">YUNG KONG CO. BHD.</h2>
 		</a>
 
 
@@ -84,3 +84,4 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 		</div>
 	</div>
 </nav>
+

@@ -3,7 +3,8 @@
 
 $(document).ready(function () {
 	function checkScroll() {
-		if ($(window).scrollTop() > 50) {
+		
+		if ($(window).scrollTop() > 100) {
 			$('#navbar').addClass('navbar-scrolled');
 			// Show the button
 			$('#back-to-top').slideDown();
@@ -28,12 +29,7 @@ $(document).ready(function () {
 
 	// Back to Top button
 	$('#back-to-top').on('click', function () {
-		$('html, body').animate({
-			scrollTop: 0
-		}, {
-			duration: 1000,
-			easing: 'easeInOutBounce'
-		});
+		$('html, body').animate({ scrollTop: 0 }, { duration: 0 });
 		return false; // Prevents the default action of the link
 	});
 

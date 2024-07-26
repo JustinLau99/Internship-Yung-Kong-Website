@@ -29,6 +29,9 @@
 
 		<?php include_once 'phpData/readCSV.php' ?>
 		<?php $departments = readCSVData('phpData/departments.csv') ?>
+		<?php foreach ($departments as $dep): ?>
+
+		<?php endforeach; ?>
 
 
 		<div class="container contact-section">
@@ -46,12 +49,45 @@
 
 					<div class="col-md-4">
 						<h5><?= $dep['name']; ?></h5>
-						<?= $dep['img']; ?>
-						<p>Address: <?= $dep['address']; ?></p>
-						<p>Phone: <?= $dep['tel']; ?></p>
-						<p>Fax: <?= $dep['fax']; ?></p>
-						<p>WhatsApp: <?= $dep['whatsapp']; ?></p>
-						<p>Email: <?= $dep['mail']; ?></p>
+
+						<div class="row">
+
+							<img src="img/department/<?= $dep['img']; ?>" alt="<?= $dep['img']; ?>">
+						</div>
+
+						<address>
+
+							<h3>Address: </h3>
+							<a rel="noopener noreferrer" target="_blank" href="https://maps.app.goo.gl/ZWygtHRJ35YiDgTn7">
+								<p><?= $dep['address']; ?></p>
+							</a>
+
+							<h3>Phone: </h3>
+							<p><?= $dep['tel']; ?></p>
+
+							<h3>Fax:</h3>
+							<p><?= $dep['fax']; ?></p>
+
+							<h3>WhatsApp: </h3>
+							<a rel="noopener noreferrer" target="_blank"
+								href="https://api.whatsapp.com/send?phone=60168866571">
+								<p><?= $dep['whatsapp']; ?></p>
+							</a>
+
+							<h3>Facebook: </h3>
+							<a rel="noopener noreferrer" target="_blank"
+								href="https://www.facebook.com/p/Yung-Kong-Co-Bhd-Hardware-%E4%BA%94%E9%87%91%E5%BA%97-100076001867357/">
+								<p><?= $dep['fb']; ?></p>
+							</a>
+
+							<h3>Email: </h3>
+							<a href="mailto:ykacc@yungkong.com" target="_blank" rel="noopener noreferrer">
+								<p><?= $dep['mail']; ?></p>
+							</a>
+
+						</address>
+
+
 					</div>
 
 				<?php endforeach; ?>
