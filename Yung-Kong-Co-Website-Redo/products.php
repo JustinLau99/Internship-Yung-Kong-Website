@@ -1,4 +1,4 @@
-<!-- index.php -->
+<!-- products.php -->
 
 
 <!DOCTYPE html>
@@ -15,16 +15,14 @@
 	<section class="parallax-section">
 		<div class="parallax-image"></div>
 		<div class="parallax-content text-shadow-lg text-center">
-			<h1>Product Category</h1>
+			<h1>Products</h1>
 		</div>
 	</section>
 
 
 	<?php include_once 'phpData/readCSV.php' ?>
 
-
 	<section class="yk-section bg-gray">
-
 
 		<!-- read CSV -->
 		<?php include_once 'phpData/readCSV.php'; ?>

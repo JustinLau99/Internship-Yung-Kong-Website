@@ -104,7 +104,7 @@ body {
 
 }
 
-.nav-item .nav-active{
+.nav-item .nav-active {
 	border-bottom: 2px solid white !important;
 }
 
@@ -294,3 +294,22 @@ footer a:hover {
 	height: 100%;
 	object-fit: cover;
 } */
+
+
+
+
+
+/************************* 
+ Back to Top
+*************************/
+
+
+
+#back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+	/* Hidden by default */
+	z-index: 100;
+}

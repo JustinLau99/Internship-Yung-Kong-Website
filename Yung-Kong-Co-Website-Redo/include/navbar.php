@@ -60,7 +60,6 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 										<div class="row g-0 fs-5">
 
 											<?php include_once 'phpData/readCSV.php'; ?>
-
 											<?php $product_category = readCSVData("phpData/product_category.csv") ?>
 											<?php foreach ($product_category as $prodCat): ?>
 

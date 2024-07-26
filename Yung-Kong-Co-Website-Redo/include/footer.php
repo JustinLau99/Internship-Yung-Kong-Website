@@ -2,25 +2,6 @@
 
 
 
-<?php
-$footerProducts = [
-	['url' => 'building_materials_category.jpg', 'icon' => 'bi bi-house-door-fill', 'name' => 'Building Materials'],
-	['url' => 'bolts_fasteners_category.jpg', 'icon' => 'bi bi-nut-fill', 'name' => 'Bolts & Fasteners'],
-	['url' => 'hand_tools_category.jpg', 'icon' => 'bi bi-wrench', 'name' => 'Hand Tools'],
-	['url' => 'general_household_category.jpg', 'icon' => 'bi bi-ladder', 'name' => 'General & Household'],
-	['url' => 'welding_machinery_category.jpg', 'icon' => 'bi bi-door-open-fill', 'name' => 'Welding & Machinery'],
-	['url' => 'safety_security_category.jpg', 'icon' => 'bi bi-lock-fill', 'name' => 'Safety & Security'],
-	['url' => 'electrical_accessories_category.jpg', 'icon' => 'bi bi-lightning-fill', 'name' => 'Electrical Accessories'],
-	['url' => 'plumbing_category.jpg', 'icon' => 'bi bi-battery-full', 'name' => 'Plumbing'],
-	['url' => 'power_tools_category.jpg', 'icon' => 'bi bi-plug-fill', 'name' => 'Power Tools'],
-	['url' => 'paint_category.jpg', 'icon' => 'bi bi-paint-bucket', 'name' => 'Paint '],
-];
-
-
-
-
-?>
-
 <footer class="footer">
 	<div class="footer-section-1 text-light py-4">
 		<div class="container">
@@ -39,10 +20,10 @@ $footerProducts = [
 				<div class="col-md-4 mb-3">
 					<h3>Products</h3>
 					<ul class="list-unstyled text-start ms-5 ps-5 ">
-						<?php foreach ($footerProducts as $footerProduct): ?>
-							<li><a href="products.php#<?php echo $footerProduct['url']; ?>">
-									<i class="<?php echo $footerProduct['icon']; ?>"></i>
-									<?php echo $footerProduct['name']; ?></a></li>
+						<?php foreach ($product_category as $prodCat): ?>
+							<li><a href="products.php#<?php echo $prodCat['img_path']; ?>">
+									<i class="<?php echo $prodCat['icon']; ?>"></i>
+									<?php echo $prodCat['name']; ?></a></li>
 						<?php endforeach; ?>
 					</ul>
 				</div>
@@ -99,13 +80,21 @@ $footerProducts = [
 
 					<?php foreach ($pages as $page): ?>
 
-						<li class="list-inline-item <?= ($currentPage == $page['url']) ? 'text-white' : 'text-white-50'; ?>">
+						<li
+							class="list-inline-item <?= ($currentPage == $page['url']) ? 'text-white' : 'text-white-50'; ?>">
 							<a href="<?= $page['url'] ?>" class="footer-link"><?= $page['name'] ?></a>
 						</li>
+
 					<?php endforeach; ?>
 				</ul>
 			</div>
 		</div>
 	</div>
+
+	<!-- Back to Top Button -->
+	<button id="back-to-top" class="btn btn-primary" title="Back to Top">
+		<i class="bi bi-arrow-up fs-5"></i>
+	</button>
+
 
 </footer>

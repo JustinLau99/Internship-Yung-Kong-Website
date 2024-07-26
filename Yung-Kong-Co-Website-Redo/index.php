@@ -7,6 +7,8 @@
 
 <body>
 
+
+
 	<?php include_once 'include/navbar.php'; ?><!-- navbar.php -->
 
 	<!-- carousel -->
@@ -16,13 +18,13 @@
 
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="0" aria-label="Slide 1"
-				class="active" aria-current="true"></button>
+					class="active" aria-current="true"></button>
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="1" aria-label="Slide 2"></button>
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="2" aria-label="Slide 3"></button>
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="3" aria-label="Slide 4"></button>
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="4" aria-label="Slide 5"></button>
 			</div>
-			
+
 			<div class="carousel-inner">
 				<div class="carousel-item active"><img src="img/department/slider-ykacc.jpg" class="w-100"></div>
 				<div class="carousel-item"><img src="img/department/slider-ykbtw.jpg" class="w-100"></div>
@@ -30,8 +32,8 @@
 				<div class="carousel-item"><img src="img/department/slider-ykpending.jpg" class="w-100"></div>
 				<div class="carousel-item"><img src="img/department/slider-ykpenrissen.jpg" class="w-100"></div>
 			</div>
-			
-			
+
+
 			<div class="caption">
 				<h1 class="fs-2 text-center text-white">Welcome to Yung Kong Co. Bhd.</h1>
 			</div>
@@ -166,7 +168,7 @@
 			</div>
 	</section>
 
-
+	
 
 
 
