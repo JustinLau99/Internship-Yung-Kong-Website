@@ -98,6 +98,9 @@ function searchProduct(): array
 						</span>
 					</section>
 
+
+					
+
 					<?php include_once PHPDATA_PATH . 'product_category.php'; ?>
 					<?php $foundProduct = searchProduct(); // function ?>
 

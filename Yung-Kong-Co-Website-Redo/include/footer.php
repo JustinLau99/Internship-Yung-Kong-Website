@@ -29,15 +29,16 @@ $footerProducts = [
 				<div class="col-md-4 mb-3 border-end border-2 border-secondary border-opacity-25">
 					<a href="index.php"><img src="img/yk_logo.png" class="img-fluid" alt="yk_logo"></a>
 					<a href="index.php">
-						<h1 class="fs-5 lh-lg ">榕 光 有 限 公 司</h1>
-						<h2 class="fs-5">YUNG KONG CO. BHD.</h2>
+						<br><br>
+						<h1 class="fs-2">榕光有限公司</h1>
+						<h1 class="fs-4">YUNG KONG CO. BHD.</h1>
 					</a>
 				</div>
 
 				<!-- section 2 -->
 				<div class="col-md-4 mb-3">
 					<h3>Products</h3>
-					<ul class="list-unstyled text-start ms-5">
+					<ul class="list-unstyled text-start ms-5 ps-5 ">
 						<?php foreach ($footerProducts as $footerProduct): ?>
 							<li><a href="products.php#<?php echo $footerProduct['url']; ?>">
 									<i class="<?php echo $footerProduct['icon']; ?>"></i>
@@ -82,11 +83,12 @@ $footerProducts = [
 		</div>
 	</div>
 
-	<div class="footer-section-2 text-light py-4">
+	<div class="footer-section-2 text-light py-4 text-white">
 		<div class="container">
 			<div class="d-flex justify-content-between align-items-center">
 				<!-- Copyright Text -->
 				<span class="copytext">
+
 					Copyright &copy; 2023 |
 					<a href="https://www.yungkongco.com.my/">Yung Kong Co. Bhd.</a>
 					(103194-T). <text style="color: #31aae2;">All Rights Reserved.</text>
@@ -94,18 +96,10 @@ $footerProducts = [
 
 				<!-- Navigation Links -->
 				<ul class="list-inline mb-0">
-					<?php $current_page = basename($_SERVER['SCRIPT_NAME']); ?>
-					<?php
-					$pages = [
-						['url' => 'index.php', 'name' => 'Home'],
-						['url' => 'products.php', 'name' => 'Products'],
-						['url' => 'contact.php', 'name' => 'Contact Us'],
-						['url' => 'onlineShop.php', 'name' => 'Online Shop'],
-					];
-					?>
 
 					<?php foreach ($pages as $page): ?>
-						<li class="list-inline-item <?= $current_page == $page['url'] ? 'text-white' : 'text-white-50'; ?>">
+
+						<li class="list-inline-item <?= ($currentPage == $page['url']) ? 'text-white' : 'text-white-50'; ?>">
 							<a href="<?= $page['url'] ?>" class="footer-link"><?= $page['name'] ?></a>
 						</li>
 					<?php endforeach; ?>
@@ -115,5 +109,3 @@ $footerProducts = [
 	</div>
 
 </footer>
-
-

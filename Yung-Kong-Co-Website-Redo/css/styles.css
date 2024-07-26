@@ -1,6 +1,23 @@
 /* styles.css */
 
 
+
+/************************* 
+ id - color
+*************************/
+
+#index-productList {
+	background-color: #ececec;
+}
+
+#index-department {
+	background-color: #92aedc;
+}
+
+#index-brands {
+	background-color: #7ba1df;
+}
+
 /************************* 
  Global
 *************************/
@@ -49,6 +66,11 @@ body {
 	object-fit: contain;
 }
 
+#navbar .navbar-brand {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0);
+	font-family: Baskerville, Georgia, "Kaiti", "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+}
+
 #navbar.navbar-scrolled {
 	background-color: #333333 !important;
 }
@@ -67,22 +89,30 @@ body {
 /* Dropdown menu */
 #navbar .dropdown-menu {
 	display: flex;
+	flex-wrap: wrap;
 	padding: 0;
 	background-color: #d0d0d0;
 	transform: translateY(10px);
+	left: 0;
+	width: 100%;
+	min-width: 100px;
+	line-height: 40px;
 	/* Animation */
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease;
-	width: 100%;
-	position: absolute;
-	left: 0;
+
+}
+
+.nav-item .nav-active{
+	border-bottom: 2px solid white !important;
 }
 
 #navbar .nav-item:hover .dropdown-menu {
 	opacity: 1;
 	visibility: visible;
 	transform: translateY(0);
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
 }
 
 #navbar .dropdown-menu .dropdown-item {
@@ -99,12 +129,6 @@ body {
 	position: static !important;
 }
 
-.dropdown-menu {
-	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
-	margin-top: 0px !important;
-	/* width: 100% !important; */
-}
-
 
 
 /************************* 
@@ -118,15 +142,13 @@ body {
 }
 
 /* carousel text */
-.carousel-caption {
+.caption {
+	position: absolute;
 	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -20%);
 	z-index: 10;
-
+	width: 100%;
+	text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
 }
-
-
 
 
 /************************* 
@@ -155,6 +177,11 @@ footer .footer-section-1 {
 	color: #fff;
 }
 
+footer .footer-section-1 h1 {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0);
+	font-family: Baskerville, Georgia, "Kaiti", "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+}
+
 footer .footer-section-2 {
 	background-color: #222;
 	color: #fff;
@@ -166,7 +193,7 @@ footer a {
 
 
 footer a:hover {
-	color: #e6e6e6;
+	color: #e6e6e6 !important;
 }
 
 .footer-section-2 .footer-link {
@@ -175,9 +202,6 @@ footer a:hover {
 	transition: color 0.3s;
 }
 
-.footer-section-2 .footer-link:hover {
-	color: white;
-}
 
 
 
@@ -208,7 +232,7 @@ footer a:hover {
 .parallax-section {
 	position: relative;
 	min-height: 400px;
-	overflow: hidden;
+	overflow: auto;
 }
 
 .parallax-image {
@@ -257,3 +281,16 @@ footer a:hover {
 	overflow: hidden;
 	position: relative;
 }
+
+
+
+/* 
+.product-details-img-container {
+	height: 500px;
+}
+
+.product-details-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+} */

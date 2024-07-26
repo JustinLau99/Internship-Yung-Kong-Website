@@ -16,13 +16,13 @@
 
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="0" aria-label="Slide 1"
-					class="active" aria-current="true"></button>
+				class="active" aria-current="true"></button>
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="1" aria-label="Slide 2"></button>
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="2" aria-label="Slide 3"></button>
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="3" aria-label="Slide 4"></button>
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="4" aria-label="Slide 5"></button>
 			</div>
-
+			
 			<div class="carousel-inner">
 				<div class="carousel-item active"><img src="img/department/slider-ykacc.jpg" class="w-100"></div>
 				<div class="carousel-item"><img src="img/department/slider-ykbtw.jpg" class="w-100"></div>
@@ -30,9 +30,10 @@
 				<div class="carousel-item"><img src="img/department/slider-ykpending.jpg" class="w-100"></div>
 				<div class="carousel-item"><img src="img/department/slider-ykpenrissen.jpg" class="w-100"></div>
 			</div>
-
-			<div class="carousel-caption d-md-block ">
-				<h5 class="fs-1 text-center">Welcome to Yung Kong Co. Bhd.</h5>
+			
+			
+			<div class="caption">
+				<h1 class="fs-2 text-center text-white">Welcome to Yung Kong Co. Bhd.</h1>
 			</div>
 
 			<!-- button -->
@@ -48,7 +49,7 @@
 
 
 	<!-- productList -->
-	<section class="yk-section bg-gray">
+	<section class="yk-section" id="index-productList">
 		<section class="section-title text-center">
 			<h2>What We Offer</h2>
 			<span class="bordered-icon">
@@ -60,26 +61,25 @@
 
 		<!-- read CSV -->
 		<?php include_once 'phpData/readCSV.php'; ?>
-		<?php $stockItemTypeListing = readCSVData("phpData/stock_item_type_listing.csv"); ?>
-		<?php $productCategory = readCSVData("phpData/product_category.csv"); // Parse CSV data to PHP ?>
+		<?php $product_category = readCSVData("phpData/product_category.csv"); ?>
 		<!-- product card -->
 
 		<div class="container-fluid">
 			<div class="row g-3 d-flex align-items-stretch">
 
-				<?php foreach ($stockItemTypeListing as $stockList): ?>
+				<?php foreach ($product_category as $prodCat): ?>
 					<div class="col-md-3 col-sm-4 col-xs-6">
 						<div class="card h-100">
-							<a href="products.php#<?= htmlspecialchars($stockList['img_path']) ?>">
+							<a href="products.php#<?= htmlspecialchars($prodCat['img_path']) ?>">
 
-								<img src="img/product-categories/<?= htmlspecialchars($stockList['img_path']); ?>"
-									class="card-img-top" alt="<?= htmlspecialchars($stockList['img_path']); ?>">
+								<img src="img/product-categories/<?= htmlspecialchars($prodCat['img_path']); ?>"
+									class="card-img-top" alt="<?= htmlspecialchars($prodCat['img_path']); ?>">
 								<div class="card-body">
 									<!-- card info -->
-									<h5 class="card-title"><?= htmlspecialchars($stockList['name']) ?></h5>
+									<h5 class="card-title"><?= htmlspecialchars($prodCat['name']) ?></h5>
 									<p class="card-text">
 
-										<?php $subcategories = explode(';', $stockList['subcategory']); ?>
+										<?php $subcategories = explode(';', $prodCat['subcategory']); ?>
 										<?php foreach ($subcategories as $subcategory): ?>
 											<?= "- " . htmlspecialchars(trim($subcategory)) . "<br>"; ?>
 										<?php endforeach; ?>
@@ -97,12 +97,11 @@
 
 
 	<!-- department -->
-	<section class="yk-section bg-gray">
+	<section class="yk-section" id="index-department">
 		<section class="section-title text-center">
 			<h2>Our Departments</h2>
 			<span class="bordered-icon">
 				<i class="bi bi-dash-lg fs-1"></i><i class="bi bi-circle fs-2"></i><i class="bi bi-dash-lg fs-1"></i>
-
 			</span>
 		</section>
 
@@ -139,7 +138,7 @@
 	</section>
 
 	<!-- key product brand -->
-	<section class="yk-section bg-gray">
+	<section class="yk-section" id="index-brands">
 		<section class="section-title text-center">
 			<h2>Key Product Brands</h2>
 			<span class="bordered-icon">

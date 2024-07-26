@@ -24,45 +24,6 @@ function readCSVData(string $filename): array
 }
 
 
-/* 
-function buildNestedArray(array $stockItemTypeListing, array $productCategory): array
-{
-	// Create an empty array for the nested structure
-	$result = [];
-
-	// Build the itemTypeMap from the productCategory data
-	$itemTypeMap = [];
-	foreach ($productCategory as $category) {
-		$itemType = $category['Item Type'];
-		if (!isset($itemTypeMap[$itemType])) {
-			$itemTypeMap[$itemType] = [];
-		}
-		$itemTypeMap[$itemType][] = [
-			'Item Group' => $category['Item Group'],
-			'Description' => $category['Description']
-		];
-	}
-
-	// Build the final nested array structure
-	foreach ($stockItemTypeListing as $itemTypeData) {
-		$itemType = $itemTypeData['Item Type'];
-		$subCategoryString = $itemTypeData['SubCategory'];
-		// Use str_getcsv to handle quotes and embedded commas
-		$subCategory = str_getcsv($subCategoryString);
-		$subCategory = array_map('trim', $subCategory); // Trim each subcategory
-
-		$result[$itemType] = [
-			'Description' => $itemTypeData['Description'],
-			'Image Path' => $itemTypeData['Image Path'],
-			'SubCategory' => $subCategory,
-			'Category' => $itemTypeMap[$itemType] ?? [] // Use empty array if no categories exist for this item type
-		];
-	}
-	return $result;
-}
-
-*/
-
 
 function debugExtractedCSV($extracted)
 {
