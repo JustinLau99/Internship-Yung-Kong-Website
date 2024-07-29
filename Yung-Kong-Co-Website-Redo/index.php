@@ -100,7 +100,7 @@
 
 	<!-- department -->
 	<section class="yk-section" id="index-department">
-		<section class="section-title text-center">
+		<section class="section-title text-center text-white" >
 			<h2>Our Departments</h2>
 			<span class="bordered-icon">
 				<i class="bi bi-dash-lg fs-1"></i><i class="bi bi-circle fs-2"></i><i class="bi bi-dash-lg fs-1"></i>
@@ -142,7 +142,7 @@
 
 	<!-- key product brand -->
 	<section class="yk-section" id="index-brands">
-		<section class="section-title text-center">
+		<section class="section-title text-center text-white">
 			<h2>Key Product Brands</h2>
 			<span class="bordered-icon">
 				<i class="bi bi-dash-lg fs-1"></i><i class="bi bi-circle fs-2"></i><i class="bi bi-dash-lg fs-1"></i>

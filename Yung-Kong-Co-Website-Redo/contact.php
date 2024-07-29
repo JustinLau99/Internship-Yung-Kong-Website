@@ -17,34 +17,24 @@
 	<section class="parallax-section">
 		<div class="parallax-image"></div>
 		<div class="parallax-content text-shadow-lg text-center">
-			<h1>Contact Us</h1>
+			<h1>Our Departments</h1>
 		</div>
 	</section>
 
 
 
-	<section class="yk-section">
-
-
+	<section class="yk-section" id="contact-departments">
 
 		<?php include_once 'phpData/readCSV.php' ?>
 		<?php $departments = readCSVData('phpData/departments.csv') ?>
 
 
-
-
-
-
-
-
-		<div class="container contact-section">
-
+		<!-- Our Departments -->
+		<div class="container ">
 
 			<section class="section-title text-center">
-				<h2>Our Departments</h2>
-				<!-- Introductory Text -->
-				<p>If you have any questions or need further assistance, please contact the relevant department
-					below. We are here to help!</p>
+				<h2>Contact Us</h2>
+
 				<span class="bordered-icon">
 					<i class="bi bi-dash-lg fs-1"></i>
 					<i class="bi bi-circle fs-2"></i>
@@ -53,9 +43,8 @@
 			</section>
 
 
-
 			<!-- Departments Contact Information -->
-			<div class="row contact-info">
+			<div class="row">
 
 				<?php foreach ($departments as $dep): ?>
 
@@ -63,55 +52,80 @@
 					<?php
 					$dep['address'] = str_replace('"', '', $dep['address']);
 					$dep['tel_link'] = str_replace('-', '', $dep['tel']);
-					$dep['fax_link'] = str_replace('-', '', $dep['fax']);
 					$dep['whatsapp_link'] = str_replace('-', '', $dep['whatsapp']);
+					$dep['fax_link'] = str_replace('-', '', $dep['fax']);
 					?>
 
-					<div class="col-md-4">
+
+					<div class="col-md-4 department-card my-4">
 						<h5><?= htmlspecialchars($dep['name']); ?></h5>
 
 						<div class="row">
-							<img src="img/department/<?= htmlspecialchars($dep['img']); ?>"
-								alt="<?= htmlspecialchars($dep['img']); ?>">
+							<!-- img: department -->
+
+							<a href="#contactForm">
+								<img src="img/department/<?= htmlspecialchars($dep['img']); ?>"
+									alt="<?= htmlspecialchars($dep['img']); ?>"
+									class="img-fluid department-img"
+									data-department="<?= htmlspecialchars($dep['name']); ?>">
+							</a>
 						</div>
 
 						<address>
+
 							<div class="card-text">
-								<!-- google map -->
+								<!-- Location: Google Map -->
 								<a rel="noopener noreferrer" target="_blank"
 									href="<?= htmlspecialchars($dep['address_url']); ?>">
 									<i class="fs-4 bi bi-geo"></i>
-									<?= htmlspecialchars($dep['address']) ?><br>
+									<span class="fw-bold">Location: </span>
+									<?= htmlspecialchars($dep['address']) ?>
+									<br>
 								</a>
 
-								<!-- Tel -->
-								<i class="fs-4 bi bi-telephone"></i>
-								<?= htmlspecialchars($dep['tel']) ?><br>
+								<!-- Tel : Phone Number -->
+								<a href="tel:+6<?= htmlspecialchars($dep['tel']); ?>">
+									<i class="fs-4 bi bi-telephone"></i>
+									<span class="fw-bold">Tel: </span>
+									<?= htmlspecialchars($dep['tel']) ?>
+									<br>
+								</a>
+
 
 								<!-- Whatsapp -->
 								<a rel="noopener noreferrer" target="_blank"
 									href="https://api.whatsapp.com/send?phone=<?= htmlspecialchars($dep['whatsapp_link']); ?>">
 									<i class="fs-4 bi bi-whatsapp"></i>
-									<?= htmlspecialchars($dep['whatsapp']) ?><br>
+									<span class="fw-bold">WhatsApp: </span>
+									<?= htmlspecialchars($dep['whatsapp']) ?>
+									<br>
 								</a>
 
-								<!-- facebook -->
-								<?php if (!empty($dep['fb'])): ?>
-									<a rel="noopener noreferrer" target="_blank" href="<?= htmlspecialchars($dep['fb']); ?>">
+								<!-- Facebook -->
+								<?php if (!empty($dep['fb_url'])): ?>
+									<a rel="noopener noreferrer" target="_blank"
+										href="<?= htmlspecialchars($dep['fb_url']); ?>">
 										<i class="fs-4 bi bi-facebook"></i>
-										Facebook<br>
+										<span class="fw-bold">FB: </span>
+										<?= htmlspecialchars($dep['fb_name']) ?>
+										<br>
 									</a>
 								<?php endif; ?>
 
-
+								<!-- mail -->
 								<a href="mailto:<?= htmlspecialchars($dep['mail']); ?>" target="_blank"
 									rel="noopener noreferrer">
 									<i class="fs-4 bi bi-envelope"></i>
-									<?= htmlspecialchars($dep['mail']); ?><br>
+									<span class="fw-bold">Email: </span>
+									<?= htmlspecialchars($dep['mail']); ?>
+									<br>
 								</a>
 
+								<!-- Fax -->
 								<i class="fs-4 bi bi-printer"></i>
-								Fax: <?= htmlspecialchars($dep['fax']) ?><br>
+								<span class="fw-bold">Fax: </span>
+								<?= htmlspecialchars($dep['fax']) ?>
+								<br>
 							</div>
 
 
@@ -125,9 +139,13 @@
 		</div>
 
 
+	</section>
 
-		<!-- General Contact Form -->
-		<section class="yk-section">
+	<!-- General Contact Form -->
+	<section class="yk-section" id="contact-inquiry">
+
+		<div class="container">
+
 			<section class="section-title text-center">
 				<h2>General Inquiries</h2>
 				<!-- Introductory Text -->
@@ -142,49 +160,77 @@
 				</span>
 			</section>
 
-			<div class="row">
 
-				<form>
+			<div class="row">
+				<!-- General Inquiries form -->
+				<form id="contactForm" class="needs-validation" novalidate>
+
+					<!-- Name -->
 					<div class="mb-3">
 						<label for="name" class="form-label">Name</label>
 						<input type="text" class="form-control" id="name" required>
+						<div class="invalid-feedback">
+							Please provide your name.
+						</div>
 					</div>
-					<div class="mb-3">
-						<label for="email" class="form-label">Email</label>
-						<input type="email" class="form-control" id="email" required>
-					</div>
-					<div class="mb-3">
-						<label for="department" class="form-label">Department</label>
-						<select class="form-control" id="department">
-							<?php foreach ($departments as $dep): ?>
-								<option><?= $dep['name']; ?></option>
-							<?php endforeach; ?>
 
-						</select>
+					<!-- Department and Inquiry Type -->
+					<div class="mb-3">
+						<div class="row">
+							<!-- Department -->
+							<div class="col-md-6 mb-3">
+								<label for="department" class="form-label">Department</label>
+								<select class="form-control" id="department" required>
+									<option value="" disabled selected>Select a department</option>
+									<?php foreach ($departments as $dep): ?>
+										<option value="<?= htmlspecialchars($dep['name']); ?>"
+											data-email="<?= htmlspecialchars($dep['mail']); ?>">
+											<?= htmlspecialchars($dep['name']); ?>
+										</option>
+									<?php endforeach; ?>
+								</select>
+								<div class="invalid-feedback">
+									Please select a department.
+								</div>
+							</div>
+
+							<!-- Inquiry Type -->
+							<div class="col-md-6 mb-3">
+								<label for="inquiryType" class="form-label">Inquiry Type</label>
+								<select class="form-control" id="inquiryType" required>
+									<option value="" disabled selected>Select the type of inquiry</option>
+									<option value="General Inquiries">General Inquiries</option>
+									<option value="Product Information">Product Information</option>
+									<option value="Pricing and Discounts">Pricing and Discounts</option>
+									<option value="Payment Method">Payment Method</option>
+									<option value="Technical Support">Technical Support</option>
+									<option value="Customer Service">Customer Service</option>
+									<option value="Warranty and Support">Warranty and Support</option>
+								</select>
+								<div class="invalid-feedback">
+									Please select the type of inquiry.
+								</div>
+							</div>
+						</div>
 					</div>
+
+					<!-- Message -->
 					<div class="mb-3">
 						<label for="message" class="form-label">Message</label>
-						<textarea class="form-control" id="message" rows="5" required></textarea>
+						<textarea class="form-control" id="message" rows="5" placeholder="Enter your message here"
+							required></textarea>
+						<div class="invalid-feedback">
+							Please enter your message.
+						</div>
 					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
 				</form>
+
 			</div>
-			</div>
 
+		</div>
 
-
-
-
-
-
-
-
-
-		</section>
 	</section>
-
-
-
 
 
 

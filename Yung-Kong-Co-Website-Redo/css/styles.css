@@ -18,6 +18,16 @@
 	background-color: #7ba1df;
 }
 
+
+
+#contact-departments {
+	background-color: #f4f8ffd0;
+}
+
+#contact-inquiry {
+	background-color: #ffffff;
+}
+
 /************************* 
  Global
 *************************/
@@ -64,7 +74,7 @@ body {
 #navbar .navbar-brand img {
 	max-height: 70px;
 	object-fit: contain;
-	transition: max-height 1s ease; /* Smooth transition for image height */
+	transition: max-height 1s ease;
 }
 
 
@@ -77,10 +87,15 @@ body {
 	max-height: 50px;
 }
 
+:root{
+	scroll-padding-top: 60px;
+}
+
 
 #navbar .navbar-brand {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0);
 	font-family: Baskerville, Georgia, "Kaiti", "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+
 }
 
 
@@ -98,7 +113,6 @@ body {
 /* Dropdown menu */
 #navbar .dropdown-menu {
 	display: flex;
-	flex-wrap: wrap;
 	padding: 0;
 	background-color: #d0d0d0;
 	transform: translateY(10px);
@@ -292,7 +306,21 @@ footer a:hover {
 }
 
 
+#contact-departments .department-card {
+    transition: box-shadow 0.5s ease;
+}
 
+#contact-departments .department-card:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.department-card .department-img {
+    transition: filter 0.5s ease;
+}
+
+.department-card .department-img:hover {
+    filter: brightness(1.08);
+}
 
 
 /************************* 
