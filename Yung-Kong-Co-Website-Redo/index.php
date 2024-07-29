@@ -114,24 +114,25 @@
 		<div class="container-fluid">
 			<div class="row g-3 d-flex align-items-stretch">
 
-				<?php foreach ($brand_logos as $key => $logo): ?>
+				<?php foreach ($brand_logos as $key => $dep): ?>
 
 					<div class="col-md-3 col-sm-4 col-xs-6">
 						<div class="card h-100">
-							<img src="img/department/<?= htmlspecialchars($logo['img']); ?>" class="card-img-top"
-								alt="<?= htmlspecialchars($logo['img']); ?>">
+							<img src="img/department/<?= htmlspecialchars($dep['img']); ?>" class="card-img-top"
+								alt="<?= htmlspecialchars($dep['img']); ?>">
 							<div class="card-body">
-								<h5 class="card-title text-center"><?= htmlspecialchars($logo['name']) ?></h5>
+								<h5 class="card-title text-center"><?= htmlspecialchars($dep['name']) ?></h5>
 
 								<div class="card-text">
 									<!-- department info -->
-									<i class="fs-4 bi bi-geo"></i><?= htmlspecialchars($logo['address']) ?><br>
-									<i class="fs-4 bi bi-telephone"></i><?= htmlspecialchars($logo['tel']) ?><br>
-									<i class="fs-4 bi bi-whatsapp"></i><?= htmlspecialchars($logo['fax']) ?><br>
-									<i class="fs-4 bi bi-envelope"></i><?= htmlspecialchars($logo['whatsapp']) ?><br>
-									Fax: <?= htmlspecialchars($logo['mail']) ?><br>
+									<i class="fs-4 bi bi-geo"></i><?= htmlspecialchars($dep['address']) ?><br>
+									<i class="fs-4 bi bi-telephone"></i><?= htmlspecialchars($dep['tel']) ?><br>
+									<i class="fs-4 bi bi-whatsapp"></i><?= htmlspecialchars($dep['fax']) ?><br>
+									<i class="fs-4 bi bi-envelope"></i><?= htmlspecialchars($dep['whatsapp']) ?><br>
+									Fax: <?= htmlspecialchars($dep['mail']) ?><br>
 
 								</div>
+
 							</div>
 						</div>
 					</div>
@@ -156,12 +157,12 @@
 		<div class="container-fluid">
 			<div class="row g-3 d-flex align-items-stretch">
 
-				<?php foreach ($brand_logos as $key => $logo): ?>
+				<?php foreach ($brand_logos as $key => $dep): ?>
 
 					<div class="col-lg-1 col-md-2 col-sm-3 col-xs-4">
 						<div class="h-100">
-							<img src="img/brands/<?= htmlspecialchars($logo['img']); ?>" class="card-img-top"
-								alt="<?= htmlspecialchars($logo['img']); ?>">
+							<img src="img/brands/<?= htmlspecialchars($dep['img']); ?>" class="card-img-top"
+								alt="<?= htmlspecialchars($dep['img']); ?>">
 						</div>
 					</div>
 				<?php endforeach; ?>

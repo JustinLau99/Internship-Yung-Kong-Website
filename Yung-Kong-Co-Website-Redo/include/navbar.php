@@ -9,7 +9,7 @@ $pages = [
 ];
 
 $currentPage = basename($_SERVER['SCRIPT_NAME']); // Get the current page name
-// mark product-details.php to products.php as active 
+// mark product-details.php to products.php as active
 $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $currentPage;
 
 ?>

@@ -22,12 +22,7 @@
 
 
 
-	<section class="yk-section bg-gray">
-
-
-
-
-
+	<section class="yk-section">
 
 
 

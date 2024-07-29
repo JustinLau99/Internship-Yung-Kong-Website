@@ -62,7 +62,7 @@ body {
 }
 
 #navbar .navbar-brand img {
-	max-height: 75px;
+	max-height: 70px;
 	object-fit: contain;
 	transition: max-height 1s ease; /* Smooth transition for image height */
 }

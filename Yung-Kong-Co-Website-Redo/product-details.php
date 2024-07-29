@@ -137,11 +137,6 @@ if ($foundProd !== null) {
 
 
 
-	<section class="yk-section bg-gray">
-
-
-	</section>
-
 
 
 	<?php include_once 'include/footer.php'; ?><!-- footer.php -->

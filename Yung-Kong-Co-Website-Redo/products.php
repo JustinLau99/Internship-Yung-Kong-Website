@@ -22,7 +22,7 @@
 
 	<?php include_once 'phpData/readCSV.php' ?>
 
-	<section class="yk-section bg-gray">
+	<section class="yk-section">
 
 		<!-- read CSV -->
 		<?php include_once 'phpData/readCSV.php'; ?>
