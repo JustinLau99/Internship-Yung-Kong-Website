@@ -1,5 +1,39 @@
 <!-- news.php -->
 
+<?php
+
+
+
+$discount_offer_img = [ // Promotion and Discount
+	'2021RayaPromotion.jpg',
+	'lavorPromotion.jpg',
+	'TransPaintNewYearPromotion.jpg',
+];
+$event_img = [ // Event and Activities
+	'e1.png',
+	'e2.png',
+	'e3.png',
+	'e4.jpg',
+	'YKMT.jpg',
+];
+$new_product_img = [ // New Products
+	'LAVOR_IKON_160_Italy.jpg',
+	'LAVOR_ONE_120_Italy.jpg',
+];
+
+$job_offer = [ // New Products
+	['job' => 'Software Developer', 'location' => 'Pending', 'prereq' => 'SPM'],
+	['job' => 'Admin Clerk', 'location' => 'Matang', 'prereq' => '3 Year Work Experience'],
+	['job' => 'Account Clerk', 'location' => 'Penrissen', 'prereq' => ''],
+];
+
+
+
+
+?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,98 +59,204 @@
 	<section class="yk-section">
 
 
+		<!-- Modal for img popup -->
+		<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
 
+					<div class="modal-body">
+						<img src="" class="img-fluid" id="modalImage">
+					</div>
 
-
-
-		1. Hero Section
-		<div class="hero-section">
-			<img src="path/to/hero-image.jpg" alt="New Offer" class="img-fluid">
-			<div class="hero-content">
-				<h1>Check Out Our Latest Offers!</h1>
-				<p>Exciting discounts on new arrivals.</p>
-				<a href="#offers" class="btn btn-primary">Shop Now</a>
+				</div>
 			</div>
 		</div>
 
-		2. Featured Section
-		<div class="featured-section py-5">
-			<h2 class="text-center">Featured New Products</h2>
-			<div class="container">
-				<div class="row">
-					<!-- Repeat for each product -->
-					<div class="col-md-4">
-						<div class="card">
-							<img src="path/to/product.jpg" class="card-img-top" alt="Product">
-							<div class="card-body">
-								<h5 class="card-title">Product Name</h5>
-								<p class="card-text">Brief description of the product.</p>
-								<a href="#" class="btn btn-primary">View Details</a>
+
+
+		<!-- News Tabs -->
+		<div class="alert alert-info text-center" role="alert">
+			New products are now available!
+		</div>
+
+		<div>
+			<div class="nav nav-tabs" id="nav-tab" role="tablist">
+				<!-- tab title -->
+				<button class="nav-link active fw-bold fs-5" data-bs-toggle="tab" type="button" role="tab"
+					data-bs-target="#nav-new_product">
+					New Products</button>
+				<button class="nav-link fw-bold fs-5" data-bs-toggle="tab" type="button" role="tab"
+					data-bs-target="#nav-discount_offer">
+					Discount & Offers</button>
+				<button class="nav-link fw-bold fs-5" data-bs-toggle="tab" type="button" role="tab"
+					data-bs-target="#nav-event">
+					Event & Activities</button>
+				<button class="nav-link fw-bold fs-5" data-bs-toggle="tab" type="button" role="tab"
+					data-bs-target="#nav-job_offer">
+					Job Offers</button>
+
+			</div>
+		</div>
+
+
+
+		<div class="tab-content" id="nav-tabContent">
+
+			<!-- New Product -->
+			<div class="tab-pane fade show active" id="nav-new_product" role="tabpanel">
+				<div class="card p-5">
+
+					<section class="section-title text-center ">
+						<h2>Featured New Products</h2>
+
+						<span class="bordered-icon">
+							<i class="bi bi-dash-lg fs-1"></i>
+							<i class="bi bi-circle fs-2"></i>
+							<i class="bi bi-dash-lg fs-1"></i>
+						</span>
+					</section>
+
+					<!-- content -->
+					<div class="row g-0">
+						<?php foreach ($new_product_img as $new_prod): ?>
+							<div class="col-md-3 p-1">
+								<div class="d-flex align-items-center h-100">
+									<img src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>"
+										class="img-fluid w-100 h-100" alt="<?= htmlspecialchars($new_prod); ?>"
+										data-bs-toggle="modal" data-bs-target="#imageModal"
+										data-bs-src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>">
+								</div>
+							</div>
+						<?php endforeach; ?>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!-- Discount and Offer -->
+			<div class="tab-pane fade" id="nav-discount_offer" role="tabpanel">
+				<div class="card p-5">
+
+					<section class="section-title text-center">
+						<h2>Discount and Offers</h2>
+
+						<span class="bordered-icon">
+							<i class="bi bi-dash-lg fs-1"></i>
+							<i class="bi bi-circle fs-2"></i>
+							<i class="bi bi-dash-lg fs-1"></i>
+						</span>
+					</section>
+
+					<!-- content -->
+					<div class="row g-0">
+						<?php foreach ($discount_offer_img as $discount_offer): ?>
+							<div class="col-md-3 p-1">
+								<div class="d-flex align-items-center h-100 ">
+									<img src="img/news/discount_offer/<?= htmlspecialchars($discount_offer); ?>"
+										class="img-fluid w-100 h-100 " alt="<?= htmlspecialchars($discount_offer); ?>"
+										data-bs-toggle="modal" data-bs-target="#imageModal"
+										data-bs-src="img/news/discount_offer/<?= htmlspecialchars($discount_offer); ?>">
+								</div>
+							</div>
+						<?php endforeach; ?>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!--Event & Activities  -->
+			<div class="tab-pane fade" id="nav-event" role="tabpanel">
+
+				<div class="card p-5">
+
+
+					<section class="section-title text-center">
+						<h2>Event and Activities</h2>
+
+						<span class="bordered-icon">
+							<i class="bi bi-dash-lg fs-1"></i>
+							<i class="bi bi-circle fs-2"></i>
+							<i class="bi bi-dash-lg fs-1"></i>
+						</span>
+					</section>
+
+					<!-- content -->
+					<div class="row g-0">
+						<?php foreach ($event_img as $event): ?>
+							<div class="col-md-3 p-1">
+								<div class="d-flex align-items-center h-100">
+									<img src="img/news/event/<?= htmlspecialchars($event); ?>" class="img-fluid w-100 h-100"
+										alt="<?= htmlspecialchars($event) ?>" data-bs-toggle="modal"
+										data-bs-target="#imageModal"
+										data-bs-src="img/news/event/<?= htmlspecialchars($event); ?>">
+								</div>
+							</div>
+						<?php endforeach; ?>
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<!-- Job Offer  -->
+			<div class="tab-pane fade" id="nav-job_offer" role="tabpanel">
+				<div class="card p-5">
+
+					<section class="section-title text-center">
+						<h2>Job Offers</h2>
+
+						<span class="bordered-icon">
+							<i class="bi bi-dash-lg fs-1"></i>
+							<i class="bi bi-circle fs-2"></i>
+							<i class="bi bi-dash-lg fs-1"></i>
+						</span>
+					</section>
+
+
+
+
+					<!-- content -->
+					<section id="job-offers" class="py-5">
+						<div class="container">
+
+							<!-- Job Offer Card -->
+							<div class="row">
+								<?php foreach ($job_offer as $job): ?>
+
+									<div class="col-md-4 mb-4">
+										<div class="card">
+											<div class="card-body">
+												<h5 class="card-title"><?= htmlspecialchars($job['job']); ?></h5>
+												<h6 class="card-subtitle mb-2 text-muted">
+													Department: <?= htmlspecialchars($job['location']); ?></h6>
+												<p class="card-text">Prerequisite:
+													<?= !empty($job['prereq']) ? htmlspecialchars($job['prereq']) : 'Not specified'; ?>
+												</p>
+												<a href="contact.php?inquiryType=job_application#contact-inquiry"
+													class="btn btn-primary">Apply Now</a>
+											</div>
+										</div>
+									</div>
+
+
+								<?php endforeach; ?>
+
+
 							</div>
 						</div>
-					</div>
+					</section>
+
+
+
 				</div>
 			</div>
+
+
+
 		</div>
-
-
-		3. Announcements Banner
-		<div class="alert alert-info text-center" role="alert">
-			New arrivals are now available! Check them out <a href="#new-products" class="alert-link">here</a>.
-		</div>
-
-
-
-		4. Grid or List Display
-		<div class="container py-5" id="new-products">
-			<h2 class="text-center">New Products</h2>
-			<div class="row">
-				<!-- Repeat for each product -->
-				<div class="col-md-3 col-sm-6">
-					<div class="card mb-4">
-						<img src="path/to/product.jpg" class="card-img-top" alt="Product">
-						<div class="card-body">
-							<h5 class="card-title">Product Name</h5>
-							<p class="card-text">Brief description.</p>
-							<a href="#" class="btn btn-primary">View Details</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-		5. Navigation and Filters
-		<div class="container py-5">
-			<h2 class="text-center">Browse New Offers</h2>
-			<div class="row mb-4">
-				<div class="col-md-12">
-					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-secondary">All</button>
-						<button type="button" class="btn btn-secondary">Category 1</button>
-						<button type="button" class="btn btn-secondary">Category 2</button>
-						<button type="button" class="btn btn-secondary">Category 3</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-
-		7. Call-to-Action (CTA)
-		<div class="cta-section text-center py-5">
-			<h2>Don't Miss Our Latest Deals!</h2>
-			<p>Sign up for our newsletter to stay updated.</p>
-			<a href="#signup" class="btn btn-lg btn-primary">Sign Up Now</a>
-		</div>
-
-
-
-
-
-
 	</section>
 
 

@@ -21,9 +21,9 @@
 					<h3>Products</h3>
 					<ul class="list-unstyled text-start ms-5 ps-5 ">
 						<?php foreach ($product_category as $prodCat): ?>
-							<li><a href="products.php#<?php echo $prodCat['img_path']; ?>">
-									<i class="<?php echo $prodCat['icon']; ?>"></i>
-									<?php echo $prodCat['name']; ?></a></li>
+							<li><a href="products.php#<?= htmlspecialchars($prodCat['img_path']); ?>">
+									<i class="<?= htmlspecialchars($prodCat['icon']); ?>"></i>
+									<?= htmlspecialchars($prodCat['name']); ?></a></li>
 						<?php endforeach; ?>
 					</ul>
 				</div>
@@ -82,7 +82,8 @@
 
 						<li
 							class="list-inline-item <?= ($currentPage == $page['url']) ? 'text-white' : 'text-white-50'; ?>">
-							<a href="<?= $page['url'] ?>" class="footer-link"><?= $page['name'] ?></a>
+							<a href="<?= htmlspecialchars($page['url']); ?>"
+								class="footer-link"><?= htmlspecialchars($page['name']); ?></a>
 						</li>
 
 					<?php endforeach; ?>

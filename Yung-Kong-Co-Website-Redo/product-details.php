@@ -77,9 +77,9 @@ if ($foundProd !== null) {
 			<div class="row g-3 d-flex align-items-stretch">
 
 
-				<section class="section-title text-center" id="<?= $prodCat['img_path'] ?>">
+				<section class="section-title text-center" id="<?= htmlspecialchars($prodCat['img_path']); ?>">
 					<!-- category name -->
-					<h2><?= $foundProd['name'] ?></h2>
+					<h2><?= htmlspecialchars($foundProd['name']); ?></h2>
 
 					<span class="bordered-icon">
 						<i class="bi bi-dash-lg fs-1"></i>
@@ -123,7 +123,7 @@ if ($foundProd !== null) {
 								</div>
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 

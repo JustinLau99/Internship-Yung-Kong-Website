@@ -17,7 +17,7 @@
 	<section class="parallax-section">
 		<div class="parallax-image"></div>
 		<div class="parallax-content text-shadow-lg text-center">
-			<h1>Our Departments</h1>
+			<h1>Contact Us</h1>
 		</div>
 	</section>
 
@@ -30,10 +30,11 @@
 
 
 		<!-- Our Departments -->
+
 		<div class="container ">
 
 			<section class="section-title text-center">
-				<h2>Contact Us</h2>
+				<h2>Our Departments</h2>
 
 				<span class="bordered-icon">
 					<i class="bi bi-dash-lg fs-1"></i>
@@ -41,6 +42,7 @@
 					<i class="bi bi-dash-lg fs-1"></i>
 				</span>
 			</section>
+
 
 
 			<!-- Departments Contact Information -->
@@ -63,7 +65,7 @@
 						<div class="row">
 							<!-- img: department -->
 
-							<a href="#contactForm">
+							<a href="#contact-inquiry">
 								<img src="img/department/<?= htmlspecialchars($dep['img']); ?>"
 									alt="<?= htmlspecialchars($dep['img']); ?>"
 									class="img-fluid department-img"
@@ -136,6 +138,7 @@
 
 
 			</div>
+			
 		</div>
 
 
@@ -199,13 +202,14 @@
 								<label for="inquiryType" class="form-label">Inquiry Type</label>
 								<select class="form-control" id="inquiryType" required>
 									<option value="" disabled selected>Select the type of inquiry</option>
-									<option value="General Inquiries">General Inquiries</option>
-									<option value="Product Information">Product Information</option>
-									<option value="Pricing and Discounts">Pricing and Discounts</option>
-									<option value="Payment Method">Payment Method</option>
-									<option value="Technical Support">Technical Support</option>
-									<option value="Customer Service">Customer Service</option>
-									<option value="Warranty and Support">Warranty and Support</option>
+									<option value="general_inquiries">General Inquiries</option>
+									<option value="job_application">Job Application</option>
+									<option value="product_information">Product Information</option>
+									<option value="pricing_and_discounts">Pricing and Discounts</option>
+									<option value="payment_method">Payment Method</option>
+									<option value="technical_support">Technical Support</option>
+									<option value="customer_service">Customer Service</option>
+									<option value="warranty_and_Support">Warranty and Support</option>
 								</select>
 								<div class="invalid-feedback">
 									Please select the type of inquiry.

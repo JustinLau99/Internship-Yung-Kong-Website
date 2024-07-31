@@ -39,16 +39,16 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 
 						<li class="nav-item">
 							<a class="nav-link text-white <?= ($currentPage === $page['url']) ? 'nav-active' : ''; ?>"
-								href="<?= $page['url']; ?>"><?= $page['name']; ?>
+								href="<?= htmlspecialchars($page['url']); ?>"><?= htmlspecialchars($page['name']); ?>
 							</a>
 						</li>
-						
+
 					<?php else: ?>
 
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle text-white <?= ($currentPage === $page['url']) ? 'nav-active' : ''; ?>"
 								href="products.php" id="navbarDropdown" role="button">
-								<?= $page['name']; ?>
+								<?= htmlspecialchars($page['name']); ?>
 							</a>
 
 							<!-- only run if file exists -->
@@ -65,7 +65,7 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 
 												<div class="col-md-2 ">
 													<a class="dropdown-item"
-														href="products.php#<?= htmlspecialchars($prodCat['img_path']) ?>"><?= $prodCat['name'] ?></a>
+														href="products.php#<?= htmlspecialchars($prodCat['img_path']) ?>"><?= htmlspecialchars($prodCat['name']); ?></a>
 												</div>
 
 											<?php endforeach; ?>
@@ -84,4 +84,3 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 		</div>
 	</div>
 </nav>
-

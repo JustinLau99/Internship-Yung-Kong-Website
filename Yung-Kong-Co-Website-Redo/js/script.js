@@ -34,10 +34,10 @@ $(document).ready(function () {
 
 
 	// Change inquiry department option based on clicked img
-	$('.department-img').on('click', function() {
-        var departmentName = $(this).data('department');
-        $('#department').val(departmentName).change(); 
-    });
+	$('.department-img').on('click', function () {
+		var departmentName = $(this).data('department');
+		$('#department').val(departmentName).change();
+	});
 
 	// Function to validate the form
 	function validateForm() {
@@ -83,8 +83,31 @@ $(document).ready(function () {
 
 
 
-	
 
+	// news image pop up modal
+
+	$('#imageModal').on('show.bs.modal', function (event) {
+		var button = $(event.relatedTarget);
+		var imageSrc = button.data('bs-src');
+		var modalImage = $(this).find('#modalImage');
+		modalImage.attr('src', imageSrc);
+	});
+
+
+
+	// Function to get URL parameters
+	function getParameterByName(name) {
+		const urlParams = new URLSearchParams(window.location.search);
+		return urlParams.get(name);
+	}
+
+	// Get the inquiryType from the URL parameters
+	const inquiryType = getParameterByName('inquiryType');
+
+	// Set the selected option if it matches
+	if (inquiryType) {
+		$('#inquiryType').val(inquiryType);
+	}
 
 });
 

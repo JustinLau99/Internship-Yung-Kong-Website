@@ -1,6 +1,6 @@
 <?php
 
-function readCSVData(string $filename): array
+function readCSVData(string $filename): array 
 {
 	$data = [];
 
@@ -23,26 +23,4 @@ function readCSVData(string $filename): array
 	return $data;
 }
 
-
-
-function debugExtractedCSV($extracted)
-{
-	foreach ($extracted as $key => $extract) {
-		echo "<br>Item Type: " . htmlspecialchars($key);
-		echo "<br>Description: " . htmlspecialchars($extract['Description']);
-		echo "<br>Image Path: " . htmlspecialchars($extract['Image Path']);
-		echo "<br>Categories:";
-		foreach ($extract['SubCategory'] as $subcategory) {
-			echo "- " . htmlspecialchars($subcategory) . "<br>";
-		}
-
-		echo "<br>Categories:";
-		foreach ($extract['Category'] as $category) {
-			echo "<br>- Item Group: " . htmlspecialchars($category['Item Group']) . "----";
-			echo "  Description: " . htmlspecialchars($category['Description']);
-		}
-		echo "<br>";
-	}
-
-}
 

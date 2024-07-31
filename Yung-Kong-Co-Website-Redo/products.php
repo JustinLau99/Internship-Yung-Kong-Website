@@ -35,9 +35,9 @@
 
 				<?php foreach ($product_category as $prodCat): ?>
 
-					<section class="section-title text-center" id="<?= $prodCat['img_path'] ?>">
+					<section class="section-title text-center" id="<?= htmlspecialchars($prodCat['img_path']); ?>">
 						<!-- category name -->
-						<h2><?= $prodCat['name'] ?></h2>
+						<h2><?= htmlspecialchars($prodCat['name']); ?></h2>
 
 						<span class="bordered-icon">
 							<i class="bi bi-dash-lg fs-1"></i>
@@ -55,7 +55,7 @@
 							<div class="col-lg-2 col-md-3 col-sm-4 ">
 								<div class="card h-100">
 									<a href="product-details.php?
-												cat=<?php echo $stockList['item_type']; ?>&id=<?php echo $stockList['img_path'] ?>">
+												cat=<?= htmlspecialchars($stockList['item_type']); ?>&id=<?= htmlspecialchars($stockList['img_path']); ?>">
 
 										<div class="card-img-container shadow">
 
