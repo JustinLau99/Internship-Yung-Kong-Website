@@ -19,7 +19,7 @@
 				<!-- section 2 -->
 				<div class="col-md-4 mb-3">
 					<h3>Products</h3>
-					<ul class="list-unstyled text-start ms-5 ps-5 ">
+					<ul class="list-unstyled text-start ms-md-4 ps-md-4 ">
 						<?php foreach ($product_category as $prodCat): ?>
 							<li><a href="products.php#<?= htmlspecialchars($prodCat['img_path']); ?>">
 									<i class="<?= htmlspecialchars($prodCat['icon']); ?>"></i>

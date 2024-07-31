@@ -1,6 +1,12 @@
 // script.js
 
 $(document).ready(function () {
+
+
+
+
+
+
 	function checkScroll() {
 
 		if ($(window).scrollTop() > 100) {
@@ -39,7 +45,7 @@ $(document).ready(function () {
 		$('#department').val(departmentName).change();
 	});
 
-	// Function to validate the form
+	// Validate the form
 	function validateForm() {
 		var form = $('#contactForm')[0];
 		var isValid = form.checkValidity();
@@ -82,10 +88,7 @@ $(document).ready(function () {
 	});
 
 
-
-
 	// news image pop up modal
-
 	$('#imageModal').on('show.bs.modal', function (event) {
 		var button = $(event.relatedTarget);
 		var imageSrc = button.data('bs-src');
@@ -94,20 +97,22 @@ $(document).ready(function () {
 	});
 
 
-
-	// Function to get URL parameters
+	// set inquiry type automatically from news job application
 	function getParameterByName(name) {
 		const urlParams = new URLSearchParams(window.location.search);
 		return urlParams.get(name);
 	}
 
-	// Get the inquiryType from the URL parameters
+
 	const inquiryType = getParameterByName('inquiryType');
 
-	// Set the selected option if it matches
 	if (inquiryType) {
 		$('#inquiryType').val(inquiryType);
 	}
+
+
+	// Ensure everything loaded before fading out prelaoder 
+	$('#preloader').fadeOut('slow');
 
 });
 

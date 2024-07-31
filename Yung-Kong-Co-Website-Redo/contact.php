@@ -202,14 +202,14 @@
 								<label for="inquiryType" class="form-label">Inquiry Type</label>
 								<select class="form-control" id="inquiryType" required>
 									<option value="" disabled selected>Select the type of inquiry</option>
-									<option value="general_inquiries">General Inquiries</option>
-									<option value="job_application">Job Application</option>
-									<option value="product_information">Product Information</option>
-									<option value="pricing_and_discounts">Pricing and Discounts</option>
-									<option value="payment_method">Payment Method</option>
-									<option value="technical_support">Technical Support</option>
-									<option value="customer_service">Customer Service</option>
-									<option value="warranty_and_Support">Warranty and Support</option>
+									<option value="General Inquiries">General Inquiries</option>
+									<option value="Job Application">Job Application</option>
+									<option value="Product Information">Product Information</option>
+									<option value="Pricing and Discount">Pricing and Discounts</option>
+									<option value="Payment Method">Payment Method</option>
+									<option value="Technical Support">Technical Support</option>
+									<option value="Customer Service">Customer Service</option>
+									<option value="Warranty and Support">Warranty and Support</option>
 								</select>
 								<div class="invalid-feedback">
 									Please select the type of inquiry.

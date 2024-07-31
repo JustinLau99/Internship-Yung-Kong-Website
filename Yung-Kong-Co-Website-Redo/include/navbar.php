@@ -14,6 +14,11 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 
 ?>
 
+<!-- Preloader -->
+<div id="preloader">
+	<img src="img/preloader.gif" alt="Loading...">
+</div>
+
 
 
 <nav id="navbar" class="navbar navbar-expand-md navbar-light fixed-top text-light">
@@ -54,25 +59,25 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 							<!-- only run if file exists -->
 							<?php if (file_exists('phpData/product_category.csv') && file_exists('phpData/readCSV.php')): ?>
 
-								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<!-- dropdown: product category -->
+								<ul class="dropdown-menu p-3">
 									<div class="container-fluid">
-
-										<div class="row g-0 fs-5">
-
+										<div class="row g-0">
 											<?php include_once 'phpData/readCSV.php'; ?>
 											<?php $product_category = readCSVData("phpData/product_category.csv") ?>
 											<?php foreach ($product_category as $prodCat): ?>
-
-												<div class="col-md-2 ">
-													<a class="dropdown-item"
-														href="products.php#<?= htmlspecialchars($prodCat['img_path']) ?>"><?= htmlspecialchars($prodCat['name']); ?></a>
+												<div class="col-md-2 d-flex align-items-center bg-transparent">
+													<a class="dropdown-item text-wrap fw-bold w-100 h-100 text-shadow"
+														href="products.php#<?= htmlspecialchars($prodCat['img_path']) ?>">
+														<i class="<?= htmlspecialchars($prodCat['icon']); ?>"></i>
+														<?= htmlspecialchars($prodCat['name']); ?>
+													</a>
 												</div>
-
 											<?php endforeach; ?>
 										</div>
-
 									</div>
 								</ul>
+
 
 							<?php endif ?>
 						</li>

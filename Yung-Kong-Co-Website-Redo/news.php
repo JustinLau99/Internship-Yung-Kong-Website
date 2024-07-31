@@ -117,15 +117,13 @@ $job_offer = [ // New Products
 					</section>
 
 					<!-- content -->
-					<div class="row g-0">
+					<div class="row">
 						<?php foreach ($new_product_img as $new_prod): ?>
 							<div class="col-md-3 p-1">
-								<div class="d-flex align-items-center h-100">
-									<img src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>"
-										class="img-fluid w-100 h-100" alt="<?= htmlspecialchars($new_prod); ?>"
-										data-bs-toggle="modal" data-bs-target="#imageModal"
-										data-bs-src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>">
-								</div>
+								<img src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>"
+									class="img-fluid " alt="<?= htmlspecialchars($new_prod); ?>"
+									data-bs-toggle="modal" data-bs-target="#imageModal"
+									data-bs-src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>">
 							</div>
 						<?php endforeach; ?>
 					</div>
@@ -149,7 +147,7 @@ $job_offer = [ // New Products
 					</section>
 
 					<!-- content -->
-					<div class="row g-0">
+					<div class="row ">
 						<?php foreach ($discount_offer_img as $discount_offer): ?>
 							<div class="col-md-3 p-1">
 								<div class="d-flex align-items-center h-100 ">
@@ -183,7 +181,7 @@ $job_offer = [ // New Products
 					</section>
 
 					<!-- content -->
-					<div class="row g-0">
+					<div class="row ">
 						<?php foreach ($event_img as $event): ?>
 							<div class="col-md-3 p-1">
 								<div class="d-flex align-items-center h-100">
@@ -235,7 +233,7 @@ $job_offer = [ // New Products
 												<p class="card-text">Prerequisite:
 													<?= !empty($job['prereq']) ? htmlspecialchars($job['prereq']) : 'Not specified'; ?>
 												</p>
-												<a href="contact.php?inquiryType=job_application#contact-inquiry"
+												<a href="contact.php?inquiryType=Job%20Application#contact-inquiry"
 													class="btn btn-primary">Apply Now</a>
 											</div>
 										</div>

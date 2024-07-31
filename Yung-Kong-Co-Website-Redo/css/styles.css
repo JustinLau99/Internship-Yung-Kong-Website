@@ -32,6 +32,37 @@
  Global
 *************************/
 
+/* 
+ preloader
+*/
+
+/* styles.css */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #706d5d; /* Semi-transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it sits on top of other elements */
+    transition: all 0s ease;
+}
+
+#preloader img {
+    width: 100px; /* Adjust the size of your loader image */
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -109,17 +140,17 @@ body {
 	border-bottom: 2px solid white;
 }
 
+.nav-item .nav-active {
+	border-bottom: 2px solid white !important;
+}
+
 
 /* Dropdown menu */
 #navbar .dropdown-menu {
 	display: flex;
-	padding: 0;
-	background-color: #d0d0d0;
 	transform: translateY(10px);
 	left: 0;
 	width: 100%;
-	min-width: 100px;
-	line-height: 40px;
 	/* Animation */
 	opacity: 0;
 	visibility: hidden;
@@ -127,24 +158,26 @@ body {
 
 }
 
-.nav-item .nav-active {
-	border-bottom: 2px solid white !important;
-}
-
 #navbar .nav-item:hover .dropdown-menu {
 	opacity: 1;
 	visibility: visible;
 	transform: translateY(0);
 	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+	border-top: 3px solid rgb(88, 88, 88);
 }
 
 #navbar .dropdown-menu .dropdown-item {
-	transition: background-color 0.3s ease;
+	border-right: 2px solid rgb(220, 220, 220);
+	border-bottom: 1px solid rgb(242, 242, 242);
+	transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #navbar .dropdown-menu .dropdown-item:hover {
-	background-color: #31aae2;
-	color: #fff;
+	background-color: #c7edff;
+	color: #4690ff;
+	transform: translateX(5px);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+
 }
 
 
@@ -230,7 +263,6 @@ footer a:hover {
 
 /* footer social links */
 
-
 .footer .social-links a {
 	font-size: 20px;
 	width: 42px;
@@ -247,6 +279,8 @@ footer a:hover {
 }
 
 
+
+
 /************************* 
  Parallax
 *************************/
@@ -254,7 +288,7 @@ footer a:hover {
 
 .parallax-section {
 	position: relative;
-	min-height: 400px;
+	min-height: 350px;
 	overflow: auto;
 }
 
@@ -290,22 +324,18 @@ footer a:hover {
 *************************/
 
 .custom-card-img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 	object-fit: cover;
 	object-position: center;
+
 }
 
-
 .card-img-container {
-	width: 100%;
 	height: 200px;
 	overflow: hidden;
 	position: relative;
 }
+
+
 
 
 #contact-departments .department-card {
@@ -319,6 +349,39 @@ footer a:hover {
 .department-card .department-img {
 	transition: filter 0.5s ease;
 }
+
+
+/* 
+ index-icon-circle
+*/
+
+
+
+
+#contact-departments .index-department address {
+	transition: all 0.5s ease;
+	transform: translateY(10px);
+}
+
+
+#contact-departments .index-department:hover address {
+	background-color: #fffcf4b8;
+	box-shadow: 3px 2px 6px #888888;
+	transform: translateY(0px);
+
+}
+
+#contact-departments .index-department img {
+	transform: translateY(-55px);
+	transition: all 0.5s ease;
+}
+
+#contact-departments .index-department:hover img {
+	transform: translateY(-20px);
+}
+
+
+
 
 /* Nav Tab */
 #nav-tabContent img:hover,
@@ -341,7 +404,7 @@ footer a:hover {
 	transform: translateY(-5px);
 	z-index: 2;
 	color: #fff;
-	border-bottom: 8px solid #4ba2ff;
+	border-bottom: 8px solid #46a0ff;
 }
 
 .nav-tabs .nav-link {

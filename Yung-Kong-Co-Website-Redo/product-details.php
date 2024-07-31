@@ -60,6 +60,8 @@ if ($foundProd !== null) {
 	</section>
 
 
+
+
 	<?php if ($foundProd === null): ?>
 		<p>No item found.</p>
 	<?php else: ?>

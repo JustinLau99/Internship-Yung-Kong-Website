@@ -8,37 +8,39 @@
 <body>
 
 
-
+	
 	<?php include_once 'include/navbar.php'; ?><!-- navbar.php -->
 
+	
+	
 	<!-- carousel -->
 	<section>
-
-		<div id="carouselIMG" class="carousel slide" data-bs-ride="carousel">
-
+		<div id="carouselIMG" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000" >
 			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="0" aria-label="Slide 1"
-					class="active" aria-current="true"></button>
-				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="2" aria-label="Slide 3"></button>
-				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="3" aria-label="Slide 4"></button>
-				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="4" aria-label="Slide 5"></button>
+				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="0" class="active"></button>
+				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="1"></button>
+				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="2"></button>
+				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="3"></button>
+				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="4"></button>
 			</div>
 
 			<div class="carousel-inner">
-				<div class="carousel-item active"><img src="img/department/slider-ykacc.jpg" class="w-100"></div>
-				<div class="carousel-item"><img src="img/department/slider-ykbtw.jpg" class="w-100"></div>
-				<div class="carousel-item"><img src="img/department/slider-ykmatang.jpg" class="w-100"></div>
-				<div class="carousel-item"><img src="img/department/slider-ykpending.jpg" class="w-100"></div>
-				<div class="carousel-item"><img src="img/department/slider-ykpenrissen.jpg" class="w-100"></div>
+				<div class="carousel-item active"><img src="img/department/slider-ykacc.jpg" class="w-100"
+						alt="Slide 1"></div>
+				<div class="carousel-item"><img src="img/department/slider-ykbtw.jpg" class="w-100" alt="Slide 2"></div>
+				<div class="carousel-item"><img src="img/department/slider-ykmatang.jpg" class="w-100" alt="Slide 3">
+				</div>
+				<div class="carousel-item"><img src="img/department/slider-ykpending.jpg" class="w-100" alt="Slide 4">
+				</div>
+				<div class="carousel-item"><img src="img/department/slider-ykpenrissen.jpg" class="w-100" alt="Slide 5">
+				</div>
 			</div>
-
 
 			<div class="caption">
 				<h1 class="fs-2 text-center text-white">Welcome to Yung Kong Co. Bhd.</h1>
 			</div>
 
-			<!-- button -->
+			<!-- buttons -->
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselIMG" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			</button>
@@ -46,8 +48,8 @@
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			</button>
 		</div>
-
 	</section>
+
 
 
 	<!-- productList -->
@@ -98,46 +100,105 @@
 	</section>
 
 
-	<!-- department -->
-	<section class="yk-section" id="index-department">
-		<section class="section-title text-center text-white" >
-			<h2>Our Departments</h2>
-			<span class="bordered-icon">
-				<i class="bi bi-dash-lg fs-1"></i><i class="bi bi-circle fs-2"></i><i class="bi bi-dash-lg fs-1"></i>
-			</span>
-		</section>
+	<section class="yk-section" id="contact-departments">
 
-		<!-- read CSV -->
-		<?php include_once 'phpData/readCSV.php'; ?>
-		<?php $brand_logos = readCSVData('phpData/departments.csv'); ?>
-		<!-- department card -->
+		<?php include_once 'phpData/readCSV.php' ?>
+		<?php $departments = readCSVData('phpData/departments.csv') ?>
+
+
+		<!-- Our Departments -->
+
 		<div class="container-fluid">
-			<div class="row g-3 d-flex align-items-stretch">
 
-				<?php foreach ($brand_logos as $key => $dep): ?>
+			<section class="section-title text-center">
+				<h2>Our Departments</h2>
 
-					<div class="col-md-3 col-sm-4 col-xs-6">
-						<div class="card h-100">
-							<img src="img/department/<?= htmlspecialchars($dep['img']); ?>" class="card-img-top"
-								alt="<?= htmlspecialchars($dep['img']); ?>">
-							<div class="card-body">
-								<h5 class="card-title text-center"><?= htmlspecialchars($dep['name']) ?></h5>
+				<span class="bordered-icon">
+					<i class="bi bi-dash-lg fs-1"></i>
+					<i class="bi bi-circle fs-2"></i>
+					<i class="bi bi-dash-lg fs-1"></i>
+				</span>
+			</section>
 
-								<div class="card-text">
-									<!-- department info -->
-									<i class="fs-4 bi bi-geo"></i><?= htmlspecialchars($dep['address']) ?><br>
-									<i class="fs-4 bi bi-telephone"></i><?= htmlspecialchars($dep['tel']) ?><br>
-									<i class="fs-4 bi bi-whatsapp"></i><?= htmlspecialchars($dep['fax']) ?><br>
-									<i class="fs-4 bi bi-envelope"></i><?= htmlspecialchars($dep['whatsapp']) ?><br>
-									Fax: <?= htmlspecialchars($dep['mail']) ?><br>
 
-								</div>
 
+			<!-- Departments Contact Information -->
+			<div class="row">
+
+				<?php foreach ($departments as $dep): ?>
+
+					<!-- For dynamic link -->
+					<?php
+					$dep['address'] = str_replace('"', '', $dep['address']);
+					$dep['tel_link'] = str_replace('-', '', $dep['tel']);
+					$dep['whatsapp_link'] = str_replace('-', '', $dep['whatsapp']);
+					$dep['fax_link'] = str_replace('-', '', $dep['fax']);
+					?>
+
+
+					<div class="col-md-3 department-card my-1 index-department">
+						<h5 class="m-0"><?= htmlspecialchars($dep['name']); ?></h5>
+
+						<address>
+
+							<div class="card-text d-flex justify-content-between  px-4">
+								<!-- Location: Google Map -->
+								<a rel="noopener noreferrer" target="_blank" class=""
+									href="<?= htmlspecialchars($dep['address_url']); ?>">
+									<i class="fs-3 bi bi-geo "></i>
+								</a>
+
+								<!-- Tel : Phone Number -->
+								<a href="tel:+6<?= htmlspecialchars($dep['tel']); ?>" class="">
+									<i class="fs-3 bi bi-telephone"></i>
+								</a>
+
+
+								<!-- Whatsapp -->
+								<a rel="noopener noreferrer" target="_blank" class=""
+									href="https://api.whatsapp.com/send?phone=<?= htmlspecialchars($dep['whatsapp_link']); ?>">
+									<i class="fs-3 bi bi-whatsapp"></i>
+								</a>
+
+								<!-- Facebook -->
+								<?php if (!empty($dep['fb_url'])): ?>
+									<a rel="noopener noreferrer" target="_blank" class=""
+										href="<?= htmlspecialchars($dep['fb_url']); ?>">
+										<i class="fs-3 bi bi-facebook"></i>
+									</a>
+								<?php endif; ?>
+
+								<!-- mail -->
+								<a href="mailto:<?= htmlspecialchars($dep['mail']); ?>" target="_blank" class=""
+									rel="noopener noreferrer">
+									<i class="fs-3 bi bi-envelope"></i>
+								</a>
 							</div>
+
+
+						</address>
+
+
+						<div class="row">
+							<!-- img: department -->
+
+							<a href="contact.php#contact-departments ">
+								<img src="img/department/<?= htmlspecialchars($dep['img']); ?>"
+									alt="<?= htmlspecialchars($dep['img']); ?>" class="img-fluid department-img"
+									data-department="<?= htmlspecialchars($dep['name']); ?>">
+							</a>
 						</div>
+
 					</div>
+
 				<?php endforeach; ?>
+
+
 			</div>
+
+		</div>
+
+
 	</section>
 
 	<!-- key product brand -->
@@ -169,7 +230,7 @@
 			</div>
 	</section>
 
-	
+
 
 
 
