@@ -8,14 +8,14 @@
 <body>
 
 
-	
+
 	<?php include_once 'include/navbar.php'; ?><!-- navbar.php -->
 
-	
-	
+
+
 	<!-- carousel -->
 	<section>
-		<div id="carouselIMG" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000" >
+		<div id="carouselIMG" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="0" class="active"></button>
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="1"></button>
@@ -106,7 +106,7 @@
 		<?php $departments = readCSVData('phpData/departments.csv') ?>
 
 
-		<!-- Our Departments -->
+		<!-- Departments -->
 
 		<div class="container-fluid">
 
@@ -141,37 +141,37 @@
 
 						<address>
 
-							<div class="card-text d-flex justify-content-between  px-4">
+							<div class="card-text d-flex justify-content-between px-4">
 								<!-- Location: Google Map -->
 								<a rel="noopener noreferrer" target="_blank" class=""
 									href="<?= htmlspecialchars($dep['address_url']); ?>">
-									<i class="fs-3 bi bi-geo "></i>
+									<!-- --><i class="fs-3 bi bi-geo "></i>
 								</a>
 
 								<!-- Tel : Phone Number -->
 								<a href="tel:+6<?= htmlspecialchars($dep['tel']); ?>" class="">
-									<i class="fs-3 bi bi-telephone"></i>
+									<!-- --><i class="fs-3 bi bi-telephone"></i>
 								</a>
 
 
 								<!-- Whatsapp -->
 								<a rel="noopener noreferrer" target="_blank" class=""
 									href="https://api.whatsapp.com/send?phone=<?= htmlspecialchars($dep['whatsapp_link']); ?>">
-									<i class="fs-3 bi bi-whatsapp"></i>
+									<!-- --><i class="fs-3 bi bi-whatsapp"></i>
 								</a>
 
 								<!-- Facebook -->
 								<?php if (!empty($dep['fb_url'])): ?>
 									<a rel="noopener noreferrer" target="_blank" class=""
 										href="<?= htmlspecialchars($dep['fb_url']); ?>">
-										<i class="fs-3 bi bi-facebook"></i>
+										<!-- --><i class="fs-3 bi bi-facebook"></i>
 									</a>
 								<?php endif; ?>
 
 								<!-- mail -->
 								<a href="mailto:<?= htmlspecialchars($dep['mail']); ?>" target="_blank" class=""
 									rel="noopener noreferrer">
-									<i class="fs-3 bi bi-envelope"></i>
+									<!-- --><i class="fs-3 bi bi-envelope"></i>
 								</a>
 							</div>
 

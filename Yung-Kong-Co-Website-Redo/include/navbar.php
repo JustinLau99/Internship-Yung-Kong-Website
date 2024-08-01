@@ -40,15 +40,68 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ms-auto">
 				<?php foreach ($pages as $page): ?>
-					<?php if ($page['url'] !== 'products.php'): ?>
 
-						<li class="nav-item">
-							<a class="nav-link text-white <?= ($currentPage === $page['url']) ? 'nav-active' : ''; ?>"
-								href="<?= htmlspecialchars($page['url']); ?>"><?= htmlspecialchars($page['name']); ?>
-							</a>
-						</li>
+						<?php switch ($page):
+							case 'products.php':
+								?>
+	
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle text-white <?= ($currentPage === $page['url']) ? 'nav-active' : ''; ?>"
+										href="products.php" id="navbarDropdown" role="button">
+										<?= htmlspecialchars($page['name']); ?>
+									</a>
+	
+									<!-- only run if file exists -->
+									<?php if (file_exists('phpData/product_category.csv') && file_exists('phpData/readCSV.php')): ?>
+										<!-- dropdown: product category -->
+										<ul class="dropdown-menu p-3">
+											<div class="container-fluid">
+												<div class="row g-0">
+													<?php include_once 'phpData/readCSV.php'; ?>
+													<?php $product_category = readCSVData("phpData/product_category.csv") ?>
+													<?php foreach ($product_category as $prodCat): ?>
+														<div class="col-md-2 d-flex align-items-center bg-transparent">
+															<a class="dropdown-item text-wrap fw-bold w-100 h-100 text-shadow"
+																href="products.php#<?= htmlspecialchars($prodCat['img_path']); ?>">
+																<i class="<?= htmlspecialchars($prodCat['icon']); ?>"></i>
+																<?= htmlspecialchars($prodCat['name']); ?>
+															</a>
+														</div>
+													<?php endforeach; ?>
+												</div>
+											</div>
+										</ul>
+									<?php endif; ?>
+								</li>
+								
+								<?php
+								break;
+							case 'onlineShop.php':
+								?>
+	
+	
+	
+								<?php
+								break;
+	
+							default:
+								?>
+	
+								<li class="nav-item">
+									<a class="nav-link text-white <?= ($currentPage === $page['url']) ? 'nav-active' : ''; ?>"
+										href="<?= htmlspecialchars($page['url']); ?>">
+										<?= htmlspecialchars($page['name']); ?>
+									</a>
+								</li>
+	
+								<?php
+								break;
+						endswitch;
+						?>
+	
+	
 
-					<?php else: ?>
+					<?php if ($page['url'] === 'products.php'): ?>
 
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle text-white <?= ($currentPage === $page['url']) ? 'nav-active' : ''; ?>"
@@ -58,7 +111,6 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 
 							<!-- only run if file exists -->
 							<?php if (file_exists('phpData/product_category.csv') && file_exists('phpData/readCSV.php')): ?>
-
 								<!-- dropdown: product category -->
 								<ul class="dropdown-menu p-3">
 									<div class="container-fluid">
@@ -68,7 +120,7 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 											<?php foreach ($product_category as $prodCat): ?>
 												<div class="col-md-2 d-flex align-items-center bg-transparent">
 													<a class="dropdown-item text-wrap fw-bold w-100 h-100 text-shadow"
-														href="products.php#<?= htmlspecialchars($prodCat['img_path']) ?>">
+														href="products.php#<?= htmlspecialchars($prodCat['img_path']); ?>">
 														<i class="<?= htmlspecialchars($prodCat['icon']); ?>"></i>
 														<?= htmlspecialchars($prodCat['name']); ?>
 													</a>
@@ -77,14 +129,29 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 										</div>
 									</div>
 								</ul>
-
-
-							<?php endif ?>
+							<?php endif; ?>
 						</li>
 
 
+						
+					<?php else: ?>
+						<li class="nav-item">
+							<a class="nav-link text-white <?= ($currentPage === $page['url']) ? 'nav-active' : ''; ?>"
+								href="<?= htmlspecialchars($page['url']); ?>">
+								<?= htmlspecialchars($page['name']); ?>
+							</a>
+						</li>
 					<?php endif; ?>
+
+
+
+
+
+
+
+
 				<?php endforeach; ?>
+
 			</ul>
 		</div>
 	</div>

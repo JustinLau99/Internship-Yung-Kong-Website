@@ -58,7 +58,6 @@
 					$dep['fax_link'] = str_replace('-', '', $dep['fax']);
 					?>
 
-
 					<div class="col-md-4 department-card my-4">
 						<h5><?= htmlspecialchars($dep['name']); ?></h5>
 
