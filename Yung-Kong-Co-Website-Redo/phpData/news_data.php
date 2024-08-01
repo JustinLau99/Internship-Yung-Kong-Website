@@ -33,7 +33,7 @@ $job_offer = [ // New Products
 
 	
 	<div class="alert alert-info text-center" role="alert">
-		New products are now available! Check it out <a href="news.php#nav-new_product" class="alert-link tab-link">here!</a>
+		New products are now available! Check it out <a href="news.php#nav-new_product" class="alert-link tab-link">here</a>
 	</div>
 
 <?php endif; ?>

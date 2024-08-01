@@ -35,6 +35,12 @@
 
 
 
+
+
+
+		
+		<?php foreach ($product_category as $prodCat): ?>
+
 		<div class="nav nav-tabs" id="nav-tab" role="tablist">
 			<!-- tab title -->
 			<button data-bs-toggle="tab" type="button" role="tab" id="nav-new_product-tab"
@@ -54,6 +60,8 @@
 				Job Offers
 			</button>
 		</div>
+
+
 
 		<div class="tab-content" id="nav-tabContent">
 
@@ -89,60 +97,60 @@
 
 
 
-		<!-- product list card -->
-		<div class="container">
-
-			<?php foreach ($product_category as $prodCat): ?>
-
-				<section class="section-title text-center" id="<?= htmlspecialchars($prodCat['img_path']); ?>">
-					<!-- category name -->
-					<div class="alert alert-info">
-
-						<h4><?= htmlspecialchars($prodCat['name']); ?></h4>
-					</div>
-
-				</section>
 
 
 
 
-				<div class="row ">
-
-					<?php foreach ($stock_item_type_listing as $stockList): ?>
-						<?php if ($stockList['item_type'] == $prodCat['item_type']): ?>
 
 
+		
 
+			<section class="section-title text-center" id="<?= htmlspecialchars($prodCat['img_path']); ?>">
+				<!-- category name -->
+				<div class="alert alert-info">
 
-							<!-- loop all products -->
-							<div class="col-lg-2 col-md-3 col-sm-4 my-3">
-								<a href="product-details.php?
-									cat=<?= htmlspecialchars($stockList['item_type']); ?>&id=<?= htmlspecialchars($stockList['img_path']); ?>">
-
-									<div class="card-img-container shadow">
-
-										<img class="w-100 h-100 custom-card-img "
-											src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
-											alt="<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>">
-									</div>
-
-									<div class="text-wrap mt-1">
-										<!-- card info -->
-										<h6 class="card-title"><?= htmlspecialchars($stockList['name']) ?></h6>
-										<p class="card-text"><?= htmlspecialchars($stockList['description']) ?></p>
-									</div>
-								</a>
-							</div>
-
-
-						<?php endif; ?>
-					<?php endforeach; ?>
-
+					<h4><?= htmlspecialchars($prodCat['name']); ?></h4>
 				</div>
 
+			</section>
 
-			<?php endforeach; ?>
-		</div>
+
+
+
+			<div class="row ">
+
+				<?php foreach ($stock_item_type_listing as $stockList): ?>
+					<?php if ($stockList['item_type'] == $prodCat['item_type']): ?>
+
+
+						<!-- loop all products -->
+						<div class="col-lg-2 col-md-3 col-sm-4 my-3">
+							<a href="product-details.php?
+									cat=<?= htmlspecialchars($stockList['item_type']); ?>&id=<?= htmlspecialchars($stockList['img_path']); ?>">
+
+								<div class="card-img-container shadow">
+
+									<img class="w-100 h-100 custom-card-img "
+										src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
+										alt="<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>">
+								</div>
+
+								<div class="text-wrap mt-1">
+									<!-- card info -->
+									<h6 class="card-title"><?= htmlspecialchars($stockList['name']) ?></h6>
+									<p class="card-text"><?= htmlspecialchars($stockList['description']) ?></p>
+								</div>
+							</a>
+						</div>
+
+
+					<?php endif; ?>
+				<?php endforeach; ?>
+
+			</div>
+
+
+		<?php endforeach; ?>
 	</section>
 
 
