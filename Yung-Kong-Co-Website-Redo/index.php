@@ -145,33 +145,33 @@
 								<!-- Location: Google Map -->
 								<a rel="noopener noreferrer" target="_blank" class=""
 									href="<?= htmlspecialchars($dep['address_url']); ?>">
-									<!-- --><i class="fs-3 bi bi-geo "></i>
+									<!-- --><i style="text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);" class="fs-3 bi bi-geo-alt "></i>
 								</a>
 
 								<!-- Tel : Phone Number -->
 								<a href="tel:+6<?= htmlspecialchars($dep['tel']); ?>" class="">
-									<!-- --><i class="fs-3 bi bi-telephone"></i>
+									<!-- --><i style="text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);" class="fs-3 bi bi-telephone"></i>
 								</a>
 
 
 								<!-- Whatsapp -->
 								<a rel="noopener noreferrer" target="_blank" class=""
 									href="https://api.whatsapp.com/send?phone=<?= htmlspecialchars($dep['whatsapp_link']); ?>">
-									<!-- --><i class="fs-3 bi bi-whatsapp"></i>
+									<!-- --><i style="text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);" class="fs-3 bi bi-whatsapp"></i>
 								</a>
 
 								<!-- Facebook -->
 								<?php if (!empty($dep['fb_url'])): ?>
 									<a rel="noopener noreferrer" target="_blank" class=""
 										href="<?= htmlspecialchars($dep['fb_url']); ?>">
-										<!-- --><i class="fs-3 bi bi-facebook"></i>
+										<!-- --><i style="text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);" class="fs-3 bi bi-facebook"></i>
 									</a>
 								<?php endif; ?>
 
 								<!-- mail -->
 								<a href="mailto:<?= htmlspecialchars($dep['mail']); ?>" target="_blank" class=""
 									rel="noopener noreferrer">
-									<!-- --><i class="fs-3 bi bi-envelope"></i>
+									<!-- --><i style="text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);" class="fs-3 bi bi-envelope"></i>
 								</a>
 							</div>
 

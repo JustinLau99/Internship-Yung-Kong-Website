@@ -1,36 +1,5 @@
 <!-- news.php -->
 
-<?php
-
-
-
-$discount_offer_img = [ // Promotion and Discount
-	'2021RayaPromotion.jpg',
-	'lavorPromotion.jpg',
-	'TransPaintNewYearPromotion.jpg',
-];
-$event_img = [ // Event and Activities
-	'e1.png',
-	'e2.png',
-	'e3.png',
-	'e4.jpg',
-	'YKMT.jpg',
-];
-$new_product_img = [ // New Products
-	'LAVOR_IKON_160_Italy.jpg',
-	'LAVOR_ONE_120_Italy.jpg',
-];
-
-$job_offer = [ // New Products
-	['job' => 'Software Developer', 'location' => 'Pending', 'prereq' => 'SPM'],
-	['job' => 'Admin Clerk', 'location' => 'Matang', 'prereq' => '3 Year Work Experience'],
-	['job' => 'Account Clerk', 'location' => 'Penrissen', 'prereq' => ''],
-];
-
-
-
-
-?>
 
 
 
@@ -73,32 +42,28 @@ $job_offer = [ // New Products
 		</div>
 
 
-
 		<!-- News Tabs -->
-		<div class="alert alert-info text-center" role="alert">
-			New products are now available!
+		<?php include_once 'phpData/news_data.php'; // tab data ?>
+
+		<div class="nav nav-tabs" id="nav-tab" role="tablist">
+			<!-- tab title -->
+			<button class="nav-link active fw-bold fs-5" id="nav-new_product-tab" data-bs-toggle="tab" type="button"
+				role="tab" data-bs-target="#nav-new_product">
+				New Products
+			</button>
+			<button class="nav-link fw-bold fs-5" id="nav-discount_offer-tab" data-bs-toggle="tab" type="button"
+				role="tab" data-bs-target="#nav-discount_offer">
+				Discount & Offers
+			</button>
+			<button class="nav-link fw-bold fs-5" id="nav-event-tab" data-bs-toggle="tab" type="button" role="tab"
+				data-bs-target="#nav-event">
+				Event & Activities
+			</button>
+			<button class="nav-link fw-bold fs-5" id="nav-job_offer-tab" data-bs-toggle="tab" type="button" role="tab"
+				data-bs-target="#nav-job_offer">
+				Job Offers
+			</button>
 		</div>
-
-		<div>
-			<div class="nav nav-tabs" id="nav-tab" role="tablist">
-				<!-- tab title -->
-				<button class="nav-link active fw-bold fs-5" data-bs-toggle="tab" type="button" role="tab"
-					data-bs-target="#nav-new_product">
-					New Products</button>
-				<button class="nav-link fw-bold fs-5" data-bs-toggle="tab" type="button" role="tab"
-					data-bs-target="#nav-discount_offer">
-					Discount & Offers</button>
-				<button class="nav-link fw-bold fs-5" data-bs-toggle="tab" type="button" role="tab"
-					data-bs-target="#nav-event">
-					Event & Activities</button>
-				<button class="nav-link fw-bold fs-5" data-bs-toggle="tab" type="button" role="tab"
-					data-bs-target="#nav-job_offer">
-					Job Offers</button>
-
-			</div>
-		</div>
-
-
 
 		<div class="tab-content" id="nav-tabContent">
 
@@ -120,9 +85,9 @@ $job_offer = [ // New Products
 					<div class="row">
 						<?php foreach ($new_product_img as $new_prod): ?>
 							<div class="col-md-3 p-1">
-								<img src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>"
-									class="img-fluid " alt="<?= htmlspecialchars($new_prod); ?>"
-									data-bs-toggle="modal" data-bs-target="#imageModal"
+								<img src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>" class="img-fluid "
+									alt="<?= htmlspecialchars($new_prod); ?>" data-bs-toggle="modal"
+									data-bs-target="#imageModal"
 									data-bs-src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>">
 							</div>
 						<?php endforeach; ?>

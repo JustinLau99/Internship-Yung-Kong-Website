@@ -78,7 +78,7 @@
 								<!-- Location: Google Map -->
 								<a rel="noopener noreferrer" target="_blank"
 									href="<?= htmlspecialchars($dep['address_url']); ?>">
-									<i class="fs-4 bi bi-geo"></i>
+									<i class="fs-4 bi bi-geo-alt "></i>
 									<span class="fw-bold">Location: </span>
 									<?= htmlspecialchars($dep['address']) ?>
 									<br>

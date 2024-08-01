@@ -2,11 +2,6 @@
 
 $(document).ready(function () {
 
-
-
-
-
-
 	function checkScroll() {
 
 		if ($(window).scrollTop() > 100) {
@@ -22,12 +17,8 @@ $(document).ready(function () {
 
 		}
 	}
-
-	// Run on page load
 	checkScroll();
-
-	// Run on scroll
-	$(window).on('scroll', function () {
+	$(window).on('scroll', function () { // Run on scroll
 		checkScroll();
 	});
 
@@ -44,6 +35,7 @@ $(document).ready(function () {
 		var departmentName = $(this).data('department');
 		$('#department').val(departmentName).change();
 	});
+
 
 	// Validate the form
 	function validateForm() {
@@ -102,13 +94,34 @@ $(document).ready(function () {
 		const urlParams = new URLSearchParams(window.location.search);
 		return urlParams.get(name);
 	}
-
-
 	const inquiryType = getParameterByName('inquiryType');
-
 	if (inquiryType) {
 		$('#inquiryType').val(inquiryType);
 	}
+
+
+	// Handle clicks on links with the class tab-link
+	$('.tab-link').on('click', function (event) {
+		const targetId = $(this).attr('href'); // Get the target tab pane id
+		const tabButton = $(`button[data-bs-target="${targetId}"]`); // Find the corresponding tab button
+		if (tabButton.length) {
+			const tab = new bootstrap.Tab(tabButton[0]); // Create a new Bootstrap tab instance
+			tab.show(); // Activate the tab
+		}
+	});
+	// get hash value from url, necessary for other page link
+	const hash = window.location.hash;
+	if (hash) {
+		const tabButton = $(`button[data-bs-target="${hash}"]`);
+		if (tabButton.length) {
+			const tab = new bootstrap.Tab(tabButton[0]);
+			tab.show();
+		}
+	}
+
+
+
+
 
 
 	// Ensure everything loaded before fading out prelaoder 

@@ -53,7 +53,7 @@
 							<i class="bi bi-envelope"></i>
 						</a>
 						<a href="https://maps.app.goo.gl/ZWygtHRJ35YiDgTn7" target="_blank" rel="noopener noreferrer">
-							<i class="bi bi-geo"></i>
+							<i class="bi bi-geo-alt "></i>
 						</a>
 					</div>
 
@@ -79,12 +79,15 @@
 				<ul class="list-inline mb-0">
 
 					<?php foreach ($pages as $page): ?>
+						<?php if ($page['url'] !== '#'): ?>
 
-						<li
-							class="list-inline-item <?= ($currentPage == $page['url']) ? 'text-white' : 'text-white-50'; ?>">
-							<a href="<?= htmlspecialchars($page['url']); ?>"
-								class="footer-link"><?= htmlspecialchars($page['name']); ?></a>
-						</li>
+							<li
+								class="list-inline-item <?= ($currentPage == $page['url']) ? 'text-white' : 'text-white-50'; ?>">
+								<a href="<?= htmlspecialchars($page['url']); ?>"
+									class="footer-link"><?= htmlspecialchars($page['name']); ?></a>
+							</li>
+
+							<?php endif; ?>
 
 					<?php endforeach; ?>
 				</ul>

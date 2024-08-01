@@ -5,7 +5,7 @@ $pages = [
 	['url' => 'products.php', 'name' => 'Products'],
 	['url' => 'contact.php', 'name' => 'Contact Us'],
 	['url' => 'news.php', 'name' => 'News'],
-	['url' => 'onlineShop.php', 'name' => 'Online Shop'],
+	['url' => '#', 'name' => 'Online Shop'],
 ];
 
 $currentPage = basename($_SERVER['SCRIPT_NAME']); // Get the current page name
@@ -39,9 +39,11 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ms-auto">
+
 				<?php foreach ($pages as $page): ?>
-					<?php switch ($page['url']):
-						case 'products.php':
+					<?php switch ($page['name']):
+						///////////////////////////////////
+						case 'Products':
 							?>
 
 							<li class="nav-item dropdown">
@@ -75,14 +77,47 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 
 							<?php
 							break;
-						case 'onlineShop.php':
+						///////////////////////////////////
+						case 'Online Shop':
 							?>
 
+							<li class="nav-item dropdown">
+								<div class="nav-link dropdown-toggle text-white <?= ($currentPage === $page['url']) ? 'nav-active' : ''; ?>"
+									href="#" id="navbarDropdown" role="button">
+									<?= htmlspecialchars($page['name']); ?>
+								</div>
 
+								<!-- dropdown: online shop -->
+								<ul class="dropdown-menu p-3">
+									<div class="container-fluid">
+										<div class="row g-0">
+
+											<!-- lazada -->
+											<div class="col-md-3 d-flex align-items-center bg-transparent">
+												<a class="dropdown-item text-wrap fw-bold w-100 h-100 text-shadow"
+													href="https://www.lazada.com.my/shop/yung-kong-co-bhd/" target="_blank"
+													rel="noopener noreferrer">
+													<img src="img/lazada.png" class="img-fluid" style="max-height: 35px;">
+												</a>
+											</div>
+
+											<!-- shopee -->
+											<div class="col-md-3 d-flex align-items-center bg-transparent">
+												<a class="dropdown-item text-wrap fw-bold w-100 h-100 text-shadow"
+													href="https://shopee.com.my/shop/906127861" target="_blank"
+													rel="noopener noreferrer">
+													<img src="img/shopee.png" class="img-fluid" style="max-height: 35px;">
+												</a>
+											</div>
+
+										</div>
+									</div>
+								</ul>
+							</li>
 
 							<?php
 							break;
-
+						///////////////////////////////////
 						default:
 							?>
 
@@ -99,6 +134,7 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 					?>
 
 				<?php endforeach; ?>
+
 
 			</ul>
 		</div>
