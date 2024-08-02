@@ -6,13 +6,12 @@ $(document).ready(function () {
 
 		if ($(window).scrollTop() > 100) {
 			$('#navbar').addClass('navbar-scrolled');
-			// Show the button
+			// Show button
 			$('#back-to-top').slideDown();
-
 
 		} else {
 			$('#navbar').removeClass('navbar-scrolled');
-			// Hide the button
+			// Hide button
 			$('#back-to-top').fadeOut();
 
 		}

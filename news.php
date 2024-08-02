@@ -98,6 +98,7 @@
 			</div>
 
 
+
 			<!-- Discount and Offer -->
 			<div class="tab-pane fade" id="nav-discount_offer" role="tabpanel">
 				<div class="card p-5">

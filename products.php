@@ -24,10 +24,6 @@
 
 	<section class="yk-section">
 
-	
-		<?php include_once 'phpData/news_data.php'; ?>
-
-
 		<!-- read CSV -->
 		<?php include_once 'phpData/readCSV.php'; ?>
 		<?php $product_category = readCSVData("phpData/product_category.csv"); ?>
@@ -41,59 +37,33 @@
 
 
 
+		<!-- Product Category Tab Title -->
 		<div class="nav nav-tabs" id="nav-tab" role="tablist">
-			<!-- tab title -->
-			<button data-bs-toggle="tab" type="button" role="tab" id="nav-new_product-tab"
-				data-bs-target="#nav-new_product" class="nav-link active fw-bold fs-5">
-				New Products
-			</button>
-			<button class="nav-link fw-bold fs-5" id="nav-discount_offer-tab" data-bs-toggle="tab" type="button"
-				role="tab" data-bs-target="#nav-discount_offer">
-				Discount & Offers
-			</button>
-			<button class="nav-link fw-bold fs-5" id="nav-event-tab" data-bs-toggle="tab" type="button" role="tab"
-				data-bs-target="#nav-event">
-				Event & Activities
-			</button>
-			<button class="nav-link fw-bold fs-5" id="nav-job_offer-tab" data-bs-toggle="tab" type="button" role="tab"
-				data-bs-target="#nav-job_offer">
-				Job Offers
-			</button>
+			<?php foreach ($product_category as $index => $prodCat): ?>
+				<?php $imgPath = htmlspecialchars($prodCat['img_path']); ?>
+				<button class="nav-link <?= $index === 0 ? 'active' : ''; ?> fw-bold fs-5" data-bs-toggle="tab"
+					type="button" role="tab" data-bs-target="#product-tabContent-<?= $imgPath; ?>"
+					id="product-tab-<?= $imgPath; ?>">
+					<?= htmlspecialchars($prodCat['name']); ?>
+				</button>
+			<?php endforeach; ?>
 		</div>
 
-
-
+		<!-- Product Category Tab Content -->
 		<div class="tab-content" id="nav-tabContent">
+			<?php foreach ($product_category as $index => $prodCat): ?>
+				<?php $imgPath = htmlspecialchars($prodCat['img_path']); ?>
+				<div class="tab-pane fade <?= $index === 0 ? 'show active' : ''; ?>"
+					id="product-tabContent-<?= $imgPath; ?>" role="tabpanel">
+					<div class="card p-5">
 
-			<!-- New Product -->
-			<div class="tab-pane fade show active" id="nav-new_product" role="tabpanel">
-				<div class="card p-5">
+						<?= $index === 0 ? 'slide a' : 'slide b'; ?>
 
-					<section class="section-title text-center ">
-						<h2>Featured New Products</h2>
-
-						<span class="bordered-icon">
-							<i class="bi bi-dash-lg fs-1"></i>
-							<i class="bi bi-circle fs-2"></i>
-							<i class="bi bi-dash-lg fs-1"></i>
-						</span>
-					</section>
-
-					<!-- content -->
-					<div class="row">
-						<?php foreach ($new_product_img as $new_prod): ?>
-							<div class="col-md-3 p-1">
-								<img src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>" class="img-fluid "
-									alt="<?= htmlspecialchars($new_prod); ?>" data-bs-toggle="modal"
-									data-bs-target="#imageModal"
-									data-bs-src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>">
-							</div>
-						<?php endforeach; ?>
 					</div>
-
 				</div>
-			</div>
+			<?php endforeach; ?>
 		</div>
+
 
 
 
@@ -106,6 +76,8 @@
 
 
 
+
+
 			<section class="section-title text-center" id="<?= htmlspecialchars($prodCat['img_path']); ?>">
 				<!-- category name -->
 				<div class="alert alert-info">
@@ -114,8 +86,6 @@
 				</div>
 
 			</section>
-
-
 
 
 			<div class="row ">
