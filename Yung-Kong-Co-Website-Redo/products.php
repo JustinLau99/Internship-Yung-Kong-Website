@@ -24,6 +24,7 @@
 
 	<section class="yk-section">
 
+	
 		<?php include_once 'phpData/news_data.php'; ?>
 
 
@@ -38,8 +39,7 @@
 
 
 
-		
-		<?php foreach ($product_category as $prodCat): ?>
+
 
 		<div class="nav nav-tabs" id="nav-tab" role="tablist">
 			<!-- tab title -->
@@ -102,8 +102,9 @@
 
 
 
+		<?php foreach ($product_category as $prodCat): ?>
 
-		
+
 
 			<section class="section-title text-center" id="<?= htmlspecialchars($prodCat['img_path']); ?>">
 				<!-- category name -->

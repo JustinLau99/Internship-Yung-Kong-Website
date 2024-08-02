@@ -31,9 +31,11 @@ $job_offer = [ // New Products
 
 <?php if (!empty($new_product_img)): ?>
 
-	
 	<div class="alert alert-info text-center" role="alert">
-		New products are now available! Check it out <a href="news.php#nav-new_product" class="alert-link tab-link">here</a>
+		New products are now available! Check it out
+		<!-- if is the same page as tab  -->
+		<a href="<?= (basename($_SERVER['PHP_SELF']) === 'news.php') ? '#nav-new_product' : 'news.php#nav-new_product'; ?>"
+			class="alert-link tab-link">here</a>
 	</div>
 
 <?php endif; ?>

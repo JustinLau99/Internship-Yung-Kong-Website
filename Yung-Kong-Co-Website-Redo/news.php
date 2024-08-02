@@ -45,6 +45,7 @@
 		<!-- News Tabs -->
 		<?php include_once 'phpData/news_data.php'; // tab data ?>
 
+
 		<div class="nav nav-tabs" id="nav-tab" role="tablist">
 			<!-- tab title -->
 			<button class="nav-link active fw-bold fs-5" id="nav-new_product-tab" data-bs-toggle="tab" type="button"

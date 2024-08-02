@@ -106,18 +106,9 @@ $(document).ready(function () {
 		const tabButton = $(`button[data-bs-target="${targetId}"]`); // Find the corresponding tab button
 		if (tabButton.length) {
 			const tab = new bootstrap.Tab(tabButton[0]); // Create a new Bootstrap tab instance
-			tab.show(); // Activate the tab
+			tab.show(); 
 		}
 	});
-	// get hash value from url, necessary for other page link
-	const hash = window.location.hash;
-	if (hash) {
-		const tabButton = $(`button[data-bs-target="${hash}"]`);
-		if (tabButton.length) {
-			const tab = new bootstrap.Tab(tabButton[0]);
-			tab.show();
-		}
-	}
 
 
 
