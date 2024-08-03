@@ -31,58 +31,62 @@
 
 
 
-			<div class="row">
-				<!-- Sidebar for Tab Titles -->
-				<div class="col-md-2">
-					<div class="sidebar sticky-top">
-						<div class="nav product-tabs flex-column" id="nav-tab" role="tablist">
-							<?php foreach ($product_category as $index => $prodCat): ?>
-								<button class="nav-link <?= $index === 0 ? 'active' : ''; ?> fw-bold fs-5 text-start"
-									data-bs-toggle="tab" type="button" role="tab"
-									data-bs-target="#product-tabContent-<?= htmlspecialchars($prodCat['img_path']); ?>" id="product-tab-<?= htmlspecialchars($prodCat['img_path']); ?>">
-									<?= htmlspecialchars($prodCat['name']); ?>
-								</button>
-							<?php endforeach; ?>
-						</div>
-					</div>
-				</div>
-
-				<!-- Content Area for Tab Content -->
-				<div class="col-md-10">
-					<div class="tab-content" id="nav-tabContent">
+		<div class="row">
+			<!-- Sidebar for Tab Titles -->
+			<div class="col-md-2">
+				<div class="sidebar sticky-top">
+					<div class="nav product-tabs flex-column" id="nav-tab" role="tablist">
 						<?php foreach ($product_category as $index => $prodCat): ?>
-							<div class="tab-pane fade <?= $index === 0 ? 'show active' : ''; ?>" role="tabpanel"
-								id="product-tabContent-<?= htmlspecialchars($prodCat['img_path']); ?>">
-								<section class="section-title text-center">
-									<h2><?= htmlspecialchars($prodCat['name']); ?></h2>
-									<span class="bordered-icon">
-										<i class="bi bi-dash-lg fs-1"></i>
-										<i class="bi bi-circle fs-2"></i>
-										<i class="bi bi-dash-lg fs-1"></i>
-									</span>
-								</section>
-								<div class="row">
-									<?php foreach ($stock_item_type_listing as $stockList): ?>
-										<?php if ($stockList['item_type'] == $prodCat['item_type']): ?>
-											<div class="col-lg-2 col-md-3 col-sm-4 p-3 height: 200px;">
-												<img src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
-													data-bs-src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
-													data-bs-toggle="modal" data-bs-target="#imageModal"
-													alt="<?= htmlspecialchars($stockList['img_path']); ?>" class="img-fluid w-100 overflow-hidden"
-													style="">
-												<h6 class="card-title"><?= htmlspecialchars($stockList['name']) ?></h6>
-												<p class="card-text"><?= htmlspecialchars($stockList['description']) ?></p>
-											</div>
-										<?php endif; ?>
-									<?php endforeach; ?>
-								</div>
-							</div>
+							<button class="nav-link <?= $index === 0 ? 'active' : ''; ?> fw-bold fs-5 text-start"
+								data-bs-toggle="tab" type="button" role="tab"
+								data-bs-target="#product-tabContent-<?= htmlspecialchars($prodCat['img_path']); ?>"
+								id="product-tab-<?= htmlspecialchars($prodCat['img_path']); ?>">
+								<?= htmlspecialchars($prodCat['name']); ?>
+							</button>
 						<?php endforeach; ?>
 					</div>
 				</div>
+			</div>
+
+
+
+			<!-- Tab Content -->
+			<div class="col-md-10" >
+				<div class="tab-content" id="nav-tabContent" >
+					<?php foreach ($product_category as $index => $prodCat): ?>
+						<div class="tab-pane fade <?= $index === 0 ? 'show active' : ''; ?>" role="tabpanel"
+							id="product-tabContent-<?= htmlspecialchars($prodCat['img_path']); ?>" >
+							<section class="section-title text-center">
+								<h2><?= htmlspecialchars($prodCat['name']); ?></h2>
+								<span class="bordered-icon">
+									<i class="bi bi-dash-lg fs-1"></i>
+									<i class="bi bi-circle fs-2"></i>
+									<i class="bi bi-dash-lg fs-1"></i>
+								</span>
+							</section>
+							<div class="row" >
+								<?php foreach ($stock_item_type_listing as $stockList): ?>
+									<?php if ($stockList['item_type'] == $prodCat['item_type']): ?>
+										<div class="col-lg-2 col-md-3 col-sm-4 p-3 height: 200px;">
+											<img src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
+												data-bs-src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
+												data-bs-toggle="modal" data-bs-target="#imageModal"
+												alt="<?= htmlspecialchars($stockList['img_path']); ?>"
+												class="img-fluid w-100 overflow-hidden" style="">
+											<h6 class="card-title"><?= htmlspecialchars($stockList['name']) ?></h6>
+											<p class="card-text"><?= htmlspecialchars($stockList['description']) ?></p>
+										</div>
+									<?php endif; ?>
+								<?php endforeach; ?>
+							</div>
+						</div>
+					<?php endforeach; ?>
+				</div>
+			</div>
 		</div>
 
 
+		<!-- <iframe src="https://www.soundczech.cz/temp/lorem-ipsum.pdf" title="PDF Viewer"></iframe> -->
 
 
 

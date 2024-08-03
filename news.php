@@ -1,6 +1,42 @@
 <!-- news.php -->
 
+<?php
 
+
+// 'id' = if need to href from other place
+//'target' = targetting its tabcontent
+// 'title' = text title
+
+$tabIndex = 0; // iterate through tabContent
+$tabData = [
+	[
+		'id' => 'nav-new_product-tab',
+		'target' => 'nav-new_product',
+		'title' => 'New Products',
+	],
+	[
+		'id' => 'nav-discount_offer-tab',
+		'target' => 'nav-discount_offer',
+		'title' => 'Discount & Offers',
+	],
+	[
+		'id' => 'nav-event-tab',
+		'target' => 'nav-event',
+		'title' => 'Event & Activities',
+	],
+	[
+		'id' => 'nav-job_offer-tab',
+		'target' => 'nav-job_offer',
+		'title' => 'Job Offers',
+	],
+	[
+		'id' => 'nav-product_catalog-tab',
+		'target' => 'nav-product_catalog',
+		'title' => 'Product Catalog',
+	],
+];
+
+?>
 
 
 
@@ -45,35 +81,29 @@
 		<!-- News Tabs -->
 		<?php include_once 'phpData/news_data.php'; // tab data ?>
 
-
 		<div class="nav nav-tabs" id="nav-tab" role="tablist">
-			<!-- tab title -->
-			<button class="nav-link active fw-bold fs-5" id="nav-new_product-tab" data-bs-toggle="tab" type="button"
-				role="tab" data-bs-target="#nav-new_product">
-				New Products
-			</button>
-			<button class="nav-link fw-bold fs-5" id="nav-discount_offer-tab" data-bs-toggle="tab" type="button"
-				role="tab" data-bs-target="#nav-discount_offer">
-				Discount & Offers
-			</button>
-			<button class="nav-link fw-bold fs-5" id="nav-event-tab" data-bs-toggle="tab" type="button" role="tab"
-				data-bs-target="#nav-event">
-				Event & Activities
-			</button>
-			<button class="nav-link fw-bold fs-5" id="nav-job_offer-tab" data-bs-toggle="tab" type="button" role="tab"
-				data-bs-target="#nav-job_offer">
-				Job Offers
-			</button>
+			<!-- Dynamically generated tab titles -->
+			<?php foreach ($tabData as $index => $tab): ?>
+				<button class="nav-link <?php echo $index === 0 ? 'active' : ''; ?> fw-bold fs-5"
+					id="<?php echo $tab['id']; ?>" data-bs-toggle="tab" type="button" role="tab"
+					data-bs-target="#<?php echo $tab['target']; ?>">
+					<?php echo $tab['title']; ?>
+				</button>
+			<?php endforeach; ?>
 		</div>
 
+
+		<!-- tab content -->
 		<div class="tab-content" id="nav-tabContent">
 
+
 			<!-- New Product -->
-			<div class="tab-pane fade show active" id="nav-new_product" role="tabpanel">
+			<div class="tab-pane fade show active" id="<?= htmlspecialchars($tabData[$tabIndex]['target']); ?>"
+				role="tabpanel">
 				<div class="card p-5">
 
 					<section class="section-title text-center ">
-						<h2>Featured New Products</h2>
+						<h2><?= htmlspecialchars($tabData[$tabIndex]['title']); ?><?php $tabIndex++; ?></h2>
 
 						<span class="bordered-icon">
 							<i class="bi bi-dash-lg fs-1"></i>
@@ -97,14 +127,11 @@
 				</div>
 			</div>
 
-
-
 			<!-- Discount and Offer -->
-			<div class="tab-pane fade" id="nav-discount_offer" role="tabpanel">
+			<div class="tab-pane fade" id="<?= htmlspecialchars($tabData[$tabIndex]['target']) ?>" role="tabpanel">
 				<div class="card p-5">
-
 					<section class="section-title text-center">
-						<h2>Discount and Offers</h2>
+						<h2><?= htmlspecialchars($tabData[$tabIndex]['title']); ?><?php $tabIndex++; ?></h2>
 
 						<span class="bordered-icon">
 							<i class="bi bi-dash-lg fs-1"></i>
@@ -132,13 +159,10 @@
 
 
 			<!--Event & Activities  -->
-			<div class="tab-pane fade" id="nav-event" role="tabpanel">
-
+			<div class="tab-pane fade" id="<?= htmlspecialchars($tabData[$tabIndex]['target']) ?>" role="tabpanel">
 				<div class="card p-5">
-
-
 					<section class="section-title text-center">
-						<h2>Event and Activities</h2>
+						<h2><?= htmlspecialchars($tabData[$tabIndex]['title']); ?><?php $tabIndex++; ?></h2>
 
 						<span class="bordered-icon">
 							<i class="bi bi-dash-lg fs-1"></i>
@@ -162,16 +186,14 @@
 					</div>
 
 				</div>
-
 			</div>
 
 
 			<!-- Job Offer  -->
-			<div class="tab-pane fade" id="nav-job_offer" role="tabpanel">
+			<div class="tab-pane fade" id="<?= htmlspecialchars($tabData[$tabIndex]['target']) ?>" role="tabpanel">
 				<div class="card p-5">
-
 					<section class="section-title text-center">
-						<h2>Job Offers</h2>
+						<h2><?= htmlspecialchars($tabData[$tabIndex]['title']); ?><?php $tabIndex++; ?></h2>
 
 						<span class="bordered-icon">
 							<i class="bi bi-dash-lg fs-1"></i>
@@ -180,14 +202,10 @@
 						</span>
 					</section>
 
-
-
-
 					<!-- content -->
 					<section id="job-offers" class="py-5">
 						<div class="container">
 
-							<!-- Job Offer Card -->
 							<div class="row">
 								<?php foreach ($job_offer as $job): ?>
 
@@ -214,11 +232,43 @@
 						</div>
 					</section>
 
-
-
 				</div>
 			</div>
 
+
+			<!-- Product Catalog  -->
+			<div class="tab-pane fade" id="<?= htmlspecialchars($tabData[$tabIndex]['target']) ?>" role="tabpanel">
+
+				<div class="card p-5">
+
+					<section class="section-title text-center">
+						<h2><?= htmlspecialchars($tabData[$tabIndex]['title']); ?></h2>
+						<?php $tabIndex++; ?>
+
+						<span class="bordered-icon">
+							<i class="bi bi-dash-lg fs-1"></i>
+							<i class="bi bi-circle fs-2"></i>
+							<i class="bi bi-dash-lg fs-1"></i>
+						</span>
+					</section>
+
+					<!-- content -->
+					<section class="py-5">
+						<div class="container-fluid p-0">
+							<div class="row">
+								<div class="col-12 text-center">
+									<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+										data-bs-target="#pdfModal"
+										data-bs-src="https://www.buds.com.ua/images/Lorem_ipsum.pdf">
+										View Product Catalog
+									</button>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</div>
 
 
 		</div>
