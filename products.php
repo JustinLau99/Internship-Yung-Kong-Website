@@ -30,8 +30,23 @@
 		<?php $stock_item_type_listing = readCSVData("phpData/stock_item_type_listing.csv"); ?><!--  Parse CSV data to PHP -->
 
 
+		<!-- Modal for popup -->
+		<div class="modal fade" id="mediaModal" tabindex="-1" aria-labelledby="mediaModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+
+					<div class="modal-body">
+						<img src="" class="img-fluid" id="modalImage" style="display: none;" alt="Preview Image">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 
 		<div class="row">
+
 			<!-- Sidebar for Tab Titles -->
 			<div class="col-md-2">
 				<div class="sidebar sticky-top">
@@ -48,14 +63,12 @@
 				</div>
 			</div>
 
-
-
 			<!-- Tab Content -->
-			<div class="col-md-10" >
-				<div class="tab-content" id="nav-tabContent" >
+			<div class="col-md-10">
+				<div class="tab-content" id="nav-tabContent">
 					<?php foreach ($product_category as $index => $prodCat): ?>
 						<div class="tab-pane fade <?= $index === 0 ? 'show active' : ''; ?>" role="tabpanel"
-							id="product-tabContent-<?= htmlspecialchars($prodCat['img_path']); ?>" >
+							id="product-tabContent-<?= htmlspecialchars($prodCat['img_path']); ?>">
 							<section class="section-title text-center">
 								<h2><?= htmlspecialchars($prodCat['name']); ?></h2>
 								<span class="bordered-icon">
@@ -64,15 +77,16 @@
 									<i class="bi bi-dash-lg fs-1"></i>
 								</span>
 							</section>
-							<div class="row" >
+							<div class="row">
 								<?php foreach ($stock_item_type_listing as $stockList): ?>
 									<?php if ($stockList['item_type'] == $prodCat['item_type']): ?>
-										<div class="col-lg-2 col-md-3 col-sm-4 p-3 height: 200px;">
+										<div class="col-lg-2 col-md-3 col-sm-4 p-3 ">
 											<img src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
 												data-bs-src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
-												data-bs-toggle="modal" data-bs-target="#imageModal"
+												data-bs-toggle="modal" data-bs-target="#mediaModal"
 												alt="<?= htmlspecialchars($stockList['img_path']); ?>"
-												class="img-fluid w-100 overflow-hidden" style="">
+												class="img-fluid">
+												
 											<h6 class="card-title"><?= htmlspecialchars($stockList['name']) ?></h6>
 											<p class="card-text"><?= htmlspecialchars($stockList['description']) ?></p>
 										</div>
@@ -83,6 +97,7 @@
 					<?php endforeach; ?>
 				</div>
 			</div>
+
 		</div>
 
 

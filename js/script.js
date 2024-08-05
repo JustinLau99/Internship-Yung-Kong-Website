@@ -80,12 +80,24 @@ $(document).ready(function () {
 
 
 	// news image pop up modal
-	$('#imageModal').on('show.bs.modal', function (event) {
+	$('#mediaModal').on('show.bs.modal', function (event) {
 		var button = $(event.relatedTarget);
-		var imageSrc = button.data('bs-src');
+		var contentSrc = button.data('bs-src');
+		var contentType = button.data('bs-type'); // 'image' or 'pdf'
+
 		var modalImage = $(this).find('#modalImage');
-		modalImage.attr('src', imageSrc);
+		var modalIframe = $(this).find('#modalIframe');
+
+		if (contentType === 'image') {
+			modalImage.attr('src', contentSrc).show();
+			modalIframe.hide();
+		} else if (contentType === 'pdf') {
+			modalIframe.attr('src', contentSrc).show();
+			modalImage.hide();
+		}
 	});
+
+
 
 
 	// set inquiry type automatically from news job application
@@ -105,7 +117,7 @@ $(document).ready(function () {
 		const tabButton = $(`button[data-bs-target="${targetId}"]`); // Find the corresponding tab button
 		if (tabButton.length) {
 			const tab = new bootstrap.Tab(tabButton[0]); // Create a new Bootstrap tab instance
-			tab.show(); 
+			tab.show();
 		}
 	});
 

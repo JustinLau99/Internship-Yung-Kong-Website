@@ -64,15 +64,18 @@ $tabData = [
 	<section class="yk-section">
 
 
-		<!-- Modal for img popup -->
-		<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<!-- Modal for popup -->
+		<div class="modal fade" id="mediaModal" tabindex="-1" aria-labelledby="mediaModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-lg">
 				<div class="modal-content">
 
 					<div class="modal-body">
-						<img src="" class="img-fluid" id="modalImage">
-					</div>
+						<!-- Image -->
+						<img src="" class="img-fluid" id="modalImage" style="display: none;" alt="Preview Image">
 
+						<!-- PDF -->
+						<iframe id="modalIframe" class="w-100" style="height: 80vh; display: none;"></iframe>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -116,10 +119,11 @@ $tabData = [
 					<div class="row">
 						<?php foreach ($new_product_img as $new_prod): ?>
 							<div class="col-md-3 p-1">
-								<img src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>" class="img-fluid "
+								<img src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>" class="img-fluid"
 									alt="<?= htmlspecialchars($new_prod); ?>" data-bs-toggle="modal"
-									data-bs-target="#imageModal"
-									data-bs-src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>">
+									data-bs-target="#mediaModal"
+									data-bs-src="img/news/new_product/<?= htmlspecialchars($new_prod); ?>"
+									data-bs-type="image">
 							</div>
 						<?php endforeach; ?>
 					</div>
@@ -147,8 +151,9 @@ $tabData = [
 								<div class="d-flex align-items-center h-100 ">
 									<img src="img/news/discount_offer/<?= htmlspecialchars($discount_offer); ?>"
 										class="img-fluid w-100 h-100 " alt="<?= htmlspecialchars($discount_offer); ?>"
-										data-bs-toggle="modal" data-bs-target="#imageModal"
-										data-bs-src="img/news/discount_offer/<?= htmlspecialchars($discount_offer); ?>">
+										data-bs-toggle="modal" data-bs-target="#mediaModal"
+										data-bs-src="img/news/discount_offer/<?= htmlspecialchars($discount_offer); ?>"
+										data-bs-type="image">
 								</div>
 							</div>
 						<?php endforeach; ?>
@@ -178,8 +183,8 @@ $tabData = [
 								<div class="d-flex align-items-center h-100">
 									<img src="img/news/event/<?= htmlspecialchars($event); ?>" class="img-fluid w-100 h-100"
 										alt="<?= htmlspecialchars($event) ?>" data-bs-toggle="modal"
-										data-bs-target="#imageModal"
-										data-bs-src="img/news/event/<?= htmlspecialchars($event); ?>">
+										data-bs-target="#mediaModal"
+										data-bs-src="img/news/event/<?= htmlspecialchars($event); ?>" data-bs-type="image">
 								</div>
 							</div>
 						<?php endforeach; ?>
@@ -254,15 +259,38 @@ $tabData = [
 
 					<!-- content -->
 					<section class="py-5">
-						<div class="container-fluid p-0">
+						<div class="container-fluid ">
 							<div class="row">
-								<div class="col-12 text-center">
+								<div class="col-4 text-center card">
+									<h5>Catalog 1</h5>
 									<button type="button" class="btn btn-primary" data-bs-toggle="modal"
-										data-bs-target="#pdfModal"
-										data-bs-src="https://www.buds.com.ua/images/Lorem_ipsum.pdf">
-										View Product Catalog
+										data-bs-target="#mediaModal"
+										data-bs-src="https://www.buds.com.ua/images/Lorem_ipsum.pdf" data-bs-type="pdf">
+										View PDF
 									</button>
 								</div>
+
+								<div class="col-4 text-center card">
+									<h5>Catalog 2</h5>
+									<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+										data-bs-target="#mediaModal"
+										data-bs-src="https://s2.q4cdn.com/175719177/files/doc_presentations/Placeholder-PDF.pdf"
+										data-bs-type="pdf">
+										View PDF
+									</button>
+								</div>
+
+
+								<div class="col-4 text-center card">
+									<h5>Catalog 3</h5>
+									<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+										data-bs-target="#mediaModal"
+										data-bs-src="https://s2.q4cdn.com/175719177/files/doc_presentations/Placeholder-PDF.pdf"
+										data-bs-type="pdf">
+										View PDF
+									</button>
+								</div>
+
 							</div>
 						</div>
 					</section>
