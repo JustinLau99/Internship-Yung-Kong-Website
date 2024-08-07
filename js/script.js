@@ -2,25 +2,77 @@
 
 $(document).ready(function () {
 
+	// update navbar and back to top button
 	function checkScroll() {
 
 		if ($(window).scrollTop() > 100) {
 			$('#navbar').addClass('navbar-scrolled');
-			// Show button
 			$('#back-to-top').slideDown();
 
 		} else {
 			$('#navbar').removeClass('navbar-scrolled');
-			// Hide button
 			$('#back-to-top').fadeOut();
 
 		}
 	}
-	checkScroll();
+
+	// update active link in product slidebar
+	function updateActiveLink() {
+
+		var sidebarLinks = $('.sidebar-link a'); 	
+		var sections = $('.section-title'); 		
+		var previousSectionId = ""; // keep track of the previously active section
+
+		var scrollTop = $(this).scrollTop(); // Current scroll position
+		var scrollBottom = scrollTop + $(window).height();
+		var currentSectionId = "";
+
+		sections.each(function () {
+			var sectionTop = $(this).offset().top - 60; // Adjust offset (navbar)
+			var sectionBottom = sectionTop + $(this).outerHeight();
+
+			// Check if the section is within the viewport range
+			if (scrollBottom > sectionTop && scrollTop < sectionBottom) {
+				currentSectionId = $(this).attr('id');
+			}
+		});
+
+
+		if (currentSectionId !== previousSectionId) { // Only update class if the section ID has changed
+			var selector = '.sidebar-link a[href="#' + currentSectionId + '"]';
+			sidebarLinks.parent().removeClass('active');
+
+			// Find the active link element and add the active class
+			var $activeLink = $(selector).parent();
+
+			if ($activeLink.length) {
+				$activeLink.addClass('active'); // Add active class to the corresponding link
+			}
+
+			// Update the previous section ID
+			previousSectionId = currentSectionId;
+		}
+	}
+
 	$(window).on('scroll', function () { // Run on scroll
+
 		checkScroll();
+		$('.sidebar').length ? updateActiveLink() : null; // only call if sidebar class exist
+
 	});
 
+	// Validate the form
+	function validateForm() {
+		var form = $('#contactForm')[0];
+		var isValid = form.checkValidity();
+
+		// Add or remove Bootstrap's validation classes
+		$(form).toggleClass('was-validated', !isValid);
+		return isValid;
+	}
+
+
+	checkScroll();
 
 	// Back to Top button
 	$('#back-to-top').on('click', function () {
@@ -36,20 +88,7 @@ $(document).ready(function () {
 	});
 
 
-	// Validate the form
-	function validateForm() {
-		var form = $('#contactForm')[0];
-		var isValid = form.checkValidity();
-
-		// Add or remove Bootstrap's validation classes
-		if (isValid) {
-			$(form).removeClass('was-validated');
-		} else {
-			$(form).addClass('was-validated');
-		}
-
-		return isValid;
-	}
+	
 
 	// Handle form submission
 	$('#submitBtn').on('click', function () {
@@ -111,6 +150,8 @@ $(document).ready(function () {
 	}
 
 
+
+
 	// Handle clicks on links with the class tab-link
 	$('.tab-link').on('click', function (event) {
 		const targetId = $(this).attr('href'); // Get the target tab pane id
@@ -120,6 +161,15 @@ $(document).ready(function () {
 			tab.show();
 		}
 	});
+
+
+
+
+
+
+
+
+
 
 
 

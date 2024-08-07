@@ -15,96 +15,98 @@
 	<section class="parallax-section">
 		<div class="parallax-image"></div>
 		<div class="parallax-content text-shadow-lg text-center">
-			<h1>Product Category</h1>
+			<h1>Products</h1>
 		</div>
 	</section>
 
 
-	<?php include_once 'phpData/readCSV.php' ?>
-
-	<section class="yk-section">
-
-		<!-- read CSV -->
-		<?php include_once 'phpData/readCSV.php'; ?>
-		<?php $product_category = readCSVData("phpData/product_category.csv"); ?>
-		<?php $stock_item_type_listing = readCSVData("phpData/stock_item_type_listing.csv"); ?><!--  Parse CSV data to PHP -->
 
 
-		<!-- Modal for popup -->
-		<div class="modal fade" id="mediaModal" tabindex="-1" aria-labelledby="mediaModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered modal-lg">
-				<div class="modal-content">
 
-					<div class="modal-body">
-						<img src="" class="img-fluid" id="modalImage" style="display: none;" alt="Preview Image">
 
+
+	<!-- sidebar link -->
+	<section class="d-flex ">
+
+		<div class="col-lg-2 sidebar d-flex flex-column align-items-center sticky-top p-4" style="overflow-y: auto; ">
+			<h4 class="pb-4 border-bottom border-2 ">Product Categories</h4>
+			<div class="w-100 mt-3 p-3 bg-body-secondary bg-gradient">
+				<?php foreach ($product_category as $prodCat): ?>
+					<div class="row sidebar-link lh-lg py-1">
+						<a class="text-wrap fw-bold" href="#<?= htmlspecialchars($prodCat['img_path']); ?>">
+							<i class="<?= htmlspecialchars($prodCat['icon']); ?>"></i>
+							<?= htmlspecialchars($prodCat['name']); ?>
+						</a>
 					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
 		</div>
 
 
 
-		<div class="row">
+		<!-- sidebar content -->
+		<section class="py-3">
 
-			<!-- Sidebar for Tab Titles -->
-			<div class="col-md-2">
-				<div class="sidebar sticky-top">
-					<div class="nav product-tabs flex-column" id="nav-tab" role="tablist">
-						<?php foreach ($product_category as $index => $prodCat): ?>
-							<button class="nav-link <?= $index === 0 ? 'active' : ''; ?> fw-bold fs-5 text-start"
-								data-bs-toggle="tab" type="button" role="tab"
-								data-bs-target="#product-tabContent-<?= htmlspecialchars($prodCat['img_path']); ?>"
-								id="product-tab-<?= htmlspecialchars($prodCat['img_path']); ?>">
-								<?= htmlspecialchars($prodCat['name']); ?>
-							</button>
-						<?php endforeach; ?>
-					</div>
-				</div>
-			</div>
+			<?php include_once 'phpData/news_data.php'; ?>
 
-			<!-- Tab Content -->
-			<div class="col-md-10">
-				<div class="tab-content" id="nav-tabContent">
-					<?php foreach ($product_category as $index => $prodCat): ?>
-						<div class="tab-pane fade <?= $index === 0 ? 'show active' : ''; ?>" role="tabpanel"
-							id="product-tabContent-<?= htmlspecialchars($prodCat['img_path']); ?>">
-							<section class="section-title text-center">
-								<h2><?= htmlspecialchars($prodCat['name']); ?></h2>
-								<span class="bordered-icon">
-									<i class="bi bi-dash-lg fs-1"></i>
-									<i class="bi bi-circle fs-2"></i>
-									<i class="bi bi-dash-lg fs-1"></i>
-								</span>
-							</section>
-							<div class="row">
-								<?php foreach ($stock_item_type_listing as $stockList): ?>
-									<?php if ($stockList['item_type'] == $prodCat['item_type']): ?>
-										<div class="col-lg-2 col-md-3 col-sm-4 p-3 ">
-											<img src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
-												data-bs-src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
-												data-bs-toggle="modal" data-bs-target="#mediaModal"
-												alt="<?= htmlspecialchars($stockList['img_path']); ?>"
-												class="img-fluid">
-												
+			<!-- read CSV -->
+			<?php include_once 'phpData/readCSV.php'; ?>
+			<?php $product_category = readCSVData("phpData/product_category.csv"); ?>
+			<?php $stock_item_type_listing = readCSVData("phpData/stock_item_type_listing.csv"); ?><!--  Parse CSV data to PHP -->
+
+
+			<!-- product list card -->
+			<div class="container-fluid">
+
+				<?php foreach ($product_category as $prodCat): ?>
+
+					<section class="section-title text-center mt-5 border-bottom border-2"
+						id="<?= htmlspecialchars($prodCat['img_path']); ?>">
+						<h2><?= htmlspecialchars($prodCat['name']); ?></h2>
+
+						<span class="bordered-icon">
+							<i class="bi bi-dash-lg fs-1"></i>
+							<i class="bi bi-circle fs-2"></i>
+							<i class="bi bi-dash-lg fs-1"></i>
+						</span>
+					</section>
+
+
+					<div class="row pb-5">
+
+						<?php foreach ($stock_item_type_listing as $stockList): ?>
+							<?php if ($stockList['item_type'] == $prodCat['item_type']): ?>
+
+								<!-- loop all products -->
+								<div class="col-lg-2 col-md-3 col-sm-4 my-3">
+									<a href="product-details.php?
+									cat=<?= htmlspecialchars($stockList['item_type']); ?>&id=<?= htmlspecialchars($stockList['img_path']); ?>">
+
+										<div class="card-img-container shadow ">
+
+											<img class="w-100 h-100 custom-card-img" loading="lazy"
+												src="img/product/<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>"
+												alt="<?= htmlspecialchars($prodCat['name']) ?>/<?= htmlspecialchars($stockList['img_path']) ?>">
+										</div>
+
+										<div class="text-wrap mt-1">
+											<!-- card info -->
 											<h6 class="card-title"><?= htmlspecialchars($stockList['name']) ?></h6>
 											<p class="card-text"><?= htmlspecialchars($stockList['description']) ?></p>
 										</div>
-									<?php endif; ?>
-								<?php endforeach; ?>
-							</div>
-						</div>
-					<?php endforeach; ?>
-				</div>
+									</a>
+								</div>
+
+
+							<?php endif; ?>
+						<?php endforeach; ?>
+
+					</div>
+
+
+				<?php endforeach; ?>
 			</div>
-
-		</div>
-
-
-		<!-- <iframe src="https://www.soundczech.cz/temp/lorem-ipsum.pdf" title="PDF Viewer"></iframe> -->
-
-
-
+		</section>
 
 	</section>
 

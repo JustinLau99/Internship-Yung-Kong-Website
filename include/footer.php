@@ -2,7 +2,7 @@
 
 
 
-<footer class="footer">
+<footer class="footer mt-auto">
 	<div class="footer-section-1 text-light py-4">
 		<div class="container">
 			<div class="row text-center">
@@ -19,7 +19,7 @@
 				<!-- section 2 -->
 				<div class="col-md-4 mb-3">
 					<h3>Products</h3>
-					<ul class="list-unstyled text-start ms-md-4 ps-md-4 ">
+					<ul class="list-unstyled text-start ms-md-4 ps-md-4 pt-3">
 						<?php foreach ($product_category as $prodCat): ?>
 							<li><a href="products.php#<?= htmlspecialchars($prodCat['img_path']); ?>">
 									<i class="<?= htmlspecialchars($prodCat['icon']); ?>"></i>
@@ -31,8 +31,7 @@
 				<!-- section 3 -->
 				<div class="col-md-4 mb-3 border-start border-2 border-secondary border-opacity-25">
 					<h3>Contact Us Today</h3>
-					<address class="text-white-50">
-						Call Us: <u>082-483 570</u><br>
+					<address class="text-white-50 pt-3">
 						Send an Email on <a href="mailto:ykacc@yungkong.com" target="_blank" rel="noopener noreferrer">
 							ykacc@yungkong.com</a><br>
 						Visit Us at <a href="https://maps.app.goo.gl/ZWygtHRJ35YiDgTn7" target="_blank"

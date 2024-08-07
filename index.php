@@ -13,9 +13,11 @@
 
 
 
+
 	<!-- carousel -->
 	<section>
-		<div id="carouselIMG" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+		<div id="carouselIMG" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000"
+			class="carousel slide carousel-fade">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="0" class="active"></button>
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="1"></button>
@@ -26,18 +28,35 @@
 
 			<div class="carousel-inner">
 				<div class="carousel-item active"><img src="img/department/slider-ykacc.jpg" class="w-100"
-						alt="Slide 1"></div>
-				<div class="carousel-item"><img src="img/department/slider-ykbtw.jpg" class="w-100" alt="Slide 2"></div>
+						alt="Slide 1">
+					<div class="carousel-caption ">
+						<h5 class="fs-2 lh-lg">HQ and Account Department</h5>
+					</div>
+				</div>
+				<div class="carousel-item"><img src="img/department/slider-ykbtw.jpg" class="w-100" alt="Slide 2">
+					<div class="carousel-caption d-none d-md-block">
+						<h5 class="fs-2 lh-lg">Bintawa Department</h5>
+					</div>
+				</div>
 				<div class="carousel-item"><img src="img/department/slider-ykmatang.jpg" class="w-100" alt="Slide 3">
+					<div class="carousel-caption d-none d-md-block">
+						<h5 class="fs-2 lh-lg">Matang Department</h5>
+					</div>
 				</div>
 				<div class="carousel-item"><img src="img/department/slider-ykpending.jpg" class="w-100" alt="Slide 4">
+					<div class="carousel-caption d-none d-md-block">
+						<h5 class="fs-2 lh-lg">Pending Department</h5>
+					</div>
 				</div>
 				<div class="carousel-item"><img src="img/department/slider-ykpenrissen.jpg" class="w-100" alt="Slide 5">
+					<div class="carousel-caption d-none d-md-block">
+						<h5 class="fs-2 lh-lg">Penrissen Department</h5>
+					</div>
 				</div>
 			</div>
 
 			<div class="caption">
-				<h1 class="fs-2 text-center text-white">Welcome to Yung Kong Co. Bhd.</h1>
+				<!-- <h1 class="fs-2 text-center text-white">Welcome to Yung Kong Co. Bhd.</h1> -->
 			</div>
 
 			<!-- buttons -->
@@ -207,32 +226,31 @@
 	</section>
 
 	<!-- key product brand -->
-	<section class="yk-section" id="index-brands">
-		<section class="section-title text-center text-white">
+	<section class="py-5" id="index-brands">
+		<section class="section-title text-center text-black">
 			<h2>Key Product Brands</h2>
 			<span class="bordered-icon">
 				<i class="bi bi-dash-lg fs-1"></i><i class="bi bi-circle fs-2"></i><i class="bi bi-dash-lg fs-1"></i>
-
 			</span>
 		</section>
 
 		<!-- read CSV -->
 		<?php include_once 'phpData/readCSV.php'; ?>
 		<?php $brand_logos = readCSVData('phpData/brand_logo.csv'); ?>
+
 		<!-- key product brand card -->
-		<div class="container-fluid">
-			<div class="row g-3 d-flex align-items-stretch">
-
+		<div class="container">
+			<div class="row g-3">
 				<?php foreach ($brand_logos as $key => $dep): ?>
-
-					<div class="col-lg-1 col-md-2 col-sm-3 col-xs-4">
-						<div class="h-100">
-							<img src="img/brands/<?= htmlspecialchars($dep['img']); ?>" class="card-img-top"
-								alt="<?= htmlspecialchars($dep['img']); ?>">
-						</div>
+					<div class="col-lg-1 col-md-2 col-sm-3 d-flex justify-content-center align-items-center">
+						<img src="img/brands/<?= htmlspecialchars($dep['img']); ?>"
+							alt="<?= htmlspecialchars($dep['img']); ?>" 
+							loading="lazy"
+							class="img-fluid">
 					</div>
 				<?php endforeach; ?>
 			</div>
+		</div>
 	</section>
 
 

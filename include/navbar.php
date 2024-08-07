@@ -60,6 +60,7 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 											<div class="row g-0">
 												<?php include_once 'phpData/readCSV.php'; ?>
 												<?php $product_category = readCSVData("phpData/product_category.csv") ?>
+
 												<?php foreach ($product_category as $prodCat): ?>
 													<div class="col-md-2 d-flex align-items-center bg-transparent">
 														<a class="dropdown-item text-wrap fw-bold w-100 h-100 text-shadow"
@@ -69,6 +70,7 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 														</a>
 													</div>
 												<?php endforeach; ?>
+
 											</div>
 										</div>
 									</ul>
