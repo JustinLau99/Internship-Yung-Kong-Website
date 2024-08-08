@@ -4,17 +4,21 @@ $(document).ready(function () {
 
 	// update navbar and back to top button
 	function checkScroll() {
+
 		if ($(window).scrollTop() > 100) {
 			$('#navbar').addClass('navbar-scrolled');
 			$('#back-to-top').slideDown();
+
 		} else {
 			$('#navbar').removeClass('navbar-scrolled');
 			$('#back-to-top').fadeOut();
+
 		}
 	}
 
 	// update active link in product slidebar
 	function updateActiveLink() {
+
 		var sidebarLinks = $('.sidebar-link a');
 		var sections = $('.section-title');
 		var previousSectionId = ""; // keep track of the previously active section
@@ -25,17 +29,26 @@ $(document).ready(function () {
 		sections.each(function () {
 			var sectionTop = $(this).offset().top - 60; // Adjust offset (navbar)
 			var sectionBottom = sectionTop + $(this).outerHeight();
+
 			// Check if the section is within the viewport range
 			if (scrollBottom > sectionTop && scrollTop < sectionBottom) {
 				currentSectionId = $(this).attr('id');
 			}
 		});
 
+
 		if (currentSectionId !== previousSectionId) { // Only update class if the section ID has changed
 			var selector = '.sidebar-link a[href="#' + currentSectionId + '"]';
 			sidebarLinks.parent().removeClass('active');
+
 			// Find the active link element and add the active class
-			$(selector).parent().length && $activeLink.addClass('active'); // Add active class to corresponding link if exist
+			var $activeLink = $(selector).parent();
+
+			if ($activeLink.length) {
+				$activeLink.addClass('active'); // Add active class to the corresponding link
+			}
+
+			// Update the previous section ID
 			previousSectionId = currentSectionId;
 		}
 	}
@@ -44,56 +57,61 @@ $(document).ready(function () {
 	function validateForm() {
 		var form = $('#contactForm')[0];
 		var isValid = form.checkValidity();
+
 		// Add or remove Bootstrap's validation classes
 		$(form).toggleClass('was-validated', !isValid);
 		return isValid;
 	}
 
 
-
-	function updateInquiryFromJobApplication() { // set inquiry type automatically from news job application
-		const inquiryType = new URLSearchParams(window.location.search).get('inquiryType');
-		if (inquiryType) {
-			$('#inquiryType').val(inquiryType);
-		}
-	}
-
-
-
-	// on load
-	checkScroll();
-	updateInquiryFromJobApplication();
-
-	// on scroll
 	$(window).on('scroll', function () { // Run on scroll
 		checkScroll();
-		$('.sidebar').length && updateActiveLink(); // only call if sidebar class exist
-	});
-	
-	// on click
-	$('#back-to-top').on('click', function () { // move to top
-		$('html, body').animate({ scrollTop: 0 }, { duration: 0 });
-		return false; // Prevents default action of the link
+		$('.sidebar').length ? updateActiveLink() : null; // only call if sidebar class exist
 	});
 
-	$('.department-img').on('click', function () { // Change inquiry department option based on clicked img
+
+
+
+	checkScroll();
+
+	// set inquiry type automatically from news job application
+
+	const inquiryType = new URLSearchParams(window.location.search).get('inquiryType');
+	if (inquiryType) {
+		$('#inquiryType').val(inquiryType);
+	}
+
+	// Back to Top button
+	$('#back-to-top').on('click', function () {
+		$('html, body').animate({ scrollTop: 0 }, { duration: 0 });
+		return false; // Prevents the default action of the link
+	});
+
+
+	// Change inquiry department option based on clicked img
+	$('.department-img').on('click', function () {
 		var departmentName = $(this).data('department');
 		$('#department').val(departmentName).change();
 	});
-	
-	$('#submitBtn').on('click', function () { // Handle form submission
+
+
+
+
+	// Handle form submission
+	$('#submitBtn').on('click', function () {
 		if (validateForm()) {
+
 			// Get form values
 			var name = $('#name').val().trim();
 			var message = $('#message').val().trim();
 			var department = $('#department option:selected').val().trim();
 			var inquiryType = $('#inquiryType option:selected').val().trim();
-			// Get selected department's email
-			var departmentEmail = encodeURIComponent($('#department option:selected').data('email'));
+			var departmentEmail = $('#department option:selected').data('email');
+			var ccEmail = 'ykhr@yungkong.com';
 			// Construct the mailto link with inquiry type in the subject
 			var mailtoLink =
-				'mailto:' + departmentEmail +
-				'?cc=' + 'ykhr@yungkong.com' +
+				'mailto:' + encodeURIComponent(departmentEmail) +
+				'?cc=' + encodeURIComponent(ccEmail) +
 				'?subject=' + encodeURIComponent('Inquiry: ' + inquiryType) +
 				'&body=' +
 				encodeURIComponent('Department: ' + department) + '%0A' +
@@ -131,7 +149,6 @@ $(document).ready(function () {
 
 
 
-
 	// Handle clicks on links with the class tab-link
 	$('.tab-link').on('click', function (event) {
 		const targetId = $(this).attr('href'); // Get the target tab pane id
@@ -151,13 +168,7 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
 	// Ensure everything loaded before fading out prelaoder 
 	$('#preloader').fadeOut('slow');
 
 });
-

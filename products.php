@@ -29,7 +29,6 @@
 				<div class="modal-body">
 					<!-- Image -->
 					<img src="" class="img-fluid" id="modalImage" style="display: none;" alt="Preview Image">
-
 					<!-- PDF -->
 					<iframe id="modalIframe" class="w-100" style="height: 80vh; display: none;"></iframe>
 				</div>
@@ -43,14 +42,14 @@
 	<!-- sidebar link -->
 	<section class="d-flex ">
 
-		<div class="col-lg-2 sidebar d-flex flex-column align-items-center sticky-top p-4" style="overflow-y: auto; ">
+		<div class="col-2 sidebar d-flex flex-column align-items-center sticky-top p-4" style="overflow-y: auto; ">
 			<h4 class="pb-4 border-bottom border-2 ">Product Categories</h4>
 			<div class="w-100 mt-3 p-3 bg-body-secondary bg-gradient">
 				<?php foreach ($product_category as $prodCat): ?>
 					<div class="row sidebar-link lh-lg py-1">
 						<a class="text-wrap fw-bold" href="#<?= htmlspecialchars($prodCat['img_path']); ?>">
 							<i class="<?= htmlspecialchars($prodCat['icon']); ?>"></i>
-							<?= htmlspecialchars($prodCat['name']); ?>
+							<span class="d-none d-md-inline"><?= htmlspecialchars($prodCat['name']); ?></span> <!-- Show name on medium screens and up -->
 						</a>
 					</div>
 				<?php endforeach; ?>
