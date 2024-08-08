@@ -99,7 +99,6 @@ $tabData = [
 		<!-- tab content -->
 		<div class="tab-content" id="nav-tabContent">
 
-
 			<!-- New Product -->
 			<div class="tab-pane fade show active" id="<?= htmlspecialchars($tabData[$tabIndex]['target']); ?>"
 				role="tabpanel">

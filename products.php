@@ -21,6 +21,21 @@
 
 
 
+	<!-- Modal for popup -->
+	<div class="modal fade" id="mediaModal" tabindex="-1" aria-labelledby="mediaModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+
+				<div class="modal-body">
+					<!-- Image -->
+					<img src="" class="img-fluid" id="modalImage" style="display: none;" alt="Preview Image">
+
+					<!-- PDF -->
+					<iframe id="modalIframe" class="w-100" style="height: 80vh; display: none;"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
@@ -68,7 +83,14 @@
 							<i class="bi bi-dash-lg fs-1"></i>
 							<i class="bi bi-circle fs-2"></i>
 							<i class="bi bi-dash-lg fs-1"></i>
-						</span>
+						</span><br>
+
+						<!-- product catalog -->
+
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mediaModal"
+							data-bs-src="<?= htmlspecialchars($prodCat['pdf_link']); ?>" data-bs-type="pdf">
+							View Catalog
+						</button>
 					</section>
 
 
