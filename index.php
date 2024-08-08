@@ -3,7 +3,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include_once 'include/header.php'; ?><!-- header.php -->
+
+<head>
+	<?php include_once 'include/head.php'; ?><!-- head.php -->
+
+	<!-- Preload Images -->
+	<link rel="preload" href="img/department/slider-ykacc.jpg" as="image">
+	<link rel="preload" href="img/department/slider-ykbtw.jpg" as="image">
+	<link rel="preload" href="img/department/slider-ykmatang.jpg" as="image">
+	<link rel="preload" href="img/department/slider-ykpending.jpg" as="image">
+	<link rel="preload" href="img/department/slider-ykpenrissen.jpg" as="image">
+
+</head>
 
 <body>
 
@@ -72,7 +83,7 @@
 
 
 	<!-- productList -->
-	<section class="yk-section" id="index-productList">
+	<section class="yk-section" id="index-whatWeOffer">
 		<section class="section-title text-center">
 			<h2>What We Offer</h2>
 			<span class="bordered-icon">
@@ -244,9 +255,7 @@
 				<?php foreach ($brand_logos as $key => $dep): ?>
 					<div class="col-lg-1 col-md-2 col-sm-3 d-flex justify-content-center align-items-center">
 						<img src="img/brands/<?= htmlspecialchars($dep['img']); ?>"
-							alt="<?= htmlspecialchars($dep['img']); ?>" 
-							loading="lazy"
-							class="img-fluid">
+							alt="<?= htmlspecialchars($dep['img']); ?>" loading="lazy" class="img-fluid">
 					</div>
 				<?php endforeach; ?>
 			</div>

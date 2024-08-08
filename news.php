@@ -43,9 +43,9 @@ $tabData = [
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include_once 'include/header.php'; ?><!-- header.php -->
-
-
+<head>
+	<?php include_once 'include/head.php'; ?><!-- head.php -->
+</head>
 
 <body>
 
@@ -61,7 +61,7 @@ $tabData = [
 
 
 
-	<section class="yk-section">
+	<section class="yk-section" >
 
 
 		<!-- Modal for popup -->
@@ -97,7 +97,7 @@ $tabData = [
 
 
 		<!-- tab content -->
-		<div class="tab-content" id="nav-tabContent">
+		<div class="tab-content" id="nav-tabContent" >
 
 			<!-- New Product -->
 			<div class="tab-pane fade show active" id="<?= htmlspecialchars($tabData[$tabIndex]['target']); ?>"

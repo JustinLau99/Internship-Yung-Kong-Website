@@ -4,8 +4,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include_once 'include/header.php'; ?><!-- header.php -->
-
+<head>
+	<?php include_once 'include/head.php'; ?><!-- head.php -->
+</head>
 
 
 <body>
