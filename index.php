@@ -135,9 +135,7 @@
 		<?php include_once 'phpData/readCSV.php' ?>
 		<?php $departments = readCSVData('phpData/departments.csv') ?>
 
-
 		<!-- Departments -->
-
 		<div class="container-fluid">
 
 			<section class="section-title text-center">
@@ -149,8 +147,6 @@
 					<i class="bi bi-dash-lg fs-1"></i>
 				</span>
 			</section>
-
-
 
 			<!-- Departments Contact Information -->
 			<div class="row">
@@ -165,12 +161,10 @@
 					$dep['fax_link'] = str_replace('-', '', $dep['fax']);
 					?>
 
-
 					<div class="col-md-3 department-card my-1 index-department">
 						<h5 class="m-0"><?= htmlspecialchars($dep['name']); ?></h5>
 
 						<address>
-
 							<div class="card-text d-flex justify-content-between px-4">
 								<!-- Location: Google Map -->
 								<a rel="noopener noreferrer" target="_blank" class=""
@@ -209,8 +203,6 @@
 										class="fs-3 bi bi-envelope"></i>
 								</a>
 							</div>
-
-
 						</address>
 
 

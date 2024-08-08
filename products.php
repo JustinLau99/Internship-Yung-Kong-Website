@@ -44,13 +44,13 @@
 	<section class="d-flex ">
 
 		<div class="col-2 sidebar d-flex flex-column align-items-center sticky-top p-4" style="overflow-y: auto; ">
-			<h4 class="pb-4 border-bottom border-2 ">Product Categories</h4>
-			<div class="w-100 mt-3 p-3 bg-body-secondary bg-gradient">
+			<h4 class="mt-4 py-4 border-bottom border-2 ">Product Categories</h4>
+			<div class="w-100 mt-3 mb-5 p-3 bg-body-secondary bg-gradient">
 				<?php foreach ($product_category as $prodCat): ?>
-					<div class="row sidebar-link lh-lg py-1">
+					<div class="row sidebar-link lh-lg">
 						<a class="text-wrap fw-bold" href="#<?= htmlspecialchars($prodCat['img_path']); ?>">
 							<i class="<?= htmlspecialchars($prodCat['icon']); ?>"></i>
-							<span class="d-none d-md-inline"><?= htmlspecialchars($prodCat['name']); ?></span> <!-- Show name on medium screens and up -->
+							<span class="d-none d-lg-inline"><?= htmlspecialchars($prodCat['name']); ?></span>
 						</a>
 					</div>
 				<?php endforeach; ?>
