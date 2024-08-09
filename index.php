@@ -27,7 +27,7 @@
 
 	<!-- carousel -->
 	<section>
-		<div id="carouselIMG" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000"
+		<div id="carouselIMG" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="5000"
 			class="carousel slide carousel-fade">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselIMG" data-bs-slide-to="0" class="active"></button>
@@ -264,3 +264,4 @@
 </body>
 
 </html>
+

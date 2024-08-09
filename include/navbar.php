@@ -21,10 +21,10 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 
 
 
-<nav id="navbar" class="navbar navbar-expand-md navbar-light fixed-top text-light">
-	<div class="container align-items-center">
+<nav id="navbar" class="navbar navbar-expand-sm navbar-light fixed-top text-light">
+	<div class="container">
 		<a class="navbar-brand" href="index.php">
-			<img src="img/yk_logo.png" alt="" class="img-fluid">
+			<img src="img/yk_logo.png" alt="">
 		</a>
 		<a class="navbar-brand flex-column text-white ms-0" href="index.php">
 			<h1 class="fs-4 m-0">榕光有限公司</h1>
@@ -62,7 +62,7 @@ $currentPage = ($currentPage == 'product-details.php') ? 'products.php' : $curre
 												<?php $product_category = readCSVData("phpData/product_category.csv") ?>
 
 												<?php foreach ($product_category as $prodCat): ?>
-													<div class="col-md-2 d-flex align-items-center bg-transparent">
+													<div class="col-md-2 d-flex align-items-center">
 														<a class="dropdown-item text-wrap fw-bold w-100 h-100 text-shadow"
 															href="products.php#<?= htmlspecialchars($prodCat['img_path']); ?>">
 															<i class="<?= htmlspecialchars($prodCat['icon']); ?>"></i>
